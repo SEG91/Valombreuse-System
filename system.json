@@ -28,7 +28,7 @@
   "secondaryTokenAttribute": "power",
   "url": "https://github.com/SEG91/Valombreuse-System",
   "manifest": "https://raw.githubusercontent.com/SEG91/Valombreuse-System/main/system.json",
-  "download": "",
+  "download": "https://github.com/SEG91/Valombreuse-System/archive/main.zip",
   "license": "LICENSE.txt",
   "changelog": "CHANGELOG.md"
 }
