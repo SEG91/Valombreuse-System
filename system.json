@@ -1,0 +1,34 @@
+{
+  "id": "Valombreuse",
+  "title": "Valombreuse",
+  "description": "Systèmes pour FoundryVTT pour Valombreuse",
+  "version": "1.2.0",
+  "compatibility": {
+    "minimum": 10,
+    "verified": "11",
+    "maximum": 11
+  },
+  "authors": [{
+    "name": "SEG"
+  }],
+  "esmodules": ["module/valombreuse.mjs"],
+  "styles": ["css/valombreuse.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "gridDistance": 1.5,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt",
+  "changelog": "CHANGELOG.md"
+}
