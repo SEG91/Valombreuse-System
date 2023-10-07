@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["Lignée", "sang impur", "acolyte", "pnj", "créature", "invention"],
+    "types": ["Lignee", "sang impur", "acolyte", "pnj", "creature", "invention"],
     "templates": {
       "ListeVia": {
         "Via": {
@@ -40,7 +40,8 @@
           "Serpentis": {
             "valeur": 0
           }
-        },
+        }
+      }, 
       "Attributs": {
         "Vig": {
           "value": 0
@@ -178,38 +179,31 @@
             "Apprentissage":0
           }
         }
-    },
-    "base": {
-        "Blessures": {
-          "value": 3,
-          "min": 0,
-          "max": 10
-        },
-		   "Encaissement": {
-          "value": 0,
-          "min": 0,
-          "max": 20
-        },
-        "Description": ""
+      },
+     "base": {
+          "Blessures": {
+            "value": 3,
+            "min": 0,
+            "max": 10
+          },
+		    "Encaissement": {
+           "value": 0,
+           "min": 0,
+            "max": 20
+          },
+          "Description": ""
       }
     },
-    "Lignée": {
-      "templates": ["base","ListeVia","Caractéristiques","ListeCompétences"],
-      "attributes": {
+  "Lignee": {
+      "templates": ["base","ListeVia","Attributs","ListeCompetences"],
+      "SangAncien": {
         "Rang": {
           "value": 1
         },
-		"Sang Ancien": {
-          "value": 0
-        },
-    "Pureté":{
-          "value": 0
-    },
-		"Energie": {
+		  "PointSang": {
           "value": 0
         }
-      },
-     
+      }
     },
     "npc": {
       "templates": ["base"]
