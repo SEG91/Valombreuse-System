@@ -2,39 +2,7 @@
   "Actor": {
     "types": ["Lignée", "sang impur", "acolyte", "pnj", "créature", "invention"],
     "templates": {
-      "base": {
-        "Blessures": {
-          "value": 3,
-          "min": 0,
-          "max": 10
-        },
-		 "Encaissement": {
-          "value": 0,
-          "min": 0,
-          "max": 20
-        },
-        "Energie": {
-          "value": 0,
-          "min": 0,
-          "max": 20
-        },
-        "Description": ""
-      }
-    },
-    "Lignée": {
-      "templates": ["base"],
-      "attributes": {
-        "Rang": {
-          "value": 1
-        },
-		"Sang Ancien": {
-          "value": 0
-        },
-		"Energie": {
-          "value": 0
-        }
-      },
-	  "ListeVia": {
+      "ListeVia": {
         "Via": {
           "Aquilae": {
             "valeur": 0
@@ -72,7 +40,7 @@
           "Serpentis": {
             "valeur": 0
           }
-        }
+        },
       "Caractéristiques": {
         "Vig": {
           "value": 0
@@ -93,10 +61,155 @@
           "value": 10
         }
       },
-	  "ListeCompétences": {
-				"Compétences": {
-				}
-	  }
+      "ListeCompétences": {
+        "Compétences": {
+          "Acrobatie":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Athlétisme":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Armes à distance":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Art":{
+            "value": 0,
+            "Apprentissage":0,
+            "Spécialisation": "",
+            "Expertise": ""
+          },
+          "Artisanat":{
+            "value": 0,
+            "Apprentissage":0,
+            "Spécialisation": "",
+            "Expertise": ""
+          },
+          "Bagarre":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Bricolage":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Charme":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Commerce":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Conduite":{
+            "value": 0,
+            "Apprentissage":0,
+            "Spécialisation": "",
+            "Expertise": ""
+          },
+          "Connaissance du Monde":{
+            "value": 0,
+            "Apprentissage":0,
+            "Spécialisation": "",
+            "Expertise": ""
+          },
+          "Connaissance de la Génèse":{
+            "value": 0,
+            "Apprentissage":0,
+            "Spécialisation": "",
+            "Expertise": ""
+          },
+          "Connaissance de la Nature":{
+            "value": 0,
+            "Apprentissage":0,
+            "Spécialisation": "",
+            "Expertise": ""
+          },
+          "Discrétion":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Equitation":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Escamotage":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Intimidation":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Intuition":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Mêlée":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Persuasion":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Sang Froid":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Soins":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Supercherie":{
+            "value": 0,
+            "Apprentissage":0
+          },
+          "Survie":{
+            "value": 0,
+            "Apprentissage":0,
+            "Spécialisation": "",
+            "Expertise": ""
+          },
+          "Vigilance":{
+            "value": 0,
+            "Apprentissage":0
+          }
+        }
+    },
+      "base": {
+        "Blessures": {
+          "value": 3,
+          "min": 0,
+          "max": 10
+        },
+		   "Encaissement": {
+          "value": 0,
+          "min": 0,
+          "max": 20
+        },
+        "Description": ""
+      }
+    },
+    "Lignée": {
+      "templates": ["base"],
+      "attributes": {
+        "Rang": {
+          "value": 1
+        },
+		"Sang Ancien": {
+          "value": 0
+        },
+    "Pureté":{
+          "value": 0
+    },
+		"Energie": {
+          "value": 0
+        }
+      },
+     
     },
     "npc": {
       "templates": ["base"],
