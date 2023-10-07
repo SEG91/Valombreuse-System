@@ -200,7 +200,13 @@
         "Rang": {
           "value": 1
         },
-		  "PointSang": {
+		    "PointSangMax": {
+          "value": 0
+        },
+        "PointSangUsed": {
+          "value": 0
+        },
+        "PerteSang": {
           "value": 0
         }
       }

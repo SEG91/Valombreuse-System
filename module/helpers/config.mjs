@@ -1,10 +1,10 @@
-export const BOILERPLATE = {};
+export const VALOMBREUSE = {};
 
 /**
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- BOILERPLATE.abilities = {
+ /*BOILERPLATE.abilities = {
   "str": "BOILERPLATE.AbilityStr",
   "dex": "BOILERPLATE.AbilityDex",
   "con": "BOILERPLATE.AbilityCon",
@@ -20,4 +20,4 @@ BOILERPLATE.abilityAbbreviations = {
   "int": "BOILERPLATE.AbilityIntAbbr",
   "wis": "BOILERPLATE.AbilityWisAbbr",
   "cha": "BOILERPLATE.AbilityChaAbbr"
-};
+};*/
