@@ -36,7 +36,7 @@ Hooks.once('init', async function() {
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = ValombreuseActor;
-  CONFIG.Item.documentClass = ValombreuseItemSheet;
+  //CONFIG.Item.documentClass = ValombreuseItemSheet;
 
   // Register sheet application classes
  /* Actors.unregisterSheet("core", ActorSheet);
