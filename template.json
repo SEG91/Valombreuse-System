@@ -41,7 +41,7 @@
             "valeur": 0
           }
         },
-      "Caractéristiques": {
+      "Attributs": {
         "Vig": {
           "value": 0
         },
@@ -61,17 +61,17 @@
           "value": 10
         }
       },
-      "ListeCompétences": {
-        "Compétences": {
+      "ListeCompetences": {
+        "Competences": {
           "Acrobatie":{
             "value": 0,
             "Apprentissage":0
           },
-          "Athlétisme":{
+          "Athletisme":{
             "value": 0,
             "Apprentissage":0
           },
-          "Armes à distance":{
+          "ArmesDistance":{
             "value": 0,
             "Apprentissage":0
           },
@@ -109,25 +109,25 @@
             "Spécialisation": "",
             "Expertise": ""
           },
-          "Connaissance du Monde":{
+          "ConnaissanceMonde":{
             "value": 0,
             "Apprentissage":0,
             "Spécialisation": "",
             "Expertise": ""
           },
-          "Connaissance de la Génèse":{
+          "ConnaissanceGenese":{
             "value": 0,
             "Apprentissage":0,
             "Spécialisation": "",
             "Expertise": ""
           },
-          "Connaissance de la Nature":{
+          "ConnaissanceNature":{
             "value": 0,
             "Apprentissage":0,
             "Spécialisation": "",
             "Expertise": ""
           },
-          "Discrétion":{
+          "Discretion":{
             "value": 0,
             "Apprentissage":0
           },
@@ -147,7 +147,7 @@
             "value": 0,
             "Apprentissage":0
           },
-          "Mêlée":{
+          "Melee":{
             "value": 0,
             "Apprentissage":0
           },
@@ -179,7 +179,7 @@
           }
         }
     },
-      "base": {
+    "base": {
         "Blessures": {
           "value": 3,
           "min": 0,
@@ -194,7 +194,7 @@
       }
     },
     "Lignée": {
-      "templates": ["base"],
+      "templates": ["base","ListeVia","Caractéristiques","ListeCompétences"],
       "attributes": {
         "Rang": {
           "value": 1
@@ -212,12 +212,11 @@
      
     },
     "npc": {
-      "templates": ["base"],
-      "cr": 0
+      "templates": ["base"]
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item"],
     "templates": {
       "base": {
         "description": ""
@@ -227,14 +226,7 @@
       "templates": ["base"],
       "quantity": 1,
       "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
-    "feature": {
-      "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
+      "formula": ""
     }
   }
 }
