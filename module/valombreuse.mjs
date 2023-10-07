@@ -39,10 +39,10 @@ Hooks.once('init', async function() {
   CONFIG.Item.documentClass = ValombreuseItemSheet;
 
   // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
+ /* Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("valombreuse", ValombreuseActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("valombreuse", ValombreuseItemSheet, { makeDefault: true });
+  Items.registerSheet("valombreuse", ValombreuseItemSheet, { makeDefault: true });*/
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
