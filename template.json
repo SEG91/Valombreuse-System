@@ -1,48 +1,102 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["Lignée", "sang impur", "acolyte", "pnj", "créature", "invention"],
     "templates": {
       "base": {
-        "health": {
-          "value": 10,
+        "Blessures": {
+          "value": 3,
           "min": 0,
           "max": 10
         },
-        "power": {
-          "value": 5,
+		 "Encaissement": {
+          "value": 0,
           "min": 0,
-          "max": 5
+          "max": 20
         },
-        "biography": ""
+        "Energie": {
+          "value": 0,
+          "min": 0,
+          "max": 20
+        },
+        "Description": ""
       }
     },
-    "character": {
+    "Lignée": {
       "templates": ["base"],
       "attributes": {
-        "level": {
+        "Rang": {
           "value": 1
+        },
+		"Sang Ancien": {
+          "value": 0
+        },
+		"Energie": {
+          "value": 0
         }
       },
-      "abilities": {
-        "str": {
+	  "ListeVia": {
+        "Via": {
+          "Aquilae": {
+            "valeur": 0
+          },
+          "Arenae": {
+            "valeur": 0
+          },
+          "Draconis": {
+            "valeur": 0
+          },
+          "Leo": {
+            "valeur": 0
+          },
+          "Lupus": {
+            "valeur": 0
+          },
+          "Phoenix": {
+            "valeur": 0
+          },
+          "Simia": {
+            "valeur": 0
+          },
+          "Taurus": {
+            "valeur": 0
+          },
+          "Unicornis": {
+            "valeur": 0
+          },
+          "Lunae": {
+            "valeur": 0
+          },
+          "Solaris": {
+            "valeur": 0
+          },
+          "Serpentis": {
+            "valeur": 0
+          }
+        }
+      "Caractéristiques": {
+        "Vig": {
+          "value": 0
+        },
+        "MC": {
           "value": 10
         },
-        "dex": {
+        "Con": {
           "value": 10
         },
-        "con": {
+        "Int": {
           "value": 10
         },
-        "int": {
+        "Eve": {
           "value": 10
         },
-        "wis": {
-          "value": 10
-        },
-        "cha": {
+        "Cha": {
           "value": 10
         }
-      }
+      },
+	  "ListeCompétences": {
+				"Compétences": {
+				}
+	  }
     },
     "npc": {
       "templates": ["base"],
