@@ -1,23 +1,23 @@
-export const BOILERPLATE = {};
+export const VALOMBREUSE = {};
 
 /**
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- BOILERPLATE.abilities = {
-  "str": "BOILERPLATE.AbilityStr",
-  "dex": "BOILERPLATE.AbilityDex",
-  "con": "BOILERPLATE.AbilityCon",
-  "int": "BOILERPLATE.AbilityInt",
-  "wis": "BOILERPLATE.AbilityWis",
-  "cha": "BOILERPLATE.AbilityCha"
+ VALOMBREUSE.attributes = {
+  "vig": "VALOMBREUSE.AttributeVig",
+  "mc": "VALOMBREUSE.AttributeMc",
+  "con": "VALOMBREUSE.AttributeCon",
+  "int": "VALOMBREUSE.AttributeInt",
+  "eve": "VALOMBREUSE.AttributeEve",
+  "cha": "VALOMBREUSE.AbilityCha"
 };
 
-BOILERPLATE.abilityAbbreviations = {
-  "str": "BOILERPLATE.AbilityStrAbbr",
-  "dex": "BOILERPLATE.AbilityDexAbbr",
-  "con": "BOILERPLATE.AbilityConAbbr",
-  "int": "BOILERPLATE.AbilityIntAbbr",
-  "wis": "BOILERPLATE.AbilityWisAbbr",
-  "cha": "BOILERPLATE.AbilityChaAbbr"
+VALOMBREUSE.attributesAbbreviations = {
+  "vig": "VALOMBREUSE.AttributeVigAbbr",
+  "mc": "VALOMBREUSE.AttributeMcAbbr",
+  "con": "VALOMBREUSE.AttributeConAbbr",
+  "int": "VALOMBREUSE.AttributeIntAbbr",
+  "eve": "VALOMBREUSE.AtributeEveAbbr",
+  "cha": "VALOMBREUSE.AttributeChaAbbr"
 };

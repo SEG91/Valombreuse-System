@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["Lignée", "sang impur", "acolyte", "pnj", "créature", "invention"],
+    "types": ["Lignee", "sang impur", "acolyte", "pnj", "creature", "invention"],
     "templates": {
       "ListeVia": {
         "Via": {
@@ -40,25 +40,28 @@
           "Serpentis": {
             "valeur": 0
           }
-        },
-      "Attributs": {
-        "Vig": {
-          "value": 0
-        },
-        "MC": {
-          "value": 10
-        },
-        "Con": {
-          "value": 10
-        },
-        "Int": {
-          "value": 10
-        },
-        "Eve": {
-          "value": 10
-        },
-        "Cha": {
-          "value": 10
+        }
+      }, 
+      "ListeAttributs": {
+        "Attributs":{
+          "Vig": {
+            "value": 0
+          },
+          "MC": {
+           "value": 0
+          },
+          "Con": {
+            "value": 0
+          },
+          "Int": {
+           "value": 0
+          },
+          "Eve": {
+            "value": 0
+          },
+          "Cha": {
+            "value": 0
+          }
         }
       },
       "ListeCompetences": {
@@ -178,38 +181,37 @@
             "Apprentissage":0
           }
         }
-    },
-    "base": {
-        "Blessures": {
-          "value": 3,
-          "min": 0,
-          "max": 10
-        },
-		   "Encaissement": {
-          "value": 0,
-          "min": 0,
-          "max": 20
-        },
-        "Description": ""
+      },
+     "base": {
+          "Blessures": {
+            "value": 3,
+            "min": 0,
+            "max": 10
+          },
+		    "Encaissement": {
+           "value": 0,
+           "min": 0,
+            "max": 20
+          },
+          "Description": ""
       }
     },
-    "Lignée": {
-      "templates": ["base","ListeVia","Caractéristiques","ListeCompétences"],
-      "attributes": {
+  "Lignee": {
+      "templates": ["base","ListeVia","ListeAttributs","ListeCompetences"],
+      "SangAncien": {
         "Rang": {
           "value": 1
         },
-		"Sang Ancien": {
+		    "PointSangMax": {
           "value": 0
         },
-    "Pureté":{
+        "PointSangUsed": {
           "value": 0
-    },
-		"Energie": {
+        },
+        "PerteSang": {
           "value": 0
         }
-      },
-     
+      }
     },
     "npc": {
       "templates": ["base"]

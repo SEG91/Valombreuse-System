@@ -36,13 +36,13 @@ Hooks.once('init', async function() {
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = ValombreuseActor;
-  CONFIG.Item.documentClass = ValombreuseItemSheet;
+  //CONFIG.Item.documentClass = ValombreuseItemSheet;
 
   // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
+ Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("valombreuse", ValombreuseActorSheet, { makeDefault: true });
-  Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("valombreuse", ValombreuseItemSheet, { makeDefault: true });
+  /*Items.unregisterSheet("core", ItemSheet);
+  Items.registerSheet("valombreuse", ValombreuseItemSheet, { makeDefault: true });*/
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
@@ -97,7 +97,7 @@ async function createItemMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.boilerplate.rollItemMacro("${data.uuid}");`;
+  const command = `game.valombreuse.rollItemMacro("${data.uuid}");`;
   let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({

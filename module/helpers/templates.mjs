@@ -7,9 +7,10 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/boilerplate/templates/actor/parts/actor-features.html",
-    "systems/boilerplate/templates/actor/parts/actor-items.html",
-    "systems/boilerplate/templates/actor/parts/actor-spells.html",
-    "systems/boilerplate/templates/actor/parts/actor-effects.html",
+    "systems/valombreuse/templates/actor/parts/actor-features.html",
+    "systems/valombreuse/templates/actor/parts/actor-items.html",
+    "systems/valombreuse/templates/actor/parts/actor-spells.html",
+    "systems/valombreuse/templates/actor/parts/actor-effects.html",
+    "systems/valombreuse/templates/actor/parts/lignee-bloc-info.hbs",
   ]);
 };

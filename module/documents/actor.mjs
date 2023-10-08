@@ -2,7 +2,7 @@
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class BoilerplateActor extends Actor {
+export class ValombreuseActor extends Actor {
 
   /** @override */
   prepareData() {
@@ -31,7 +31,7 @@ export class BoilerplateActor extends Actor {
   prepareDerivedData() {
     const actorData = this;
     const systemData = actorData.system;
-    const flags = actorData.flags.boilerplate || {};
+    const flags = actorData.flags.valombreuse || {};
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
@@ -43,16 +43,17 @@ export class BoilerplateActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') return;
+    if (actorData.type !== 'Lignee') return;
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
+    
 
     // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(systemData.abilities)) {
+    /*for (let [key, ability] of Object.entries(systemData.abilities)) {
       // Calculate the modifier using d20 rules.
       ability.mod = Math.floor((ability.value - 10) / 2);
-    }
+    }*/
   }
 
   /**
@@ -63,7 +64,6 @@ export class BoilerplateActor extends Actor {
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
-    systemData.xp = (systemData.cr * systemData.cr) * 100;
   }
 
   /**
