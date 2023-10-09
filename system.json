@@ -2,7 +2,7 @@
   "id": "Valombreuse",
   "title": "Valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.3.5",
+  "version": "0.0.3.5.1",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
