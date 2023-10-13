@@ -1,0 +1,40 @@
+<div class="flexrow top">
+    <div class="flexcol">
+         <div class="flex1 center">
+                <span class="titleFont titre-general field-label">{{ localize 'VALOMBREUSE.ui.veinard' }}</span>
+         </div>
+        <!-- NAME -->
+        <div class="flexrow">
+            <div class="flex4 center cell">
+                <input class="field-value charname" name="name" type="text" value="{{actor.name}}" placeholder="Name" data-dtype="String"/>
+            </div>
+        </div>
+            <!-- /NAME -->
+        <div class="flex1 center">
+             <span class="field-label">Origine</span>
+        </div>  
+    </div>
+    <div class="flexcol"id="logo-sceptre">
+            <img class="img" src="/systems/valombreuse/assets/images/Clef.webp"/>
+    </div>
+    <div class="flexcol">
+        <div class="flex1 center">
+                <span class="titleFont titre-general field-label">{{ localize 'VALOMBREUSE.ui.lignee' }}</span>
+         </div>
+         <!-- Ordre -->
+        <div class="flexrow">
+            <div class="flex4 center cell drop-field valombreuse-compendium-pack" data-pack="" data-open="0">
+                <div class="empty">Ajoutez une Lignée &nbsp; <i class="fas fa-atlas"></i> </div>
+            </div>
+        </div>
+         <div class="flex1 center">
+                <span class="titleFont titre-general field-label">{{ localize 'VALOMBREUSE.ui.ordre' }}</span>
+         </div>
+         <!-- Ordre -->
+        <div class="flexrow">
+            <div class="flex4 center cell drop-field valombreuse-compendium-pack" data-pack="" data-open="0">
+                <div class="empty">Ajoutez un Ordre&nbsp; <i class="fas fa-atlas"></i> </div>
+            </div>
+        </div>
+    </div>
+</div>

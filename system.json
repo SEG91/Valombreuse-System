@@ -1,8 +1,8 @@
 {
-  "id": "Valombreuse",
-  "title": "Valombreuse",
+  "id": "valombreuse",
+  "title": "valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.3.5.1",
+  "version": "0.0.5",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
@@ -11,7 +11,7 @@
   "authors": [{
     "name": "SEG"
   }],
-  "esmodules": ["module/valombreuse.mjs"],
+  "esmodules": ["module/valombreuse.js"],
   "styles": ["css/valombreuse.css"],
   "scripts": [],
   "packs": [],

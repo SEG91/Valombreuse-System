@@ -1,161 +1,498 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-/* Global styles */
-.window-app .window-content {
-  background: url("./assets/images/BG-Page-Web-scaled.jpg") repeat;
+@charset "UTF-8";
+/* ----------------------------------------- */
+/*  Premade colors                           */
+/* ----------------------------------------- */
+.light {
+  color: lightgray;
 }
 
-.rollable:hover, .rollable:focus {
+.bg-light {
+  background: lightgray;
+}
+
+.darkgray {
+  color: #23221d;
+}
+
+.bg-darkgray {
+  background: #23221d;
+  color: #fff;
+}
+
+.bg-dark {
+  background: #464331c4;
+  color: #fff;
+}
+
+.darkslate {
+  color: darkslategray;
+}
+
+.bg-darkslate {
+  background: darkslategray;
+  color: #fff;
+}
+
+.darkgreen {
+  color: #003c1e;
+}
+
+.bg-darkgreen {
+  background: #003c1e;
+  color: #fff;
+}
+
+.darkblue {
+  color: midnightblue;
+}
+
+.bg-darkblue {
+  background: midnightblue;
+  color: #fff;
+}
+
+.blue {
+  color: #009ee0;
+}
+
+.bg-blue {
+  background: #009ee0;
+  color: #fff;
+}
+
+.green {
+  color: #44a12b;
+}
+
+.bg-green {
+  background: #44a12b;
+  color: #fff;
+}
+
+.black {
   color: #000;
-  text-shadow: 0 0 10px red;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+.red {
+  color: #cd071e;
+}
+
+.bg-red {
+  background: #cd071e;
+  color: #fff;
+}
+
+.purple {
+  color: purple;
+}
+
+.bg-purple {
+  background: purple;
+  color: #fff;
+}
+
+/* ----------------------------------------- */
+/*  LOCAL FONTS                             */
+/* ----------------------------------------- */
+@font-face {
+  font-family: "AGaramondPro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AGaramondPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "AGaramondPro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/AGaramondPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "AGaramondPro";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/AGaramondPro-BoldItalic.otf");
+}
+
+@font-face {
+  font-family: "AGaramondPro";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/AGaramondPro-Italic.otf");
+}
+
+@font-face {
+  font-family: "CharlemagneStd";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/CharlemagneStd-Bold.otf");
+}
+
+@font-face {
+  font-family: "HelveticaNeueLT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/HelveticaNeueLTStd-Cn.otf");
+}
+
+@font-face {
+  font-family: "PermanentMarker";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/PermanentMarker-Regular.ttf");
+}
+
+@font-face {
+  font-family: "CaxtonStd-LightItalic";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/CaxtonStd-LightItalic.otf");
+}
+
+@font-face {
+  font-family: "CaxtonStd-Book";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/CaxtonStd-Book.otf");
+}
+
+@font-face {
+  font-family: "Kingman";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Kingman-Regular.otf");
+}
+
+@font-face {
+  font-family: "GWENT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/hinted-GWENT-ExtraBold.ttf");
+}
+
+
+@font-face {
+  font-family: 'Modesto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../../fonts/modesto-condensed/modesto-condensed.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Modesto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../../fonts/modesto-condensed/modesto-condensed-bold.woff2") format("woff2");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIipYSxP.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIGpYSxP.woff2") format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIupYSxP.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIWpYQ.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ----------------------------------------- */
+/*  TEXT STYLES                             */
+/* ----------------------------------------- */
+.empty {
+  color: #23221d;
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* Global styles */
+.window-app a:hover {
+  text-shadow: 0 0 8px #4f7783;
+}
+
+.window-app .rollable:hover, .window-app .rollable:focus {
+  text-shadow: 0 0 8px #4f7783;
   cursor: pointer;
 }
 
-.grid,
-.grid-2col {
+.window-app .calc-comp:hover, .window-app .calc-comp:focus {
+  text-shadow: 0 0 8px #4f7783;
+  cursor: pointer;
+}
+
+.window-app.valombreuse.sheet.actor {
+  min-width: 765px;
+  width: 765px;
+  overflow: hidden;
+}
+
+.window-app.valombreuse.sheet.item {
+  min-width: 430px;
+  overflow: hidden;
+}
+
+/* ----------------------------------------- */
+/* Scrollbar
+/* ----------------------------------------- */
+.grid {
   display: grid;
-  grid-column: span 2/span 2;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin: 10px 0;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+}
+
+.grid .gridheader {
+  font-weight: bold;
+}
+
+.grid .gridrow {
+  display: grid;
+  height: 24px;
+  margin: 0 0 1px 0;
   padding: 0;
 }
 
+.grid .gridcell {
+  text-align: center;
+  margin: 0 1px 1px 0;
+  padding: 3px;
+  height: 24px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.grid .no-border {
+  border: none !important;
+}
+
+.grid .gridcell-sm {
+  font-weight: lighter;
+}
+
+.grid-1col {
+  grid-column: span 1 / span 1;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-2col {
+  grid-column: span 2 / span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-3col {
-  grid-column: span 3/span 3;
+  grid-column: span 3 / span 3;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-4col {
-  grid-column: span 4/span 4;
+  grid-column: span 4 / span 4;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-5col {
-  grid-column: span 5/span 5;
+  grid-column: span 5 / span 5;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.grid-6col-150 {
+  grid-column: span 6 / span 6;
+  grid-template-columns: 3fr 2fr 2fr 2fr 2fr 2fr;
+}
+
+.grid-6col-200 {
+  grid-column: span 6 / span 6;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 .grid-6col {
-  grid-column: span 6/span 6;
+  grid-column: span 6 / span 6;
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .grid-7col {
-  grid-column: span 7/span 7;
+  grid-column: span 7 / span 7;
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .grid-8col {
-  grid-column: span 8/span 8;
+  grid-column: span 8 / span 8;
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
 .grid-9col {
-  grid-column: span 9/span 9;
+  grid-column: span 9 / span 9;
   grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
 .grid-10col {
-  grid-column: span 10/span 10;
+  grid-column: span 10 / span 10;
   grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
 .grid-11col {
-  grid-column: span 11/span 11;
+  grid-column: span 11 / span 11;
   grid-template-columns: repeat(11, minmax(0, 1fr));
 }
 
 .grid-12col {
-  grid-column: span 12/span 12;
+  grid-column: span 12 / span 12;
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.grid-start-2 {
-  grid-column-start: 2;
+/* ----------------------------------------- */
+/*  Flexbox                                  */
+/* ----------------------------------------- */
+.flexrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
-.grid-start-3 {
-  grid-column-start: 3;
+.flexrow > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.grid-start-4 {
-  grid-column-start: 4;
+.flexrow .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.grid-start-5 {
-  grid-column-start: 5;
+.flexrow .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
 }
 
-.grid-start-6 {
-  grid-column-start: 6;
+.flexrow .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
 }
 
-.grid-start-7 {
-  grid-column-start: 7;
+.flexrow .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
 }
 
-.grid-start-8 {
-  grid-column-start: 8;
+.flexrow .flex5 {
+  -webkit-box-flex: 5;
+  -ms-flex: 5;
+  flex: 5;
 }
 
-.grid-start-9 {
-  grid-column-start: 9;
+.flexrow .flex6 {
+  -webkit-box-flex: 6;
+  -ms-flex: 6;
+  flex: 6;
 }
 
-.grid-start-10 {
-  grid-column-start: 10;
+.flexrow .flex7 {
+  -webkit-box-flex: 7;
+  -ms-flex: 7;
+  flex: 7;
 }
 
-.grid-start-11 {
-  grid-column-start: 11;
+.flexrow .flex8 {
+  -webkit-box-flex: 8;
+  -ms-flex: 8;
+  flex: 8;
 }
 
-.grid-start-12 {
-  grid-column-start: 12;
+.flexrow .flex9 {
+  -webkit-box-flex: 9;
+  -ms-flex: 9;
+  flex: 9;
 }
 
-.grid-span-2 {
-  grid-column-end: span 2;
+.flexcol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
 
-.grid-span-3 {
-  grid-column-end: span 3;
+.flexcol > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.grid-span-4 {
-  grid-column-end: span 4;
+.flexcol .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.grid-span-5 {
-  grid-column-end: span 5;
+.flexcol .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
 }
 
-.grid-span-6 {
-  grid-column-end: span 6;
+.flexcol .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
 }
 
-.grid-span-7 {
-  grid-column-end: span 7;
-}
-
-.grid-span-8 {
-  grid-column-end: span 8;
-}
-
-.grid-span-9 {
-  grid-column-end: span 9;
-}
-
-.grid-span-10 {
-  grid-column-end: span 10;
-}
-
-.grid-span-11 {
-  grid-column-end: span 11;
-}
-
-.grid-span-12 {
-  grid-column-end: span 12;
+.flexcol .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
 }
 
 .flex-group-center,
@@ -168,6 +505,8 @@
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
+  padding: 5px;
+  border: 1px solid #999;
 }
 
 .flex-group-left {
@@ -184,10 +523,53 @@
   text-align: right;
 }
 
-.flexshrink {
-  -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+.center {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.left {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .flex-between {
@@ -196,48 +578,2152 @@
   justify-content: space-between;
 }
 
-.flexlarge {
-  -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+.no-wrap {
+  -ms-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
 }
 
-.align-left {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: left;
+.chat-card {
+  font-style: normal;
+  font-size: 14px;
 }
 
-.align-right {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  text-align: right;
+.chat-card .card-header {
+  padding: 3px 0;
+  border-top: 2px groove #FFF;
+  border-bottom: 2px groove #FFF;
 }
 
-.align-center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.chat-card .card-header img {
+  margin-right: 5px;
+  display: block;
+  max-width: 64px;
+  max-height: 128px;
+  width: auto;
+  height: auto;
+}
+
+.chat-card .card-header .item-img {
+  max-width: 64px;
+  max-height: 64px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.chat-card .card-header .item-name {
+  line-height: 48px;
+}
+bg
+.chat-card .card-header h3 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+}
+
+.chat-card .card-header h2 {
+  max-height: 27px;
+}
+
+.chat-card .card-header .mini {
+  font-size: .4em;
+}
+
+.chat-card .card-header .damage {
+  color: orangered;
+  font-weight: bold;
+}
+
+.chat-card .card-header .dice-title-card {
+  font-size: 1.2em;
+  border-bottom: 0;
+}
+
+.chat-card .card-header .critical {
+  color: green;
+  font-weight: bold;
+}
+
+.chat-card .card-header .fumble {
+  color: red;
+  font-weight: bold;
+}
+
+.chat-card .card-header .success {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.chat-card .card-header .failure {
+  color: darkred;
+  font-weight: bold;
+}
+
+.chat-card .card-header .roll {
+  color: darkslategrey;
+  font-weight: bold;
+}
+
+.chat-message.message-header.message-sender {
+  color: red;
+}
+
+/* ----------------------------------------- */
+/*  JOURNAL                                  */
+/* ----------------------------------------- */
+.sheet.journal-entry .journal-entry-content,
+.editor.prosemirror,
+.mce-content-body {
+  background: #fff;
+}
+
+.journal-page-header h1 {
+  font-family: "CharlemagneStd", serif;
   text-align: center;
+  text-transform: uppercase;
+  color: #2c3f45;
+  font-size: 3rem;
+  border: none;
+  margin: 1em auto;
+  position: relative;
+}
+
+.journal-page-header h1::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #2c3f45;
+  top: 100%;
+  width: 33%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.mce-content-body h1,
+.mce-content-body h2,
+.mce-content-body h3,
+.mce-content-body h4,
+.mce-content-body h5,
+.mce-content-body h6,
+.journal-page-content h1,
+.journal-page-content h2,
+.journal-page-content h3,
+.journal-page-content h4,
+.journal-page-content h5,
+.journal-page-content h6 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  border: none;
+  margin: 1em auto;
+  position: relative;
+}
+
+.mce-content-body h1,
+.journal-page-content h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #2c3f45;
+  font-size: 2.5rem;
+  font-family: "CharlemagneStd", serif;
+}
+
+.mce-content-body h2,
+.journal-page-content h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #5a6a72;
+  font-size: 2.2rem;
+  font-family: "CharlemagneStd", serif;
+}
+
+.mce-content-body h1::after,
+.mce-content-body h2::after,
+.journal-page-content h1::after,
+.journal-page-content h2::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.mce-content-body h1::after,
+.journal-page-content h1::after {
+  background: #2c3f45;
+  width: 20%;
+}
+
+.mce-content-body h2::after,
+.journal-page-content h2::after {
+  background: #5a6a72;
+  width: 10%;
+}
+
+.mce-content-body h3,
+.journal-page-content h3 {
+  color: #426266;
+  font-size: 1.8rem;
+  font-family: "CaxtonStd-Book", serif;
+}
+
+.mce-content-body h4,
+.journal-page-content h4 {
+  color: #8897a0;
+  font-size: 1.6rem;
+  margin-left: 10px;
+  font-family: "CaxtonStd-Book", serif;
+}
+
+.mce-content-body h5,
+.journal-page-content h5 {
+  font-size: 1.4rem;
+  color: #bea185;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  font-family: "CaxtonStd-LightItalic", serif;
+}
+
+.mce-content-body h6,
+.journal-page-content h6 {
+  font-size: 1.2rem;
+  color: #8998a0;
+  margin-bottom: 0px;
+  margin-left: 30px;
+}
+
+.mce-content-body .valombreuse-info h1,
+.mce-content-body .valombreuse-info h2,
+.mce-content-body .valombreuse-info h3,
+.mce-content-body .valombreuse-info h4,
+.mce-content-body .valombreuse-info h5,
+.mce-content-body .valombreuse-info h6,
+.mce-content-body .valombreuse-texte h1,
+.mce-content-body .valombreuse-texte h2,
+.mce-content-body .valombreuse-texte h3,
+.mce-content-body .valombreuse-texte h4,
+.mce-content-body .valombreuse-texte h5,
+.mce-content-body .valombreuse-texte h6,
+.mce-content-body .valombreuse-regle h1,
+.mce-content-body .valombreuse-regle h2,
+.mce-content-body .valombreuse-regle h3,
+.mce-content-body .valombreuse-regle h4,
+.mce-content-body .valombreuse-regle h5,
+.mce-content-body .valombreuse-regle h6,
+.mce-content-body .secret h1,
+.mce-content-body .secret h2,
+.mce-content-body .secret h3,
+.mce-content-body .secret h4,
+.mce-content-body .secret h5,
+.mce-content-body .secret h6,
+.mce-content-body .valombreuse-point-cle h1,
+.mce-content-body .valombreuse-point-cle h2,
+.mce-content-body .valombreuse-point-cle h3,
+.mce-content-body .valombreuse-point-cle h4,
+.mce-content-body .valombreuse-point-cle h5,
+.mce-content-body .valombreuse-point-cle h6,
+.mce-content-body .valombreuse-quete-principale h1,
+.mce-content-body .valombreuse-quete-principale h2,
+.mce-content-body .valombreuse-quete-principale h3,
+.mce-content-body .valombreuse-quete-principale h4,
+.mce-content-body .valombreuse-quete-principale h5,
+.mce-content-body .valombreuse-quete-principale h6,
+.mce-content-body .valombreuse-quete-parallele h1,
+.mce-content-body .valombreuse-quete-parallele h2,
+.mce-content-body .valombreuse-quete-parallele h3,
+.mce-content-body .valombreuse-quete-parallele h4,
+.mce-content-body .valombreuse-quete-parallele h5,
+.mce-content-body .valombreuse-quete-parallele h6,
+.mce-content-body .valombreuse-quete-personnelle h1,
+.mce-content-body .valombreuse-quete-personnelle h2,
+.mce-content-body .valombreuse-quete-personnelle h3,
+.mce-content-body .valombreuse-quete-personnelle h4,
+.mce-content-body .valombreuse-quete-personnelle h5,
+.mce-content-body .valombreuse-quete-personnelle h6,
+.mce-content-body .valombreuse-quete-principale-fin h1,
+.mce-content-body .valombreuse-quete-principale-fin h2,
+.mce-content-body .valombreuse-quete-principale-fin h3,
+.mce-content-body .valombreuse-quete-principale-fin h4,
+.mce-content-body .valombreuse-quete-principale-fin h5,
+.mce-content-body .valombreuse-quete-principale-fin h6,
+.mce-content-body .valombreuse-quete-parallele-fin h1,
+.mce-content-body .valombreuse-quete-parallele-fin h2,
+.mce-content-body .valombreuse-quete-parallele-fin h3,
+.mce-content-body .valombreuse-quete-parallele-fin h4,
+.mce-content-body .valombreuse-quete-parallele-fin h5,
+.mce-content-body .valombreuse-quete-parallele-fin h6,
+.mce-content-body .valombreuse-quete-personnelle-fin h1,
+.mce-content-body .valombreuse-quete-personnelle-fin h2,
+.mce-content-body .valombreuse-quete-personnelle-fin h3,
+.mce-content-body .valombreuse-quete-personnelle-fin h4,
+.mce-content-body .valombreuse-quete-personnelle-fin h5,
+.mce-content-body .valombreuse-quete-personnelle-fin h6,
+.mce-content-body .valombreuse-quete-resolue h1,
+.mce-content-body .valombreuse-quete-resolue h2,
+.mce-content-body .valombreuse-quete-resolue h3,
+.mce-content-body .valombreuse-quete-resolue h4,
+.mce-content-body .valombreuse-quete-resolue h5,
+.mce-content-body .valombreuse-quete-resolue h6,
+.mce-content-body .valombreuse-quete-exception h1,
+.mce-content-body .valombreuse-quete-exception h2,
+.mce-content-body .valombreuse-quete-exception h3,
+.mce-content-body .valombreuse-quete-exception h4,
+.mce-content-body .valombreuse-quete-exception h5,
+.mce-content-body .valombreuse-quete-exception h6,
+.mce-content-body .valombreuse-quete-alchimiste h1,
+.mce-content-body .valombreuse-quete-alchimiste h2,
+.mce-content-body .valombreuse-quete-alchimiste h3,
+.mce-content-body .valombreuse-quete-alchimiste h4,
+.mce-content-body .valombreuse-quete-alchimiste h5,
+.mce-content-body .valombreuse-quete-alchimiste h6,
+.mce-content-body .valombreuse-quete-magicien h1,
+.mce-content-body .valombreuse-quete-magicien h2,
+.mce-content-body .valombreuse-quete-magicien h3,
+.mce-content-body .valombreuse-quete-magicien h4,
+.mce-content-body .valombreuse-quete-magicien h5,
+.mce-content-body .valombreuse-quete-magicien h6,
+.mce-content-body .valombreuse-quete-noble h1,
+.mce-content-body .valombreuse-quete-noble h2,
+.mce-content-body .valombreuse-quete-noble h3,
+.mce-content-body .valombreuse-quete-noble h4,
+.mce-content-body .valombreuse-quete-noble h5,
+.mce-content-body .valombreuse-quete-noble h6,
+.mce-content-body .valombreuse-quete-combattant h1,
+.mce-content-body .valombreuse-quete-combattant h2,
+.mce-content-body .valombreuse-quete-combattant h3,
+.mce-content-body .valombreuse-quete-combattant h4,
+.mce-content-body .valombreuse-quete-combattant h5,
+.mce-content-body .valombreuse-quete-combattant h6,
+.mce-content-body .valombreuse-quete-ennemi h1,
+.mce-content-body .valombreuse-quete-ennemi h2,
+.mce-content-body .valombreuse-quete-ennemi h3,
+.mce-content-body .valombreuse-quete-ennemi h4,
+.mce-content-body .valombreuse-quete-ennemi h5,
+.mce-content-body .valombreuse-quete-ennemi h6,
+.journal-page-content .valombreuse-info h1,
+.journal-page-content .valombreuse-info h2,
+.journal-page-content .valombreuse-info h3,
+.journal-page-content .valombreuse-info h4,
+.journal-page-content .valombreuse-info h5,
+.journal-page-content .valombreuse-info h6,
+.journal-page-content .valombreuse-texte h1,
+.journal-page-content .valombreuse-texte h2,
+.journal-page-content .valombreuse-texte h3,
+.journal-page-content .valombreuse-texte h4,
+.journal-page-content .valombreuse-texte h5,
+.journal-page-content .valombreuse-texte h6,
+.journal-page-content .valombreuse-regle h1,
+.journal-page-content .valombreuse-regle h2,
+.journal-page-content .valombreuse-regle h3,
+.journal-page-content .valombreuse-regle h4,
+.journal-page-content .valombreuse-regle h5,
+.journal-page-content .valombreuse-regle h6,
+.journal-page-content .secret h1,
+.journal-page-content .secret h2,
+.journal-page-content .secret h3,
+.journal-page-content .secret h4,
+.journal-page-content .secret h5,
+.journal-page-content .secret h6,
+.journal-page-content .valombreuse-point-cle h1,
+.journal-page-content .valombreuse-point-cle h2,
+.journal-page-content .valombreuse-point-cle h3,
+.journal-page-content .valombreuse-point-cle h4,
+.journal-page-content .valombreuse-point-cle h5,
+.journal-page-content .valombreuse-point-cle h6,
+.journal-page-content .valombreuse-quete-principale h1,
+.journal-page-content .valombreuse-quete-principale h2,
+.journal-page-content .valombreuse-quete-principale h3,
+.journal-page-content .valombreuse-quete-principale h4,
+.journal-page-content .valombreuse-quete-principale h5,
+.journal-page-content .valombreuse-quete-principale h6,
+.journal-page-content .valombreuse-quete-parallele h1,
+.journal-page-content .valombreuse-quete-parallele h2,
+.journal-page-content .valombreuse-quete-parallele h3,
+.journal-page-content .valombreuse-quete-parallele h4,
+.journal-page-content .valombreuse-quete-parallele h5,
+.journal-page-content .valombreuse-quete-parallele h6,
+.journal-page-content .valombreuse-quete-personnelle h1,
+.journal-page-content .valombreuse-quete-personnelle h2,
+.journal-page-content .valombreuse-quete-personnelle h3,
+.journal-page-content .valombreuse-quete-personnelle h4,
+.journal-page-content .valombreuse-quete-personnelle h5,
+.journal-page-content .valombreuse-quete-personnelle h6,
+.journal-page-content .valombreuse-quete-principale-fin h1,
+.journal-page-content .valombreuse-quete-principale-fin h2,
+.journal-page-content .valombreuse-quete-principale-fin h3,
+.journal-page-content .valombreuse-quete-principale-fin h4,
+.journal-page-content .valombreuse-quete-principale-fin h5,
+.journal-page-content .valombreuse-quete-principale-fin h6,
+.journal-page-content .valombreuse-quete-parallele-fin h1,
+.journal-page-content .valombreuse-quete-parallele-fin h2,
+.journal-page-content .valombreuse-quete-parallele-fin h3,
+.journal-page-content .valombreuse-quete-parallele-fin h4,
+.journal-page-content .valombreuse-quete-parallele-fin h5,
+.journal-page-content .valombreuse-quete-parallele-fin h6,
+.journal-page-content .valombreuse-quete-personnelle-fin h1,
+.journal-page-content .valombreuse-quete-personnelle-fin h2,
+.journal-page-content .valombreuse-quete-personnelle-fin h3,
+.journal-page-content .valombreuse-quete-personnelle-fin h4,
+.journal-page-content .valombreuse-quete-personnelle-fin h5,
+.journal-page-content .valombreuse-quete-personnelle-fin h6,
+.journal-page-content .valombreuse-quete-resolue h1,
+.journal-page-content .valombreuse-quete-resolue h2,
+.journal-page-content .valombreuse-quete-resolue h3,
+.journal-page-content .valombreuse-quete-resolue h4,
+.journal-page-content .valombreuse-quete-resolue h5,
+.journal-page-content .valombreuse-quete-resolue h6,
+.journal-page-content .valombreuse-quete-exception h1,
+.journal-page-content .valombreuse-quete-exception h2,
+.journal-page-content .valombreuse-quete-exception h3,
+.journal-page-content .valombreuse-quete-exception h4,
+.journal-page-content .valombreuse-quete-exception h5,
+.journal-page-content .valombreuse-quete-exception h6,
+.journal-page-content .valombreuse-quete-alchimiste h1,
+.journal-page-content .valombreuse-quete-alchimiste h2,
+.journal-page-content .valombreuse-quete-alchimiste h3,
+.journal-page-content .valombreuse-quete-alchimiste h4,
+.journal-page-content .valombreuse-quete-alchimiste h5,
+.journal-page-content .valombreuse-quete-alchimiste h6,
+.journal-page-content .valombreuse-quete-magicien h1,
+.journal-page-content .valombreuse-quete-magicien h2,
+.journal-page-content .valombreuse-quete-magicien h3,
+.journal-page-content .valombreuse-quete-magicien h4,
+.journal-page-content .valombreuse-quete-magicien h5,
+.journal-page-content .valombreuse-quete-magicien h6,
+.journal-page-content .valombreuse-quete-noble h1,
+.journal-page-content .valombreuse-quete-noble h2,
+.journal-page-content .valombreuse-quete-noble h3,
+.journal-page-content .valombreuse-quete-noble h4,
+.journal-page-content .valombreuse-quete-noble h5,
+.journal-page-content .valombreuse-quete-noble h6,
+.journal-page-content .valombreuse-quete-combattant h1,
+.journal-page-content .valombreuse-quete-combattant h2,
+.journal-page-content .valombreuse-quete-combattant h3,
+.journal-page-content .valombreuse-quete-combattant h4,
+.journal-page-content .valombreuse-quete-combattant h5,
+.journal-page-content .valombreuse-quete-combattant h6,
+.journal-page-content .valombreuse-quete-ennemi h1,
+.journal-page-content .valombreuse-quete-ennemi h2,
+.journal-page-content .valombreuse-quete-ennemi h3,
+.journal-page-content .valombreuse-quete-ennemi h4,
+.journal-page-content .valombreuse-quete-ennemi h5,
+.journal-page-content .valombreuse-quete-ennemi h6 {
+  text-transform: none;
+  font-family: "CaxtonStd-Book", serif;
+  font-size: 1.5rem;
+}
+
+.mce-content-body .valombreuse-info h1::after,
+.mce-content-body .valombreuse-texte h1::after,
+.mce-content-body .valombreuse-regle h1::after,
+.mce-content-body .secret h1::after,
+.mce-content-body .valombreuse-point-cle h1::after,
+.mce-content-body .valombreuse-quete-principale h1::after,
+.mce-content-body .valombreuse-quete-parallele h1::after,
+.mce-content-body .valombreuse-quete-personnelle h1::after,
+.mce-content-body .valombreuse-quete-principale-fin h1::after,
+.mce-content-body .valombreuse-quete-parallele-fin h1::after,
+.mce-content-body .valombreuse-quete-personnelle-fin h1::after,
+.mce-content-body .valombreuse-quete-resolue h1::after,
+.mce-content-body .valombreuse-quete-exception h1::after,
+.mce-content-body .valombreuse-quete-alchimiste h1::after,
+.mce-content-body .valombreuse-quete-magicien h1::after,
+.mce-content-body .valombreuse-quete-noble h1::after,
+.mce-content-body .valombreuse-quete-combattant h1::after,
+.mce-content-body .valombreuse-quete-ennemi h1::after,
+.journal-page-content .valombreuse-info h1::after,
+.journal-page-content .valombreuse-texte h1::after,
+.journal-page-content .valombreuse-regle h1::after,
+.journal-page-content .secret h1::after,
+.journal-page-content .valombreuse-point-cle h1::after,
+.journal-page-content .valombreuse-quete-principale h1::after,
+.journal-page-content .valombreuse-quete-parallele h1::after,
+.journal-page-content .valombreuse-quete-personnelle h1::after,
+.journal-page-content .valombreuse-quete-principale-fin h1::after,
+.journal-page-content .valombreuse-quete-parallele-fin h1::after,
+.journal-page-content .valombreuse-quete-personnelle-fin h1::after,
+.journal-page-content .valombreuse-quete-resolue h1::after,
+.journal-page-content .valombreuse-quete-exception h1::after,
+.journal-page-content .valombreuse-quete-alchimiste h1::after,
+.journal-page-content .valombreuse-quete-magicien h1::after,
+.journal-page-content .valombreuse-quete-noble h1::after,
+.journal-page-content .valombreuse-quete-combattant h1::after,
+.journal-page-content .valombreuse-quete-ennemi h1::after {
+  width: 0%;
+}
+
+.mce-content-body .valombreuse-info h2::after,
+.mce-content-body .valombreuse-texte h2::after,
+.mce-content-body .valombreuse-regle h2::after,
+.mce-content-body .secret h2::after,
+.mce-content-body .valombreuse-point-cle h2::after,
+.mce-content-body .valombreuse-quete-principale h2::after,
+.mce-content-body .valombreuse-quete-parallele h2::after,
+.mce-content-body .valombreuse-quete-personnelle h2::after,
+.mce-content-body .valombreuse-quete-principale-fin h2::after,
+.mce-content-body .valombreuse-quete-parallele-fin h2::after,
+.mce-content-body .valombreuse-quete-personnelle-fin h2::after,
+.mce-content-body .valombreuse-quete-resolue h2::after,
+.mce-content-body .valombreuse-quete-exception h2::after,
+.mce-content-body .valombreuse-quete-alchimiste h2::after,
+.mce-content-body .valombreuse-quete-magicien h2::after,
+.mce-content-body .valombreuse-quete-noble h2::after,
+.mce-content-body .valombreuse-quete-combattant h2::after,
+.mce-content-body .valombreuse-quete-ennemi h2::after,
+.journal-page-content .valombreuse-info h2::after,
+.journal-page-content .valombreuse-texte h2::after,
+.journal-page-content .valombreuse-regle h2::after,
+.journal-page-content .secret h2::after,
+.journal-page-content .valombreuse-point-cle h2::after,
+.journal-page-content .valombreuse-quete-principale h2::after,
+.journal-page-content .valombreuse-quete-parallele h2::after,
+.journal-page-content .valombreuse-quete-personnelle h2::after,
+.journal-page-content .valombreuse-quete-principale-fin h2::after,
+.journal-page-content .valombreuse-quete-parallele-fin h2::after,
+.journal-page-content .valombreuse-quete-personnelle-fin h2::after,
+.journal-page-content .valombreuse-quete-resolue h2::after,
+.journal-page-content .valombreuse-quete-exception h2::after,
+.journal-page-content .valombreuse-quete-alchimiste h2::after,
+.journal-page-content .valombreuse-quete-magicien h2::after,
+.journal-page-content .valombreuse-quete-noble h2::after,
+.journal-page-content .valombreuse-quete-combattant h2::after,
+.journal-page-content .valombreuse-quete-ennemi h2::after {
+  width: 0%;
+}
+
+.mce-content-body .valombreuse-texte h1,
+.mce-content-body .valombreuse-texte h2,
+.mce-content-body .valombreuse-texte h3,
+.mce-content-body .valombreuse-texte h4,
+.mce-content-body .valombreuse-texte h5,
+.mce-content-body .valombreuse-texte h6,
+.journal-page-content .valombreuse-texte h1,
+.journal-page-content .valombreuse-texte h2,
+.journal-page-content .valombreuse-texte h3,
+.journal-page-content .valombreuse-texte h4,
+.journal-page-content .valombreuse-texte h5,
+.journal-page-content .valombreuse-texte h6 {
+  color: #5a6a72;
+}
+
+.mce-content-body .valombreuse-regle h1,
+.mce-content-body .valombreuse-regle h2,
+.mce-content-body .valombreuse-regle h3,
+.mce-content-body .valombreuse-regle h4,
+.mce-content-body .valombreuse-regle h5,
+.mce-content-body .valombreuse-regle h6,
+.journal-page-content .valombreuse-regle h1,
+.journal-page-content .valombreuse-regle h2,
+.journal-page-content .valombreuse-regle h3,
+.journal-page-content .valombreuse-regle h4,
+.journal-page-content .valombreuse-regle h5,
+.journal-page-content .valombreuse-regle h6 {
+  color: #000000;
+}
+
+.mce-content-body .valombreuse-info h1,
+.mce-content-body .valombreuse-info h2,
+.mce-content-body .valombreuse-info h3,
+.mce-content-body .valombreuse-info h4,
+.mce-content-body .valombreuse-info h5,
+.mce-content-body .valombreuse-info h6,
+.mce-content-body .secret h1,
+.mce-content-body .secret h2,
+.mce-content-body .secret h3,
+.mce-content-body .secret h4,
+.mce-content-body .secret h5,
+.mce-content-body .secret h6,
+.mce-content-body .valombreuse-point-cle h1,
+.mce-content-body .valombreuse-point-cle h2,
+.mce-content-body .valombreuse-point-cle h3,
+.mce-content-body .valombreuse-point-cle h4,
+.mce-content-body .valombreuse-point-cle h5,
+.mce-content-body .valombreuse-point-cle h6,
+.mce-content-body .valombreuse-quete-principale h1,
+.mce-content-body .valombreuse-quete-principale h2,
+.mce-content-body .valombreuse-quete-principale h3,
+.mce-content-body .valombreuse-quete-principale h4,
+.mce-content-body .valombreuse-quete-principale h5,
+.mce-content-body .valombreuse-quete-principale h6,
+.mce-content-body .valombreuse-quete-parallele h1,
+.mce-content-body .valombreuse-quete-parallele h2,
+.mce-content-body .valombreuse-quete-parallele h3,
+.mce-content-body .valombreuse-quete-parallele h4,
+.mce-content-body .valombreuse-quete-parallele h5,
+.mce-content-body .valombreuse-quete-parallele h6,
+.mce-content-body .valombreuse-quete-personnelle h1,
+.mce-content-body .valombreuse-quete-personnelle h2,
+.mce-content-body .valombreuse-quete-personnelle h3,
+.mce-content-body .valombreuse-quete-personnelle h4,
+.mce-content-body .valombreuse-quete-personnelle h5,
+.mce-content-body .valombreuse-quete-personnelle h6,
+.mce-content-body .valombreuse-quete-principale-fin h1,
+.mce-content-body .valombreuse-quete-principale-fin h2,
+.mce-content-body .valombreuse-quete-principale-fin h3,
+.mce-content-body .valombreuse-quete-principale-fin h4,
+.mce-content-body .valombreuse-quete-principale-fin h5,
+.mce-content-body .valombreuse-quete-principale-fin h6,
+.mce-content-body .valombreuse-quete-parallele-fin h1,
+.mce-content-body .valombreuse-quete-parallele-fin h2,
+.mce-content-body .valombreuse-quete-parallele-fin h3,
+.mce-content-body .valombreuse-quete-parallele-fin h4,
+.mce-content-body .valombreuse-quete-parallele-fin h5,
+.mce-content-body .valombreuse-quete-parallele-fin h6,
+.mce-content-body .valombreuse-quete-personnelle-fin h1,
+.mce-content-body .valombreuse-quete-personnelle-fin h2,
+.mce-content-body .valombreuse-quete-personnelle-fin h3,
+.mce-content-body .valombreuse-quete-personnelle-fin h4,
+.mce-content-body .valombreuse-quete-personnelle-fin h5,
+.mce-content-body .valombreuse-quete-personnelle-fin h6,
+.mce-content-body .valombreuse-quete-resolue h1,
+.mce-content-body .valombreuse-quete-resolue h2,
+.mce-content-body .valombreuse-quete-resolue h3,
+.mce-content-body .valombreuse-quete-resolue h4,
+.mce-content-body .valombreuse-quete-resolue h5,
+.mce-content-body .valombreuse-quete-resolue h6,
+.mce-content-body .valombreuse-quete-exception h1,
+.mce-content-body .valombreuse-quete-exception h2,
+.mce-content-body .valombreuse-quete-exception h3,
+.mce-content-body .valombreuse-quete-exception h4,
+.mce-content-body .valombreuse-quete-exception h5,
+.mce-content-body .valombreuse-quete-exception h6,
+.mce-content-body .valombreuse-quete-alchimiste h1,
+.mce-content-body .valombreuse-quete-alchimiste h2,
+.mce-content-body .valombreuse-quete-alchimiste h3,
+.mce-content-body .valombreuse-quete-alchimiste h4,
+.mce-content-body .valombreuse-quete-alchimiste h5,
+.mce-content-body .valombreuse-quete-alchimiste h6,
+.mce-content-body .valombreuse-quete-magicien h1,
+.mce-content-body .valombreuse-quete-magicien h2,
+.mce-content-body .valombreuse-quete-magicien h3,
+.mce-content-body .valombreuse-quete-magicien h4,
+.mce-content-body .valombreuse-quete-magicien h5,
+.mce-content-body .valombreuse-quete-magicien h6,
+.mce-content-body .valombreuse-quete-noble h1,
+.mce-content-body .valombreuse-quete-noble h2,
+.mce-content-body .valombreuse-quete-noble h3,
+.mce-content-body .valombreuse-quete-noble h4,
+.mce-content-body .valombreuse-quete-noble h5,
+.mce-content-body .valombreuse-quete-noble h6,
+.mce-content-body .valombreuse-quete-combattant h1,
+.mce-content-body .valombreuse-quete-combattant h2,
+.mce-content-body .valombreuse-quete-combattant h3,
+.mce-content-body .valombreuse-quete-combattant h4,
+.mce-content-body .valombreuse-quete-combattant h5,
+.mce-content-body .valombreuse-quete-combattant h6,
+.mce-content-body .valombreuse-quete-ennemi h1,
+.mce-content-body .valombreuse-quete-ennemi h2,
+.mce-content-body .valombreuse-quete-ennemi h3,
+.mce-content-body .valombreuse-quete-ennemi h4,
+.mce-content-body .valombreuse-quete-ennemi h5,
+.mce-content-body .valombreuse-quete-ennemi h6,
+.journal-page-content .valombreuse-info h1,
+.journal-page-content .valombreuse-info h2,
+.journal-page-content .valombreuse-info h3,
+.journal-page-content .valombreuse-info h4,
+.journal-page-content .valombreuse-info h5,
+.journal-page-content .valombreuse-info h6,
+.journal-page-content .secret h1,
+.journal-page-content .secret h2,
+.journal-page-content .secret h3,
+.journal-page-content .secret h4,
+.journal-page-content .secret h5,
+.journal-page-content .secret h6,
+.journal-page-content .valombreuse-point-cle h1,
+.journal-page-content .valombreuse-point-cle h2,
+.journal-page-content .valombreuse-point-cle h3,
+.journal-page-content .valombreuse-point-cle h4,
+.journal-page-content .valombreuse-point-cle h5,
+.journal-page-content .valombreuse-point-cle h6,
+.journal-page-content .valombreuse-quete-principale h1,
+.journal-page-content .valombreuse-quete-principale h2,
+.journal-page-content .valombreuse-quete-principale h3,
+.journal-page-content .valombreuse-quete-principale h4,
+.journal-page-content .valombreuse-quete-principale h5,
+.journal-page-content .valombreuse-quete-principale h6,
+.journal-page-content .valombreuse-quete-parallele h1,
+.journal-page-content .valombreuse-quete-parallele h2,
+.journal-page-content .valombreuse-quete-parallele h3,
+.journal-page-content .valombreuse-quete-parallele h4,
+.journal-page-content .valombreuse-quete-parallele h5,
+.journal-page-content .valombreuse-quete-parallele h6,
+.journal-page-content .valombreuse-quete-personnelle h1,
+.journal-page-content .valombreuse-quete-personnelle h2,
+.journal-page-content .valombreuse-quete-personnelle h3,
+.journal-page-content .valombreuse-quete-personnelle h4,
+.journal-page-content .valombreuse-quete-personnelle h5,
+.journal-page-content .valombreuse-quete-personnelle h6,
+.journal-page-content .valombreuse-quete-principale-fin h1,
+.journal-page-content .valombreuse-quete-principale-fin h2,
+.journal-page-content .valombreuse-quete-principale-fin h3,
+.journal-page-content .valombreuse-quete-principale-fin h4,
+.journal-page-content .valombreuse-quete-principale-fin h5,
+.journal-page-content .valombreuse-quete-principale-fin h6,
+.journal-page-content .valombreuse-quete-parallele-fin h1,
+.journal-page-content .valombreuse-quete-parallele-fin h2,
+.journal-page-content .valombreuse-quete-parallele-fin h3,
+.journal-page-content .valombreuse-quete-parallele-fin h4,
+.journal-page-content .valombreuse-quete-parallele-fin h5,
+.journal-page-content .valombreuse-quete-parallele-fin h6,
+.journal-page-content .valombreuse-quete-personnelle-fin h1,
+.journal-page-content .valombreuse-quete-personnelle-fin h2,
+.journal-page-content .valombreuse-quete-personnelle-fin h3,
+.journal-page-content .valombreuse-quete-personnelle-fin h4,
+.journal-page-content .valombreuse-quete-personnelle-fin h5,
+.journal-page-content .valombreuse-quete-personnelle-fin h6,
+.journal-page-content .valombreuse-quete-resolue h1,
+.journal-page-content .valombreuse-quete-resolue h2,
+.journal-page-content .valombreuse-quete-resolue h3,
+.journal-page-content .valombreuse-quete-resolue h4,
+.journal-page-content .valombreuse-quete-resolue h5,
+.journal-page-content .valombreuse-quete-resolue h6,
+.journal-page-content .valombreuse-quete-exception h1,
+.journal-page-content .valombreuse-quete-exception h2,
+.journal-page-content .valombreuse-quete-exception h3,
+.journal-page-content .valombreuse-quete-exception h4,
+.journal-page-content .valombreuse-quete-exception h5,
+.journal-page-content .valombreuse-quete-exception h6,
+.journal-page-content .valombreuse-quete-alchimiste h1,
+.journal-page-content .valombreuse-quete-alchimiste h2,
+.journal-page-content .valombreuse-quete-alchimiste h3,
+.journal-page-content .valombreuse-quete-alchimiste h4,
+.journal-page-content .valombreuse-quete-alchimiste h5,
+.journal-page-content .valombreuse-quete-alchimiste h6,
+.journal-page-content .valombreuse-quete-magicien h1,
+.journal-page-content .valombreuse-quete-magicien h2,
+.journal-page-content .valombreuse-quete-magicien h3,
+.journal-page-content .valombreuse-quete-magicien h4,
+.journal-page-content .valombreuse-quete-magicien h5,
+.journal-page-content .valombreuse-quete-magicien h6,
+.journal-page-content .valombreuse-quete-noble h1,
+.journal-page-content .valombreuse-quete-noble h2,
+.journal-page-content .valombreuse-quete-noble h3,
+.journal-page-content .valombreuse-quete-noble h4,
+.journal-page-content .valombreuse-quete-noble h5,
+.journal-page-content .valombreuse-quete-noble h6,
+.journal-page-content .valombreuse-quete-combattant h1,
+.journal-page-content .valombreuse-quete-combattant h2,
+.journal-page-content .valombreuse-quete-combattant h3,
+.journal-page-content .valombreuse-quete-combattant h4,
+.journal-page-content .valombreuse-quete-combattant h5,
+.journal-page-content .valombreuse-quete-combattant h6,
+.journal-page-content .valombreuse-quete-ennemi h1,
+.journal-page-content .valombreuse-quete-ennemi h2,
+.journal-page-content .valombreuse-quete-ennemi h3,
+.journal-page-content .valombreuse-quete-ennemi h4,
+.journal-page-content .valombreuse-quete-ennemi h5,
+.journal-page-content .valombreuse-quete-ennemi h6 {
+  color: #ffffff !important;
+}
+
+.mce-content-body .valombreuse-block,
+.journal-page-content .valombreuse-block {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 0px !important;
+  padding: 5px 10px !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+
+.mce-content-body .valombreuse-block::before,
+.journal-page-content .valombreuse-block::before {
+  content: "";
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.mce-content-body .valombreuse-texte,
+.journal-page-content .valombreuse-texte {
+  background: #dce2e6;
+  color: #5a6a72;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.mce-content-body .valombreuse-texte::before,
+.journal-page-content .valombreuse-texte::before {
+  background-image: url("../ui/icons/pins/texte.png");
+}
+
+.mce-content-body .valombreuse-regle,
+.journal-page-content .valombreuse-regle {
+  background: #f2ebe3;
+}
+
+.mce-content-body .valombreuse-regle::before,
+.journal-page-content .valombreuse-regle::before {
+  background-image: url("../ui/icons/pins/regles.png");
+}
+
+.mce-content-body .valombreuse-info,
+.journal-page-content .valombreuse-info {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 0px !important;
+  padding: 5px 10px !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+
+.mce-content-body .valombreuse-info,
+.mce-content-body .valombreuse-point-cle,
+.mce-content-body .valombreuse-quete-principale,
+.mce-content-body .valombreuse-quete-parallele,
+.mce-content-body .valombreuse-quete-personnelle,
+.mce-content-body .valombreuse-quete-principale-fin,
+.mce-content-body .valombreuse-quete-parallele-fin,
+.mce-content-body .valombreuse-quete-personnelle-fin,
+.mce-content-body .valombreuse-quete-resolue,
+.mce-content-body .valombreuse-quete-exception,
+.mce-content-body .valombreuse-quete-alchimiste,
+.mce-content-body .valombreuse-quete-magicien,
+.mce-content-body .valombreuse-quete-noble,
+.mce-content-body .valombreuse-quete-combattant,
+.mce-content-body .valombreuse-quete-ennemi,
+.mce-content-body .secret,
+.journal-page-content .valombreuse-info,
+.journal-page-content .valombreuse-point-cle,
+.journal-page-content .valombreuse-quete-principale,
+.journal-page-content .valombreuse-quete-parallele,
+.journal-page-content .valombreuse-quete-personnelle,
+.journal-page-content .valombreuse-quete-principale-fin,
+.journal-page-content .valombreuse-quete-parallele-fin,
+.journal-page-content .valombreuse-quete-personnelle-fin,
+.journal-page-content .valombreuse-quete-resolue,
+.journal-page-content .valombreuse-quete-exception,
+.journal-page-content .valombreuse-quete-alchimiste,
+.journal-page-content .valombreuse-quete-magicien,
+.journal-page-content .valombreuse-quete-noble,
+.journal-page-content .valombreuse-quete-combattant,
+.journal-page-content .valombreuse-quete-ennemi,
+.journal-page-content .secret {
+  background: #959595 !important;
+  color: #ffffff;
+}
+
+.mce-content-body .secret,
+.journal-page-content .secret {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 0px !important;
+  padding: 5px 10px !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+
+.mce-content-body .secret.revealed,
+.journal-page-content .secret.revealed {
+  background: #8a9b89  !important;
+}
+
+.mce-content-body .secret::before,
+.journal-page-content .secret::before {
+  background-image: url("../ui/icons/pins/MJ.png");
+  content: "";
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.mce-content-body .secret.revealed::before,
+.journal-page-content .secret.revealed::before {
+  background-image: url("../ui/icons/pins/UnlockMJ.png");
+  content: "";
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.mce-content-body .valombreuse-point-cle::before,
+.journal-page-content .valombreuse-point-cle::before {
+  background-image: url("../ui/icons/pins/pointCle.png");
+}
+
+.mce-content-body .valombreuse-quete-principale::before,
+.journal-page-content .valombreuse-quete-principale::before {
+  background-image: url("../ui/icons/pins/quetePrincipale.png");
+}
+
+.mce-content-body .valombreuse-quete-parallele::before,
+.journal-page-content .valombreuse-quete-parallele::before {
+  background-image: url("../ui/icons/pins/queteSecondaire.png");
+}
+
+.mce-content-body .valombreuse-quete-personnelle::before,
+.journal-page-content .valombreuse-quete-personnelle::before {
+  background-image: url("../ui/icons/pins/quetePersonnelle.png");
+}
+
+.mce-content-body .valombreuse-quete-principale-fin::before,
+.journal-page-content .valombreuse-quete-principale-fin::before {
+  background-image: url("../ui/icons/pins/achevementPrincipale.png");
+}
+
+.mce-content-body .valombreuse-quete-parallele-fin::before,
+.journal-page-content .valombreuse-quete-parallele-fin::before {
+  background-image: url("../ui/icons/pins/achevementSecondaire.png");
+}
+
+.mce-content-body .valombreuse-quete-personnelle-fin::before,
+.journal-page-content .valombreuse-quete-personnelle-fin::before {
+  background-image: url("../ui/icons/pins/achevementPersonnel.png");
+}
+
+.mce-content-body .valombreuse-quete-resolue::before,
+.journal-page-content .valombreuse-quete-resolue::before {
+  background-image: url("../ui/icons/pins/queteAchevee.png");
+}
+
+.mce-content-body .valombreuse-quete-exception::before,
+.journal-page-content .valombreuse-quete-exception::before {
+  background-image: url("../ui/icons/pins/persoException.png");
+}
+
+.mce-content-body .valombreuse-quete-alchimiste::before,
+.journal-page-content .valombreuse-quete-alchimiste::before {
+  background-image: url("../ui/icons/pins/alchimiste.png");
+}
+
+.mce-content-body .valombreuse-quete-magicien::before,
+.journal-page-content .valombreuse-quete-magicien::before {
+  background-image: url("../ui/icons/pins/magicien.png");
+}
+
+.mce-content-body .valombreuse-quete-noble::before,
+.journal-page-content .valombreuse-quete-noble::before {
+  background-image: url("../ui/icons/pins/noble.png");
+}
+
+.mce-content-body .valombreuse-quete-combattant::before,
+.journal-page-content .valombreuse-quete-combattant::before {
+  background-image: url("../ui/icons/pins/combattant.png");
+}
+
+.mce-content-body .valombreuse-quete-ennemi::before,
+.journal-page-content .valombreuse-quete-ennemi::before {
+  background-image: url("../ui/icons/pins/dieuEnnemi.png");
 }
 
 /* Styles limited to valombreuse sheets */
 .valombreuse {
-  /* ----------------------------------------- */
-  /*  Items Lists                              */
-  /* ----------------------------------------- */
-  /* Example style for valombreuse (can be removed if not needed) */
+  /* Form Groups */
+  /*
+ Placeholders
+ */
 }
-.valombreuse .item-form {
-  font-family: "Roboto", sans-serif;
+
+.valombreuse.actor {
+  /* ----------------------------------------- */
+  /*  Layout                                   */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /*  Layout                                   */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /*  Sidebar                                  */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /*  Custom classes                           */
+  /* ----------------------------------------- */
 }
-.valombreuse .sheet-header {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 auto;
-  flex: 0 auto;
+
+.valombreuse.actor .window-content {
+  padding: 0;
+  margin: 0;
   overflow: hidden;
+}
+
+.valombreuse.actor .window-content .loot-img {
+  cursor: pointer;
+  border: none;
+  max-height: 100px;
+  margin: 2px;
+}
+
+.valombreuse.actor .window-content > form {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.valombreuse.actor .window-content > form .wrap {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner {
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner-left {
+  min-height: 3px;
+  height: 3px;
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner-right {
+  float: right;
+  min-height: 3px;
+  height: 3px;
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner-bot-left {
+  min-height: 3px;
+  height: 3px;
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner-bot-right {
+  float: right;
+  min-height: 3px;
+  height: 3px;
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #logo-banner {
+  max-width: 63px;
+  max-height: 50px;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #logo-banner > img {
+  min-width: 63px;
+  width: 63px;
+  max-width: 63px;
+  min-height: 50px;
+  height: 50px;
+  max-height: 50px;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #logo-orbe {
+  max-width: 83px;
+  max-height: 66px;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #logo-orbe > img {
+  min-width: 83px;
+  width: 83px;
+  max-width: 83px;
+  min-height: 66px;
+  height: 66px;
+  max-height: 66px;
+}
+
+.valombreuse.actor .window-content > form .wrap #logo-sceptre {
+  max-width: 42px;
+  max-height: 162px;
+}
+
+.valombreuse.actor .window-content > form .wrap #logo-sceptre > img {
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+  min-height: 162px;
+  height: 162px;
+  max-height: 162px;
+}
+
+.valombreuse.actor .window-content > form .wrap .mainHeight_std {
+  height: calc(100% - 300px);
+  min-height: calc(100% - 300px);
+  max-height: calc(100% - 300px);
+}
+
+.valombreuse.actor .window-content > form .wrap .mainHeight_stars {
+  height: calc(100% - 230px);
+  min-height: calc(100% - 230px);
+  max-height: calc(100% - 230px);
+}
+
+.valombreuse.actor .window-content > form .wrap .mainHeight_modern {
+  height: calc(100% - 150px);
+  min-height: calc(100% - 150px);
+  max-height: calc(100% - 150px);
+}
+
+.valombreuse.actor .window-content > form .wrap .mainLootHeight_std {
+  height: calc(100% - 230px);
+  min-height: calc(100% - 230px);
+  max-height: calc(100% - 230px);
+}
+
+.valombreuse.actor .window-content > form .wrap .mainLootHeight_stars {
+  height: calc(100% - 180px);
+  min-height: calc(100% - 180px);
+  max-height: calc(100% - 180px);
+}
+
+.valombreuse.actor .window-content > form .wrap .mainLootHeight_modern {
+  height: calc(100% - 180px);
+  min-height: calc(100% - 180px);
+  max-height: calc(100% - 180px);
+}
+
+.valombreuse.actor .window-content > form .wrap .main {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 0 0 0;
+}
+
+.valombreuse.actor .window-content > form .wrap .main #banner-top {
+  min-width: 32px;
+  width: 32px;
+  max-width: 32px;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .stats {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 330px;
+  height: 330px;
+  max-height: 330px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .pos_relative {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .carac {
+  min-width: 120px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .caracvalue {
+  min-width: 50px;
+  width: 50px;
+  max-width: 50px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .caracname {
+  min-width: 80px;
+  font-size: 20px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .hpcol {
+  min-width: 200px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .hpcol1 {
+  min-width: 200px;
+  margin-left: -90px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .degatcol {
+  min-width: 140px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .pwcol {
+  min-width: 200px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .attrvertalign {
+  position: absolute;
+  top: 50%;
+  /* poussé de la moitié de hauteur du référent */
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* tiré de la moitié de sa propre hauteur */
+  min-width: 100px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .sidebar {
+  max-width: 200px;
+  min-width: 50px;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100%;
+  height: 100%;
+  max-height: 330px;
+  padding: 0 0px 0 0px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .sidebar .profession-img {
+  cursor: pointer;
+  border: none;
+  max-height: 330px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .detail_row {
+  max-height: 69px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .competence_row {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .description_row {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  margin-top: 30px;
+  min-height: 100px;
+  height: calc(100% - 370px);
+  max-height: calc(100% - 370px);
+}
+
+.valombreuse.actor .window-content > form .wrap .main .editor {
+  margin: 0;
+  overflow: hidden;
+  min-height: calc(100% - 30px);
+  height: calc(100% - 30px);
+  max-height: calc(100% - 30px);
+  border: 1px solid #736953a6;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .editor .editor-content {
+  padding: 5px;
+  margin: 0;
+  overflow: auto;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content {
+  margin: 0;
+  padding: 5px 5px 5px 5px;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .top {
+  padding: 0;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body {
+  padding: 0;
+  margin: 0;
+  min-height: calc(100% - 28px);
+  height: calc(100% - 28px);
+  max-height: calc(100% - 28px);
+  overflow: auto;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0 0 0 0;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab .coin {
+  margin-left: 10px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab .coin-field {
+  min-width: 50px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab.competences {
+  overflow: auto;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab.competences .competence-toolbar {
+  height: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab.competences .competence-toolbar .competence-tools {
+  height: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab.competences .competence-toolbar .competence-tools .competence-tool {
+  height: 20px;
+  padding: 2px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab.competences .competence-list {
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab.competences .competence-col-width {
+  min-width: 50px;
+  width: 50px;
+  max-width: 50px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab.competences .competence-link {
+  font-size: 8px;
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .sheet-body .tab.description {
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.valombreuse.actor #logo-stars {
+  max-width: 216px;
+  max-height: 50px;
+}
+
+.valombreuse.actor #logo-stars > img {
+  min-width: 216px;
+  width: 216px;
+  max-width: 216px;
+  min-height: 50px;
+  height: 50px;
+  max-height: 50px;
+}
+
+.valombreuse.actor #logo-modern {
+  max-width: 126px;
+  max-height: 60px;
+  padding-top: 10px;
+}
+
+.valombreuse.actor #logo-modern > img {
+  min-width: 126px;
+  width: 126px;
+  max-width: 126px;
+  min-height: 60px;
+  height: 60px;
+  max-height: 60px;
+}
+
+.valombreuse.actor .table-header {
+  font-weight: bold;
+  min-height: 28px;
+  height: 28px;
+  max-height: 28px;
+}
+
+.valombreuse.actor .half-spacer {
+  min-height: 14px;
+  height: 14px;
+  max-height: 14px;
+}
+
+.valombreuse.actor .spacer {
+  min-height: 28px;
+  height: 28px;
+  max-height: 28px;
+}
+
+.valombreuse.actor .layout {
+  padding: 5px;
+}
+
+.valombreuse.actor .weapon-image {
+  background-image: url("../ui/icons/red_31.jpg");
+}
+
+.valombreuse.actor .locked {
+  color: lightgray;
+}
+
+.valombreuse.actor .unlocked {
+  cursor: pointer;
+  color: #4b4a44;
+}
+
+.valombreuse.actor .window-content > form .wrap {
+  color: #000;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.valombreuse.actor .window-content > form .wrap #logo-banner > img {
+  border: none;
+}
+
+.valombreuse.actor .window-content > form .wrap #logo-orbe > img {
+  border: none;
+}
+
+.valombreuse.actor .window-content > form .wrap #logo-sceptre > img {
+  border: none;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-label {
+  background: none;
+  margin: 0;
+  min-height: 28px;
+  padding: 5px;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  vertical-align: middle;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-label-icon-attack {
+  margin-bottom: 30px;
+  margin-right: 5px;
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+}
+
+.valombreuse.actor .window-content > form .wrap .weaponMod {
+  max-width: 20px;
+  margin-left: -40px;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-label-icon-hp {
+  margin-bottom: 30px;
+  margin-right: 5px;
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-label-icon-power {
+  margin-bottom: 30px;
+  margin-right: 5px;
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-label-icon-initiative {
+  margin-bottom: -2px;
+  margin-right: 5px;
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-label-icon-hit {
+  margin-bottom: -2px;
+  margin-right: 5px;
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-label-icon-prot {
+  margin-bottom: 8px;
+  margin-right: 5px;
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-value {
+  width: 100%;
+  min-height: 26px;
+  height: 26px;
+  max-height: 26px;
+  vertical-align: middle;
+  padding: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  color: #4f7783;
+  font-weight: 700;
+  font: bold 24px "Caveat", cursive;
+}
+
+.valombreuse.actor .window-content > form .wrap .dead-color {
+  color: red;
+}
+
+.valombreuse.actor .window-content > form .wrap .field-value.charname {
+  font-size: 30px;
+  min-height: 34px;
+}
+
+.valombreuse.actor .window-content > form .wrap .empty {
+  background-color: #286e1f;
+  color: lightgrey;
+  min-height: 30px;
+  min-width: 200px;
+  padding-top: 5px;
+}
+
+.valombreuse.actor .window-content > form .wrap .profession {
+  width: 100%;
+  min-height: 26px;
+  height: 26px;
+  max-height: 26px;
+  vertical-align: middle;
+  padding: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  color: #4f7783;
+  font-weight: 700;
+  font: bold 30px "Caveat", cursive;
+}
+
+.valombreuse.actor .window-content > form .wrap .capa_score {
+  padding: 0 0 0 0;
+}
+
+.valombreuse.actor .window-content > form .wrap .capa_percent {
+  padding-top: 3px;
+  font-size: 12px;
+  min-width: 15px;
+  width: 15px;
+  max-width: 15px;
+  margin-left: -5px;
+}
+
+.valombreuse.actor .window-content > form .wrap .origine {
+  margin-top: 20px;
+}
+
+.valombreuse.actor .window-content > form .wrap .origine_name {
+  vertical-align: middle;
+  margin-top: -10px;
+  padding: 0;
+}
+
+.valombreuse.actor .window-content > form .wrap .carte_magie {
+  border: 0;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.valombreuse.actor .window-content > form .wrap .icon_d100 {
+  background: center/contain no-repeat url("../ui/d100.png");
+  min-width: 16px;
+  width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  height: 16px;
+  max-height: 16px;
+  margin: auto;
+}
+
+.valombreuse.actor .window-content > form .wrap .icon_d100:hover {
+  -webkit-filter: drop-shadow(0 0 8px #4f7783);
+  filter: drop-shadow(0 0 8px #4f7783);
+}
+
+.valombreuse.actor .window-content > form .wrap .cancel_margin_top {
+  margin-top: 3px;
+}
+
+.valombreuse.actor .window-content > form .wrap .item-name .item_tooltiptext {
+  visibility: hidden;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  margin-left: 0px;
+  width: 60%;
+  left: 35%;
+  opacity: 0;
+  top: 335px;
+}
+
+.valombreuse.actor .window-content > form .wrap .item-name:hover .item_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.valombreuse.actor .window-content > form .wrap .item-name:hover .item_tooltiptext p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.valombreuse.actor .window-content > form .wrap .item-name:hover .item_tooltiptext h1 {
+  margin: 0 5px 0 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name {
+  margin: 0 0 0 0;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name .comp_tooltiptext {
+  visibility: hidden;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 100;
+  margin-left: 0px;
+  opacity: 0;
+  width: 50%;
+  left: 49%;
+  top: 300px;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name:hover .comp_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name:hover .comp_tooltiptext p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name:hover .comp_tooltiptext h1 {
+  margin: 0 5px 0 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name .compspe_tooltiptext {
+  visibility: hidden;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  width: 50%;
+  right: 49%;
+  top: 300px;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name:hover .compspe_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name:hover .compspe_tooltiptext p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.valombreuse.actor .window-content > form .wrap .competence_name:hover .compspe_tooltiptext h1 {
+  margin: 0 5px 0 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
+}
+
+.valombreuse.actor .window-content > form .wrap .item-delete:hover {
+  text-shadow: 0 0 8px #cd071e;
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner-left {
+  margin-top: 30px;
+  background: url("../assets/images/separateur-valombreuse-left.png");
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner-right {
+  margin-top: 30px;
+  background: url("../assets/images/separateur-valombreuse-droite.png");
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner-bot-left {
+  margin-top: 50px;
+  background: url("../assets/images/separateur-valombreuse-left.png");
+}
+
+.valombreuse.actor .window-content > form .wrap .header #banner-bot-right {
+  margin-top: 50px;
+  background: url("../assets/images/separateur-valombreuse-droite.png");
+}
+
+.valombreuse.actor .window-content > form .wrap .main #banner-top {
+  margin-top: 30px;
+  background: center/contain no-repeat url("../assets/images/separateur-valombreuse-vert.png");
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .drop-field {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.valombreuse.actor .window-content > form .wrap .main .content .drop-field .field-value {
+  background: transparent;
+}
+
+.valombreuse.actor .window-content > form .valombreuse-bg-std {
+  background: url("../assets/images/BG-Page-Web-scaled.jpg");
+  background-size: cover;
+  font-family: "AGaramondPro", serif;
+}
+
+.valombreuse.actor .window-content > form .valombreuse-bg-std .titleFont {
+  font-family: "CharlemagneStd", serif;
+  line-height: 22px;
+}
+
+.valombreuse.actor .window-content > form .valombreuse-bg-modern {
+  background: url("../ui/bgModern.webp");
+  background-size: cover;
+  font-family: "HelveticaNeueLT", serif;
+}
+
+.valombreuse.actor .window-content > form .valombreuse-bg-modern .titleFont {
+  font-family: "HelveticaNeueLT", serif;
+  line-height: 22px;
+}
+
+.valombreuse.actor .window-content > form .valombreuse-bg-stars {
+  background: url("../ui/bgStars.webp");
+  background-size: cover;
+  font-family: "HelveticaNeueLT", serif;
+}
+
+.valombreuse.actor .window-content > form .valombreuse-bg-stars .titleFont {
+  font-family: "HelveticaNeueLT", serif;
+  line-height: 22px;
+}
+
+.valombreuse.actor .window-content > form .calc-comp .calc-comp-tooltip {
+  visibility: hidden;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  margin-left: 0px;
+  bottom: 0;
+  opacity: 0;
+  min-width: 250px;
+}
+
+.valombreuse.actor .window-content > form .calc-comp:hover .calc-comp-tooltip {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.valombreuse.actor .window-content > form .calc-comp:hover .calc-comp-tooltip p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.valombreuse.actor #logo-stars > img {
+  border: none;
+}
+
+.valombreuse.actor #logo-modern > img {
+  border: none;
+}
+
+.valombreuse.actor #carac_icon {
+  background: center/contain no-repeat url("../assets/images/doublecircle.png");
+  min-height: 60px;
+  height: 60px;
+  max-height: 80px;
+  font-size: 30px;
+}
+
+.valombreuse.actor #life_icon {
+  background: center/contain no-repeat url("../assets/images/hp.png");
+  min-height: 60px;
+  height: 60px;
+  max-height: 80px;
+  font-size: 30px;
+}
+
+.valombreuse.actor #power_icon {
+  background: center/contain no-repeat url("../assets/images/hp.png");
+  min-height: 60px;
+  max-height: 60px;
+  font-size: 30px;
+}
+
+.valombreuse.actor #hit_icon {
+  background: center/contain no-repeat url("../ui/blessure.png");
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
+  font-size: 30px;
+}
+
+.valombreuse.actor #initiative_icon {
+  background: center/contain no-repeat url("../ui/initiative.png");
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
+  font-size: 30px;
+}
+
+.valombreuse.actor #protection_icon {
+  background: center/contain no-repeat url("../ui/protection.png");
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
+  font-size: 30px;
+}
+
+.valombreuse.actor #degat_icon {
+  background: center/contain no-repeat url("../ui/degats.png");
+  min-height: 100px;
+  height: 100px;
+  max-height: 100px;
+  min-width: 112px;
+  width: 112px;
+  max-width: 112px;
+  font-size: 30px;
+}
+
+.valombreuse.actor #carac_img {
+  background: center/contain no-repeat url("../assets/images/carac.png");
+  min-height: 330px;
+  min-width: 120px;
+  height: 100%;
+  float: right;
+  margin-top: 0px;
+  margin-right: -27px;
+}
+
+.valombreuse.actor .carac_block {
+  margin-top: 25px;
+}
+
+.valombreuse.actor .carac_row {
+  min-height: 58px;
+}
+
+.valombreuse.actor .carac_label {
+  min-height: 58px;
+}
+
+.valombreuse.actor .col_carac {
+  margin-top: 0px;
+}
+
+.valombreuse.actor .area-value {
+  border: none;
+  background: #fff;
+  font-size: 1em;
+}
+
+.valombreuse.actor .ellipsis {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.valombreuse.actor .titre-general {
+  font-size: 20px;
+}
+
+.valombreuse.actor .box-shadow {
+  -webkit-box-shadow: 1px 1px 2px gray;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.valombreuse.actor .field-area {
+  border: none;
+  width: 100%;
+  vertical-align: middle;
+  background: transparent;
+  font-size: 13px;
+}
+
+.valombreuse.actor .valombreuse-valombreuse-compendium-pack {
+  cursor: pointer;
+  min-height: 26px;
+  padding: 7px 0px 0px 0px !important;
+}
+
+.valombreuse.actor .row {
+  margin-top: 1px;
+  background: transparent;
+}
+
+.valombreuse.actor .cell {
+  margin-left: 1px;
+}
+
+.valombreuse.actor .btn {
+  cursor: pointer;
+  color: #464331c4;
+  border: 1px solid #736953a6;
+  -webkit-box-shadow: 0 0 10px #00000052 inset;
+  box-shadow: 0 0 10px #00000052 inset;
+  background: rgba(0, 0, 0, 0.05);
+  margin-left: 1px;
+}
+
+.valombreuse.actor .btn:hover {
+  color: #464331c4;
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: none;
+  border: 1px outset #736953a6;
+}
+
+.valombreuse.actor .btn:active {
+  border: 1px inset #736953a6;
+  background: rgba(0, 0, 0, 0.3);
+  color: #464331c4;
+}
+
+.valombreuse.actor .tabs {
+  font-size: 14px;
+  color: #464331c4;
+  text-align: center;
+  margin: 0 0;
+}
+
+.valombreuse.actor .tabs .item {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0;
+  border: 1px solid #736953a6;
+  margin: 0;
+  height: 28px;
+  -webkit-box-shadow: 0 0 10px #00000052 inset;
+  box-shadow: 0 0 10px #00000052 inset;
+  /*padding: 3px 3px 0 3px;*/
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.valombreuse.actor .tabs .item:hover {
+  color: #464331c4;
+  background: rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}
+
+.valombreuse.actor .tabs .item.active {
+  color: #464331c4;
+  border: 1px inset #736953a6;
+  background: #4f778377;
+  text-shadow: none;
+}
+
+.valombreuse.actor .origines-controls,
+.valombreuse.actor .profession-controls {
+  color: #464331c4;
+  visibility: hidden;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 18px;
+  flex: 0 0 18px;
+  border: 1px solid transparent;
+}
+
+.valombreuse.actor div:hover > div.origines-controls,
+.valombreuse.actor div:hover > div.profession-controls {
+  visibility: visible;
+}
+
+.valombreuse.actor .sidebar .charname {
+  font-family: "Caveat", cursive;
+  font-size: 2.5em;
+  -webkit-text-fill-color: #fff;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #003c1e;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 3px 3px 10px #000;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  min-height: 80px;
+  /*color: $c-darkgreen;*/
+  background-color: transparent;
+}
+
+.valombreuse.actor .nameLoot {
+  min-height: 40px;
+  background: rgba(255, 255, 255, 0) !important;
+}
+
+.valombreuse.actor .inventory h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #464331c4;
+  border-bottom: 1px solid lightgray;
+}
+
+.valombreuse.actor label.input-label {
+  border: 1px solid red;
+  text-align: center;
+  vertical-align: center;
+  padding-bottom: 7px;
+  margin: 0;
+}
+
+.valombreuse.actor .readonly {
+  -webkit-box-shadow: 0 0 10px #00000052 inset;
+  box-shadow: 0 0 10px #00000052 inset;
+}
+
+.valombreuse.actor .label-text {
+  font-size: 14px;
+  color: #464331c4;
+  text-align: center;
+  border: 1px solid #736953a6;
+  margin: 0;
+  height: 28px;
+  -webkit-box-shadow: 0 0 10px #00000052 inset;
+  box-shadow: 0 0 10px #00000052 inset;
+  padding: 3px 3px 0 3px;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  background: none;
+}
+
+.valombreuse.actor strong {
+  font-weight: bold;
+}
+
+.valombreuse.actor .collapsed {
+  display: none;
+}
+
+.valombreuse.item {
+  /* ----------------------------------------- */
+  /*  Layout                                   */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /*  SKIN                                     */
+  /* ----------------------------------------- */
+}
+
+.valombreuse.item .window-content {
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+  font-size: 13px;
+  color: #000;
+  /* ----------------------------------------- */
+  /*  Item Actions                             */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /*  Item Actions                             */
+  /* ----------------------------------------- */
+}
+
+.valombreuse.item .window-content .wrap {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.valombreuse.item .window-content .valombreuse-bg-std {
+  background: url("../ui/bgNormal.webp");
+  background-size: cover;
+  font-family: "AGaramondPro", serif;
+}
+
+.valombreuse.item .window-content .valombreuse-bg-std .titleFont {
+  font-family: "CharlemagneStd", serif;
+  line-height: 22px;
+}
+
+.valombreuse.item .window-content .valombreuse-bg-modern {
+  background: url("../ui/bgModern.webp");
+  background-size: cover;
+  font-family: "HelveticaNeueLT", serif;
+}
+
+.valombreuse.item .window-content .valombreuse-bg-modern .titleFont {
+  font-family: "HelveticaNeueLT", serif;
+  line-height: 22px;
+}
+
+.valombreuse.item .window-content .valombreuse-bg-stars {
+  background: url("../ui/bgStars.webp");
+  background-size: cover;
+  font-family: "HelveticaNeueLT", serif;
+}
+
+.valombreuse.item .window-content .valombreuse-bg-stars .titleFont {
+  font-family: "HelveticaNeueLT", serif;
+  line-height: 22px;
+}
+
+.valombreuse.item .window-content .sheet-header {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  border-bottom: 2px groove #eeede0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,153 +2736,864 @@
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-.valombreuse .sheet-header .profile-img {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
-  height: 100px;
-  margin-right: 10px;
-}
-.valombreuse .sheet-header .header-fields {
+
+.valombreuse.item .window-content .sheet-header > * {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
-.valombreuse .sheet-header h1.charname {
-  height: 50px;
-  padding: 0px;
-  margin: 5px 0;
-  border-bottom: 0;
+
+.valombreuse.item .window-content .sheet-header img.profession {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 64px;
+  flex: 0 0 64px;
+  max-width: 64px;
+  height: 64px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border: none;
 }
-.valombreuse .sheet-header h1.charname input {
-  width: 100%;
-  height: 100%;
+
+.valombreuse.item .window-content .sheet-header .header-details {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.valombreuse.item .window-content .sheet-header .header-details h1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-bottom: none;
+  height: 60px;
+  margin: 0;
+  padding: 5px;
+}
+
+.valombreuse.item .window-content .sheet-header .header-details h1 input {
+  display: block;
+  height: 50px;
+  font-size: 32px;
   margin: 0;
 }
-.valombreuse .sheet-tabs {
+
+.valombreuse.item .window-content .sheet-header .header-details .item-subtitle {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+  -ms-flex: 0 0 150px;
+  flex: 0 0 150px;
+  height: 60px;
+  margin: 0;
+  padding: 5px;
+  text-align: right;
 }
-.valombreuse .sheet-body,
-.valombreuse .sheet-body .tab,
-.valombreuse .sheet-body .tab .editor {
-  height: 100%;
+
+.valombreuse.item .window-content .sheet-header .header-details .item-subtitle .item-type {
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0;
 }
-.valombreuse .tox .tox-editor-container {
-  background: #fff;
+
+.valombreuse.item .window-content .sheet-header .header-details .item-subtitle .item-status {
+  font-size: 16px;
+  line-height: 24px;
 }
-.valombreuse .tox .tox-edit-area {
-  padding: 0 8px;
+
+.valombreuse.item .window-content .sheet-header .header-details .summary {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 2px groove #003700;
+  border-bottom: none;
 }
-.valombreuse .resource-label {
-  font-weight: bold;
-}
-.valombreuse .items-header {
-  height: 28px;
+
+.valombreuse.item .window-content .sheet-header .header-details .summary li {
+  height: calc(100% - 6px);
+  float: left;
   margin: 2px 0;
   padding: 0;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  border-right: 2px groove #003700;
+  line-height: 34px;
+}
+
+.valombreuse.item .window-content .sheet-header .header-details .summary li:last-child {
+  border-right: none;
+}
+
+.valombreuse.item .window-content .sheet-navigation {
+  background-image: url("../ui/deco-valombreuse.png");
+  background-repeat: repeat-x;
+  background-position: top;
+  margin-top: -2px;
+  margin-bottom: 5px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.valombreuse.item .window-content .sheet-navigation .item {
+  height: 35px;
+  line-height: 37px;
+  margin: 5px 24px 0 24px;
+  border-bottom: 3px solid #b5b3a4;
+  font-size: 18px;
+}
+
+.valombreuse.item .window-content .sheet-navigation .item.active {
+  border-bottom: 3px solid #44191A;
+}
+
+.valombreuse.item .window-content .sheet-body {
+  overflow: auto;
+  min-height: calc(100% - 120px);
+  height: calc(100% - 120px);
+  max-height: calc(100% - 120px);
+  margin-left: 5px;
+  /* ----------------------------------------- */
+  /*  Item Details Form                        */
+  /* ----------------------------------------- */
+}
+
+.valombreuse.item .window-content .sheet-body .item-properties {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 150px;
+  flex: 0 0 150px;
+  margin: 5px 5px 5px 0;
+  padding-right: 5px;
+  border-right: 2px groove #eeede0;
+}
+
+.valombreuse.item .window-content .sheet-body .item-properties .form-group {
+  margin: 0;
+}
+
+.valombreuse.item .window-content .sheet-body .item-properties .form-group label {
+  line-height: 20px;
+}
+
+.valombreuse.item .window-content .sheet-body .item-properties .form-group input {
+  text-align: right;
+}
+
+.valombreuse.item .window-content .sheet-body .item-properties .properties-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.valombreuse.item .window-content .sheet-body .item-properties .properties-list li {
+  margin: 3px 0;
+  padding: 0 2px;
   background: rgba(0, 0, 0, 0.05);
   border: 2px groove #eeede0;
-  font-weight: bold;
-}
-.valombreuse .items-header > * {
-  font-size: 14px;
   text-align: center;
+  font-size: 12px;
+  line-height: 18px;
 }
-.valombreuse .items-header .item-name {
-  font-weight: bold;
-  padding-left: 5px;
-  text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+
+.valombreuse.item .window-content .sheet-body .description {
+  height: 150px;
+  min-height: 100px;
+  max-height: 200px;
 }
-.valombreuse .items-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  color: #444;
+
+.valombreuse.item .window-content .sheet-body .description .editor {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }
-.valombreuse .items-list .item-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+.valombreuse.item .window-content .sheet-body .description .editor .editor-content {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }
-.valombreuse .items-list .item-name {
-  -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
-  margin: 0;
-  overflow: hidden;
-  font-size: 13px;
-  text-align: left;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+
+.valombreuse.item .window-content .sheet-body.details {
+  padding: 10px;
 }
-.valombreuse .items-list .item-name h3, .valombreuse .items-list .item-name h4 {
-  margin: 0;
-  white-space: nowrap;
-  overflow-x: hidden;
+
+.valombreuse.item .window-content .sheet-body.details input[type="text"],
+.valombreuse.item .window-content .sheet-body.details input[type="number"],
+.valombreuse.item .window-content .sheet-body.details select {
+  height: 24px;
+  background: rgba(0, 0, 0, 0.05);
 }
-.valombreuse .items-list .item-controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+
+.valombreuse.item .window-content .sheet-body.details .form-group span {
+  text-align: center;
+  line-height: 24px;
+}
+
+.valombreuse.item .window-content .sheet-body.details .form-group.input-select select {
+  -webkit-box-flex: 1.8;
+  -ms-flex: 1.8;
+  flex: 1.8;
+}
+
+.valombreuse.item .window-content .sheet-body.details .form-group.input-select-select select {
+  -webkit-box-flex: 1.5;
+  -ms-flex: 1.5;
+  flex: 1.5;
+}
+
+.valombreuse.item .window-content .sheet-body.details .form-group.uses-per input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.valombreuse.item .window-content .sheet-body.details .form-group.uses-per span {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
+  -ms-flex: 0 0 16px;
+  flex: 0 0 16px;
+}
+
+.valombreuse.item .window-content .sheet-body.details .form-group.uses-per select {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.valombreuse.item .window-content .sheet-body.details span.sep {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 8px;
+  flex: 0 0 8px;
+}
+
+.valombreuse.item .window-content .sheet-body.details .prepared {
+  -webkit-box-flex: 1.3 !important;
+  -ms-flex: 1.3 !important;
+  flex: 1.3 !important;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.valombreuse.item .window-content .sheet-body.details .spell-materials {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: 0.25em 0;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
-.valombreuse .items-list .item-controls a {
+
+.valombreuse.item .window-content .sheet-body.details .spell-materials label {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 64px;
+  flex: 0 0 64px;
+  text-align: right;
+  margin-right: 5px;
   font-size: 12px;
-  text-align: center;
-  margin: 0 6px;
+  line-height: 24px;
 }
-.valombreuse .items-list .item {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+
+.valombreuse.item .window-content .sheet-body.details .spell-materials input[type="text"] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 48px;
+  flex: 0 0 48px;
+  margin-right: 10px;
+}
+
+.valombreuse.item .window-content h4.damage-header {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.valombreuse.item .window-content .damage-parts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.valombreuse.item .window-content .damage-parts .damage-part {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  padding: 0;
+}
+
+.valombreuse.item .window-content .damage-parts .damage-part input {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.valombreuse.item .window-content .damage-parts .damage-part select {
+  margin-left: 5px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.valombreuse.item .window-content .damage-control {
+  width: 18px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 18px;
+  flex: 0 0 18px;
+  line-height: 24px;
+  float: right;
+  text-align: right;
+}
+
+.valombreuse.item .window-content .recharge.form-group span {
+  text-align: right;
+  padding-right: 3px;
+}
+
+.valombreuse.item .window-content .recharge.form-group input[type="text"] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 32px;
+  flex: 0 0 32px;
+  text-align: center;
+}
+
+.valombreuse.item .window-content .recharge.form-group label.checkbox {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+}
+
+.valombreuse.item .window-content .recharge.form-group label.checkbox input {
+  width: 16px;
+  height: 16px;
+  top: 4px;
+}
+
+.valombreuse.item .window-content .weapon-properties label.checkbox {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 98px;
+  flex: 0 0 98px;
+}
+
+.valombreuse.item .window-content .dragging {
+  outline: 1px dotted gray;
+}
+
+.valombreuse.item .window-content {
+  font-family: "AGaramondPro", serif;
+}
+
+.valombreuse.item .window-content .field-value {
+  width: 100%;
+  min-height: 26px;
+  height: 26px;
+  max-height: 26px;
+  vertical-align: middle;
+  padding: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  color: #4f7783;
+  font-weight: 700;
+  font: bold 20px "Caveat", cursive;
+}
+
+.valombreuse.item .window-content .field-value.charname {
+  font-size: 30px;
+  min-height: 34px;
+}
+
+.valombreuse.item .window-content .capa_score {
+  padding: 0 0 0 0;
+}
+
+.valombreuse.item .window-content .capa_percent {
+  padding-top: 3px;
+  font-size: 16px;
+}
+
+.valombreuse.item .window-content .cancel_margin_top {
+  margin-top: 3px;
+}
+
+.valombreuse.item .window-content .competence_name {
+  margin: 0 0 0 0;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+}
+
+.valombreuse.item .window-content .competence_name .comp_tooltiptext {
+  visibility: hidden;
+  width: calc(100% + 60px);
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  bottom: 110%;
+  left: 0;
+  margin-left: 0px;
+  opacity: 0;
+}
+
+.valombreuse.item .window-content .competence_name:hover .comp_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.valombreuse.item .window-content .competence_name:hover .comp_tooltiptext p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.valombreuse.item .window-content .competence_name:hover .comp_tooltiptext h1 {
+  margin: 0 5px 0 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
+}
+
+.valombreuse.item .window-content .competence_name .compspe_tooltiptext {
+  visibility: hidden;
+  width: 445px;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  top: 0%;
+  left: 0%;
+  margin-left: -465px;
+  opacity: 0;
+}
+
+.valombreuse.item .window-content .competence_name:hover .compspe_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.valombreuse.item .window-content .competence_name:hover .compspe_tooltiptext p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.valombreuse.item .window-content .competence_name:hover .compspe_tooltiptext h1 {
+  margin: 0 5px 0 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
+}
+
+.valombreuse.item .window-content .item-delete:hover {
+  text-shadow: 0 0 8px #cd071e;
+}
+
+.valombreuse.item .box-shadow {
+  -webkit-box-shadow: 1px 1px 2px gray;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.valombreuse input[readonly="true"] {
+  border: none;
+  color: dimgray;
+  cursor: not-allowed;
+  width: 100%;
+  vertical-align: middle;
+  background: transparent;
+}
+
+.valombreuse input[type="text"],
+.valombreuse input[type="number"],
+.valombreuse input[type="text"]:hover,
+.valombreuse input[type="number"]:hover,
+.valombreuse input[type="text"]:focus,
+.valombreuse input[type="number"]:focus {
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.valombreuse input:disabled,
+.valombreuse select:disabled,
+.valombreuse textarea:disabled {
+  color: #4b4a44;
+}
+
+.valombreuse input:disabled:hover,
+.valombreuse select:disabled:hover,
+.valombreuse textarea:disabled:hover,
+.valombreuse input:disabled:focus,
+.valombreuse select:disabled:focus,
+.valombreuse textarea:disabled:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid transparent !important;
+  outline: none !important;
+}
+
+.valombreuse button {
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px groove #eeede0;
+}
+
+.valombreuse select {
+  color: #191813;
+  font-size: 14px;
+  text-align: center;
+  text-align-last: center;
+  -moz-text-align-last: center;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+.valombreuse label.checkbox {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  height: 22px;
+  line-height: 22px;
+  font-size: 11px;
+}
+
+.valombreuse label.checkbox > input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px 0 0;
+  position: relative;
+  top: 4px;
+}
+
+.valombreuse label.checkbox.right > input[type="checkbox"] {
+  margin: 0 0 0 2px;
+}
+
+.valombreuse .form-group label {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 120px;
+  color: #4b4a44;
+  font-weight: bold;
+}
+
+.valombreuse .form-group .form-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.valombreuse .form-group .form-fields > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 3px 0 0;
+}
+
+.valombreuse .form-group .form-fields > *:last-child {
+  margin-right: 0;
+}
+
+.valombreuse .form-group .form-fields > * .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.valombreuse .form-group .form-fields > * .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.valombreuse .form-group .form-fields > * .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.valombreuse .form-group .form-fields > * .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+.valombreuse .form-group .form-fields label {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.valombreuse .form-group .form-fields label.checkbox {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  text-align: left;
+}
+
+.valombreuse .form-group.stacked label {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.valombreuse .form-group.stacked label.checkbox {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  text-align: left;
+}
+
+.valombreuse .form-header {
+  margin: 0 0 0 0;
+  padding: 2px 0;
+  border-top: 2px groove #eeede0;
+  border-bottom: 2px groove #eeede0;
+  font-size: 20px;
+  font-weight: 700;
+  max-height: 29px;
+}
+
+.valombreuse .tag {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  padding: 0 3px;
+  font-size: 10px;
+  line-height: 16px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.valombreuse ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgray;
+  opacity: 1;
+  /* Firefox */
+}
+
+.valombreuse ::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgray;
+  opacity: 1;
+  /* Firefox */
+}
+
+.valombreuse :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgray;
+  opacity: 1;
+  /* Firefox */
+}
+
+.valombreuse ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgray;
+  opacity: 1;
+  /* Firefox */
+}
+
+.valombreuse ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgray;
+  opacity: 1;
+  /* Firefox */
+}
+
+.valombreuse :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: lightgray;
+}
+
+.valombreuse ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: lightgray;
+}
+
+.valombreuse input::-webkit-input-placeholder {
+  color: lightgray;
+}
+
+.valombreuse input::-moz-placeholder {
+  color: lightgray;
+}
+
+.valombreuse input:-ms-input-placeholder {
+  color: lightgray;
+}
+
+.valombreuse input::-ms-input-placeholder {
+  color: lightgray;
+}
+
+.valombreuse input::placeholder {
+  color: lightgray;
+}
+
+.valombreuse nav.sheet-tabs {
+  border: none;
+  height: 30px;
+}
+
+.valombreuse nav.sheet-tabs.tabs {
+  font-size: 14px;
+  color: #464331c4;
+  text-align: center;
+  border: none;
+}
+
+.valombreuse nav.sheet-tabs.tabs .item {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2px;
+  border: 1px solid #736953a6;
+  margin: 0;
+  height: 28px;
+  width: 100%;
+  -webkit-box-shadow: 0 0 10px #00000052 inset;
+  box-shadow: 0 0 10px #00000052 inset;
+  /*padding: 3px 3px 0 3px;*/
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.valombreuse nav.sheet-tabs.tabs .item:hover {
+  color: #464331c4;
+  background: rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}
+
+.valombreuse nav.sheet-tabs.tabs .item.active {
+  color: #464331c4;
+  border: 1px inset #736953a6;
+  background: #4f778377;
+  text-shadow: none;
+}
+
+.valombreuse .currencies {
+  margin: 0 0 5px 0;
+  padding: 5px;
+}
+
+.valombreuse .inventory-list:before,
+.valombreuse .inventory-list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.valombreuse .inventory-list:after {
+  clear: both;
+}
+
+.valombreuse .inventory-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 5px;
+  scrollbar-width: thin;
+  color: #7a7971;
+}
+
+.valombreuse .inventory-list .item {
+  line-height: 25px;
+  max-height: 25px;
   padding: 0 2px;
   border-bottom: 1px solid #c9c7b8;
 }
-.valombreuse .items-list .item:last-child {
+
+.valombreuse .inventory-list .item:last-child {
   border-bottom: none;
 }
-.valombreuse .items-list .item .item-name {
-  color: #191813;
+
+.valombreuse .inventory-list .item .item-name {
+  cursor: pointer;
+  max-height: 25px;
+  overflow: hidden;
 }
-.valombreuse .items-list .item .item-name .item-image {
+
+.valombreuse .inventory-list .item .item-name .item-image {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 30px;
-  flex: 0 0 30px;
-  height: 30px;
-  background-size: 30px;
-  border: none;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  background-size: 22px;
   margin-right: 5px;
+  padding: 1px;
 }
-.valombreuse .items-list .item-prop {
+
+.valombreuse .inventory-list .item .item-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.valombreuse .inventory-list .item .item-name i.attuned {
+  color: #7a7971;
+}
+
+.valombreuse .inventory-list .item .item-uses input {
+  width: 24px;
   text-align: center;
-  border-left: 1px solid #c9c7b8;
-  border-right: 1px solid #c9c7b8;
-  font-size: 12px;
 }
-.valombreuse .items-list .items-header {
-  height: 28px;
-  margin: 2px 0;
+
+.valombreuse .inventory-list .item .item-properties {
+  margin-top: 3px;
+}
+
+.valombreuse .inventory-list .item .item-recharge {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  text-align: right;
+  font-size: 11px;
+  color: #7a7971;
+  white-space: nowrap;
+}
+
+.valombreuse .inventory-list .inventory-header {
+  margin-top: 2px;
   padding: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -404,95 +3601,152 @@
   background: rgba(0, 0, 0, 0.05);
   border: 2px groove #eeede0;
   font-weight: bold;
+  line-height: 14px;
+  min-height: 30px;
 }
-.valombreuse .items-list .items-header > * {
-  font-size: 12px;
-  text-align: center;
-}
-.valombreuse .items-list .items-header .item-name {
+
+.valombreuse .inventory-list .inventory-header h3 {
+  margin: 0 0 0 0;
   padding-left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.valombreuse .inventory-list .item-name {
+  color: #000;
+  border-right: 1px solid #c9c7b8;
+}
+
+.valombreuse .inventory-list .item-name .item-category {
   text-align: left;
+  padding-right: 5px;
+  font-weight: 100;
 }
-.valombreuse .item-formula {
+
+.valombreuse .inventory-list .item-detail {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 200px;
-  flex: 0 0 200px;
-  padding: 0 8px;
-}
-.valombreuse .effects .item .effect-source,
-.valombreuse .effects .item .effect-duration,
-.valombreuse .effects .item .effect-controls {
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #000;
   text-align: center;
+  border-right: 1px solid #c9c7b8;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  max-height: 25px;
+}
+
+.valombreuse .inventory-list .item-detail:last-child {
+  border-right: none;
+}
+
+.valombreuse .inventory-list .item-detail.item-action {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+}
+
+.valombreuse .inventory-list .item-weight {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
+}
+
+.valombreuse .inventory-list .item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.valombreuse .inventory-list .item-controls {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-height: 25px;
+}
+
+.valombreuse .inventory-list .item-controls > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.valombreuse .inventory-list .item-controls .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.valombreuse .inventory-list .item-controls .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.valombreuse .inventory-list .item-controls .flex3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.valombreuse .inventory-list .item-controls .flex4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+.valombreuse .inventory-list .item-controls .item-control {
+  margin-top: 6px;
+}
+
+.valombreuse .inventory-list .item-controls a {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
   font-size: 12px;
-}
-.valombreuse .effects .item .effect-controls {
-  border: none;
-}
-.valombreuse.sheet.actor .actor-infos-line {
-  display: flex;
+  text-align: center;
+  color: #000;
 }
 
-.valombreuse.sheet.actor .actor-infos-line .sous-type {
-  display: flex;
-  margin: 2px;
-  align-items: center;
-}
-.valombreuse.sheet.actor .actor-infos-line .sous-type label {
-  width: 60px;
-}
-.valombreuse.sheet.actor .actor-infos-line .sous-type select {
-  color: white;
-}
-.valombreuse.sheet.actor .actor-infos-line .sous-type select:disabled {
-  color: white;
-}
-.valombreuse.sheet.actor .invisible {
-  visibility: hidden;
-}
-.valombreuse.sheet.actor .sheet-tabs.tabs {
-  height: 50px;
-}
-.valombreuse.sheet.actor input[type="text"]:focus,
-.valombreuse.sheet.actor input[type="number"]:focus,
-.valombreuse.sheet.actor input[type="password"]:focus,
-.valombreuse.sheet.actor input[type="date"]:focus,
-.valombreuse.sheet.actor input[type="time"]:focus,
-.valombreuse.sheet.actor select:focus,
-.valombreuse.sheet.actor textarea:focus {
-  box-shadow: 0 0 5px var(--color-shadow-trinite);
-}
-.valombreuse.sheet.actor input[type="number"] {
-  background-color: floralwhite;
-}
-.valombreuse.sheet.actor input[type="number"]:read-only {
-  background-color: rgba(0, 0, 0, 0.05);
-  cursor: default;
-}
-.valombreuse.sheet.actor input[type="text"]:read-only {
-  cursor: default;
-  border: none;
-}
-.valombreuse.sheet.actor select:disabled {
-  color: black;
+.valombreuse .inventory-list .item-summary {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0.25em 0.5em;
+  border-top: 1px solid #c9c7b8;
 }
 
-.valombreuse.sheet.actor .sheet-header img {
-  height: 128px;
-  margin-right: 6px;
-  border: none;
+#configRollDialog .rollOptionGroup {
+  margin: 10px;
 }
-.valombreuse.sheet.actor .sheet-header label {
-  padding: 7px 0;
+
+#configRollDialog .divTitle {
+  text-align: center;
+  min-height: 30px;
 }
-.valombreuse.sheet.actor .sheet-header h1 {
-  font-family: 'Cabaletta';
+
+#configRollDialog .optionTitle {
+  vertical-align: middle;
 }
-.valombreuse.sheet.actor .sheet-header input {
-  color: var(--color-actor-header);
-}
-.valombreuse.sheet.actor .sheet-header input::placeholder {
-  color: lightgray;
-}
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJvaWxlcnBsYXRlLnNjc3MiLCJnbG9iYWwvX3dpbmRvdy5zY3NzIiwidXRpbHMvX3R5cG9ncmFwaHkuc2NzcyIsImJvaWxlcnBsYXRlLmNzcyIsImdsb2JhbC9fZ3JpZC5zY3NzIiwiZ2xvYmFsL19mbGV4LnNjc3MiLCJjb21wb25lbnRzL19pdGVtcy5zY3NzIiwiY29tcG9uZW50cy9fZm9ybXMuc2NzcyIsInV0aWxzL19jb2xvcnMuc2NzcyIsImNvbXBvbmVudHMvX3Jlc291cmNlLnNjc3MiLCJ1dGlscy9fdmFyaWFibGVzLnNjc3MiLCJjb21wb25lbnRzL19lZmZlY3RzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ1Esd0ZBQUE7QUFRUixrQkFBQTtBQ1RBO0VBQ0UsaUNDRGE7QUNJZjs7QUZDRTtFQUVFLFdBQUE7RUFDQSx5QkFBQTtFQUNBLGVBQUE7QUVDSjs7QUNUQTs7RUFFRSxhQUFBO0VBQ0EsMEJBQUE7RUFDQSxnREFBQTtFQUNBLFNBQUE7RUFDQSxjQUFBO0VBQ0EsVUFBQTtBRFlGOztBQ1RBO0VBQ0UsMEJBQUE7RUFDQSxnREFBQTtBRFlGOztBQ1RBO0VBQ0UsMEJBQUE7RUFDQSxnREFBQTtBRFlGOztBQ1RBO0VBQ0UsMEJBQUE7RUFDQSxnREFBQTtBRFlGOztBQ1RBO0VBQ0UsMEJBQUE7RUFDQSxnREFBQTtBRFlGOztBQ1RBO0VBQ0UsMEJBQUE7RUFDQSxnREFBQTtBRFlGOztBQ1RBO0VBQ0UsMEJBQUE7RUFDQSxnREFBQTtBRFlGOztBQ1RBO0VBQ0UsMEJBQUE7RUFDQSxnREFBQTtBRFlGOztBQ1RBO0VBQ0UsNEJBQUE7RUFDQSxpREFBQTtBRFlGOztBQ1RBO0VBQ0UsNEJBQUE7RUFDQSxpREFBQTtBRFlGOztBQ1RBO0VBQ0UsNEJBQUE7RUFDQSxpREFBQTtBRFlGOztBQ1JBO0VBQWdCLG9CQUFBO0FEWWhCOztBQ1hBO0VBQWdCLG9CQUFBO0FEZWhCOztBQ2RBO0VBQWdCLG9CQUFBO0FEa0JoQjs7QUNqQkE7RUFBZ0Isb0JBQUE7QURxQmhCOztBQ3BCQTtFQUFnQixvQkFBQTtBRHdCaEI7O0FDdkJBO0VBQWdCLG9CQUFBO0FEMkJoQjs7QUMxQkE7RUFBZ0Isb0JBQUE7QUQ4QmhCOztBQzdCQTtFQUFnQixvQkFBQTtBRGlDaEI7O0FDaENBO0VBQWlCLHFCQUFBO0FEb0NqQjs7QUNuQ0E7RUFBaUIscUJBQUE7QUR1Q2pCOztBQ3RDQTtFQUFpQixxQkFBQTtBRDBDakI7O0FDeENBO0VBQWUsdUJBQUE7QUQ0Q2Y7O0FDM0NBO0VBQWUsdUJBQUE7QUQrQ2Y7O0FDOUNBO0VBQWUsdUJBQUE7QURrRGY7O0FDakRBO0VBQWUsdUJBQUE7QURxRGY7O0FDcERBO0VBQWUsdUJBQUE7QUR3RGY7O0FDdkRBO0VBQWUsdUJBQUE7QUQyRGY7O0FDMURBO0VBQWUsdUJBQUE7QUQ4RGY7O0FDN0RBO0VBQWUsdUJBQUE7QURpRWY7O0FDaEVBO0VBQWdCLHdCQUFBO0FEb0VoQjs7QUNuRUE7RUFBZ0Isd0JBQUE7QUR1RWhCOztBQ3RFQTtFQUFnQix3QkFBQTtBRDBFaEI7O0FFN0pBOzs7RUFHRSx3QkFBQTtFQUFBLHFCQUFBO0VBQUEsdUJBQUE7RUFDQSx5QkFBQTtFQUFBLHNCQUFBO0VBQUEsbUJBQUE7RUFDQSxrQkFBQTtBRmdLRjs7QUU3SkE7RUFDRSx1QkFBQTtFQUFBLG9CQUFBO0VBQUEsMkJBQUE7RUFDQSxnQkFBQTtBRmdLRjs7QUU3SkE7RUFDRSxxQkFBQTtFQUFBLGtCQUFBO0VBQUEseUJBQUE7RUFDQSxpQkFBQTtBRmdLRjs7QUU3SkE7RUFDRSxtQkFBQTtFQUFBLFdBQUE7RUFBQSxPQUFBO0FGZ0tGOztBRTdKQTtFQUNFLHlCQUFBO0VBQUEsc0JBQUE7RUFBQSw4QkFBQTtBRmdLRjs7QUU3SkE7RUFDRSxtQkFBQTtFQUFBLFdBQUE7RUFBQSxPQUFBO0FGZ0tGOztBRTVKQTtFQUNFLHVCQUFBO0VBQUEsb0JBQUE7RUFBQSwyQkFBQTtFQUNBLGdCQUFBO0FGK0pGOztBRTVKQTtFQUNFLHFCQUFBO0VBQUEsa0JBQUE7RUFBQSx5QkFBQTtFQUNBLGlCQUFBO0FGK0pGOztBRTVKQTtFQUNFLHdCQUFBO0VBQUEscUJBQUE7RUFBQSx1QkFBQTtFQUNBLGtCQUFBO0FGK0pGOztBSDdMQSx5Q0FBQTtBQUNBO0VNT0EsOENBQUE7RUFDQSw4Q0FBQTtFQUNBLDhDQUFBO0VBMkZBLGlFQUFBO0FIZ0dBO0FJbk5BO0VBQ0UsaUNMRGE7QUNzTmY7QUlsTkE7RUFDRSxtQkFBQTtFQUFBLGdCQUFBO0VBQUEsWUFBQTtFQUNBLGdCQUFBO0VBQ0Esb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw4QkFBQTtFQUFBLDZCQUFBO0VBQUEsdUJBQUE7RUFBQSxtQkFBQTtFQUNBLG1CQUFBO0VBQUEsZUFBQTtFQUNBLHVCQUFBO0VBQUEsb0JBQUE7RUFBQSwyQkFBQTtFQUNBLG1CQUFBO0FKb05GO0FJbE5FO0VBQ0UsbUJBQUE7RUFBQSxtQkFBQTtFQUFBLGVBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7QUpvTko7QUlqTkU7RUFDRSxtQkFBQTtFQUFBLFdBQUE7RUFBQSxPQUFBO0FKbU5KO0FJaE5FO0VBQ0UsWUFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsZ0JBQUE7QUprTko7QUlqTkk7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFNBQUE7QUptTk47QUk5TUE7RUFDRSxtQkFBQTtFQUFBLFdBQUE7RUFBQSxPQUFBO0FKZ05GO0FJN01BOzs7RUFHRSxZQUFBO0FKK01GO0FJM01FO0VBQ0UsZ0JDaERNO0FMNlBWO0FJMU1FO0VBQ0UsY0FBQTtBSjRNSjtBTWhRQTtFQUNFLGlCQUFBO0FOa1FGO0FHbFFBO0VBQ0UsWUFBQTtFQUNBLGFBQUE7RUFDQSxVQUFBO0VBQ0EseUJBQUE7RUFBQSxzQkFBQTtFQUFBLG1CQUFBO0VBQ0EsK0JBQUE7RUFDQSwwQklIYztFSklkLGlCQUFBO0FIb1FGO0FHblFFO0VBQ0UsZUFBQTtFQUNBLGtCQUFBO0FIcVFKO0FHblFFO0VBQ0UsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0Esb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7QUhxUUo7QUc1UEE7RUFDRSxnQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0VBQ0EsZ0JBQUE7RUFDQSxxQkFBQTtFQUNBLFdFMUJNO0FMd1JSO0FHM1BFO0VBQ0UsZ0JBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtBSDZQSjtBR3pQRTtFQUNFLG1CQUFBO0VBQUEsV0FBQTtFQUFBLE9BQUE7RUFDQSxTQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSx5QkFBQTtFQUFBLHNCQUFBO0VBQUEsbUJBQUE7RUFDQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtBSDJQSjtBRzFQSTtFQUNFLFNBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0FINFBOO0FHdlBFO0VBQ0Usb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSxtQkFBQTtFQUFBLG1CQUFBO0VBQUEsZUFBQTtFQUNBLHFCQUFBO0VBQUEsa0JBQUE7RUFBQSx5QkFBQTtBSHlQSjtBR3hQSTtFQUNFLGVBQUE7RUFDQSxrQkFBQTtFQUNBLGFBQUE7QUgwUE47QUdyUEU7RUFDRSx5QkFBQTtFQUFBLHNCQUFBO0VBQUEsbUJBQUE7RUFDQSxjQUFBO0VBQ0EsZ0NBQUE7QUh1UEo7QUd0UEk7RUFBZSxtQkFBQTtBSHlQbkI7QUd4UEk7RUFDRSxjRXpFRztBTG1VVDtBR3pQTTtFQUNFLG1CQUFBO0VBQUEsa0JBQUE7RUFBQSxjQUFBO0VBQ0EsWUFBQTtFQUNBLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLGlCQUFBO0FIMlBSO0FHdFBFO0VBQ0Usa0JBQUE7RUFDQSw4QkFBQTtFQUNBLCtCQUFBO0VBQ0EsZUFBQTtBSHdQSjtBR3BQRTtFQUNFLFlBQUE7RUFDQSxhQUFBO0VBQ0EsVUFBQTtFQUNBLHlCQUFBO0VBQUEsc0JBQUE7RUFBQSxtQkFBQTtFQUNBLCtCQUFBO0VBQ0EsMEJJakdZO0VKa0daLGlCQUFBO0FIc1BKO0FHclBJO0VBQ0UsZUFBQTtFQUNBLGtCQUFBO0FIdVBOO0FHclBJO0VBQ0UsaUJBQUE7RUFDQSxnQkFBQTtBSHVQTjtBR2hQQTtFQUNFLG1CQUFBO0VBQUEsbUJBQUE7RUFBQSxlQUFBO0VBQ0EsY0FBQTtBSGtQRjtBUXZXRTs7O0VBR0Usa0JBQUE7RUFDQSw4QkFBQTtFQUNBLCtCQUFBO0VBQ0EsZUFBQTtBUnlXSjtBUXRXRTtFQUNFLFlBQUE7QVJ3V0oiLCJmaWxlIjoiYm9pbGVycGxhdGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gQWRkIGN1c3RvbSBmb250cyBieSB2aXNpdGluZyBhbmQgc2VhcmNoIGh0dHBzOi8vZm9udHMuZ29vZ2xlLmNvbVxuQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9Um9ib3RvOndnaHRANDAwOzcwMCZkaXNwbGF5PXN3YXAnKTtcblxuLy8gSW1wb3J0IHV0aWxpdGllcy5cbkBpbXBvcnQgJ3V0aWxzL3R5cG9ncmFwaHknO1xuQGltcG9ydCAndXRpbHMvY29sb3JzJztcbkBpbXBvcnQgJ3V0aWxzL21peGlucyc7XG5AaW1wb3J0ICd1dGlscy92YXJpYWJsZXMnO1xuXG4vKiBHbG9iYWwgc3R5bGVzICovXG5AaW1wb3J0ICdnbG9iYWwvd2luZG93JztcbkBpbXBvcnQgJ2dsb2JhbC9ncmlkJztcbkBpbXBvcnQgJ2dsb2JhbC9mbGV4JztcblxuLyogU3R5bGVzIGxpbWl0ZWQgdG8gYm9pbGVycGxhdGUgc2hlZXRzICovXG4uYm9pbGVycGxhdGUge1xuICBAaW1wb3J0ICdjb21wb25lbnRzL2Zvcm1zJztcbiAgQGltcG9ydCAnY29tcG9uZW50cy9yZXNvdXJjZSc7XG4gIEBpbXBvcnQgJ2NvbXBvbmVudHMvaXRlbXMnO1xuICBAaW1wb3J0ICdjb21wb25lbnRzL2VmZmVjdHMnO1xufVxuIiwiLndpbmRvdy1hcHAge1xuICBmb250LWZhbWlseTogJGZvbnQtcHJpbWFyeTtcbn1cblxuLnJvbGxhYmxlIHtcbiAgJjpob3ZlcixcbiAgJjpmb2N1cyB7XG4gICAgY29sb3I6ICMwMDA7XG4gICAgdGV4dC1zaGFkb3c6IDAgMCAxMHB4IHJlZDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gIH1cbn0iLCIkZm9udC1wcmltYXJ5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiRmb250LXNlY29uZGFyeTogJ1JvYm90bycsIHNhbnMtc2VyaWY7IiwiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PVJvYm90bzp3Z2h0QDQwMDs3MDAmZGlzcGxheT1zd2FwXCIpO1xuLyogR2xvYmFsIHN0eWxlcyAqL1xuLndpbmRvdy1hcHAge1xuICBmb250LWZhbWlseTogXCJSb2JvdG9cIiwgc2Fucy1zZXJpZjtcbn1cblxuLnJvbGxhYmxlOmhvdmVyLCAucm9sbGFibGU6Zm9jdXMge1xuICBjb2xvcjogIzAwMDtcbiAgdGV4dC1zaGFkb3c6IDAgMCAxMHB4IHJlZDtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uZ3JpZCxcbi5ncmlkLTJjb2wge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLWNvbHVtbjogc3BhbiAyL3NwYW4gMjtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMiwgbWlubWF4KDAsIDFmcikpO1xuICBnYXA6IDEwcHg7XG4gIG1hcmdpbjogMTBweCAwO1xuICBwYWRkaW5nOiAwO1xufVxuXG4uZ3JpZC0zY29sIHtcbiAgZ3JpZC1jb2x1bW46IHNwYW4gMy9zcGFuIDM7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDMsIG1pbm1heCgwLCAxZnIpKTtcbn1cblxuLmdyaWQtNGNvbCB7XG4gIGdyaWQtY29sdW1uOiBzcGFuIDQvc3BhbiA0O1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg0LCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLTVjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiA1L3NwYW4gNTtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoNSwgbWlubWF4KDAsIDFmcikpO1xufVxuXG4uZ3JpZC02Y29sIHtcbiAgZ3JpZC1jb2x1bW46IHNwYW4gNi9zcGFuIDY7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDYsIG1pbm1heCgwLCAxZnIpKTtcbn1cblxuLmdyaWQtN2NvbCB7XG4gIGdyaWQtY29sdW1uOiBzcGFuIDcvc3BhbiA3O1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg3LCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLThjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiA4L3NwYW4gODtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoOCwgbWlubWF4KDAsIDFmcikpO1xufVxuXG4uZ3JpZC05Y29sIHtcbiAgZ3JpZC1jb2x1bW46IHNwYW4gOS9zcGFuIDk7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDksIG1pbm1heCgwLCAxZnIpKTtcbn1cblxuLmdyaWQtMTBjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiAxMC9zcGFuIDEwO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgxMCwgbWlubWF4KDAsIDFmcikpO1xufVxuXG4uZ3JpZC0xMWNvbCB7XG4gIGdyaWQtY29sdW1uOiBzcGFuIDExL3NwYW4gMTE7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDExLCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLTEyY29sIHtcbiAgZ3JpZC1jb2x1bW46IHNwYW4gMTIvc3BhbiAxMjtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMTIsIG1pbm1heCgwLCAxZnIpKTtcbn1cblxuLmdyaWQtc3RhcnQtMiB7XG4gIGdyaWQtY29sdW1uLXN0YXJ0OiAyO1xufVxuXG4uZ3JpZC1zdGFydC0zIHtcbiAgZ3JpZC1jb2x1bW4tc3RhcnQ6IDM7XG59XG5cbi5ncmlkLXN0YXJ0LTQge1xuICBncmlkLWNvbHVtbi1zdGFydDogNDtcbn1cblxuLmdyaWQtc3RhcnQtNSB7XG4gIGdyaWQtY29sdW1uLXN0YXJ0OiA1O1xufVxuXG4uZ3JpZC1zdGFydC02IHtcbiAgZ3JpZC1jb2x1bW4tc3RhcnQ6IDY7XG59XG5cbi5ncmlkLXN0YXJ0LTcge1xuICBncmlkLWNvbHVtbi1zdGFydDogNztcbn1cblxuLmdyaWQtc3RhcnQtOCB7XG4gIGdyaWQtY29sdW1uLXN0YXJ0OiA4O1xufVxuXG4uZ3JpZC1zdGFydC05IHtcbiAgZ3JpZC1jb2x1bW4tc3RhcnQ6IDk7XG59XG5cbi5ncmlkLXN0YXJ0LTEwIHtcbiAgZ3JpZC1jb2x1bW4tc3RhcnQ6IDEwO1xufVxuXG4uZ3JpZC1zdGFydC0xMSB7XG4gIGdyaWQtY29sdW1uLXN0YXJ0OiAxMTtcbn1cblxuLmdyaWQtc3RhcnQtMTIge1xuICBncmlkLWNvbHVtbi1zdGFydDogMTI7XG59XG5cbi5ncmlkLXNwYW4tMiB7XG4gIGdyaWQtY29sdW1uLWVuZDogc3BhbiAyO1xufVxuXG4uZ3JpZC1zcGFuLTMge1xuICBncmlkLWNvbHVtbi1lbmQ6IHNwYW4gMztcbn1cblxuLmdyaWQtc3Bhbi00IHtcbiAgZ3JpZC1jb2x1bW4tZW5kOiBzcGFuIDQ7XG59XG5cbi5ncmlkLXNwYW4tNSB7XG4gIGdyaWQtY29sdW1uLWVuZDogc3BhbiA1O1xufVxuXG4uZ3JpZC1zcGFuLTYge1xuICBncmlkLWNvbHVtbi1lbmQ6IHNwYW4gNjtcbn1cblxuLmdyaWQtc3Bhbi03IHtcbiAgZ3JpZC1jb2x1bW4tZW5kOiBzcGFuIDc7XG59XG5cbi5ncmlkLXNwYW4tOCB7XG4gIGdyaWQtY29sdW1uLWVuZDogc3BhbiA4O1xufVxuXG4uZ3JpZC1zcGFuLTkge1xuICBncmlkLWNvbHVtbi1lbmQ6IHNwYW4gOTtcbn1cblxuLmdyaWQtc3Bhbi0xMCB7XG4gIGdyaWQtY29sdW1uLWVuZDogc3BhbiAxMDtcbn1cblxuLmdyaWQtc3Bhbi0xMSB7XG4gIGdyaWQtY29sdW1uLWVuZDogc3BhbiAxMTtcbn1cblxuLmdyaWQtc3Bhbi0xMiB7XG4gIGdyaWQtY29sdW1uLWVuZDogc3BhbiAxMjtcbn1cblxuLmZsZXgtZ3JvdXAtY2VudGVyLFxuLmZsZXgtZ3JvdXAtbGVmdCxcbi5mbGV4LWdyb3VwLXJpZ2h0IHtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmZsZXgtZ3JvdXAtbGVmdCB7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cblxuLmZsZXgtZ3JvdXAtcmlnaHQge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cblxuLmZsZXhzaHJpbmsge1xuICBmbGV4OiAwO1xufVxuXG4uZmxleC1iZXR3ZWVuIHtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4uZmxleGxhcmdlIHtcbiAgZmxleDogMjtcbn1cblxuLmFsaWduLWxlZnQge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG59XG5cbi5hbGlnbi1yaWdodCB7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xufVxuXG4uYWxpZ24tY2VudGVyIHtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLyogU3R5bGVzIGxpbWl0ZWQgdG8gYm9pbGVycGxhdGUgc2hlZXRzICovXG4uYm9pbGVycGxhdGUge1xuICAvKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAqL1xuICAvKiAgSXRlbXMgTGlzdHMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAqL1xuICAvKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAqL1xuICAvKiBFeGFtcGxlIHN0eWxlIGZvciBCb2lsZXJwbGF0ZSAoY2FuIGJlIHJlbW92ZWQgaWYgbm90IG5lZWRlZCkgKi9cbn1cbi5ib2lsZXJwbGF0ZSAuaXRlbS1mb3JtIHtcbiAgZm9udC1mYW1pbHk6IFwiUm9ib3RvXCIsIHNhbnMtc2VyaWY7XG59XG4uYm9pbGVycGxhdGUgLnNoZWV0LWhlYWRlciB7XG4gIGZsZXg6IDAgYXV0bztcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgZmxleC13cmFwOiB3cmFwO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG59XG4uYm9pbGVycGxhdGUgLnNoZWV0LWhlYWRlciAucHJvZmlsZS1pbWcge1xuICBmbGV4OiAwIDAgMTAwcHg7XG4gIGhlaWdodDogMTAwcHg7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbn1cbi5ib2lsZXJwbGF0ZSAuc2hlZXQtaGVhZGVyIC5oZWFkZXItZmllbGRzIHtcbiAgZmxleDogMTtcbn1cbi5ib2lsZXJwbGF0ZSAuc2hlZXQtaGVhZGVyIGgxLmNoYXJuYW1lIHtcbiAgaGVpZ2h0OiA1MHB4O1xuICBwYWRkaW5nOiAwcHg7XG4gIG1hcmdpbjogNXB4IDA7XG4gIGJvcmRlci1ib3R0b206IDA7XG59XG4uYm9pbGVycGxhdGUgLnNoZWV0LWhlYWRlciBoMS5jaGFybmFtZSBpbnB1dCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIG1hcmdpbjogMDtcbn1cbi5ib2lsZXJwbGF0ZSAuc2hlZXQtdGFicyB7XG4gIGZsZXg6IDA7XG59XG4uYm9pbGVycGxhdGUgLnNoZWV0LWJvZHksXG4uYm9pbGVycGxhdGUgLnNoZWV0LWJvZHkgLnRhYixcbi5ib2lsZXJwbGF0ZSAuc2hlZXQtYm9keSAudGFiIC5lZGl0b3Ige1xuICBoZWlnaHQ6IDEwMCU7XG59XG4uYm9pbGVycGxhdGUgLnRveCAudG94LWVkaXRvci1jb250YWluZXIge1xuICBiYWNrZ3JvdW5kOiAjZmZmO1xufVxuLmJvaWxlcnBsYXRlIC50b3ggLnRveC1lZGl0LWFyZWEge1xuICBwYWRkaW5nOiAwIDhweDtcbn1cbi5ib2lsZXJwbGF0ZSAucmVzb3VyY2UtbGFiZWwge1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cbi5ib2lsZXJwbGF0ZSAuaXRlbXMtaGVhZGVyIHtcbiAgaGVpZ2h0OiAyOHB4O1xuICBtYXJnaW46IDJweCAwO1xuICBwYWRkaW5nOiAwO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuMDUpO1xuICBib3JkZXI6IDJweCBncm9vdmUgI2VlZWRlMDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWhlYWRlciA+ICoge1xuICBmb250LXNpemU6IDE0cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5ib2lsZXJwbGF0ZSAuaXRlbXMtaGVhZGVyIC5pdGVtLW5hbWUge1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgcGFkZGluZy1sZWZ0OiA1cHg7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3Qge1xuICBsaXN0LXN0eWxlOiBub25lO1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIG92ZXJmbG93LXk6IGF1dG87XG4gIHNjcm9sbGJhci13aWR0aDogdGhpbjtcbiAgY29sb3I6ICM0NDQ7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3QgLml0ZW0tbGlzdCB7XG4gIGxpc3Qtc3R5bGU6IG5vbmU7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbn1cbi5ib2lsZXJwbGF0ZSAuaXRlbXMtbGlzdCAuaXRlbS1uYW1lIHtcbiAgZmxleDogMjtcbiAgbWFyZ2luOiAwO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBmb250LXNpemU6IDEzcHg7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3QgLml0ZW0tbmFtZSBoMywgLmJvaWxlcnBsYXRlIC5pdGVtcy1saXN0IC5pdGVtLW5hbWUgaDQge1xuICBtYXJnaW46IDA7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIG92ZXJmbG93LXg6IGhpZGRlbjtcbn1cbi5ib2lsZXJwbGF0ZSAuaXRlbXMtbGlzdCAuaXRlbS1jb250cm9scyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXg6IDAgMCAxMDBweDtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbn1cbi5ib2lsZXJwbGF0ZSAuaXRlbXMtbGlzdCAuaXRlbS1jb250cm9scyBhIHtcbiAgZm9udC1zaXplOiAxMnB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIG1hcmdpbjogMCA2cHg7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3QgLml0ZW0ge1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAwIDJweDtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjOWM3Yjg7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3QgLml0ZW06bGFzdC1jaGlsZCB7XG4gIGJvcmRlci1ib3R0b206IG5vbmU7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3QgLml0ZW0gLml0ZW0tbmFtZSB7XG4gIGNvbG9yOiAjMTkxODEzO1xufVxuLmJvaWxlcnBsYXRlIC5pdGVtcy1saXN0IC5pdGVtIC5pdGVtLW5hbWUgLml0ZW0taW1hZ2Uge1xuICBmbGV4OiAwIDAgMzBweDtcbiAgaGVpZ2h0OiAzMHB4O1xuICBiYWNrZ3JvdW5kLXNpemU6IDMwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3QgLml0ZW0tcHJvcCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgYm9yZGVyLWxlZnQ6IDFweCBzb2xpZCAjYzljN2I4O1xuICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjYzljN2I4O1xuICBmb250LXNpemU6IDEycHg7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3QgLml0ZW1zLWhlYWRlciB7XG4gIGhlaWdodDogMjhweDtcbiAgbWFyZ2luOiAycHggMDtcbiAgcGFkZGluZzogMDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjA1KTtcbiAgYm9yZGVyOiAycHggZ3Jvb3ZlICNlZWVkZTA7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuLmJvaWxlcnBsYXRlIC5pdGVtcy1saXN0IC5pdGVtcy1oZWFkZXIgPiAqIHtcbiAgZm9udC1zaXplOiAxMnB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4uYm9pbGVycGxhdGUgLml0ZW1zLWxpc3QgLml0ZW1zLWhlYWRlciAuaXRlbS1uYW1lIHtcbiAgcGFkZGluZy1sZWZ0OiA1cHg7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG59XG4uYm9pbGVycGxhdGUgLml0ZW0tZm9ybXVsYSB7XG4gIGZsZXg6IDAgMCAyMDBweDtcbiAgcGFkZGluZzogMCA4cHg7XG59XG4uYm9pbGVycGxhdGUgLmVmZmVjdHMgLml0ZW0gLmVmZmVjdC1zb3VyY2UsXG4uYm9pbGVycGxhdGUgLmVmZmVjdHMgLml0ZW0gLmVmZmVjdC1kdXJhdGlvbixcbi5ib2lsZXJwbGF0ZSAuZWZmZWN0cyAuaXRlbSAuZWZmZWN0LWNvbnRyb2xzIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjOWM3Yjg7XG4gIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICNjOWM3Yjg7XG4gIGZvbnQtc2l6ZTogMTJweDtcbn1cbi5ib2lsZXJwbGF0ZSAuZWZmZWN0cyAuaXRlbSAuZWZmZWN0LWNvbnRyb2xzIHtcbiAgYm9yZGVyOiBub25lO1xufSIsIi8vIEdyaWQuXG4uZ3JpZCxcbi5ncmlkLTJjb2wge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLWNvbHVtbjogc3BhbiAyIC8gc3BhbiAyO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCBtaW5tYXgoMCwgMWZyKSk7XG4gIGdhcDogMTBweDtcbiAgbWFyZ2luOiAxMHB4IDA7XG4gIHBhZGRpbmc6IDA7XG59XG5cbi5ncmlkLTNjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiAzIC8gc3BhbiAzO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgzLCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLTRjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiA0IC8gc3BhbiA0O1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg0LCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLTVjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiA1IC8gc3BhbiA1O1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg1LCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLTZjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiA2IC8gc3BhbiA2O1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg2LCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLTdjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiA3IC8gc3BhbiA3O1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg3LCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLThjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiA4IC8gc3BhbiA4O1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg4LCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLTljb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiA5IC8gc3BhbiA5O1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg5LCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi5ncmlkLTEwY29sIHtcbiAgZ3JpZC1jb2x1bW46IHNwYW4gMTAgLyBzcGFuIDEwO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgxMCwgbWlubWF4KDAsIDFmcikpO1xufVxuXG4uZ3JpZC0xMWNvbCB7XG4gIGdyaWQtY29sdW1uOiBzcGFuIDExIC8gc3BhbiAxMTtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMTEsIG1pbm1heCgwLCAxZnIpKTtcbn1cblxuLmdyaWQtMTJjb2wge1xuICBncmlkLWNvbHVtbjogc3BhbiAxMiAvIHNwYW4gMTI7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDEyLCBtaW5tYXgoMCwgMWZyKSk7XG59XG5cbi8vIEdyaWQgb2Zmc2V0LlxuLmdyaWQtc3RhcnQtMiB7IGdyaWQtY29sdW1uLXN0YXJ0OiAyIH1cbi5ncmlkLXN0YXJ0LTMgeyBncmlkLWNvbHVtbi1zdGFydDogMyB9XG4uZ3JpZC1zdGFydC00IHsgZ3JpZC1jb2x1bW4tc3RhcnQ6IDQgfVxuLmdyaWQtc3RhcnQtNSB7IGdyaWQtY29sdW1uLXN0YXJ0OiA1IH1cbi5ncmlkLXN0YXJ0LTYgeyBncmlkLWNvbHVtbi1zdGFydDogNiB9XG4uZ3JpZC1zdGFydC03IHsgZ3JpZC1jb2x1bW4tc3RhcnQ6IDcgfVxuLmdyaWQtc3RhcnQtOCB7IGdyaWQtY29sdW1uLXN0YXJ0OiA4IH1cbi5ncmlkLXN0YXJ0LTkgeyBncmlkLWNvbHVtbi1zdGFydDogOSB9XG4uZ3JpZC1zdGFydC0xMCB7IGdyaWQtY29sdW1uLXN0YXJ0OiAxMCB9XG4uZ3JpZC1zdGFydC0xMSB7IGdyaWQtY29sdW1uLXN0YXJ0OiAxMSB9XG4uZ3JpZC1zdGFydC0xMiB7IGdyaWQtY29sdW1uLXN0YXJ0OiAxMiB9XG5cbi5ncmlkLXNwYW4tMiB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiAyIH1cbi5ncmlkLXNwYW4tMyB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiAzIH1cbi5ncmlkLXNwYW4tNCB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiA0IH1cbi5ncmlkLXNwYW4tNSB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiA1IH1cbi5ncmlkLXNwYW4tNiB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiA2IH1cbi5ncmlkLXNwYW4tNyB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiA3IH1cbi5ncmlkLXNwYW4tOCB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiA4IH1cbi5ncmlkLXNwYW4tOSB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiA5IH1cbi5ncmlkLXNwYW4tMTAgeyBncmlkLWNvbHVtbi1lbmQ6IHNwYW4gMTAgfVxuLmdyaWQtc3Bhbi0xMSB7IGdyaWQtY29sdW1uLWVuZDogc3BhbiAxMSB9XG4uZ3JpZC1zcGFuLTEyIHsgZ3JpZC1jb2x1bW4tZW5kOiBzcGFuIDEyIH1cbiIsIi8vIEZsZXhib3guXG4uZmxleC1ncm91cC1jZW50ZXIsXG4uZmxleC1ncm91cC1sZWZ0LFxuLmZsZXgtZ3JvdXAtcmlnaHQge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uZmxleC1ncm91cC1sZWZ0IHtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LXN0YXJ0O1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xufVxuXG4uZmxleC1ncm91cC1yaWdodCB7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xufVxuXG4uZmxleHNocmluayB7XG4gIGZsZXg6IDA7XG59XG5cbi5mbGV4LWJldHdlZW4ge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi5mbGV4bGFyZ2Uge1xuICBmbGV4OiAyO1xufVxuXG4vLyBBbGlnbm1lbnQgc3R5bGVzLlxuLmFsaWduLWxlZnQge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG59XG5cbi5hbGlnbi1yaWdodCB7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xufVxuXG4uYWxpZ24tY2VudGVyIHtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iLCIvLyBTZWN0aW9uIEhlYWRlclxuLml0ZW1zLWhlYWRlciB7XG4gIGhlaWdodDogMjhweDtcbiAgbWFyZ2luOiAycHggMDtcbiAgcGFkZGluZzogMDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjA1KTtcbiAgYm9yZGVyOiAkYm9yZGVyLWdyb292ZTtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gID4gKiB7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgfVxuICAuaXRlbS1uYW1lIHtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBwYWRkaW5nLWxlZnQ6IDVweDtcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgLy8gZm9udC1zaXplOiAxNnB4O1xuICB9XG59XG5cbi8qIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tICovXG4vKiAgSXRlbXMgTGlzdHMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAqL1xuLyogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gKi9cblxuLml0ZW1zLWxpc3Qge1xuICBsaXN0LXN0eWxlOiBub25lO1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIG92ZXJmbG93LXk6IGF1dG87XG4gIHNjcm9sbGJhci13aWR0aDogdGhpbjtcbiAgY29sb3I6ICRjLXRhbjtcblxuICAvLyBDaGlsZCBsaXN0c1xuICAuaXRlbS1saXN0IHtcbiAgICBsaXN0LXN0eWxlOiBub25lO1xuICAgIG1hcmdpbjogMDtcbiAgICBwYWRkaW5nOiAwO1xuICB9XG5cbiAgLy8gSXRlbSBOYW1lXG4gIC5pdGVtLW5hbWUge1xuICAgIGZsZXg6IDI7XG4gICAgbWFyZ2luOiAwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgZm9udC1zaXplOiAxM3B4O1xuICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGgzLCBoNCB7XG4gICAgICBtYXJnaW46IDA7XG4gICAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgICAgb3ZlcmZsb3cteDogaGlkZGVuO1xuICAgIH1cbiAgfVxuXG4gIC8vIENvbnRyb2wgQnV0dG9uc1xuICAuaXRlbS1jb250cm9scyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4OiAwIDAgMTAwcHg7XG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgICBhIHtcbiAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgIG1hcmdpbjogMCA2cHg7XG4gICAgfVxuICB9XG5cbiAgLy8gSW5kaXZpZHVhbCBJdGVtXG4gIC5pdGVtIHtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmc6IDAgMnB4OyAvLyB0byBhbGlnbiB3aXRoIHRoZSBoZWFkZXIgYm9yZGVyXG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICRjLWZhaW50O1xuICAgICY6bGFzdC1jaGlsZCB7IGJvcmRlci1ib3R0b206IG5vbmU7IH1cbiAgICAuaXRlbS1uYW1lIHtcbiAgICAgIGNvbG9yOiAkYy1kYXJrO1xuICAgICAgLml0ZW0taW1hZ2Uge1xuICAgICAgICBmbGV4OiAwIDAgMzBweDtcbiAgICAgICAgaGVpZ2h0OiAzMHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IDMwcHg7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiA1cHg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLml0ZW0tcHJvcCB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGJvcmRlci1sZWZ0OiAxcHggc29saWQgI2M5YzdiODtcbiAgICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjYzljN2I4O1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgfVxuXG4gIC8vIFNlY3Rpb24gSGVhZGVyXG4gIC5pdGVtcy1oZWFkZXIge1xuICAgIGhlaWdodDogMjhweDtcbiAgICBtYXJnaW46IDJweCAwO1xuICAgIHBhZGRpbmc6IDA7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuMDUpO1xuICAgIGJvcmRlcjogJGJvcmRlci1ncm9vdmU7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgPiAqIHtcbiAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICB9XG4gICAgLml0ZW0tbmFtZSB7XG4gICAgICBwYWRkaW5nLWxlZnQ6IDVweDtcbiAgICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgICAvLyBmb250LXNpemU6IDE2cHg7XG4gICAgfVxuICB9XG59XG5cbi8qIEV4YW1wbGUgc3R5bGUgZm9yIEJvaWxlcnBsYXRlIChjYW4gYmUgcmVtb3ZlZCBpZiBub3QgbmVlZGVkKSAqL1xuLml0ZW0tZm9ybXVsYSB7XG4gIGZsZXg6IDAgMCAyMDBweDtcbiAgcGFkZGluZzogMCA4cHg7XG59IiwiLml0ZW0tZm9ybSB7XG4gIGZvbnQtZmFtaWx5OiAkZm9udC1wcmltYXJ5O1xufVxuXG4uc2hlZXQtaGVhZGVyIHtcbiAgZmxleDogMCBhdXRvO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcblxuICAucHJvZmlsZS1pbWcge1xuICAgIGZsZXg6IDAgMCAxMDBweDtcbiAgICBoZWlnaHQ6IDEwMHB4O1xuICAgIG1hcmdpbi1yaWdodDogMTBweDtcbiAgfVxuXG4gIC5oZWFkZXItZmllbGRzIHtcbiAgICBmbGV4OiAxO1xuICB9XG5cbiAgaDEuY2hhcm5hbWUge1xuICAgIGhlaWdodDogNTBweDtcbiAgICBwYWRkaW5nOiAwcHg7XG4gICAgbWFyZ2luOiA1cHggMDtcbiAgICBib3JkZXItYm90dG9tOiAwO1xuICAgIGlucHV0IHtcbiAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgbWFyZ2luOiAwO1xuICAgIH1cbiAgfVxufVxuXG4uc2hlZXQtdGFicyB7XG4gIGZsZXg6IDA7XG59XG5cbi5zaGVldC1ib2R5LFxuLnNoZWV0LWJvZHkgLnRhYixcbi5zaGVldC1ib2R5IC50YWIgLmVkaXRvciB7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLnRveCB7XG4gIC50b3gtZWRpdG9yLWNvbnRhaW5lciB7XG4gICAgYmFja2dyb3VuZDogJGMtd2hpdGU7XG4gIH1cblxuICAudG94LWVkaXQtYXJlYSB7XG4gICAgcGFkZGluZzogMCA4cHg7XG4gIH1cbn0iLCIkYy13aGl0ZTogI2ZmZjtcbiRjLWJsYWNrOiAjMDAwO1xuXG4kYy1kYXJrOiAjMTkxODEzO1xuJGMtZmFpbnQ6ICNjOWM3Yjg7XG4kYy1iZWlnZTogI2I1YjNhNDtcbiRjLXRhbjogIzQ0NDsiLCIucmVzb3VyY2UtbGFiZWwge1xuICBmb250LXdlaWdodDogYm9sZDtcbn0iLCIkcGFkZGluZy1zbTogNXB4O1xuJHBhZGRpbmctbWQ6IDEwcHg7XG4kcGFkZGluZy1sZzogMjBweDtcblxuJGJvcmRlci1ncm9vdmU6IDJweCBncm9vdmUgI2VlZWRlMDsiLCIuZWZmZWN0cyAuaXRlbSB7XG4gIC5lZmZlY3Qtc291cmNlLFxuICAuZWZmZWN0LWR1cmF0aW9uLFxuICAuZWZmZWN0LWNvbnRyb2xzIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgYm9yZGVyLWxlZnQ6IDFweCBzb2xpZCAjYzljN2I4O1xuICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICNjOWM3Yjg7XG4gICAgZm9udC1zaXplOiAxMnB4O1xuICB9XG5cbiAgLmVmZmVjdC1jb250cm9scyB7XG4gICAgYm9yZGVyOiBub25lO1xuICB9XG59XG4iXX0= */

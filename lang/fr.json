@@ -1,12 +1,34 @@
 {
-  "ACTOR": {
-    "TypePersonnage": "Personnage"
-  },
-  "ITEM": {
-    "TypeArme": "Arme",
-    "TypeEquipement": "Equipement",
-    "TypeTarot": "Tarot",
-    "TypeElementbio": "Element Biographique",
-    "TypeArchetype": "Archetype"
-  }
+  "VALOMBREUSE.title": "Valombreuse",
+  "VALOMBREUSE.tabs.stats": "Caractéristiques",
+  "VALOMBREUSE.tabs.combat": "Combat",
+  "VALOMBREUSE.tabs.paths" : "Voies",
+  "VALOMBREUSE.tabs.competences" : "Compétences",
+  "VALOMBREUSE.tabs.inventory" : "Inventaire",
+  "VALOMBREUSE.tabs.bloodmagic" : "Magie de Sang",
+  "VALOMBREUSE.tabs.description" : "Description",
+  "VALOMBREUSE.stats.label": "Caractéristiques",
+  "VALOMBREUSE.stats.abbrev": "CARAC.",
+  "VALOMBREUSE.stats.vig.label" : "Vigueur",
+  "VALOMBREUSE.stats.vig.abbrev" : "VIG",
+  "VALOMBREUSE.stats.mc.label" : "Maîtrise Corporelle",
+  "VALOMBREUSE.stats.mc.abbrev" : "MC",
+  "VALOMBREUSE.stats.con.label" : "Concentration",
+  "VALOMBREUSE.stats.con.abbrev" : "CON",
+  "VALOMBREUSE.stats.int.label" : "Intelligence",
+  "VALOMBREUSE.stats.int.abbrev" : "INT",
+  "VALOMBREUSE.stats.cha.label" : "Charisme",
+  "VALOMBREUSE.stats.cha.abbrev" : "CHA",
+  "VALOMBREUSE.stats.eve.label" : "Eveil",
+  "VALOMBREUSE.stats.eve.abbrev" : "EVE",
+  "VALOMBREUSE.details.name": "Nom",
+  "VALOMBREUSE.ui.veinard" : "VEINARD",
+  "VALOMBREUSE.ui.ordre" : "Ordre",
+  "VALOMBREUSE.ui.lignee" : "Lignée",
+  "VALOMBREUSE.details.description" : "Description",
+  "VALOMBREUSE.attributes.hp.label" : "Blessures",
+  "VALOMBREUSE.attributes.hit.label" : "Blessures Max",
+  "VALOMBREUSE.ui.def" : "Seuil de Blessures",
+  "VALOMBREUSE.attributes.power.label" : "Energie",
+  "VALOMBREUSE.attributes.pwmax.label" : "Energie Max"
 }

@@ -1,234 +1,212 @@
 {
   "Actor": {
-    "types": ["Lignee", "sang impur", "acolyte", "pnj", "creature", "invention"],
+    "types": [
+      "character",
+      "npc",
+      "loot"
+    ],
     "templates": {
-      "ListeVia": {
-        "Via": {
-          "Aquilae": {
-            "valeur": 0
-          },
-          "Arenae": {
-            "valeur": 0
-          },
-          "Draconis": {
-            "valeur": 0
-          },
-          "Leo": {
-            "valeur": 0
-          },
-          "Lupus": {
-            "valeur": 0
-          },
-          "Phoenix": {
-            "valeur": 0
-          },
-          "Simia": {
-            "valeur": 0
-          },
-          "Taurus": {
-            "valeur": 0
-          },
-          "Unicornis": {
-            "valeur": 0
-          },
-          "Lunae": {
-            "valeur": 0
-          },
-          "Solaris": {
-            "valeur": 0
-          },
-          "Serpentis": {
-            "valeur": 0
-          }
-        }
-      }, 
-      "ListeAttributs": {
-        "Attributs":{
-          "Vig": {
+      "stats": {
+        "stats": {
+          "vig" : {
+            "key" : "vig",
+            "label" : "VALOMBREUSE.stats.vig.label",
+            "abbrev" : "VALOMBREUSE.stats.vig.abbrev",
+            "base": 0,
             "value": 0
           },
-          "MC": {
-           "value": 0
-          },
-          "Con": {
+          "mc" : {
+            "key" : "mc",
+            "label" : "VALOMBREUSE.stats.mc.label",
+            "abbrev" : "VALOMBREUSE.stats.mc.abbrev",
+            "base": 0,
             "value": 0
           },
-          "Int": {
-           "value": 0
-          },
-          "Eve": {
+          "con" : {
+            "key" : "con",
+            "label" : "VALOMBREUSE.stats.con.label",
+            "abbrev" : "VALOMBREUSE.stats.con.abbrev",
+            "base": 0,
             "value": 0
           },
-          "Cha": {
+          "int" : {
+            "key" : "int",
+            "label" : "VALOMBREUSE.stats.int.label",
+            "abbrev" : "VALOMBREUSE.stats.int.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "eve" : {
+            "key" : "eve",
+            "label" : "VALOMBREUSE.stats.eve.label",
+            "abbrev" : "VALOMBREUSE.stats.eve.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "cha" : {
+            "key" : "cha",
+            "label" : "VALOMBREUSE.stats.cha.label",
+            "abbrev" : "VALOMBREUSE.stats.intchau.abbrev",
+            "base": 0,
             "value": 0
           }
         }
       },
-      "ListeCompetences": {
-        "Competences": {
-          "Acrobatie":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Athletisme":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "ArmesDistance":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Art":{
-            "value": 0,
-            "Apprentissage":0,
-            "Spécialisation": "",
-            "Expertise": ""
-          },
-          "Artisanat":{
-            "value": 0,
-            "Apprentissage":0,
-            "Spécialisation": "",
-            "Expertise": ""
-          },
-          "Bagarre":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Bricolage":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Charme":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Commerce":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Conduite":{
-            "value": 0,
-            "Apprentissage":0,
-            "Spécialisation": "",
-            "Expertise": ""
-          },
-          "ConnaissanceMonde":{
-            "value": 0,
-            "Apprentissage":0,
-            "Spécialisation": "",
-            "Expertise": ""
-          },
-          "ConnaissanceGenese":{
-            "value": 0,
-            "Apprentissage":0,
-            "Spécialisation": "",
-            "Expertise": ""
-          },
-          "ConnaissanceNature":{
-            "value": 0,
-            "Apprentissage":0,
-            "Spécialisation": "",
-            "Expertise": ""
-          },
-          "Discretion":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Equitation":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Escamotage":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Intimidation":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Intuition":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Melee":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Persuasion":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Sang Froid":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Soins":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Supercherie":{
-            "value": 0,
-            "Apprentissage":0
-          },
-          "Survie":{
-            "value": 0,
-            "Apprentissage":0,
-            "Spécialisation": "",
-            "Expertise": ""
-          },
-          "Vigilance":{
-            "value": 0,
-            "Apprentissage":0
-          }
-        }
-      },
-     "base": {
-          "Blessures": {
-            "value": 3,
-            "min": 0,
+      "common": {
+        "description": "",
+        "attributes": {
+          "hp": {
+            "key" : "pw",
+            "label" : "VALOMBREUSE.attributes.power.label",
+            "abbrev" : "VALOMBREUSE.attributes.power.abbrev",
+            "base": 10,
+            "bonus": 0,
+            "value": 10,
             "max": 10
           },
-		    "Encaissement": {
-           "value": 0,
-           "min": 0,
-            "max": 20
+          "power": {
+            "key" : "hp",
+            "label" : "VALOMBREUSE.attributes.hp.label",
+            "abbrev" : "VALOMBREUSE.attributes.hp.abbrev",
+            "base": 10,
+            "bonus": 0,
+            "value": 10,
+            "max": 10
           },
-          "Description": ""
-      }
-    },
-  "Lignee": {
-      "templates": ["base","ListeVia","ListeAttributs","ListeCompetences"],
-      "SangAncien": {
-        "Rang": {
-          "value": 1
+          "def": {
+            "key" : "def",
+            "label" : "VALOMBREUSE.attributes.def.label",
+            "abbrev" : "VALOMBREUSE.attributes.def.abbrev",
+            "base": 0,
+            "bonus": 0,
+            "value": 0
+          },
+          "initiative": 0
         },
-		    "PointSangMax": {
-          "value": 0
+        "currency": {
+          "gp": {
+            "key" : "gp",
+            "label" : "VALOMBREUSE.currency.gp.label",
+            "abbrev" : "VALOMBREUSE.currency.gp.abbrev",
+            "qty" : 0
+          },
+          "sp": {
+            "key" : "sp",
+            "label" : "VALOMBREUSE.currency.sp.label",
+            "abbrev" : "VALOMBREUSE.currency.sp.abbrev",
+            "qty" : 0
+          },
+          "cp": {
+            "key" : "cp",
+            "label" : "VALOMBREUSE.currency.cp.label",
+            "abbrev" : "VALOMBREUSE.currency.cp.abbrev",
+            "qty" : 0
+          },
+          "fp": {
+            "key" : "fp",
+            "label" : "AVALOMBREUSERIA.currency.fp.label",
+            "abbrev" : "VALOMBREUSE.currency.fp.abbrev",
+            "qty" : 0
+          }
         },
-        "PointSangUsed": {
-          "value": 0
-        },
-        "PerteSang": {
-          "value": 0
+        "alert": {
+          "type": "error",
+          "msg": ""
         }
       }
     },
+    "character": {
+      "templates": [
+        "stats",
+        "common"
+      ]
+    },
     "npc": {
-      "templates": ["base"]
+      "templates": [
+        "stats",
+        "common"
+      ]
+    },
+    "loot": {
+      "templates": [
+        "common"
+      ]
     }
   },
   "Item": {
-    "types": ["item"],
+    "types": [
+      "item",
+      "competence",
+      "origine",
+      "profession"
+    ],
     "templates": {
-      "base": {
-        "description": ""
+      "base" : {
+        "description" : "",
+        "source" : ""
+      },
+      "equipment" : {
+        "defBase" : 0,
+        "dmgBase": "",
+        "hands": 1,
+        "range": 0,
+        "equiped": false,
+        "slot": "",
+        "qty" : 1,
+        "qtymax" : null,
+        "price": 0,
+        "properties": {
+          "ranged": false,
+          "equipable": false,
+          "stackable": false,
+          "unique" : false,
+          "2Handed" : false,
+          "equipment" : false,
+          "weapon" : false,
+          "protection" : false
+        }
       }
     },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": ""
+    "item" : {
+      "templates": [
+        "base",
+        "equipment"
+      ],
+      "subtype" : ""
+    },
+    "competence": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "special": false,
+      "language": false,
+      "link1": "",
+      "link2": "",
+      "score": 0,
+      "bonus":0
+    },
+    "profession": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "competences": []
+    },
+    "origine": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "bonuses": {
+        "vig" : 0,
+        "mc" : 0,
+        "con" : 0,
+        "int" : 0,
+        "eve" : 0,
+        "cha" : 0
+      },
+      "competences": []
     }
   }
 }

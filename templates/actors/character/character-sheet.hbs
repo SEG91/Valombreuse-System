@@ -1,0 +1,40 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="wrap valombreuse-bg-std">
+        <div class="header">
+            <div class="flexrow no-wrap">
+                <div class="flex1 left" id="banner-left"></div>
+                    <div class="flex1 center" id="logo-banner"><img src="/systems/valombreuse/assets/images/Valombreuse-Logo.png"/></div>                
+                <div class="flex1 right" id="banner-right"></div>
+            </div>
+        </div>
+        
+        {{> "systems/valombreuse/templates/actors/character/parts/character-header.hbs"}}
+
+        <div class="flexrow main mainHeight_std" style="overflow: visible;">
+            <div class="content flex3">
+             {{!-- Sheet Tab Navigation --}}
+                <nav class="sheet-tabs tabs" data-group="primary">
+                    <a class="item titleFont" data-tab="stats">{{ localize "VALOMBREUSE.tabs.stats" }}</a>
+                    <a class="item titleFont" data-tab="competences">{{ localize "VALOMBREUSE.tabs.competences" }}</a>
+                    <a class="item titleFont" data-tab="inventory">{{ localize "VALOMBREUSE.tabs.inventory" }}</a>
+                    <a class="item titleFont" data-tab="bloodmagic">{{ localize "VALOMBREUSE.tabs.bloodmagic" }}</a>
+                </nav>
+                {{!-- Sheet Body --}}
+                <section class="sheet-body" style="overflow: visible;">
+                    {{!-- Stats Tab --}}
+                    <div class="tab stats" data-group="primary" data-tab="stats">
+                     {{> "systems/valombreuse/templates/actors/character/parts/stats/character-stats.hbs"}}
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="header">
+            <div class="flexrow no-wrap">
+                <div class="flex1 left" id="banner-bot-left"></div>
+                    <div class="flex1 center" id="logo-orbe"><img src="/systems/valombreuse/assets/images/Valombresue-Logo-4.png"/></div>
+                <div class="flex1 right" id="banner-bot-right"></div>
+            </div>
+        </div>
+    </div>
+</form>
+
