@@ -138,7 +138,10 @@
       "item",
       "competence",
       "origine",
-      "profession"
+      "ordre",
+      "bloodline",
+      "blooddomain",
+      "bloodpower"
     ],
     "templates": {
       "base" : {

@@ -1,0 +1,27 @@
+<div class="form-header">Compétences Spéciales</div>
+
+    <div class="flexcol">
+        <ol class="inventory-list competence-list">
+            <li class="inventory-header flexrow">
+                <div class="item-name flexrow">{{ localize "ARIA.ui.skill" }}</div>
+                <div class="item-controls">
+                </div>
+            </li>
+            {{#each this.system.competences}}
+                <ol class="item-list">
+                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="competence">
+                        <div class="rollable no-wrap" title="{{name}}" data-rolling-value="{{system.score}}" data-roll-type="competencycheck">
+                            <div class="flexrow no-wrap ">
+                                <div class="field-label no-wrap left competence_name">{{name}}
+                                    <span class="comp_tooltiptext"><h1>{{name}} :</h1>{{{system.description}}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-controls">
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                </ol>
+            {{/each}}
+        </ol>
+    </div>

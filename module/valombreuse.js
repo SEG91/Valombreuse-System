@@ -29,6 +29,7 @@ Hooks.once("init", async function () {
     CONFIG.VALOMBREUSE = VALOMBREUSE;
     // Define custom Entity classes
     CONFIG.Actor.documentClass = ValombreuseActor;
+    CONFIG.Item.documentClass = AriaItem;
 
 
     // Create a namespace within the game global
