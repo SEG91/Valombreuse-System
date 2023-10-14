@@ -2687,7 +2687,7 @@ bg
 }
 
 .valombreuse.item .window-content .valombreuse-bg-std {
-  background: url("../ui/bgNormal.webp");
+  background: url("../assets/images/BG-Page-Web-scaled.jpg");
   background-size: cover;
   font-family: "AGaramondPro", serif;
 }

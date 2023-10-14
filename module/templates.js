@@ -19,7 +19,10 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/valombreuse/templates/actors/character/parts/stats/attributes/character-attributes-int.hbs",
         "systems/valombreuse/templates/actors/character/parts/stats/character-hp.hbs",
         "systems/valombreuse/templates/actors/character/parts/stats/character-energy.hbs",
-        "systems/valombreuse/templates/actors/character/parts/stats/character-attacks.hbs"
+        "systems/valombreuse/templates/actors/character/parts/stats/character-attacks.hbs",
+        "systems/valombreuse/templates/items/item-sheet.hbs",
+        "systems/valombreuse/templates/items/parts/details/competence-details.hbs",
+        "systems/valombreuse/templates/items/parts/details/ordre-details.hbs"
     ];
 
     // Load the template parts

@@ -9,7 +9,7 @@ export class ValombreuseItemSheet extends GlobalValombreuseItemSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["aria", "sheet", "item", this.type],
+            classes: ["valombreuse", "sheet", "item", this.type],
             template: System.templatesPath + "/items/item-sheet.hbs",
             width: 600,
             height: 680,
