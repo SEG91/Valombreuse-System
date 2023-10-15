@@ -2,7 +2,7 @@
   "id": "valombreuse",
   "title": "valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.5",
+  "version": "0.0.5.1",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
@@ -14,12 +14,66 @@
   "esmodules": ["module/valombreuse.js"],
   "styles": ["css/valombreuse.css"],
   "scripts": [],
-  "packs": [],
   "languages": [
     {
       "lang": "fr",
       "name": "Français",
       "path": "lang/fr.json"
+    }
+  ],
+  "packs": [
+    {
+      "label": "Lignée",
+      "type": "Item",
+      "name": "lignee",
+      "path": "packs/lignee",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Domaine de Sang Ancien",
+      "type": "Item",
+      "name": "domaine-de-sang-ancien",
+      "path": "packs/domaine-de-sang-ancien",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Pouvoir de Sang Ancien",
+      "type": "Item",
+      "name": "pouvoir-de-sang-ancien",
+      "path": "packs/pouvoir-de-sang-ancien",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {},
+      "package": "world",
+      "id": "world.pouvoir-de-sang-ancien",
+      "packageType": "world",
+      "packageName": "valombreuse-20",
+      "index": [],
+      "folders": []
+    },
+    {
+      "label": "Origines",
+      "type": "Item",
+      "name": "origines",
+      "path": "packs/origines",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "gridDistance": 1.5,
