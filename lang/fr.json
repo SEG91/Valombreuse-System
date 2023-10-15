@@ -1,4 +1,22 @@
 {
+
+  "TYPES": {
+    "Actor": {
+      "character": "Veinard",
+      "pnj": "PNJ"
+    },
+
+    "Item": {
+      "item": "Objet",
+      "ordre": "Ordre",
+      "origine": "Origine",
+      "bloodline": "Lignée",
+      "blooddomain": "Domaine de Sang Ancien",
+      "bloodpower": "Pouvoir de Sang Ancien",
+      "competence": "Compétence",
+      "aptitude": "Aptitude"
+    }
+  },
   "VALOMBREUSE.title": "Valombreuse",
   "VALOMBREUSE.tabs.stats": "Caractéristiques",
   "VALOMBREUSE.tabs.combat": "Combat",
@@ -27,6 +45,7 @@
   "VALOMBREUSE.ui.veinard" : "VEINARD",
   "VALOMBREUSE.ui.ordre" : "Ordre",
   "VALOMBREUSE.ui.lignee" : "Lignée",
+  "VALOMBREUSE.ui.origine" : "Origine",
   "VALOMBREUSE.details.description" : "Description",
   "VALOMBREUSE.attributes.hp.label" : "Blessures",
   "VALOMBREUSE.attributes.hit.label" : "Blessures Max",
@@ -40,5 +59,7 @@
   "VALOMBREUSE.SheetClassItem" : "Fiche d'Objet VALOMBREUSE par défaut",
   "VALOMBREUSE.ui.properties" :  "Propriétés",
   "VALOMBREUSE.ui.spe" :  "Spécialisation",
-  "VALOMBREUSE.ui.expert" :  "Expertise"
+  "VALOMBREUSE.ui.expert" :  "Expertise",
+  "VALOMBREUSE.ui.blooddomain": "Domaine de Sang Ancien",
+  "VALOMBREUSE.ui.bloodpower": "Pouvoir de Sang Ancien"
 }

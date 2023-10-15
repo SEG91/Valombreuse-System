@@ -1,23 +1,22 @@
 
-<div class="form-header">Compétences Spéciales</div>
+<div class="form-header">Domaines de Sang Ancien</div>
 
  <div class="flexcol">
         <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
-                <div class="item-name flexrow">{{ localize "VALOMBREUSE.ui.skill" }}</div>
+                <div class="item-name flexrow">{{ localize "VALOMBREUSE.ui.blooddomain" }}</div>
                 <div class="item-controls">
                 </div>
             </li>
-            {{#each this.system.competences}}
+            {{debug this.system.blooddomains.length}}
+            {{#each this.system.blooddomains}}
                 <ol class="item-list">
-                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="competence">
-                        <div class="rollable no-wrap" title="{{name}}" data-rolling-value="{{system.score}}" data-roll-type="competencycheck">
+                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="blooddomain">
                             <div class="flexrow no-wrap ">
                                 <div class="field-label no-wrap left competence_name">{{name}}
                                     <span class="comp_tooltiptext"><h1>{{name}} :</h1>{{{system.description}}}</span>
                                 </div>
                             </div>
-                        </div>
                         <div class="item-controls">
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>

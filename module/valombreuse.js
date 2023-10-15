@@ -50,7 +50,7 @@ Hooks.once("init", async function () {
 
     // Register item sheets
     Items.registerSheet("valombreuse", ValombreuseItemSheet, {
-      types: ["item", "competence", "ordre", "origine"],
+      types: ["item", "competence", "ordre", "origine","bloodline","bloodpower","blooddomain"],
       makeDefault: true,
       label: "VALOMBREUSE.SheetClassItem"
   });

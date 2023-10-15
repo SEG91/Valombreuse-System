@@ -94,6 +94,10 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
         switch (item.type) {
             case "competence" :
                 return await this._onDropCompetenceItem(event, item);
+            case "blooddomain" :
+                return await this._onDropBlooddomainItem(event, item);
+            case "bloodpower" :
+                return await this._onDropBloodpowerItem(event, item);
             default:
                 return;
         }
@@ -124,6 +128,32 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
 
     /* -------------------------------------------- */
 
+    _onDropBlooddomainItem(event, itemData) {
+        event.preventDefault();
+        let data = duplicate(this.item.toObject(false));
+        if(data.system.blooddomains){
+            let caps = data.system.blooddomains;
+            caps.push(itemData);
+            return this.item.update(data);
+        }
+        else ui.notifications.error("Ajout de ce domaine de Sang impossible.")
+    }
+
+    /* -------------------------------------------- */
+
+    _onDropBloodpowerItem(event, itemData) {
+        event.preventDefault();
+        let data = duplicate(this.item.toObject(false));
+        if(data.system.bloodpowers){
+            let caps = data.system.bloodpowers;
+            caps.push(itemData);
+            return this.item.update(data);
+        }
+        else ui.notifications.error("Ajout de ce pouvoir de Sang impossible.")
+    }
+
+    /* -------------------------------------------- */
+
     async _onEditItem(ev){
         ev.preventDefault();
         const li = $(ev.currentTarget).closest(".item");
@@ -149,6 +179,8 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
         let array = null;
         switch(itemType){
             case "competence" : array = this.item.system.competences; break;
+            case "blooddomain" : array = this.item.system.blooddomains; break;
+            case "bloodpower" : array = this.item.system.bloodpowers; break;
         }
         if(array) {
             ArrayUtils.removeObjectById(array, id)

@@ -31,6 +31,9 @@ export class ValombreuseItem extends Item {
             case "origine" :
                 this.system.key = itemData.name.slugify({strict: true});
                 break;
+            case "bloodomain":
+            case "bloodpower":
+            case "bloodline":
             case "trapping" :
                 break;
             default :

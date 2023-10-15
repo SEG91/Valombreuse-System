@@ -24,7 +24,7 @@ export class Traversal {
         let ingame = [];
         switch(type){
             case "competence" :
-                compendium = game.aria.config.competences;
+                compendium = game.valombreuse.config.competences;
                 ingame = game.items.filter(item => item.type === "competence").map(entity => entity.toObject(false));
                 break;
         }
@@ -41,22 +41,22 @@ export class Traversal {
 
     //world + compendium can create duplicate
     static getAllCompetencesData () {
-        const compendium = game.aria.config.competences;
-        const compendiumSpe = game.aria.config.competencesSpe;
+        const compendium = game.valombreuse.config.competences;
+        const compendiumSpe = game.valombreuse.config.competencesSpe;
         const ingame = this.getInGameEntitiesDataOfType("competence");
         return ingame.concat(compendium).concat(compendiumSpe);
     }
 
     //world + compendium can create duplicate
     static getAllProfessionsData () {
-        const compendium = game.aria.config.professions;
+        const compendium = game.valombreuse.config.professions;
         const ingame = this.getInGameEntitiesDataOfType("profession");
         return ingame.concat(compendium);
     }
 
     //world + compendium can create duplicate
     static getAllOriginesData () {
-        const compendium = game.aria.config.origines;
+        const compendium = game.valombreuse.config.origines;
         const ingame = this.getInGameEntitiesDataOfType("origines");
         return ingame.concat(compendium);
     }

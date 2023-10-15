@@ -2905,6 +2905,18 @@ bg
   max-height: 200px;
 }
 
+.valombreuse.item .window-content .sheet-body .description-long {
+  height: 250px;
+  min-height: 200px;
+  max-height: 400px;
+}
+
+.valombreuse.item .window-content .sheet-body .description-verylong {
+  height: 350px;
+  min-height: 300px;
+  max-height: 500px;
+}
+
 .valombreuse.item .window-content .sheet-body .description .editor {
   height: 100%;
   min-height: 100%;
@@ -3389,6 +3401,16 @@ bg
   font-size: 20px;
   font-weight: 700;
   max-height: 29px;
+}
+
+.valombreuse .form-headerlong {
+  margin: 0 0 0 0;
+  padding: 2px 0;
+  border-top: 2px groove #eeede0;
+  border-bottom: 2px groove #eeede0;
+  font-size: 20px;
+  font-weight: 700;
+  height: 300px;
 }
 
 .valombreuse .tag {

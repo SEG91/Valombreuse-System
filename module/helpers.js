@@ -86,8 +86,12 @@ export const registerHandlebarsHelpers = function () {
         return items.filter(item => item.type === "item");
     });
 
-    Handlebars.registerHelper('getProfession', function (items) {
-        return items.find(item => item.type === "profession");
+    Handlebars.registerHelper('getOrdre', function (items) {
+        return items.find(item => item.type === "ordre");
+    });
+
+    Handlebars.registerHelper('getLignee', function (items) {
+        return items.find(item => item.type === "bloodline");
     });
       
     Handlebars.registerHelper('getCompetences', function (items) {
@@ -277,4 +281,16 @@ export const registerHandlebarsHelpers = function () {
     Handlebars.registerHelper('isActorDiscard', function (actor, handId) {
         return actor.getDefaultDiscard().id == handId;
     });
+
+    Handlebars.registerHelper("debug", function(optionalValue) {
+        console.log("Current Context");
+        console.log("====================");
+        console.log(this);
+      
+        if (optionalValue) {
+          console.log("Value");
+          console.log("====================");
+          console.log(optionalValue);
+        }
+      });
 }

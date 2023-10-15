@@ -11,7 +11,24 @@
         {{!-- Sheet Body --}}
         <section class="sheet-body">
             <div class="form-header">{{localize "VALOMBREUSE.details.description"}}</div>
-            <div class="flexrow description">
+                {{#if (equals item.type "ordre")}}
+                    <div class="flexrow description-long">
+                {{/if}}
+                {{#if (equals item.type "origine")}}
+                   <div class="flexrow description-long">
+                {{/if}}
+                {{#if (equals item.type "bloodline")}}
+                   <div class="flexrow description-long">
+                {{/if}}
+                {{#if (equals item.type "blooddomain")}}
+                   <div class="flexrow description">
+                {{/if}}
+                {{#if (equals item.type "bloodpower")}}
+                   <div class="flexrow description-verylong">
+                {{/if}} 
+                {{#if (equals item.type "item")}}
+                   <div class="flexrow description">
+                {{/if}} 
                 {{editor descriptionHTML target="system.description" button=true owner=owner editable=editable}}
             </div>
             <div class="details">
@@ -20,6 +37,15 @@
                 {{/if}}
                 {{#if (equals item.type "ordre")}}
                     {{> "systems/valombreuse/templates/items/parts/details/ordre-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "origine")}}
+                    {{> "systems/valombreuse/templates/items/parts/details/origines-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "bloodline")}}
+                    {{> "systems/valombreuse/templates/items/parts/details/bloodline-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "blooddomain")}}
+                    {{> "systems/valombreuse/templates/items/parts/details/blooddomain-details.hbs"}}
                 {{/if}}
             </div>
         </section>
