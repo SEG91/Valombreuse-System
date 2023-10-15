@@ -2,7 +2,7 @@
   "id": "valombreuse",
   "title": "valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.5.1",
+  "version": "0.0.5.1.2",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
@@ -56,13 +56,7 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {},
-      "package": "world",
-      "id": "world.pouvoir-de-sang-ancien",
-      "packageType": "world",
-      "packageName": "valombreuse-20",
-      "index": [],
-      "folders": []
+      "flags": {}
     },
     {
       "label": "Origines",
@@ -73,7 +67,44 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
+    },
+    {
+      "label": "Compétences",
+      "type": "Item",
+      "name": "competences",
+      "path": "packs/competences",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Aptitudes",
+      "type": "Item",
+      "name": "aptitudes",
+      "path": "packs/aptitudes",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Etats",
+      "type": "Item",
+      "name": "etats",
+      "path": "packs/etats",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "gridDistance": 1.5,
