@@ -7,7 +7,7 @@ import {UpdateUtils} from "../utils/update-utils.js";
 
 Hooks.once("ready", async () => {
     await game.valombreuse.config.getCompetences();
-    await game.aria.config.getAptitude();
+    await game.valombreuse.config.getAptitude();
 
     console.info("-------------------------------------System Initialized.");
 

@@ -8,6 +8,7 @@ import {Origines} from "../controllers/origines.js";
 import {Bloodline} from "../controllers/bloodline.js";
 import {Traversal} from "../utils/traversal.js";
 import { ValombreuseItem } from "../items/item.js";
+import {ValombreuseRoll} from "../controllers/roll.js";
 
 export class ValombreuseActorSheet extends ActorSheet {
 
@@ -303,6 +304,94 @@ async getData(options) {
             default: {
                 return this.actor.deleteEmbeddedDocuments("Item",[itemId]);
             }
+        }
+    }
+
+     /**
+     * Initiates a roll from any kind depending on the "data-roll-type" attribute
+     * @param event the roll event
+     * @private
+     */
+     async _onRoll(event,forceConfig) {
+        const elt = $(event.currentTarget)[0];
+        const rolltype = elt.attributes["data-roll-type"].value;
+        let extraOptions ={
+            rollType : "PUBLIC",
+            bonusMalus : "+0",
+            multi : 1,
+        };
+
+        const configJet = {
+            showGM : true,
+          };
+
+          if (event.shiftKey)
+          {
+            configJet.checkGM = true;
+            extraOptions.rollType = "BLIND";
+          }
+
+
+        switch (rolltype) {
+            case "skillcheck" :
+
+                let globalSettingCarac100 = game.settings.get("aria","carac100"); 
+
+                if(globalSettingCarac100) 
+                {
+                    if(forceConfig)
+                    {
+                        configJet.showBonus = true;
+                        extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de caractéristique",configJet);
+                        if (extraOptions.cancelled) return;     
+                        extraOptions.multi = 1;                   
+                    }
+                    return ValombreuseRoll.skillCheck(this.getData().system, this.actor, event,extraOptions.multi,extraOptions.rollType,extraOptions.bonusMalus);
+                }
+                else
+                {
+                    configJet.showBonus = true;
+                    configJet.showMulti = true;
+                    extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de caractéristique",configJet);
+                    if (extraOptions.cancelled) return;
+                    if(extraOptions.bonusMalus == "0")
+                        extraOptions.bonusMalus = "+0";
+                    return ValombreuseRoll.skillCheck(this.getData().system, this.actor, event, extraOptions.multi,extraOptions.rollType,extraOptions.bonusMalus);
+                }
+               break;
+
+
+            case "competencycheck" :
+                if(forceConfig)
+                    {
+                        configJet.showBonus = true;
+                        extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de compétence",configJet);
+                        if (extraOptions.cancelled) return;
+                        if(extraOptions.bonusMalus == "0")
+                            extraOptions.bonusMalus = "+0";
+                    }
+                    return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.bonusMalus,extraOptions.rollType);
+                break;
+
+
+            case "weapon" :
+                if(forceConfig)
+                {
+                    configJet.checkGM = true;
+                    extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet d'attaque",configJet);
+                    if (extraOptions.cancelled) return;                    
+                }
+                return ValombreuseRoll.rollWeapon(this.getData().system, this.actor, event,extraOptions.rollType);
+
+
+            case "initiative" :
+                if(forceConfig)
+                {
+                    configJet.checkGM = true;
+                    extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet d'initiative",configJet);
+                    if (extraOptions.cancelled) return;
+                }
+                return ValombreuseRoll.rollInitiative(this.getData().system, this.actor, event,extraOptions.rollType);
         }
     }
 }

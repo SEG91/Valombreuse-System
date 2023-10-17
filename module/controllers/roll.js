@@ -1,10 +1,10 @@
-import {AriaSkillRoll} from "../system/skill-roll.js";
-import {AriaDamageRoll} from "../system/dmg-roll.js";
-import {AriaInitiativeRoll} from "../system/init-roll.js";
+import {ValombreuseSkillRoll} from "../system/skill-roll.js";
+import {ValombreuseDamageRoll} from "../system/dmg-roll.js";
+import {ValombreuseInitiativeRoll} from "../system/init-roll.js";
 
-export class AriaRoll {
+export class ValombreuseRoll {
     static options() {
-        return { classes: ["aria", "dialog"] };
+        return { classes: ["valombreuse", "dialog"] };
     }
 
     /**
@@ -34,7 +34,7 @@ export class AriaRoll {
             }
         }
 
-        let r = new AriaSkillRoll(label,calcLabel,cmpValue);
+        let r = new ValombreuseSkillRoll(label,calcLabel,cmpValue);
         r.roll(actor,rollType);
     }
 
@@ -78,7 +78,7 @@ export class AriaRoll {
         else if(bonusValue > 0)
             calcLabel = calcLabel + "+" + bonusValue;            
 
-        let r = new AriaSkillRoll(label,calcLabel,cmpValue);
+        let r = new ValombreuseSkillRoll(label,calcLabel,cmpValue);
         r.roll(actor,rollType);
     }
 
@@ -95,7 +95,7 @@ export class AriaRoll {
         let label = elt.attributes["data-roll-weapon-name"].value;
         let img = elt.attributes["data-roll-weapon-img"].value;
 
-        let globalSettingCarac100 = game.settings.get("aria","carac100"); 
+        let globalSettingCarac100 = game.settings.get("valombreuse","carac100"); 
 
         if(globalSettingCarac100)
         {
@@ -124,7 +124,7 @@ export class AriaRoll {
             }
         }
 
-        let r = new AriaDamageRoll(label,formula,img);
+        let r = new ValombreuseDamageRoll(label,formula,img);
         r.roll(actor,rollType);
     }
 
@@ -141,7 +141,7 @@ export class AriaRoll {
         let label = "Initiative";
         let img = "";
 
-        let r = new AriaInitiativeRoll(label,formula,img);
+        let r = new ValombreuseInitiativeRoll(label,formula,img);
         r.roll(actor,rollType);
     }
 }

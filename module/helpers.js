@@ -50,7 +50,7 @@ export const registerHandlebarsHelpers = function () {
 
         itemByCat.push({
             key: "",
-            value: game.i18n.localize("ARIA.category.other"),
+            value: game.i18n.localize("VALOMBREUSE.category.other"),
             items: weapons
         });
 
@@ -216,11 +216,11 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('isEnabled', function (configKey) {
-        return game.settings.get("aria", configKey);
+        return game.settings.get("valombreuse", configKey);
     });
 
-    Handlebars.registerHelper('isAriaTypeSetting', function (configKey) {
-        return (game.settings.get("aria", "ariaVersion") == configKey);
+    Handlebars.registerHelper('isValombreuseTypeSetting', function (configKey) {
+        return (game.settings.get("valombreuse", "valombreuseVersion") == configKey);
     });
 
     Handlebars.registerHelper('split', function (str, separator, keep) {

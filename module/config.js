@@ -22,7 +22,7 @@ VALOMBREUSE.getCompetences = async function () {
     console.debug("Competences loaded");
 };
 
-VALOMBREUSE.Aptitude = async function () {
+VALOMBREUSE.getAptitude = async function () {
     let aptitudes;
     
     VALOMBREUSE.atitudes = aptitudes;

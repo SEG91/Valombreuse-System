@@ -9,7 +9,7 @@
             <!-- STATS -->
             {{> "systems/valombreuse/templates/actors/character/parts/stats/character-attributes.hbs"}}
         </div>
-        <div class="flex1 layout center hpcol1 pos_relative">
+        <div class="flex1 layout center hpcol pos_relative">
             <!-- HP -->
             {{> "systems/valombreuse/templates/actors/character/parts/stats/character-hp.hbs"}}
         </div>
@@ -18,13 +18,10 @@
             {{> "systems/valombreuse/templates/actors/character/parts/stats/character-energy.hbs"}}
         </div> 
     </div>
-    <div class="flexrow no-wrap description_row">
-        <div class="flexcol"> 
-            <div class="form-header">{{ localize "VALOMBREUSE.details.description" }}</div>
-                  {{editor biographyHTML target="system.description" button=true owner=owner editable=editable}}
+</div>
+ <div class="flexrow no-wrap description_row">
+              <div class="flexcol"> 
+                     <div class="form-header">{{ localize "VALOMBREUSE.details.description" }}</div>
+                           {{editor biographyHTML target="system.description" button=true owner=owner editable=editable}}
             </div>
         </div>
-    </div>
-</div>
-
-
