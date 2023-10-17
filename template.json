@@ -3,7 +3,7 @@
     "types": [
       "character",
       "npc",
-      "loot"
+      "minion"
     ],
     "templates": {
       "stats": {
@@ -81,6 +81,13 @@
             "bonus": 0,
             "value": 0
           },
+          "xp": {
+            "key" : "xp",
+            "label" : "VALOMBREUSE.attributes.xp.label",
+            "abbrev" : "VALOMBREUSE.attributes.xp.abbrev",
+            "Total": 0,
+            "value": 0
+          },
           "initiative": 0
         },
         "currency": {
@@ -104,7 +111,7 @@
           },
           "fp": {
             "key" : "fp",
-            "label" : "AVALOMBREUSERIA.currency.fp.label",
+            "label" : "VALOMBREUSE.currency.fp.label",
             "abbrev" : "VALOMBREUSE.currency.fp.abbrev",
             "qty" : 0
           }
@@ -127,7 +134,7 @@
         "common"
       ]
     },
-    "loot": {
+    "minion": {
       "templates": [
         "common"
       ]
@@ -142,7 +149,8 @@
       "ordre",
       "bloodline",
       "blooddomain",
-      "bloodpower"
+      "bloodpower",
+      "state"
     ],
     "templates": {
       "base" : {
@@ -189,8 +197,9 @@
       "link2": "",
       "spe":"",
       "expert":"",
-      "score": 0,
-      "bonus":0
+      "score":0,
+      "bonus":0,
+      "learning":0
     },
     "aptitude" : {
       "templates": [

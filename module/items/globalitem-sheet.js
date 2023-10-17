@@ -161,9 +161,9 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
         const itemType = li.data("itemType");
         let pack = null;
         switch(itemType){
-            case "origine" : pack = "aria.origines"; break;
-            case "profession" : pack = "aria.professions"; break;
-            case "competence" : pack = "aria.competences"; break;
+            case "origine" : pack = "valombreuse.origines"; break;
+            case "ordre" : pack = "valombreuse.professions"; break;
+            case "competence" : pack = "valombreuse.competences"; break;
         }
         if(pack) return Traversal.getEntity(id, "item", pack).then(e => { if(e) e.sheet.render(true) });
     }
@@ -193,7 +193,7 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
         const data = super.getData(options);
         const itemData = this.item.toObject(false);
         data.labels = this.item.labels;
-        data.config = CONFIG.ARIA;
+        data.config = CONFIG.VALOMBREUSE;
     
         // Item Type, Status, and Details
         data.itemType = game.i18n.localize(`ITEM.Type${data.item.type.titleCase()}`);
@@ -226,7 +226,7 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
         if ( item.type === "item" ) {
             const entries = Object.entries(item.system.properties)
             props.push(...entries.filter(e => e[1] === true).map(e => {
-                return game.aria.config.itemProperties[e[0]]
+                return game.valombreuse.config.itemProperties[e[0]]
             }));
         }
         return props.filter(p => !!p);

@@ -6,9 +6,31 @@
         <label>{{localize "VALOMBREUSE.ui.score"}}</label><input class="center" name="system.score" type="text" value="{{system.score}}" placeholder="{{localize "VALOMBREUSE.ui.score"}}" data-dtype="Number">
     </div>
     <div class="form-group">
+        <label>{{localize "VALOMBREUSE.ui.learning"}}</label><input class="center" name="system.learning" type="text" value="{{system.learning}}" placeholder="{{localize "VALOMBREUSE.ui.learning"}}" data-dtype="Number">
+    </div>
+    <div class="form-group">
+        <label>{{localize "VALOMBREUSE.ui.link"}} </label>
+        <div class="form-fields">
+            <select name="system.link1" data-type="String" style="width:100%">
+                {{#select system.link1}}
+                    <option value="">{{localize "VALOMBREUSE.ui.None"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.vig.abbrev"}}">{{localize "VALOMBREUSE.stats.vig.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.mc.abbrev"}}">{{localize "VALOMBREUSE.stats.mc.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.con.abbrev"}}">{{localize "VALOMBREUSE.stats.con.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.int.abbrev"}}">{{localize "VALOMBREUSE.stats.int.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.cha.abbrev"}}">{{localize "VALOMBREUSE.stats.cha.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.eve.abbrev"}}">{{localize "VALOMBREUSE.stats.eve.label"}}</option>
+                {{/select}}
+            </select>
+        </div>
+    </div>
+    {{#if (equals system.special true)}}
+    <div class="form-group">
         <label>{{localize "VALOMBREUSE.ui.spe"}}</label><input class="center" name="system.spe" type="text" value="{{system.spe}}" placeholder="{{localize "VALOMBREUSE.ui.spe"}}" data-dtype="text">
     </div>
     <div class="form-group">
         <label>{{localize "VALOMBREUSE.ui.expert"}}</label><input class="center" name="system.expert" type="text" value="{{system.expert}}" placeholder="{{localize "VALOMBREUSE.ui.expert"}}" data-dtype="text">
     </div>
+    {{/if}} 
+  
 </div>

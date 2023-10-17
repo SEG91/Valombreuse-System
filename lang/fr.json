@@ -3,7 +3,8 @@
   "TYPES": {
     "Actor": {
       "character": "Veinard",
-      "pnj": "PNJ"
+      "pnj": "PNJ",
+      "minion": "Bande"
     },
 
     "Item": {
@@ -14,7 +15,8 @@
       "blooddomain": "Domaine de Sang Ancien",
       "bloodpower": "Pouvoir de Sang Ancien",
       "competence": "Compétence",
-      "aptitude": "Aptitude"
+      "aptitude": "Aptitude",
+      "state": "Etats"
     }
   },
   "VALOMBREUSE.title": "Valombreuse",
@@ -60,6 +62,13 @@
   "VALOMBREUSE.ui.properties" :  "Propriétés",
   "VALOMBREUSE.ui.spe" :  "Spécialisation",
   "VALOMBREUSE.ui.expert" :  "Expertise",
+  "VALOMBREUSE.ui.learning" :  "Apprentissage",
   "VALOMBREUSE.ui.blooddomain": "Domaine de Sang Ancien",
-  "VALOMBREUSE.ui.bloodpower": "Pouvoir de Sang Ancien"
+  "VALOMBREUSE.ui.bloodpower": "Pouvoir de Sang Ancien",
+  "VALOMBREUSE.ui.link": "Lancement rapide",
+  "VALOMBREUSE.ui.None": "Aucun",
+  "VALOMBREUSE.attributes.xp.label" : "XP",
+  "VALOMBREUSE.attributes.xpmax.label" : "XP Max",
+  "VALOMBREUSE.ui.LR": "LR",
+  "VALOMBREUSE.ui.Aptitude": "Aptitude"
 }

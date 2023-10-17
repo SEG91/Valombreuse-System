@@ -10,5 +10,22 @@ System.logPrefix = System.abbrev;
 System.debugMode = true;
 
 export const VALOMBREUSE = {};
+VALOMBREUSE.competences = [];
 
+// Mise en cache des données de compétences
+VALOMBREUSE.getCompetences = async function () {
+    let competences;
+
+    competences = await game.packs.get("valombreuse.competences").getDocuments().then(index => index.map(entity => entity.toObject(false)));
+    
+    VALOMBREUSE.competences = competences;
+    console.debug("Competences loaded");
+};
+
+VALOMBREUSE.Aptitude = async function () {
+    let aptitudes;
+    
+    VALOMBREUSE.atitudes = aptitudes;
+    console.debug("Aptitude loaded");
+};
 

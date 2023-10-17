@@ -26,7 +26,8 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/valombreuse/templates/items/parts/details/origines-details.hbs",
         "systems/valombreuse/templates/items/parts/details/bloodline-details.hbs",
         "systems/valombreuse/templates/items/parts/details/blooddomain-details.hbs",
-        "systems/valombreuse/templates/items/parts/details/bloodpower-details.hbs"
+        "systems/valombreuse/templates/items/parts/details/bloodpower-details.hbs",
+        "systems/valombreuse/templates/actors/character/parts/competences/character-competences.hbs"
     ];
 
     // Load the template parts

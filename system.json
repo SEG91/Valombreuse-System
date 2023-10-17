@@ -11,7 +11,10 @@
   "authors": [{
     "name": "SEG"
   }],
-  "esmodules": ["module/valombreuse.js"],
+  "esmodules": [
+    "module/valombreuse.js",
+    "module/hooks/system-ready.js"
+  ],
   "styles": ["css/valombreuse.css"],
   "scripts": [],
   "languages": [

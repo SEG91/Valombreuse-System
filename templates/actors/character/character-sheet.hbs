@@ -9,7 +9,6 @@
         </div>
         
         {{> "systems/valombreuse/templates/actors/character/parts/character-header.hbs"}}
-
         <div class="flexrow main mainHeight_std" style="overflow: visible;">
             <div class="content flex3">
              {{!-- Sheet Tab Navigation --}}
@@ -23,11 +22,16 @@
                 <section class="sheet-body" style="overflow: visible;">
                     {{!-- Stats Tab --}}
                     <div class="tab stats" data-group="primary" data-tab="stats">
-                     {{> "systems/valombreuse/templates/actors/character/parts/stats/character-stats.hbs"}}
+                     
+                    </div>
+                    {{!-- Competences Tab --}}
+                    <div class="tab competences" data-group="primary" data-tab="competences">
+                        {{> "systems/valombreuse/templates/actors/character/parts/competences/character-competences.hbs"}}
                     </div>
                 </section>
             </div>
         </div>
+      
         <div class="header">
             <div class="flexrow no-wrap">
                 <div class="flex1 left" id="banner-bot-left"></div>

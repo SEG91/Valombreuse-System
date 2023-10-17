@@ -1632,11 +1632,12 @@ bg
 }
 
 .valombreuse.actor .window-content > form .wrap .header #logo-orbe > img {
-  min-width: 83px;
-  width: 83px;
+  margin-top: 20px;
+  min-width: 25px;
+  width: 52px;
   max-width: 83px;
-  min-height: 66px;
-  height: 66px;
+  min-height: 25px;
+  height: 52px;
   max-height: 66px;
 }
 
@@ -1711,9 +1712,9 @@ bg
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  min-height: 330px;
+  min-height: 230px;
   height: 330px;
-  max-height: 330px;
+  max-height: 500px;
 }
 
 .valombreuse.actor .window-content > form .wrap .main .pos_relative {
@@ -1802,7 +1803,7 @@ bg
   -ms-flex-align: stretch;
   align-items: stretch;
   margin-top: 30px;
-  min-height: 100px;
+  min-height: 200px;
   height: calc(100% - 370px);
   max-height: calc(100% - 370px);
 }
@@ -2301,8 +2302,10 @@ bg
   background: url("../assets/images/separateur-valombreuse-droite.png");
 }
 
+
+
 .valombreuse.actor .window-content > form .wrap .main #banner-top {
-  margin-top: 30px;
+  margin-top: 10px;
   background: center/contain no-repeat url("../assets/images/separateur-valombreuse-vert.png");
 }
 

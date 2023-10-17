@@ -98,16 +98,14 @@ export const registerHandlebarsHelpers = function () {
         let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
-        let caps_normal = caps.filter(item => item.system.special === false);
-        return caps_normal;
+       
+        return caps;
     });
 
-    Handlebars.registerHelper('getCompetencesSpe', function (items) {
-        let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
-            return a.name.localeCompare(b.name);
-          });
+    Handlebars.registerHelper('getAptitude', function (items) {
+        
           
-          let caps_special = caps.filter(item => item.system.special === true);
+          let caps_special ;
           return caps_special;
     });
 
