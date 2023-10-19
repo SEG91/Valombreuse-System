@@ -317,8 +317,8 @@ async getData(options) {
         const rolltype = elt.attributes["data-roll-type"].value;
         let extraOptions ={
             rollType : "PUBLIC",
-            bonusMalus : "+0",
-            multi : 1,
+            AttrLnk2 : "",
+            energyspent : 0,
         };
 
         const configJet = {
@@ -365,12 +365,11 @@ async getData(options) {
                 if(forceConfig)
                     {
                         configJet.showBonus = true;
-                        extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de compétence",configJet);
+                        extraOptions = await this.getRollOptions("systems/valombreuse/templates/config/skill-options.hbs","Configuration du jet de compétence",configJet);
                         if (extraOptions.cancelled) return;
-                        if(extraOptions.bonusMalus == "0")
-                            extraOptions.bonusMalus = "+0";
+                        
                     }
-                    return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.bonusMalus,extraOptions.rollType);
+                    return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,extraOptions.rollType);
                 break;
 
 
@@ -394,6 +393,41 @@ async getData(options) {
                 return ValombreuseRoll.rollInitiative(this.getData().system, this.actor, event,extraOptions.rollType);
         }
     }
+
+    /* -------------------------------------------- */
+    /* ROLL EVENTS CALLBACKS                        */
+    /* -------------------------------------------- */
+
+    async getRollOptions(templatePath,dialogTitle,data={}) {
+        const template = templatePath;
+
+        const html = await renderTemplate(template, {
+            ...data
+        });
+    
+        return new Promise(resolve => {
+            const data = {
+                title: dialogTitle,
+                content: html,
+                buttons: {
+                    normal: {
+                        label: "Lancer les Dés",
+                        callback: html => {
+                            const fd = new FormDataExtended(html[0].querySelector("form"));
+                            resolve(fd.object)
+                        }
+                    },
+                    cancel: {
+                        label: "Annuler",
+                        callback: html => resolve({cancelled: true}),
+                    }
+                },
+                default: "normal",
+                close: () => resolve({cancelled: true}),
+            }
+            new Dialog(data, {id:"configRollDialog",width:350}).render(true);
+        });
+    };
 }
 
 

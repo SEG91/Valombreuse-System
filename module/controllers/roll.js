@@ -33,52 +33,49 @@ export class ValombreuseRoll {
                 calcLabel = eval(`${base}`);
             }
         }
-
-        let r = new ValombreuseSkillRoll(label,calcLabel,cmpValue);
+        let energy=1;
+        let r = new ValombreuseSkillRoll(label,calcLabel,cmpValue,energy);
         r.roll(actor,rollType);
     }
 
-    static competencyCheck(data, actor, event,modifier,rollType = "PUBLIC") {
+    static competencyCheck(data, actor, event,energy,AttrLnk2,rollType = "PUBLIC") {
         const elt = $(event.currentTarget)[0];
-        let key = elt.attributes["data-rolling-value"].value;
-        let bonus = elt.attributes["data-rolling-bonus"].value;
+        let Rang = elt.attributes["data-rolling-value"].value;
+        let LnkAttr = elt.attributes["data-rolling-bonus"].value;
+        if (AttrLnk2!="")
+            LnkAttr=AttrLnk2;
 
-        if( (bonus.charAt(0) == '-') || (bonus.charAt(0) == '+') ){
-
-        }else{
-            bonus= '+' + bonus;
-        }
-
-        if(modifier)
+        let RangValue = eval(`${Rang}`);
+        let AttrValue;
+        switch(LnkAttr)
         {
-            if( (modifier.charAt(0) == '-') || (modifier.charAt(0) == '+') ){
-
-            }else{
-                modifier= '+' + modifier;
-            }
-        } else{
-            modifier="+0";
+            case "VIG": 
+                AttrValue=actor.system.stats.vig.base;
+                break;
+            case "MC":
+                AttrValue=actor.system.stats.mc.base;
+                break;
+            case "CON": 
+                AttrValue=actor.system.stats.con.base;
+                break;
+            case "EVE":
+                AttrValue=actor.system.stats.eve.base;
+                break;
+            case "INT": 
+                AttrValue=actor.system.stats.int.base;
+                break;
+            case "CHA":
+                AttrValue=actor.system.stats.cha.base;
+                break;
         }
 
-        let keyValue = eval(`${key}`);
-        let bonusValue = eval(`${bonus}`);
-        let modifierValue = eval(`${modifier}`);
-
-        let cmpValue = keyValue+ bonusValue+ modifierValue;
-        let label = elt.attributes["title"].value;
-        let calcLabel = eval(`${key}`);
-
-        if(modifierValue<0)
-            calcLabel = calcLabel + modifier;
-        else if(modifierValue > 0)
-            calcLabel = calcLabel + "+" + modifierValue;
-
-        if(bonusValue<0)
-            calcLabel = calcLabel + bonus;
-        else if(bonusValue > 0)
-            calcLabel = calcLabel + "+" + bonusValue;            
-
-        let r = new ValombreuseSkillRoll(label,calcLabel,cmpValue);
+        let energyspent=eval(`${energy}`);
+        let totalenergy=1+energyspent;
+        let oldenergy=actor.system.attributes.power.value;
+        actor.system.attributes.power.value=oldenergy-energyspent;
+        let cmpValue = RangValue+ AttrValue;
+        let label = elt.attributes["title"].value;       
+        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,totalenergy);
         r.roll(actor,rollType);
     }
 

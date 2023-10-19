@@ -1,0 +1,48 @@
+<form>  
+    
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Energie dépensée</label>
+        </div>
+        <div class="divTitle">
+            <input type="text" name="energyspent" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label>{{localize "VALOMBREUSE.ui.link"}} </label>
+        <div class="form-fields">
+            <select name="AttrLnk2" data-type="String" style="width:100%">
+                {{#select AttrLnk2}}
+                    <option value="">{{localize "VALOMBREUSE.ui.None"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.vig.abbrev"}}">{{localize "VALOMBREUSE.stats.vig.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.mc.abbrev"}}">{{localize "VALOMBREUSE.stats.mc.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.con.abbrev"}}">{{localize "VALOMBREUSE.stats.con.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.int.abbrev"}}">{{localize "VALOMBREUSE.stats.int.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.cha.abbrev"}}">{{localize "VALOMBREUSE.stats.cha.label"}}</option>
+                    <option value="{{localize "VALOMBREUSE.stats.eve.abbrev"}}">{{localize "VALOMBREUSE.stats.eve.label"}}</option>
+                {{/select}}
+            </select>
+        </div>
+    </div>
+    <hr>
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Type de lancé</label>
+        </div>
+        <div class="divTitle">
+            <input type="radio" id="PUBLIC" name="rollType" value="PUBLIC" checked>
+            <label for="PUBLIC">Public</label>
+
+            <input type="radio" id="BLIND" name="rollType" value="BLIND" {{checked checkGM}}>
+            <label for="BLIND">MJ</label>
+
+            <input type="radio" id="SELF" name="rollType" value="SELF" >
+            <label for="SELF">Moi</label>
+
+            <input type="radio" id="PRIVATE" name="rollType" value="PRIVATE" >
+            <label for="PRIVATE">MJ & Moi</label>
+        </div>
+    </div>
+
+
+</form>

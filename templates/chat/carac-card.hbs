@@ -1,0 +1,31 @@
+<div class="chat-card  valombreuse-roll-chat" data-actor-id="{{actor.id}}">
+
+    <div class="roll-card regular-roll-card">
+        <header class="card-header flexrow">
+            <img src="{{actor.img}}" title="{{actor.name}}"/>
+            <div class="flexcol">
+                <div>
+                    <h2 class="dice-title-card"> 
+                        {{#if isCritical}} 
+                                 <span class="success critical">{{result}} : Réussite critique !</span>
+                        {{/if}}
+                        {{#if isFumble}}
+                                <span class="failure fumble">{{result}} : Echec critique !</span>
+                        {{/if}}
+                    </h2>
+                </div>
+                <div>
+                <p>
+                    <strong>{{label}}</strong><br>
+                    Jet : {{calcLabel}} = <strong>{{cmpValue}}</strong>
+                </p>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+
+
+
+</div>

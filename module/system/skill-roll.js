@@ -2,10 +2,10 @@ import {ValombreuseDamageRoll} from "./dmg-roll.js";
 
 export class ValombreuseSkillRoll {
 
-    constructor(label,calcLabel,cmpValue){
+    constructor(label,calcLabel,cmpValue,energy){
         this._label = label;
         this._calcLabel = calcLabel;
-        this._formula = "1d100";
+        this._energy=energy;
         this._isCritical = false;
         this._isPerfect = false;
         this._isFumble = false;    
@@ -14,6 +14,7 @@ export class ValombreuseSkillRoll {
         this._msgFlavor = "";
         this._cmpValue = cmpValue;
         this._result = 0;
+        this._formula = "1d4";
     }
 
     async roll(actor,rollType){
@@ -24,43 +25,55 @@ export class ValombreuseSkillRoll {
             speaker: ChatMessage.getSpeaker({actor: actor}),
         };
 
-        let r = new Roll(this._formula);
-        r.evaluate({async:false});
+        let result=0;
+        let potentialfumble=1;
+        let potentialcrit=0;
+        for (let pas = 0; pas < this._energy; pas++) {
+            let keeprolling=1;
+            while (keeprolling)
+            {
+                let r = new Roll(this._formula);
+                r.evaluate({async:false});
+                let renderedRoll = await r.render();
+                let prevres=result;
+                result = prevres+r.total;
+                switch(r.total){
+                    case 1:
+                       break;
+                    case 4:
+                        if (potentialfumble) potentialfumble=0;
+                        if (potentialcrit) this._isCritical=true;
+                        else potentialcrit=1;
+                        break;
+                    default:
+                        keeprolling=0;
+                        potentialfumble=0;
+                }
+            }
+        }
 
-        let renderedRoll = await r.render();
-
-        
-        
-        const result = r.total;
-        this._isSuccess = result <= this._cmpValue;
-        this._isFumble = (result >= 96);
-        this._isCritical = (result <= 5);
-        
-        this._isTotalFumble = (result == 100);
-        this._isPerfect = (result == 1);
-    
-        
+        if (potentialfumble) this._isFumble=true;
 
         let templateContextData = {
             actor: actor,
             label: this._label,
-            calcLabel: this._calcLabel,
-            cmpValue: this._cmpValue,
+            calcLabel: this._cmpValue+" + "+result,
+            cmpValue: this._cmpValue+result,
 
             isCritical: this._isCritical,
             isFumble: this._isFumble,
 
-            isPerfect: this._isPerfect,
-            isTotalFumble: this._isTotalFumble,
+            isPerfect: 0,
+            isTotalFumble: 0,
 
-            isSuccess: this._isSuccess,
+            isSuccess: 0,
             result: result,
         };
 
         let chatData = {
             user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
-            roll: r,
+            roll: result,
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             content: await renderTemplate(messageTemplate,templateContextData),
             sound: CONFIG.sounds.dice
