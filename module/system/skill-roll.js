@@ -25,9 +25,11 @@ export class ValombreuseSkillRoll {
             speaker: ChatMessage.getSpeaker({actor: actor}),
         };
 
-        let result=0;
+        let result=[];
+        result[0]=0;
         let potentialfumble=1;
         let potentialcrit=0;
+        let minus=1;
         for (let pas = 0; pas < this._energy; pas++) {
             let keeprolling=1;
             while (keeprolling)
@@ -35,15 +37,27 @@ export class ValombreuseSkillRoll {
                 let r = new Roll(this._formula);
                 r.evaluate({async:false});
                 let renderedRoll = await r.render();
-                let prevres=result;
-                result = prevres+r.total;
+                let prevres=result[0];
+                let relativeresult=minus*r.total;
+                result[0] = prevres+(relativeresult);
+                result.push(relativeresult);
                 switch(r.total){
                     case 1:
+                       if (minus==1)
+                        minus=-1;
+                       else
+                        keeprolling=0;
+                        potentialfumble=0;
                        break;
                     case 4:
-                        if (potentialfumble) potentialfumble=0;
-                        if (potentialcrit) this._isCritical=true;
-                        else potentialcrit=1;
+                        if (minus==1) 
+                        {
+                            potentialfumble=0;
+                            if (potentialcrit) 
+                                this._isCritical=true;
+                            else
+                                potentialcrit=1;
+                        }
                         break;
                     default:
                         keeprolling=0;
@@ -53,12 +67,16 @@ export class ValombreuseSkillRoll {
         }
 
         if (potentialfumble) this._isFumble=true;
-
+        this._calcLabel=this._cmpValue;
+        for (let idx = 1; idx < result.length; idx++) {
+            let oldlabel=this._calcLabel;
+            this._calcLabel=oldlabel+" + "+result[idx];
+        }
         let templateContextData = {
             actor: actor,
             label: this._label,
-            calcLabel: this._cmpValue+" + "+result,
-            cmpValue: this._cmpValue+result,
+            calcLabel: this._calcLabel,
+            cmpValue: this._cmpValue+result[0],
 
             isCritical: this._isCritical,
             isFumble: this._isFumble,
@@ -67,7 +85,7 @@ export class ValombreuseSkillRoll {
             isTotalFumble: 0,
 
             isSuccess: 0,
-            result: result,
+            result: this._cmpValue+result[0],
         };
 
         let chatData = {
