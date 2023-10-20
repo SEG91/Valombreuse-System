@@ -37,6 +37,14 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
             $(event.currentTarget).removeClass('dragging');
         });
 
+        // Click to open
+        html.find('.valombreuse-compendium-pack').click(ev => {
+             ev.preventDefault();
+            let li = $(ev.currentTarget), pack = game.packs.get(li.data("pack"));
+             if (pack) pack.render(true);
+
+         });
+
         // Display item sheet
         html.find('.item-name').click(this._onEditItem.bind(this));
         html.find('.item-edit').click(this._onEditItem.bind(this));

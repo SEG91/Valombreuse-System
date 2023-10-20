@@ -8,6 +8,10 @@ export const registerHandlebarsHelpers = function () {
         return items.find(item => item.type === "origine");
     });
 
+    Handlebars.registerHelper('getOrdre', function (items) {
+        return items.find(item => item.type === "ordre");
+    });
+
     Handlebars.registerHelper('getInventory', function (items) {
         let inventory = items.filter(item => item.type === "item");
         inventory.sort(function (a, b) {
@@ -61,6 +65,14 @@ export const registerHandlebarsHelpers = function () {
         return VALOMBREUSE.itemSubCategories;
     });
 
+    Handlebars.registerHelper('getOrdreNames', function () {
+        let OrdreNames=[];
+        for (let pas = 0; pas < VALOMBREUSE.Ordres.length; pas++) {
+            OrdreNames.push(VALOMBREUSE.Ordres[pas].name)
+        }
+        return OrdreNames;
+    });
+
     Handlebars.registerHelper('getItemsBySubCategory', function (subCat, items) {
         let caps = items.filter(item => item.type === "item");
         let weapons = caps.filter(item => item.system.subtype == subCat);
@@ -86,16 +98,20 @@ export const registerHandlebarsHelpers = function () {
         return items.filter(item => item.type === "item");
     });
 
-    Handlebars.registerHelper('getOrdre', function (items) {
-        return items.find(item => item.type === "ordre");
-    });
-
     Handlebars.registerHelper('getLignee', function (items) {
         return items.find(item => item.type === "bloodline");
     });
       
     Handlebars.registerHelper('getCompetences', function (items) {
         let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+       
+        return caps;
+    });
+
+    Handlebars.registerHelper('getOrdres', function (items) {
+        let caps = items.filter(item => item.type === "ordre").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
        

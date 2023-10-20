@@ -12,7 +12,7 @@
         <section class="sheet-body">
             <div class="form-header">{{localize "VALOMBREUSE.details.description"}}</div>
                 {{#if (equals item.type "ordre")}}
-                    <div class="flexrow description-long">
+                    <div class="flexrow description-verylong">
                 {{/if}}
                 {{#if (equals item.type "origine")}}
                    <div class="flexrow description-long">
@@ -29,6 +29,9 @@
                 {{#if (equals item.type "competence")}}
                    <div class="flexrow description">
                 {{/if}} 
+                 {{#if (equals item.type "aptitude")}}
+                   <div class="flexrow description-verylong">
+                {{/if}}
                 {{#if (equals item.type "item")}}
                    <div class="flexrow description">
                 {{/if}} 
@@ -49,6 +52,9 @@
                 {{/if}}
                 {{#if (equals item.type "blooddomain")}}
                     {{> "systems/valombreuse/templates/items/parts/details/blooddomain-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "aptitude")}}
+                    {{> "systems/valombreuse/templates/items/parts/details/aptitude-details.hbs"}}
                 {{/if}}
             </div>
         </section>

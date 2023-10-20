@@ -70,5 +70,6 @@
   "VALOMBREUSE.attributes.xp.label" : "XP",
   "VALOMBREUSE.attributes.xpmax.label" : "XP Max",
   "VALOMBREUSE.ui.LR": "LR",
-  "VALOMBREUSE.ui.Aptitude": "Aptitude"
+  "VALOMBREUSE.ui.Aptitude": "Aptitude",
+  "VALOMBREUSE.ui.grade": "Grade"
 }

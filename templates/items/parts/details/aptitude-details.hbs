@@ -1,0 +1,19 @@
+<div class="form-header">{{localize "VALOMBREUSE.ui.properties"}}</div>
+    <div class="form-group">
+        <label>{{localize "VALOMBREUSE.ui.score"}}</label><input class="center" name="system.score" type="text" value="{{system.score}}" placeholder="{{localize "VALOMBREUSE.ui.score"}}" data-dtype="Number">
+    </div>
+    <div class="form-group">
+        <label>{{localize "VALOMBREUSE.ui.grade"}}</label><input class="center" name="system.grade" type="text" value="{{system.grade}}" placeholder="{{localize "VALOMBREUSE.ui.grade"}}" data-dtype="Number">
+    </div>
+    <div class="form-group">
+    <label>{{localize "VALOMBREUSE.ui.ordre"}}</label>
+    <div class="form-fields">
+        <select name="system.ordre" data-type="String" style="width:100%">
+            {{#select system.ordre}}
+            {{#each (getOrdreNames)  as |ordreName ord|}}
+                <option value="{{ord}}">{{ordreName}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>

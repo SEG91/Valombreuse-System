@@ -2915,9 +2915,9 @@ bg
 }
 
 .valombreuse.item .window-content .sheet-body .description-verylong {
-  height: 350px;
+  height: 400px;
   min-height: 300px;
-  max-height: 500px;
+  max-height: 500;
 }
 
 .valombreuse.item .window-content .sheet-body .description .editor {

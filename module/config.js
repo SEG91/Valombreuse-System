@@ -11,6 +11,7 @@ System.debugMode = true;
 
 export const VALOMBREUSE = {};
 VALOMBREUSE.competences = [];
+VALOMBREUSE.Ordres=[];
 
 // Mise en cache des données de compétences
 VALOMBREUSE.getCompetences = async function () {
@@ -20,6 +21,14 @@ VALOMBREUSE.getCompetences = async function () {
     
     VALOMBREUSE.competences = competences;
     console.debug("Competences loaded");
+};
+
+VALOMBREUSE.getOrdres = async function () {
+    let ordres;
+
+    ordres = await game.packs.get("valombreuse.ordres").getDocuments().then(index => index.map(entity => entity.toObject(false)));
+    VALOMBREUSE.Ordres = ordres;
+    console.debug("ordres loaded");
 };
 
 VALOMBREUSE.getAptitude = async function () {

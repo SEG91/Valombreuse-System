@@ -205,7 +205,10 @@
       "templates": [
         "base"
       ],
-      "key" : ""
+      "key" : "",
+      "score":0,
+      "ordre": "",
+      "grade":0
     },
     "ordre": {
       "templates": [
