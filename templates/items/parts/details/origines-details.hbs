@@ -1,28 +1,47 @@
-
-<div class="form-header">Compétences Spéciales</div>
-
- <div class="flexcol">
+<div class="flexrow competence_row">
+    <div class="flexcol">
         <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
                 <div class="item-name flexrow">{{ localize "VALOMBREUSE.ui.skill" }}</div>
-                <div class="item-controls">
+                <div class="item-detail competence-col-width">{{ localize "VALOMBREUSE.ui.score" }}</div>
+                <div class="item-detail competence-col-width">{{ localize "VALOMBREUSE.ui.spe" }}</div>
+                <div class="item-detail competence-col-width">{{ localize "VALOMBREUSE.ui.expert" }}</div>
+                <div class="item-controls competence-col-width">
+                      
+                    <a class="item-control item-create valombreuse-compendium-pack" title="Ajouter une compétence du compendium" data-pack="valombreuse.competences" data-open="0">
+                        <i class="fas fa-folder-plus"></i>
+                    </a>
                 </div>
             </li>
-            {{#each this.system.competences}}
+           
+        {{#each this.system.competences}}
                 <ol class="item-list">
-                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="competence">
-                        <div class="rollable no-wrap" title="{{name}}" data-rolling-value="{{system.score}}" data-roll-type="competencycheck">
+                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="competence">        
                             <div class="flexrow no-wrap ">
                                 <div class="field-label no-wrap left competence_name">{{name}}
-                                    <span class="comp_tooltiptext"><h1>{{name}} :</h1>{{{system.description}}}</span>
+                                    <span class="comp_tooltiptext">
+                                        <h1>{{name}} :</h1>{{{description}}}
+                                    </span>
                                 </div>
                             </div>
+
+                        <div class="item-detail flexrow competence-col-width">
+                            <div class="field-value flex1 capa_score">{{system.score}}</div>
                         </div>
-                        <div class="item-controls">
+                        <div class="item-detail flexrow competence-col-width">
+                            <div class="field-value flex1 capa_score">{{system.spe}}</div>
+                        </div>
+                        <div class="item-detail flexrow competence-col-width">
+                            <div class="field-value flex1 capa_score">{{system.expert}}</div>
+                        </div>
+						
+                        <div class="item-controls competence-col-width">
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
+						
                     </li>
                 </ol>
             {{/each}}
         </ol>
     </div>
+</div>

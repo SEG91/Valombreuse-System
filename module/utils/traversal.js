@@ -13,6 +13,17 @@ export class Traversal {
         return entity;
     }
 
+    static async getIdxbyId(array,id) {
+        let idx = -1;
+        for (let pas = 0; pas < array.length; pas++) {
+            if (array[pas]._id == id)
+            {
+                idx=pas;
+                break;
+            }
+        }
+    }
+
     static getAllEntitiesOfType(type, pack) {
         const compendium = game.packs.get(pack).getContent();
         const ingame = game.items.filter(item => item.type === type);

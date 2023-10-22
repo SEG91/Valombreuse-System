@@ -120,6 +120,18 @@
         "ASSISTANT": "OWNER"
       },
       "flags": {}
+    },
+    {
+      "label": "Prétirés",
+      "type": "Actor",
+      "name": "pretires",
+      "path": "packs/pretires",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "gridDistance": 1.5,

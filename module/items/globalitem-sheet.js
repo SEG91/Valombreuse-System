@@ -5,6 +5,7 @@
 import {ArrayUtils} from "../utils/array-utils.js";
 import {Traversal} from "../utils/traversal.js";
 import {System} from "../config.js";
+import {ValombreuseItem} from "./item.js";
 
 export class GlobalValombreuseItemSheet extends ItemSheet {
 
@@ -162,20 +163,6 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
 
     /* -------------------------------------------- */
 
-    async _onEditItem(ev){
-        ev.preventDefault();
-        const li = $(ev.currentTarget).closest(".item");
-        const id = li.data("itemId");
-        const itemType = li.data("itemType");
-        let pack = null;
-        switch(itemType){
-            case "origine" : pack = "valombreuse.origines"; break;
-            case "ordre" : pack = "valombreuse.professions"; break;
-            case "competence" : pack = "valombreuse.competences"; break;
-        }
-        if(pack) return Traversal.getEntity(id, "item", pack).then(e => { if(e) e.sheet.render(true) });
-    }
-
     /* -------------------------------------------- */
 
     _onDeleteItem(ev){
@@ -239,5 +226,21 @@ export class GlobalValombreuseItemSheet extends ItemSheet {
         }
         return props.filter(p => !!p);
     }
+
+    async _onEditItem(ev){
+        ev.preventDefault();
+        const li = $(ev.currentTarget).closest(".item");
+        const id = li.data("itemId");
+        const itemType = li.data("itemType");
+        let pack = null;
+        switch(itemType){
+            case "origine" : pack = "valombreuse.origines"; break;
+            case "ordre" : pack = "valombreuse.professions"; break;
+            case "competence" : pack = "valombreuse.competences"; break;
+        }
+        if(pack) return Traversal.getEntity(id, "item", pack).then(e => { if(e) e.sheet.render(true) });
+    }
+
+
 
 }

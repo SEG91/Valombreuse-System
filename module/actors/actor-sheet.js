@@ -125,6 +125,10 @@ export class ValombreuseActorSheet extends ActorSheet {
         return this._onDeleteItem(ev);
     });
 
+    html.find('.calc-comp').click(this._onCalcComp.bind(this));
+
+    html.find('.item-edit').click(this._onEditItem.bind(this));
+
     }
 
 /** @override */
@@ -149,12 +153,58 @@ async getData(options) {
 
     // The Actor's data
    // const actorData = this.actor.toObject(false);
-
-
+   data.biographyHTML = await TextEditor.enrichHTML(data.system.description, {
+    secrets: this.actor.isOwner,
+    async: true,
+    relativeTo: this.actor
+  });
 
     // Return data to the sheet
     return data
   }
+
+  async _onEditItem(event) {
+    event.preventDefault();
+    const li = $(event.currentTarget).parents(".item");
+    const id = li.data("itemId");
+    const type = (li.data("itemType")) ? li.data("itemType") : "item";
+    const pack = (li.data("pack")) ? li.data("pack") : null;
+
+    let entity = null;
+    // look first in actor onwed items
+    entity = this.actor.items.get(id);
+    if(!entity) {
+        // look into world/compendiums items
+        entity = await Traversal.getEntity(id, type, pack);
+    }
+    if(entity) return entity.sheet.render(true);
+}
+
+  async _onCalcComp(event) {
+    event.preventDefault();
+
+  }
+
+  async _onUpdateCompFromList(itemComps) {
+
+    for (let pas = 0; pas < itemComps.length; pas++) {
+
+    let itemComp=itemComps[pas];
+    let comps = this.actor.items.filter(item => item.type === "competence");
+
+    comps.forEach(element => {
+
+        let itemData = element.toObject();
+        if (itemData.name == itemComp.name)
+        {
+            itemData.system.score += itemComp.system.score;
+            itemData.system.spe += itemComp.system.spe;
+            this.actor.updateEmbeddedDocuments("Item",[itemData]);
+        }
+    });
+    }
+}
+
 
   /**
      * Handle dropping of an item reference or item data onto an Actor Sheet
@@ -172,9 +222,16 @@ async getData(options) {
     const itemData = item.toObject();
     switch (itemData.type) {
         case "ordre" :
-            return await Ordre.addToActor(this.actor, event, itemData);
+            {
+                this._onUpdateCompFromList(itemData.system.competences);
+                return await Ordre.addToActor(this.actor, event, itemData);
+            }
         case "origine" :
-            return await Origines.addToActor(this.actor, event, itemData);
+            {
+                this._onUpdateCompFromList(itemData.system.competences);
+                return await Origines.addToActor(this.actor, event, itemData);
+            }
+            
         case "bloodline":
             return await Bloodline.addToActor(this.actor, event, itemData);
         default:
