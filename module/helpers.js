@@ -110,19 +110,20 @@ export const registerHandlebarsHelpers = function () {
         return caps;
     });
 
-    Handlebars.registerHelper('getOrdres', function (items) {
-        let caps = items.filter(item => item.type === "ordre").sort(function (a, b) {
+    Handlebars.registerHelper('getAptitudes', function (items) {
+        let caps = items.filter(item => item.type === "aptitude").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
        
         return caps;
     });
 
-    Handlebars.registerHelper('getAptitude', function (items) {
-        
-          
-          let caps_special ;
-          return caps_special;
+    Handlebars.registerHelper('getOrdres', function (items) {
+        let caps = items.filter(item => item.type === "ordre").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+       
+        return caps;
     });
 
     Handlebars.registerHelper('getWeapons', function (items) {
