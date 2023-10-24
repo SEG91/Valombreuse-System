@@ -4,10 +4,10 @@
         <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
                 <div class="item-name flexrow">{{ localize "VALOMBREUSE.ui.bloodpower" }}</div>
+                <div class="item-name flexrow">{{ localize "VALOMBREUSE.ui.score" }}</div>
                 <div class="item-controls">
                 </div>
             </li>
-            {{debug this.system.bloodpowers.length}}
             {{#each this.system.bloodpowers}}
                 <ol class="item-list">
                     <li class="item flexrow" data-item-id="{{_id}}" data-item-type="bloodpower">
@@ -15,6 +15,9 @@
                                 <div class="field-label no-wrap left competence_name">{{name}}
                                     <span class="comp_tooltiptext"><h1>{{name}} :</h1>{{{system.description}}}</span>
                                 </div>
+                            </div>
+                            <div class="item-detail flexrow competence-col-width">
+                                 <div class="field-value flex1 capa_score">{{system.score}}</div>
                             </div>
                         <div class="item-controls">
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>

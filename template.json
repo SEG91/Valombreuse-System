@@ -73,6 +73,15 @@
             "value": 10,
             "max": 10
           },
+          "blood": {
+            "key" : "bld",
+            "label" : "VALOMBREUSE.attributes.bld.label",
+            "abbrev" : "VALOMBREUSE.attributes.bld.abbrev",
+            "base": 0,
+            "target": 0,
+            "value": 0,
+            "max": 10
+          },
           "def": {
             "key" : "def",
             "label" : "VALOMBREUSE.attributes.def.label",
@@ -253,7 +262,8 @@
       "templates": [
         "base"
       ],
-      "key": ""
+      "key": "",
+      "score":0
     }
   }
 }

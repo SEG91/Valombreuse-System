@@ -71,5 +71,8 @@
   "VALOMBREUSE.attributes.xpmax.label" : "XP Max",
   "VALOMBREUSE.ui.LR": "LR",
   "VALOMBREUSE.ui.Aptitude": "Aptitude",
-  "VALOMBREUSE.ui.grade": "Grade"
+  "VALOMBREUSE.ui.grade": "Grade",
+  "VALOMBREUSE.attributes.bld.label" : "Points de Sang Ancien",
+  "VALOMBREUSE.attributes.bldmax.label" : "Points de Sang Ancien Max",
+  "VALOMBREUSE.attributes.bldtarget.label" : "Capacité en Points de Sang Ancien"
 }

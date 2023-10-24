@@ -3575,6 +3575,12 @@ bg
   overflow: hidden;
 }
 
+.valombreuse .inventory-list .item .bld-name {
+  cursor: pointer;
+  max-height: 25px;
+  overflow: hidden;
+}
+
 .valombreuse .inventory-list .item .item-name .item-image {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 22px;
@@ -3642,6 +3648,11 @@ bg
   border-right: 1px solid #c9c7b8;
 }
 
+.valombreuse .inventory-list .bld-name {
+  color: #000;
+  border-right: 1px solid #c9c7b8;
+}
+
 .valombreuse .inventory-list .item-name .item-category {
   text-align: left;
   padding-right: 5px;
@@ -3663,6 +3674,23 @@ bg
   overflow: hidden;
   max-height: 25px;
 }
+
+.valombreuse .inventory-list .bld-detail {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #000;
+  text-align: center;
+  border-right: 1px solid #c9c7b8;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  max-height: 25px;
+}
+
 
 .valombreuse .inventory-list .item-detail:last-child {
   border-right: none;

@@ -104,6 +104,10 @@ export class ValombreuseActorSheet extends ActorSheet {
         return await this.actor.updateEmbeddedDocuments("Item",[itemData]);
     });
 
+    html.find('.bld_score').change(async ev => {
+        return this._onUpdateBlooddomainRank(ev);
+    });
+
     html.find('.capa_bonus').change(ev => {
         ev.preventDefault();
         const li = $(ev.currentTarget).closest(".item");
@@ -202,7 +206,7 @@ async getData(options) {
             itemData.system.spe += itemComp.system.spe;
             this.actor.updateEmbeddedDocuments("Item",[itemData]);
         }
-    });
+        });
     }
 }
 
@@ -234,7 +238,9 @@ async getData(options) {
             }
             
         case "bloodline":
-            return await Bloodline.addToActor(this.actor, event, itemData);
+            {
+                return await Bloodline.addToActor(this.actor, event, itemData);
+            }
         case "aptitude":
             return await Aptitude.addToActor(this.actor, event, itemData);
         default:
@@ -365,6 +371,25 @@ async getData(options) {
                 return this.actor.deleteEmbeddedDocuments("Item",[itemId]);
             }
         }
+    }
+
+    async _onUpdateBlooddomainRank(ev) {
+        ev.preventDefault();
+        const li = $(ev.currentTarget).closest(".inventory-header");
+        let itid=li.data("itemId");
+        let act = this.actor;
+        let caps = act.items.find(item => item.type === "bloodline");
+        const item = caps;
+        let itemData = item.toObject();
+        for (let pas = 0; pas < itemData.system.blooddomains.length; pas++) {
+            let blddomain = itemData.system.blooddomains[pas];
+            if (blddomain._id == itid)
+            {
+                blddomain.system.score=ev.currentTarget.value;
+            }
+        }
+        
+        return await this.actor.updateEmbeddedDocuments("Item",[itemData]);
     }
 
      /**

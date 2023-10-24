@@ -9,6 +9,7 @@ Hooks.once("ready", async () => {
     await game.valombreuse.config.getCompetences();
     await game.valombreuse.config.getAptitude();
     await game.valombreuse.config.getOrdres();
+    await game.valombreuse.config.getBlooddomains();
 
     console.info("-------------------------------------System Initialized.");
 

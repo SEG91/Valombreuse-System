@@ -1,6 +1,8 @@
 import { VALOMBREUSE } from "./config.js";
 import {Traversal} from "./utils/traversal.js";
 
+let globalcount=0;
+
 export const registerHandlebarsHelpers = function () {
 
 
@@ -61,6 +63,23 @@ export const registerHandlebarsHelpers = function () {
         return itemByCat;
     });
 
+    Handlebars.registerHelper('InitializeGlobalCount', function () {
+        globalcount=0;
+        return ;
+    });
+
+    Handlebars.registerHelper('IncreaseGlobalCount', function () {
+     globalcount++;
+    });
+
+    Handlebars.registerHelper('CompareGlobalCount', function (num) {
+        if (globalcount == num)
+        {
+            return true;
+        }
+        else return false;
+       });
+
     Handlebars.registerHelper('getItemSubCategories', function () {
         return VALOMBREUSE.itemSubCategories;
     });
@@ -71,6 +90,23 @@ export const registerHandlebarsHelpers = function () {
             OrdreNames.push(VALOMBREUSE.Ordres[pas].name)
         }
         return OrdreNames;
+    });
+
+    Handlebars.registerHelper('getBloodpowersbyRank', function (items) {
+        let Bloodpowers=[];
+        for (let pas = 0; pas < VALOMBREUSE.Blooddomains.length; pas++) {
+            if (VALOMBREUSE.Blooddomains[pas]._id == items._id){
+                let bldpwlist = VALOMBREUSE.Blooddomains[pas].system.bloodpowers;
+                for (let pas2 = 0; pas2 < bldpwlist.length; pas2++) {
+                    if (bldpwlist[pas2].system.score <= items.system.score){
+                        Bloodpowers.push(bldpwlist[pas2])
+                        }
+                    }
+                    break;
+                }
+            }
+        
+        return Bloodpowers;
     });
 
     Handlebars.registerHelper('getItemsBySubCategory', function (subCat, items) {
@@ -108,6 +144,12 @@ export const registerHandlebarsHelpers = function () {
           });
        
         return caps;
+    });
+
+    Handlebars.registerHelper('getBlooddomains', function (items) {
+        let caps = items.find(item => item.type === "bloodline");
+       if (caps)
+        return caps.system.blooddomains;
     });
 
     Handlebars.registerHelper('getAptitudes', function (items) {
