@@ -8,6 +8,20 @@
             <input type="text" name="energyspent" >
         </div>
     </div>
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Bonus-Malus</label>
+        </div>
+        <div class="divTitle">
+            <input type="text" name="bonusmalus" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="checkbox"> <input type="checkbox" name="isSpe" {{checked IsSpe}}> {{localize "VALOMBREUSE.ui.specialskill"}}</label>
+    </div>
+    <div class="form-group">
+        <label class="checkbox"> <input type="checkbox" name="isExpert" {{checked isExpert}}> {{localize "VALOMBREUSE.ui.expert"}}</label>
+    </div>
     <div class="form-group">
         <label>{{localize "VALOMBREUSE.ui.link"}} </label>
         <div class="form-fields">

@@ -38,7 +38,7 @@ export class ValombreuseRoll {
         r.roll(actor,rollType);
     }
 
-    static competencyCheck(data, actor, event,energy,AttrLnk2,rollType = "PUBLIC") {
+    static competencyCheck(data, actor, event,energy,AttrLnk2,rollType = "PUBLIC",bonusmalus,isSpe,isExpert) {
         const elt = $(event.currentTarget)[0];
         let Rang = elt.attributes["data-rolling-value"].value;
         let LnkAttr = elt.attributes["data-rolling-bonus"].value;
@@ -69,13 +69,18 @@ export class ValombreuseRoll {
                 break;
         }
 
-        let energyspent=eval(`${energy}`);
+        let energyspent=0;
+        if (energy!="")
+         energyspent=eval(`${energy}`);
         let totalenergy=1+energyspent;
         let oldenergy=actor.system.attributes.power.value;
         actor.system.attributes.power.value=oldenergy-energyspent;
         let cmpValue = RangValue+ AttrValue;
-        let label = elt.attributes["title"].value;       
-        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,totalenergy);
+        let label = elt.attributes["title"].value;
+        let Numbonusmalus=0;
+        if (bonusmalus!="")     
+            Numbonusmalus = eval(`${bonusmalus}`);
+        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Numbonusmalus,isSpe,isExpert);
         r.roll(actor,rollType);
     }
 

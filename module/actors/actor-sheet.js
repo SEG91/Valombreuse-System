@@ -404,6 +404,9 @@ async getData(options) {
             rollType : "PUBLIC",
             AttrLnk2 : "",
             energyspent : 0,
+            bonusmalus  : 0,
+            isSpe : false,
+            isExpert : false
         };
 
         const configJet = {
@@ -419,30 +422,6 @@ async getData(options) {
 
         switch (rolltype) {
             case "skillcheck" :
-
-                let globalSettingCarac100 = game.settings.get("aria","carac100"); 
-
-                if(globalSettingCarac100) 
-                {
-                    if(forceConfig)
-                    {
-                        configJet.showBonus = true;
-                        extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de caractéristique",configJet);
-                        if (extraOptions.cancelled) return;     
-                        extraOptions.multi = 1;                   
-                    }
-                    return ValombreuseRoll.skillCheck(this.getData().system, this.actor, event,extraOptions.multi,extraOptions.rollType,extraOptions.bonusMalus);
-                }
-                else
-                {
-                    configJet.showBonus = true;
-                    configJet.showMulti = true;
-                    extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de caractéristique",configJet);
-                    if (extraOptions.cancelled) return;
-                    if(extraOptions.bonusMalus == "0")
-                        extraOptions.bonusMalus = "+0";
-                    return ValombreuseRoll.skillCheck(this.getData().system, this.actor, event, extraOptions.multi,extraOptions.rollType,extraOptions.bonusMalus);
-                }
                break;
 
 
@@ -454,7 +433,7 @@ async getData(options) {
                         if (extraOptions.cancelled) return;
                         
                     }
-                    return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,extraOptions.rollType);
+                    return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,extraOptions.rollType,extraOptions.bonusmalus,extraOptions.isSpe,extraOptions.isExpert);
                 break;
 
 

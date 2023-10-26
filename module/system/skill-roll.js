@@ -2,7 +2,7 @@ import {ValombreuseDamageRoll} from "./dmg-roll.js";
 
 export class ValombreuseSkillRoll {
 
-    constructor(label,calcLabel,cmpValue,energy){
+    constructor(label,calcLabel,cmpValue,energy,bonusmalus,isSpe,isExpert){
         this._label = label;
         this._calcLabel = calcLabel;
         this._energy=energy;
@@ -15,6 +15,9 @@ export class ValombreuseSkillRoll {
         this._cmpValue = cmpValue;
         this._result = 0;
         this._formula = "1d4";
+        this._bonusmalus=bonusmalus;
+        this._isSpe=isSpe;
+        this._isExpert=isExpert;
     }
 
     async roll(actor,rollType){
@@ -30,7 +33,8 @@ export class ValombreuseSkillRoll {
         let potentialfumble=1;
         let potentialcrit=0;
         let minus=1;
-        for (let pas = 0; pas < this._energy; pas++) {
+        let tour = 1+this._energy;
+        for (let pas = 0; pas < tour; pas++) {
             let keeprolling=1;
             while (keeprolling)
             {
@@ -41,9 +45,10 @@ export class ValombreuseSkillRoll {
                 let relativeresult=minus*r.total;
                 result[0] = prevres+(relativeresult);
                 result.push(relativeresult);
+                console.log(r.total);
                 switch(r.total){
                     case 1:
-                       if (minus==1)
+                       if ((minus==1) && (this._energy==0))
                         minus=-1;
                        else
                         keeprolling=0;
@@ -68,15 +73,27 @@ export class ValombreuseSkillRoll {
 
         if (potentialfumble) this._isFumble=true;
         this._calcLabel=this._cmpValue;
+        if (this._bonusmalus !=0)
+            this._calcLabel+="+ ("+this._bonusmalus+")";
+        if (this._isSpe == true)
+           this._calcLabel+=" +(2)";
+        if (this._isExpert == true)
+            this._calcLabel+=" +(4)";
         for (let idx = 1; idx < result.length; idx++) {
             let oldlabel=this._calcLabel;
             this._calcLabel=oldlabel+" + "+result[idx];
         }
+
+        let interCmpValue=this._cmpValue+this._bonusmalus;
+        if (this._isSpe== true)
+          interCmpValue+=2;
+        if (this._isExpert == true)
+          interCmpValue+=4;
         let templateContextData = {
             actor: actor,
             label: this._label,
             calcLabel: this._calcLabel,
-            cmpValue: this._cmpValue+result[0],
+            cmpValue: interCmpValue+result[0],
 
             isCritical: this._isCritical,
             isFumble: this._isFumble,
