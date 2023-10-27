@@ -3,7 +3,7 @@
   "TYPES": {
     "Actor": {
       "character": "Veinard",
-      "pnj": "PNJ",
+      "npc": "PNJ",
       "minion": "Bande"
     },
 
@@ -74,5 +74,13 @@
   "VALOMBREUSE.ui.grade": "Grade",
   "VALOMBREUSE.attributes.bld.label" : "Points de Sang Ancien",
   "VALOMBREUSE.attributes.bldmax.label" : "Points de Sang Ancien Max",
-  "VALOMBREUSE.attributes.bldtarget.label" : "Capacité en Points de Sang Ancien"
+  "VALOMBREUSE.attributes.bldtarget.label" : "Capacité en Points de Sang Ancien",
+  "VALOMBREUSE.ui.minion" : "Bande",
+  "VALOMBREUSE.minion.nb.label" : "Taille de la Bande",
+  "VALOMBREUSE.minion.nbmax.label" : "Taille initiale de la Bande",
+  "VALOMBREUSE.minion.moral.label" : "Moral de la Bande",
+  "VALOMBREUSE.minion.offpot.label" : "Potentiel Offensif",
+  "VALOMBREUSE.minion.offpotmax.label" : "Potentiel Offensif de la Bande",
+  "VALOMBREUSE.ui.init": "Initiative",
+  "VALOMBREUSE.damage.label": "Dégâts"
 }

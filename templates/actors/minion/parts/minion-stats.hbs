@@ -1,0 +1,36 @@
+<div class="flexrow no-wrap stats">
+    <div class="sidebar flex1 pos_relative">
+        <div class="attrvertalign">
+            <img class="profession-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        </div>
+    </div>
+    <div class="flexrow flex3">
+        <div class="flex1 layout center carac pos_relative">
+            <!-- STATS -->
+            {{> "systems/valombreuse/templates/actors/minion/parts/minion-attributes.hbs"}}
+        </div>
+        <div class="flex1 layout center hpcol1 pos_relative">
+            <!-- HP -->
+            {{> "systems/valombreuse/templates/actors/minion/parts/minion-hp.hbs"}}
+        </div>
+         <div class="flex1 layout center hpcol pos_relative">
+            <!-- HP -->
+            {{> "systems/valombreuse/templates/actors/minion/parts/minion-init.hbs"}}
+        </div>
+        <div class="flex1 layout center powercol pos_relative">
+            <!-- Energy -->
+            {{> "systems/valombreuse/templates/actors/minion/parts/minion-energy.hbs"}}
+        </div> 
+    </div>
+</div>
+<div class="flexrow no-wrap ">
+              <div class="flexcol"> 
+                     {{> "systems/valombreuse/templates/actors/minion/parts/minion-aptitudes.hbs"}}
+            </div>
+</div>
+<div class="flexrow no-wrap description_row">
+              <div class="flexcol"> 
+                     <div class="form-header">{{ localize "VALOMBREUSE.details.description" }}</div>
+                           {{editor biographyHTML target="system.description" button=true owner=owner editable=editable}}
+            </div>
+        </div>

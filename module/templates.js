@@ -31,7 +31,14 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/valombreuse/templates/chat/carac-card.hbs",
         "systems/valombreuse/templates/config/skill-options.hbs",
         "systems/valombreuse/templates/items/parts/details/aptitude-details.hbs",
-        "systems/valombreuse/templates/actors/character/parts/blooddomains/character-blooddomains.hbs"
+        "systems/valombreuse/templates/actors/character/parts/blooddomains/character-blooddomains.hbs",
+        "systems/valombreuse/templates/actors/minion/parts/minion-header.hbs",
+        "systems/valombreuse/templates/actors/minion/parts/minion-stats.hbs",
+        "systems/valombreuse/templates/actors/minion/parts/minion-attributes.hbs",
+        "systems/valombreuse/templates/actors/minion/parts/minion-hp.hbs",
+        "systems/valombreuse/templates/actors/minion/parts/minion-energy.hbs",
+        "systems/valombreuse/templates/actors/minion/parts/minion-aptitudes.hbs",
+        "systems/valombreuse/templates/actors/minion/parts/minion-init.hbs"
     ];
 
     // Load the template parts

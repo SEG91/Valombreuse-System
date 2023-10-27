@@ -146,7 +146,12 @@
     "minion": {
       "templates": [
         "common"
-      ]
+      ],
+      "nb":0,
+      "nbmax":0,
+      "moral":0,
+      "Offpot":0,
+      "Offpotmax":0
     }
   },
   "Item": {

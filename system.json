@@ -2,7 +2,7 @@
   "id": "valombreuse",
   "title": "valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.5.1.6.1",
+  "version": "0.0.5.1.7",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
@@ -132,7 +132,20 @@
         "ASSISTANT": "OWNER"
       },
       "flags": {}
+    },
+    {
+      "label": "Scène",
+      "type": "Scene",
+      "name": "scene",
+      "path": "packs/scene",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
+
   ],
   "gridDistance": 1.5,
   "gridUnits": "m",
