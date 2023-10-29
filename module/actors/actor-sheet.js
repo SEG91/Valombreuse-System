@@ -423,6 +423,17 @@ async getData(options) {
         switch (rolltype) {
             case "skillcheck" :
                break;
+            
+            case "BandeAttack" :
+                if(forceConfig)
+                    {
+                        configJet.showBonus = true;
+                        extraOptions = await this.getRollOptions("systems/valombreuse/templates/config/BA-options.hbs","Configuration du jet d'Attaque de Bande",configJet);
+                        if (extraOptions.cancelled) return;
+                        
+                    }
+                    return ValombreuseRoll.BandeAttack(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.rollType,extraOptions.bonusmalus);
+                break;
 
 
             case "competencycheck" :

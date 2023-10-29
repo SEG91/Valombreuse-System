@@ -34,6 +34,7 @@ export class ValombreuseSkillRoll {
         let potentialcrit=0;
         let minus=1;
         let tour = 1+this._energy;
+        let r1 = new Roll(this._formula);
         for (let pas = 0; pas < tour; pas++) {
             let keeprolling=1;
             while (keeprolling)
@@ -48,7 +49,7 @@ export class ValombreuseSkillRoll {
                 console.log(r.total);
                 switch(r.total){
                     case 1:
-                       if ((minus==1) && (this._energy==0))
+                       if ((minus==1) && (this._energy==0)&&(potentialfumble!=0))
                         minus=-1;
                        else
                         keeprolling=0;
@@ -104,11 +105,10 @@ export class ValombreuseSkillRoll {
             isSuccess: 0,
             result: this._cmpValue+result[0],
         };
-
+        let msg ="toto";
         let chatData = {
             user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
-            roll: result,
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             content: await renderTemplate(messageTemplate,templateContextData),
             sound: CONFIG.sounds.dice

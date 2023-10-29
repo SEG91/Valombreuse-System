@@ -11,9 +11,9 @@
                 <div id="life_icon" class="flex1 center">
                     <input class="field-label-icon-hp field-value" name="system.offpotmax" type="text" value="{{system.offpotmax}}" placeholder="OP" data-dtype="Number"/>
                 </div>
-                <div class="rollable" data-roll-formula="{{system.offpotma}}" data-roll-type="BandeAttack">
+                <div class="rollable" data-rolling-value="{{system.offpotmax}}" data-roll-type="BandeAttack" title="{{ localize 'VALOMBREUSE.minion.offpotmax.label' }}">
                     <div class="flex1 center">
-                        <div class="field-label">{{ localize 'VALOMBREUSE.minion.offpotmax.label' }}</div>
+                        <div class="field-label" title="{{ localize 'VALOMBREUSE.minion.offpotmax.label' }}">{{ localize 'VALOMBREUSE.minion.offpotmax.label' }}</div>
                     </div>
                 </div>
             </div>

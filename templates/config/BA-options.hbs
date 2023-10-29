@@ -1,0 +1,40 @@
+<form>  
+    
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Energie dépensée</label>
+        </div>
+        <div class="divTitle">
+            <input type="text" name="energyspent" >
+        </div>
+    </div>
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Bonus-Malus</label>
+        </div>
+        <div class="divTitle">
+            <input type="text" name="bonusmalus" >
+        </div>
+    </div>
+    <hr>
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Type de lancé</label>
+        </div>
+        <div class="divTitle">
+            <input type="radio" id="PUBLIC" name="rollType" value="PUBLIC" checked>
+            <label for="PUBLIC">Public</label>
+
+            <input type="radio" id="BLIND" name="rollType" value="BLIND" {{checked checkGM}}>
+            <label for="BLIND">MJ</label>
+
+            <input type="radio" id="SELF" name="rollType" value="SELF" >
+            <label for="SELF">Moi</label>
+
+            <input type="radio" id="PRIVATE" name="rollType" value="PRIVATE" >
+            <label for="PRIVATE">MJ & Moi</label>
+        </div>
+    </div>
+
+
+</form>

@@ -1,1 +1,7 @@
-2023/10/27-18:04:06.383 10b4 Delete type=3 #1
+2023/10/29-18:12:23.028772 30fd73000 Recovering log #70
+2023/10/29-18:12:23.029227 30fd73000 Delete type=0 #70
+2023/10/29-18:12:23.029431 30fd73000 Delete type=3 #68
+2023/10/29-18:34:24.214550 309cf7000 Level-0 table #75: started
+2023/10/29-18:34:24.214623 309cf7000 Level-0 table #75: 0 bytes OK
+2023/10/29-18:34:24.214865 309cf7000 Delete type=0 #73
+2023/10/29-18:34:24.218203 309cf7000 Manual compaction at level-0 from '!scenes!QchGWL2rUdrSqdNa' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)

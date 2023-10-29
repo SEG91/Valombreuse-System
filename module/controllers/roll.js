@@ -38,6 +38,26 @@ export class ValombreuseRoll {
         r.roll(actor,rollType);
     }
 
+    static BandeAttack(data, actor, event,energy,rollType = "PUBLIC",bonusmalus = "+0") {
+        const elt = $(event.currentTarget)[0];
+        let Rang = elt.attributes["data-rolling-value"].value;
+        let RangValue = eval(`${Rang}`);
+
+        let energyspent=0;
+        if (energy!="")
+         energyspent=eval(`${energy}`);
+        let totalenergy=1+energyspent;
+        let oldenergy=actor.system.attributes.power.value;
+        actor.system.attributes.power.value=oldenergy-energyspent;
+        let cmpValue = RangValue;
+        let label = elt.attributes["title"].value;
+        let Numbonusmalus=0;
+        if (bonusmalus!="")     
+            Numbonusmalus = eval(`${bonusmalus}`);
+        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Numbonusmalus,false,false);
+        r.roll(actor,rollType);
+    }
+
     static competencyCheck(data, actor, event,energy,AttrLnk2,rollType = "PUBLIC",bonusmalus,isSpe,isExpert) {
         const elt = $(event.currentTarget)[0];
         let Rang = elt.attributes["data-rolling-value"].value;
