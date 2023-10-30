@@ -1,14 +1,10 @@
-2023/10/29-18:12:23.011856 30fd73000 Recovering log #1298
-2023/10/29-18:12:23.012835 30fd73000 Delete type=0 #1298
-2023/10/29-18:12:23.013020 30fd73000 Delete type=3 #1296
-2023/10/29-18:34:24.205678 309cf7000 Level-0 table #1303: started
-2023/10/29-18:34:24.205785 309cf7000 Level-0 table #1303: 0 bytes OK
-2023/10/29-18:34:24.206027 309cf7000 Delete type=0 #1301
-2023/10/29-18:34:24.207615 309cf7000 Manual compaction at level-0 from '!items!ffZvVSn1pvRBahPG' @ 72057594037927935 : 1 .. '!items!hCa6SHa1hxp5immh' @ 0 : 0; will stop at (end)
-2023/10/29-18:34:24.208848 309cf7000 Manual compaction at level-1 from '!items!ffZvVSn1pvRBahPG' @ 72057594037927935 : 1 .. '!items!hCa6SHa1hxp5immh' @ 0 : 0; will stop at '!items!hCa6SHa1hxp5immh' @ 15 : 1
-2023/10/29-18:34:24.208854 309cf7000 Compacting 1@1 + 0@2 files
-2023/10/29-18:34:24.209114 309cf7000 Generated table #1304@1: 1 keys, 5205 bytes
-2023/10/29-18:34:24.209121 309cf7000 Compacted 1@1 + 0@2 files => 5205 bytes
-2023/10/29-18:34:24.209176 309cf7000 compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/10/29-18:34:24.209217 309cf7000 Delete type=2 #985
-2023/10/29-18:34:24.210211 309cf7000 Manual compaction at level-1 from '!items!hCa6SHa1hxp5immh' @ 15 : 1 .. '!items!hCa6SHa1hxp5immh' @ 0 : 0; will stop at (end)
+2023/10/29-20:14:57.072 7ac8 Log #1237: 0 ops saved to Table #1307 OK
+2023/10/29-20:14:57.073 7ac8 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\lignee/001237.log: OK
+2023/10/29-20:14:57.073 7ac8 Log #1306: 0 ops saved to Table #1308 OK
+2023/10/29-20:14:57.074 7ac8 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\lignee/001306.log: OK
+2023/10/29-20:14:57.074 7ac8 Table #985: 1 entries OK
+2023/10/29-20:14:57.074 7ac8 Table #1299: 1 entries OK
+2023/10/29-20:14:57.074 7ac8 Table #1304: 1 entries OK
+2023/10/29-20:14:57.076 7ac8 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-001236: OK
+2023/10/29-20:14:57.076 7ac8 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-001305: OK
+2023/10/29-20:14:57.079 7ac8 **** Repaired leveldb E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\lignee; recovered 3 files; 15708 bytes. Some data may have been lost. ****
