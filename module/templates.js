@@ -38,7 +38,19 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/valombreuse/templates/actors/minion/parts/minion-hp.hbs",
         "systems/valombreuse/templates/actors/minion/parts/minion-energy.hbs",
         "systems/valombreuse/templates/actors/minion/parts/minion-aptitudes.hbs",
-        "systems/valombreuse/templates/actors/minion/parts/minion-init.hbs"
+        "systems/valombreuse/templates/actors/minion/parts/minion-init.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/creature-header.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/creature-stats.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/creature-attributes.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/attributes/creature-attributes-vig.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/attributes/creature-attributes-mc.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/attributes/creature-attributes-eve.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/attributes/creature-attributes-con.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/attributes/creature-attributes-cha.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/attributes/creature-attributes-int.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/creature-hp.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/creature-energy.hbs",
+        "systems/valombreuse/templates/actors/creature/parts/creature-aptitudes.hbs"
     ];
 
     // Load the template parts

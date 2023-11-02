@@ -3,6 +3,7 @@
     "types": [
       "character",
       "npc",
+      "creature",
       "minion"
     ],
     "templates": {
@@ -138,6 +139,12 @@
       ]
     },
     "npc": {
+      "templates": [
+        "stats",
+        "common"
+      ]
+    },
+    "creature": {
       "templates": [
         "stats",
         "common"

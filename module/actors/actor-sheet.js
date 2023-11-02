@@ -203,7 +203,7 @@ async getData(options) {
         if (itemData.name == itemComp.name)
         {
             itemData.system.score += itemComp.system.score;
-            itemData.system.spe += itemComp.system.spe;
+            itemData.system.spe += itemComp.system.spe+" ";
             this.actor.updateEmbeddedDocuments("Item",[itemData]);
         }
         });

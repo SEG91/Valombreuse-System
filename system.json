@@ -2,7 +2,7 @@
   "id": "valombreuse",
   "title": "valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.5.1.7.2.1",
+  "version": "0.0.5.1.7.2.2",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
@@ -144,8 +144,19 @@
         "ASSISTANT": "OWNER"
       },
       "flags": {}
+    },
+    {
+      "label": "Jeu de Cartes Valombreuse",
+      "type": "Cards",
+      "name": "jeu-de-cartes-valombreuse",
+      "path": "packs/jeu-de-cartes-valombreuse",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
-
   ],
   "gridDistance": 1.5,
   "gridUnits": "m",

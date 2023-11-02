@@ -4,6 +4,7 @@
     "Actor": {
       "character": "Veinard",
       "npc": "PNJ",
+      "creature": "Creature",
       "minion": "Bande"
     },
 
@@ -82,5 +83,6 @@
   "VALOMBREUSE.minion.offpot.label" : "Potentiel Offensif",
   "VALOMBREUSE.minion.offpotmax.label" : "Potentiel Offensif de la Bande",
   "VALOMBREUSE.ui.init": "Initiative",
-  "VALOMBREUSE.damage.label": "Dégâts"
+  "VALOMBREUSE.damage.label": "Dégâts",
+  "VALOMBREUSE.ui.creature" : "Créature"
 }

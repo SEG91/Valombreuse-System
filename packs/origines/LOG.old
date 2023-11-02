@@ -1,11 +1,8 @@
-2023/10/29-20:14:57.118 9ad0 Log #1120: 0 ops saved to Table #1190 OK
-2023/10/29-20:14:57.118 9ad0 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\origines/001120.log: OK
-2023/10/29-20:14:57.120 9ad0 Log #1189: 1 ops saved to Table #1191 OK
-2023/10/29-20:14:57.121 9ad0 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\origines/001189.log: OK
-2023/10/29-20:14:57.121 9ad0 Table #692: 1 entries OK
-2023/10/29-20:14:57.121 9ad0 Table #1182: 1 entries OK
-2023/10/29-20:14:57.121 9ad0 Table #1187: 1 entries OK
-2023/10/29-20:14:57.121 9ad0 Table #1191: 1 entries OK
-2023/10/29-20:14:57.123 9ad0 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\origines/MANIFEST-001119: OK
-2023/10/29-20:14:57.124 9ad0 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\origines/MANIFEST-001188: OK
-2023/10/29-20:14:57.126 9ad0 **** Repaired leveldb E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\origines; recovered 4 files; 13669 bytes. Some data may have been lost. ****
+2023/11/02-10:36:12.891947 30fd73000 Recovering log #1315
+2023/11/02-10:36:12.892416 30fd73000 Delete type=3 #1313
+2023/11/02-10:36:12.893125 30fd73000 Delete type=0 #1315
+2023/11/02-10:37:34.244952 309cf7000 Level-0 table #1320: started
+2023/11/02-10:37:34.244976 309cf7000 Level-0 table #1320: 0 bytes OK
+2023/11/02-10:37:34.245093 309cf7000 Delete type=0 #1318
+2023/11/02-10:37:34.245633 309cf7000 Manual compaction at level-0 from '!items!A7Qtl35uJzU0tAPh' @ 72057594037927935 : 1 .. '!items!cPZixiYXvRlAvV14' @ 0 : 0; will stop at (end)
+2023/11/02-10:37:34.245954 309cf7000 Manual compaction at level-1 from '!items!A7Qtl35uJzU0tAPh' @ 72057594037927935 : 1 .. '!items!cPZixiYXvRlAvV14' @ 0 : 0; will stop at (end)

@@ -1,10 +1,7 @@
-2023/10/29-20:14:57.195 7ac8 Log #488: 0 ops saved to Table #561 OK
-2023/10/29-20:14:57.196 7ac8 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pretires/000488.log: OK
-2023/10/29-20:14:57.199 7ac8 Log #560: 33 ops saved to Table #562 OK
-2023/10/29-20:14:57.200 7ac8 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pretires/000560.log: OK
-2023/10/29-20:14:57.200 7ac8 Table #392: 32 entries OK
-2023/10/29-20:14:57.200 7ac8 Table #558: 63 entries OK
-2023/10/29-20:14:57.201 7ac8 Table #562: 33 entries OK
-2023/10/29-20:14:57.203 7ac8 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pretires/MANIFEST-000487: OK
-2023/10/29-20:14:57.203 7ac8 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pretires/MANIFEST-000559: OK
-2023/10/29-20:14:57.205 7ac8 **** Repaired leveldb E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pretires; recovered 3 files; 202872 bytes. Some data may have been lost. ****
+2023/11/02-10:36:12.904629 30fd73000 Recovering log #688
+2023/11/02-10:36:12.905214 30fd73000 Delete type=3 #686
+2023/11/02-10:36:12.905402 30fd73000 Delete type=0 #688
+2023/11/02-10:37:34.246569 309cf7000 Level-0 table #693: started
+2023/11/02-10:37:34.246582 309cf7000 Level-0 table #693: 0 bytes OK
+2023/11/02-10:37:34.246702 309cf7000 Delete type=0 #691
+2023/11/02-10:37:34.247546 309cf7000 Manual compaction at level-0 from '!actors!5FU5lbqg9vNVieT5' @ 72057594037927935 : 1 .. '!actors.items!vshHhjqF1gydORGC.ww1DstSVeZIySbi5' @ 0 : 0; will stop at (end)
