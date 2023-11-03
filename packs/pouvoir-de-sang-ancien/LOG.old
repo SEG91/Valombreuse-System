@@ -1,8 +1,15 @@
-2023/11/02-10:36:12.891936 30f574000 Recovering log #1321
-2023/11/02-10:36:12.892436 30f574000 Delete type=0 #1321
-2023/11/02-10:36:12.893152 30f574000 Delete type=3 #1319
-2023/11/02-10:37:34.244579 309cf7000 Level-0 table #1326: started
-2023/11/02-10:37:34.244598 309cf7000 Level-0 table #1326: 0 bytes OK
-2023/11/02-10:37:34.244820 309cf7000 Delete type=0 #1324
-2023/11/02-10:37:34.245238 309cf7000 Manual compaction at level-0 from '!items!2IeuikRMEkkhWbTc' @ 72057594037927935 : 1 .. '!items!uYdiEwmNQIBKSWAh' @ 0 : 0; will stop at (end)
-2023/11/02-10:37:34.245642 309cf7000 Manual compaction at level-1 from '!items!2IeuikRMEkkhWbTc' @ 72057594037927935 : 1 .. '!items!uYdiEwmNQIBKSWAh' @ 0 : 0; will stop at (end)
+2023/11/02-14:30:53.465744 310572000 Recovering log #1333
+2023/11/02-14:30:53.466378 310572000 Delete type=0 #1333
+2023/11/02-14:30:53.466661 310572000 Delete type=3 #1331
+2023/11/02-16:01:18.811339 309cf7000 Level-0 table #1338: started
+2023/11/02-16:01:18.811674 309cf7000 Level-0 table #1338: 1881 bytes OK
+2023/11/02-16:01:18.812008 309cf7000 Delete type=0 #1336
+2023/11/02-16:01:18.812179 309cf7000 Manual compaction at level-0 from '!items!2IeuikRMEkkhWbTc' @ 72057594037927935 : 1 .. '!items!uYdiEwmNQIBKSWAh' @ 0 : 0; will stop at (end)
+2023/11/02-16:01:18.812238 309cf7000 Manual compaction at level-1 from '!items!2IeuikRMEkkhWbTc' @ 72057594037927935 : 1 .. '!items!uYdiEwmNQIBKSWAh' @ 0 : 0; will stop at '!items!WKhoiDYm8oWSr6ZA' @ 21 : 1
+2023/11/02-16:01:18.812252 309cf7000 Compacting 1@1 + 1@2 files
+2023/11/02-16:01:18.812705 309cf7000 Generated table #1339@1: 8 keys, 6666 bytes
+2023/11/02-16:01:18.812716 309cf7000 Compacted 1@1 + 1@2 files => 6666 bytes
+2023/11/02-16:01:18.812784 309cf7000 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/11/02-16:01:18.812882 309cf7000 Delete type=2 #1246
+2023/11/02-16:01:18.813112 309cf7000 Delete type=2 #1338
+2023/11/02-16:01:18.815425 309cf7000 Manual compaction at level-1 from '!items!WKhoiDYm8oWSr6ZA' @ 21 : 1 .. '!items!uYdiEwmNQIBKSWAh' @ 0 : 0; will stop at (end)

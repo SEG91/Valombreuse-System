@@ -7,6 +7,7 @@ import {Ordre} from "../controllers/ordre.js";
 import {Origines} from "../controllers/origines.js";
 import {Bloodline} from "../controllers/bloodline.js";
 import {Aptitude} from "../controllers/aptitudes.js";
+import {Competence} from "../controllers/competence.js";
 import {Traversal} from "../utils/traversal.js";
 import { ValombreuseItem } from "../items/item.js";
 import {ValombreuseRoll} from "../controllers/roll.js";
@@ -243,6 +244,14 @@ async getData(options) {
             }
         case "aptitude":
             return await Aptitude.addToActor(this.actor, event, itemData);
+        case "competence":
+            {
+                const actor = this.actor;
+                if (actor.type=="creature")
+                {
+                    return await Competence.addToActor(this.actor, event, itemData);
+                }
+            }
         default:
             // Handle item sorting within the same Actor
             const actor = this.actor;

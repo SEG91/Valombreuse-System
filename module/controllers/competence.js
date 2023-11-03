@@ -18,4 +18,10 @@ export class Competence {
             return actor.createEmbeddedDocuments("Item",[data], {renderSheet: true}); // Returns one Entity, saved to the database
         }
     }
+
+    static addToActor(actor, event, itemData) {
+        let array = [];
+        array.push(itemData);
+        return actor.createEmbeddedDocuments("Item",array);
+    }
 }
