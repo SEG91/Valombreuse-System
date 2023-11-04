@@ -50,3 +50,27 @@ VALOMBREUSE.getAptitude = async function () {
     console.debug("Aptitude loaded");
 };
 
+VALOMBREUSE.itemProperties = {
+    "ranged": "VALOMBREUSE.properties.ranged",
+    "equipment": "VALOMBREUSE.properties.equipment",
+    "weapon": "VALOMBREUSE.properties.weapon",
+    "protection": "VALOMBREUSE.properties.protection"
+};
+
+VALOMBREUSE.itemSubCategories = {
+    "systeme" : "VALOMBREUSE.catui.systeme",
+    "ranged" : "VALOMBREUSE.catui.ranged",
+    "melee" : "VALOMBREUSE.catui.melee",
+    "armor" : "VALOMBREUSE.catui.armor",
+    "jewel" : "VALOMBREUSE.catui.jewel",
+    "shield" : "VALOMBREUSE.catui.shield",
+    "consumable" : "VALOMBREUSE.catui.consumable",
+    "document" : "VALOMBREUSE.catui.document",
+    "trapping" : "VALOMBREUSE.catui.other",
+    "ingredient" : "VALOMBREUSE.catui.ingredient",
+    "mount" : "VALOMBREUSE.catui.mount",
+    "ammunition" : "VALOMBREUSE.catui.ammunition",
+    "potion" : "VALOMBREUSE.catui.potion",
+    "cloath" : "VALOMBREUSE.catui.cloath"
+};
+

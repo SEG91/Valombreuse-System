@@ -1,7 +1,7 @@
-2023/11/02-14:30:53.478345 30fd73000 Recovering log #213
-2023/11/02-14:30:53.478858 30fd73000 Delete type=0 #213
-2023/11/02-14:30:53.479625 30fd73000 Delete type=3 #211
-2023/11/02-16:01:18.824541 309cf7000 Level-0 table #218: started
-2023/11/02-16:01:18.824817 309cf7000 Level-0 table #218: 0 bytes OK
-2023/11/02-16:01:18.825081 309cf7000 Delete type=0 #216
-2023/11/02-16:01:18.826013 309cf7000 Manual compaction at level-0 from '!scenes!QchGWL2rUdrSqdNa' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)
+2023/11/04-07:38:48.435019 310d71000 Recovering log #333
+2023/11/04-07:38:48.435621 310d71000 Delete type=3 #331
+2023/11/04-07:38:48.435746 310d71000 Delete type=0 #333
+2023/11/04-07:39:02.033657 309cf7000 Level-0 table #338: started
+2023/11/04-07:39:02.033673 309cf7000 Level-0 table #338: 0 bytes OK
+2023/11/04-07:39:02.033776 309cf7000 Delete type=0 #336
+2023/11/04-07:39:02.034549 309cf7000 Manual compaction at level-0 from '!scenes!QchGWL2rUdrSqdNa' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)

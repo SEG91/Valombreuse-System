@@ -4,25 +4,26 @@
     <div class="form-fields">
         <select name="system.subtype" data-type="String" style="width:100%">
             {{#select system.subtype}}
-                <option value="">{{localize "ARIA.None"}}</option>
+                <option value="">{{localize "VALOMBREUSE.ui.None"}}</option>
             {{#each (getItemSubCategories)  as |catName cat|}}
-                <option value="{{cat}}">{{catName}}</option>
+                <option value="{{cat}}">{{localize catName}}</option>
             {{/each}}
             {{/select}}
         </select>
     </div>
 </div>
 
-{{> "systems/aria/templates/items/parts/details/equipment-details.hbs"}}
+{{> "systems/valombreuse/templates/items/parts/details/equipment-details.hbs"}}
 
 {{#if (or (or (equals system.subtype "melee") (equals system.subtype "ranged")) system.properties.weapon) }}
-    {{> "systems/aria/templates/items/parts/details/weapon-details.hbs"}}
+    {{> "systems/valombreuse/templates/items/parts/details/weapon-details.hbs"}}
 {{/if}}
 {{#if (or (equals system.subtype "ranged") system.properties.ranged) }}
-    {{> "systems/aria/templates/items/parts/details/ranged-details.hbs"}}
+    {{> "systems/valombreuse/templates/items/parts/details/ranged-details.hbs"}}
 {{/if}}
 {{#if (or (or (equals system.subtype "armor") (equals system.subtype "shield")) system.properties.protection) }}
-    {{> "systems/aria/templates/items/parts/details/protection-details.hbs"}}
+    {{> "systems/valombreuse/templates/items/parts/details/protection-details.hbs"}}
 {{/if}}
+
 
 

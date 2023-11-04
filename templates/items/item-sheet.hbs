@@ -59,6 +59,9 @@
                 {{#if (equals item.type "bloodpower")}}
                     {{> "systems/valombreuse/templates/items/parts/details/bloodpower-details.hbs"}}
                 {{/if}}
+                {{#if (equals item.type "item")}}
+                    {{> "systems/valombreuse/templates/items/parts/details/item-details.hbs"}}
+                {{/if}}
             </div>
         </section>
     </div>

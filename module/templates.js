@@ -50,7 +50,14 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/valombreuse/templates/actors/creature/parts/attributes/creature-attributes-int.hbs",
         "systems/valombreuse/templates/actors/creature/parts/creature-hp.hbs",
         "systems/valombreuse/templates/actors/creature/parts/creature-energy.hbs",
-        "systems/valombreuse/templates/actors/creature/parts/creature-aptitudes.hbs"
+        "systems/valombreuse/templates/actors/creature/parts/creature-aptitudes.hbs",
+        "systems/valombreuse/templates/items/parts/details/item-details.hbs",
+        "systems/valombreuse/templates/items/parts/details/equipment-details.hbs",
+        "systems/valombreuse/templates/items/parts/details/weapon-details.hbs",
+        "systems/valombreuse/templates/items/parts/details/protection-details.hbs",
+        "systems/valombreuse/templates/items/parts/details/ranged-details.hbs",
+        "systems/valombreuse/templates/actors/character/parts/inventory/character-inventory.hbs",
+        "systems/valombreuse/templates/actors/character/parts/inventory/character-inventory-item.hbs"
     ];
 
     // Load the template parts

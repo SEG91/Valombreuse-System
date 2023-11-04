@@ -1,78 +1,52 @@
 <div class="form-group">
-    <label>{{localize "ARIA.ui.properties"}}</label>
+    <label>{{localize "VALOMBREUSE.ui.properties"}}</label>
     <div class="form-fields">
-        <label class="checkbox"> <input type="checkbox" name="system.properties.equipable" {{checked system.properties.equipable}}> {{localize "ARIA.ui.equipable"}}</label>
+        <label class="checkbox"> <input type="checkbox" name="system.properties.equipable" {{checked system.properties.equipable}}> {{localize "VALOMBREUSE.ui.equipable"}}</label>
 {{#if (not system.properties.unique)}}
-        <label class="checkbox"> <input type="checkbox" name="system.properties.stackable" {{checked system.properties.stackable}}> {{localize "ARIA.ui.stackable"}}</label>
+        <label class="checkbox"> <input type="checkbox" name="system.properties.stackable" {{checked system.properties.stackable}}> {{localize "VALOMBREUSE.ui.stackable"}}</label>
 {{/if}}
 {{#if (not system.properties.stackable)}}
         <label class="checkbox"> <input type="checkbox" name="system.properties.unique"    {{checked system.properties.unique}}> Unique </label>
 {{/if}}
-        <label class="checkbox"><input type="checkbox" name="system.properties.2h" {{checked system.properties.2h}}> {{localize "ARIA.ui.2Handed"}}</label>
-
+        <label class="checkbox"><input type="checkbox" name="system.properties.2h" {{checked system.properties.2h}}> {{localize "VALOMBREUSE.ui.2Handed"}}</label>
+{{debug system.subtype}}
 {{#if (not (or (equals system.subtype "melee") (equals system.subtype "ranged")) ) }}
-        <label class="checkbox"><input type="checkbox" name="system.properties.weapon" {{checked system.properties.weapon}}> {{localize "ARIA.properties.damage"}}</label>
-        <label class="checkbox"><input type="checkbox" name="system.properties.ranged" {{checked system.properties.ranged}}> {{localize "ARIA.properties.ranged"}}</label>
+
+        <label class="checkbox"><input type="checkbox" name="system.properties.weapon" {{checked system.properties.weapon}}> {{localize "VALOMBREUSE.properties.damage"}}</label>
+        <label class="checkbox"><input type="checkbox" name="system.properties.ranged" {{checked system.properties.ranged}}> {{localize "VALOMBREUSE.properties.ranged"}}</label>
  {{/if}}
  {{#if (not (or (equals system.subtype "shield") (equals system.subtype "armor")) ) }}
-        <label class="checkbox"><input type="checkbox" name="system.properties.protection" {{checked system.properties.protection}}> {{localize "ARIA.properties.protection"}}</label>
+        <label class="checkbox"><input type="checkbox" name="system.properties.protection" {{checked system.properties.protection}}> {{localize "VALOMBREUSE.properties.protection"}}</label>
  {{/if}}
    </div>
 </div>
-{{#if system.properties.equipable}}
-    <div class="form-group">
-        <label>{{localize "ARIA.ui.slot"}}</label>
-        <div class="form-fields">
-            <select name="system.slot" data-type="String" style="width:100%">
-                {{#select system.slot}}
-                    <option value="">{{localize "ARIA.None"}}</option>
-                    <option value="hand">{{localize "ARIA.slot.hand"}}</option>
-                    <option value="head">{{localize "ARIA.slot.head"}}</option>
-                    <option value="ear">{{localize "ARIA.slot.ear"}}</option>
-                    <option value="neck">{{localize "ARIA.slot.neck"}}</option>
-                    <option value="shoulders">{{localize "ARIA.slot.shoulders"}}</option>
-                    <option value="chest">{{localize "ARIA.slot.chest"}}</option>
-                    <option value="back">{{localize "ARIA.slot.back"}}</option>
-                    <option value="arm">{{localize "ARIA.slot.arm"}}</option>
-                    <option value="finger">{{localize "ARIA.slot.finger"}}</option>
-                    <option value="wrist">{{localize "ARIA.slot.wrist"}}</option>
-                    <option value="waist">{{localize "ARIA.slot.waist"}}</option>
-                    <option value="legs">{{localize "ARIA.slot.legs"}}</option>
-                    <option value="feet">{{localize "ARIA.slot.feet"}}</option>
-                    <option value="belt">{{localize "ARIA.slot.belt"}}</option>
-                    <option value="backpack">{{localize "ARIA.slot.backpack"}}</option>
-                    <option value="quiver">{{localize "ARIA.slot.quiver"}}</option>
-                {{/select}}
-            </select>
-        </div>
-    </div>
-{{/if}}
+
 <div class="form-group">
-    <label>{{ localize "ARIA.ui.price" }}</label>&nbsp; <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number"/>
+    <label>{{ localize "VALOMBREUSE.ui.price" }}</label>&nbsp; <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number"/>
 </div>
 <div class="form-group">
-    <label>{{ localize "ARIA.ui.rarity" }}</label>&nbsp; <select name="system.rarity" data-type="String" style="width:100%">
+    <label>{{ localize "VALOMBREUSE.ui.rarity" }}</label>&nbsp; <select name="system.rarity" data-type="String" style="width:100%">
     {{#select system.rarity}}
-        <option value="">{{localize "ARIA.None"}}</option>
-        <option value="common">{{localize "ARIA.rarity.common"}}</option>
-        <option value="moderate">{{localize "ARIA.rarity.moderate"}}</option>
-        <option value="rare">{{localize "ARIA.rarity.rare"}}</option>
-        <option value="very-rare">{{localize "ARIA.rarity.very-rare"}}</option>
-        {{#if (not system.properties.stackable)}}<option value="unique">{{localize "ARIA.rarity.unique"}}</option>{{/if}}
+        <option value="">{{localize "VALOMBREUSE.ui.None"}}</option>
+        <option value="common">{{localize "VALOMBREUSE.rarity.common"}}</option>
+        <option value="moderate">{{localize "VALOMBREUSE.rarity.moderate"}}</option>
+        <option value="rare">{{localize "VALOMBREUSE.rarity.rare"}}</option>
+        <option value="very-rare">{{localize "VALOMBREUSE.rarity.very-rare"}}</option>
+        {{#if (not system.properties.stackable)}}<option value="unique">{{localize "VALOMBREUSE.rarity.unique"}}</option>{{/if}}
     {{/select}}
 </select>
 </div>
 {{#if system.properties.stackable}}
     <div class="form-group">
-        <label>{{ localize "ARIA.ui.quantity" }}</label>
+        <label>{{ localize "VALOMBREUSE.ui.quantity" }}</label>
         <div class="form-fields">
-            <input type="number" name="system.qty" value="{{system.qty}}" placeholder="{{localize "ARIA.ui.quantity"}}" data-dtype="Number"/>
+            <input type="number" name="system.qty" value="{{system.qty}}" placeholder="{{localize "VALOMBREUSE.ui.quantity"}}" data-dtype="Number"/>
         </div>
     </div>
     <div class="form-group">
-        <label>{{localize "ARIA.ui.qtymax"}}</label>
+        <label>{{localize "VALOMBREUSE.ui.qtymax"}}</label>
         <div class="form-fields">
-            <input name="system.qtymax" type="text" value="{{system.qtymax}}" placeholder="{{localize "ARIA.placeholders.qtymax"}}" data-dtype="Number">
+            <input name="system.qtymax" type="text" value="{{system.qtymax}}" placeholder="{{localize "VALOMBREUSE.placeholders.qtymax"}}" data-dtype="Number">
         </div>
     </div>
 {{/if}}
