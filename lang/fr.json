@@ -81,6 +81,7 @@
   "VALOMBREUSE.minion.nbmax.label" : "Taille initiale de la Bande",
   "VALOMBREUSE.minion.moral.label" : "Moral de la Bande",
   "VALOMBREUSE.minion.offpot.label" : "Potentiel Offensif",
+  "VALOMBREUSE.minion.Defpot.label" : "Potentiel Défensif",
   "VALOMBREUSE.minion.offpotmax.label" : "Potentiel Offensif de la Bande",
   "VALOMBREUSE.ui.init": "Initiative",
   "VALOMBREUSE.damage.label": "Dégâts",

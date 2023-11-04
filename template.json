@@ -158,7 +158,8 @@
       "nbmax":0,
       "moral":0,
       "Offpot":0,
-      "Offpotmax":0
+      "Offpotmax":0,
+      "Defpot":0
     }
   },
   "Item": {
