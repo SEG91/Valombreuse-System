@@ -109,6 +109,11 @@ export const registerHandlebarsHelpers = function () {
         return Bloodpowers;
     });
 
+    Handlebars.registerHelper('getBloodpowers', function (blooddomain) {
+        return blooddomain.system.bloodpowers;
+    });
+    
+
     Handlebars.registerHelper('getItemsBySubCategory', function (subCat, items) {
         let caps = items.filter(item => item.type === "item");
         let weapons = caps.filter(item => item.system.subtype == subCat);
@@ -191,6 +196,24 @@ export const registerHandlebarsHelpers = function () {
         let caps_magie = caps.filter(item => item.name === "Modélisation");
 
         return caps_magie.length > 0;
+    });
+
+    Handlebars.registerHelper('IsCharacter', function (actor) {
+
+        if (actor.type === "character")
+            return true;
+        else
+            return false ;
+    });
+
+    Handlebars.registerHelper('IsSangImpur', function (blooddomain) {
+
+        let flag=false;
+        if (blooddomain.name ==="Domaine de Sang Impur")
+        {
+            flag=true;
+        }
+        return flag;
     });
 
     Handlebars.registerHelper('isWeapon', function (item) {

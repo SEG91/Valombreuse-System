@@ -6,6 +6,7 @@
 import {Ordre} from "../controllers/ordre.js";
 import {Origines} from "../controllers/origines.js";
 import {Bloodline} from "../controllers/bloodline.js";
+import {Bloodpower} from "../controllers/bloodpower.js";
 import {Aptitude} from "../controllers/aptitudes.js";
 import {Competence} from "../controllers/competence.js";
 import {Traversal} from "../utils/traversal.js";
@@ -242,12 +243,35 @@ async getData(options) {
             {
                 return await Bloodline.addToActor(this.actor, event, itemData);
             }
+        case "bloodpower":
+            {
+                const actor = this.actor;
+                if (actor.type=="npc")
+                {
+                    let caps = actor.items.find(item => item.type === "bloodline");
+                    if (caps.name == "Sang Impur")
+                    {
+                        if(caps.system.blooddomains){
+                            let blddomain = caps.system.blooddomains;
+                            if (blddomain)
+                            {
+                                let bldpws = blddomain[0].system.bloodpowers;
+                                if (bldpws)
+                                  {
+                                    bldpws.push(itemData);
+                                      return await this.actor.updateEmbeddedDocuments("Item",[caps]);
+                                  }
+                            }
+                        }
+                    }
+                }
+            }
         case "aptitude":
             return await Aptitude.addToActor(this.actor, event, itemData);
         case "competence":
             {
                 const actor = this.actor;
-                if (actor.type=="creature")
+                if ((actor.type=="creature")||(actor.type=="npc"))
                 {
                     return await Competence.addToActor(this.actor, event, itemData);
                 }
@@ -318,6 +342,25 @@ async getData(options) {
 
             return;
     }
+}
+
+async _addItemToInventory(itemData) {
+
+    const items = this.actor.items;
+    let inventory = items.filter(item => item.type === "item");
+    
+    const similarItem = inventory.find(i => {
+        return (i.system.properties.stackable === true) && (i.name === itemData.name);
+      });
+
+    if ( !similarItem ){
+        this.actor.createEmbeddedDocuments("Item", [itemData]);
+    }else{
+        similarItem.update({
+            "system.qty": similarItem.system.qty + Math.max(itemData.system.qty, 1)
+          }); 
+    }
+
 }
 
   /* -------------------------------------------- */

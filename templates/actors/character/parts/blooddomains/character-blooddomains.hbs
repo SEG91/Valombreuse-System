@@ -38,6 +38,28 @@
                     <input class="field-value flex1 bld_score" name="blooddomain.system.score" type="text" value="{{blooddomain.system.score}}" placeholder="0" data-dtype="Number"/>
                 </div>
             </li>
+            {{debug actor}}
+            {{#if (IsSangImpur blooddomain)}}
+            {{#each (getBloodpowers blooddomain) as |bloodpower pw|}}
+                <ol class="item-list">
+                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
+                        <div class="rollable no-wrap" title="{{bloodpower.name}}">
+                            <div class="flexrow no-wrap ">
+                                <div class="field-label no-wrap left competence_name">{{bloodpower.name}}
+                                    <span class="comp_tooltiptext">
+                                        <h1>{{bloodpower.name}} :</h1>{{{bloodpower.system.description}}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item-detail flexrow competence-col-width">
+                            <label class="field-value flex1 capa_score" name="bloodpower.system.score" type="text" value="{{bloodpower.system.score}}" placeholder="" data-dtype="Number"/>
+                        </div>
+                    </li>
+                </ol>
+            {{/each}}
+            {{else}}
             {{#each (getBloodpowersbyRank blooddomain) as |bloodpower pw|}}
                 <ol class="item-list">
                     <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
@@ -57,6 +79,7 @@
                     </li>
                 </ol>
             {{/each}}
+            {{/if}}
         </ol>
     {{#if (CompareGlobalCount 1)}}
         </div>
