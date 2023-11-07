@@ -197,7 +197,8 @@
           "2Handed" : false,
           "equipment" : false,
           "weapon" : false,
-          "protection" : false
+          "protection" : false,
+          "rechargeable": false
         }
       }
     },

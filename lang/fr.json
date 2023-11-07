@@ -87,6 +87,7 @@
   "VALOMBREUSE.damage.label": "Dégâts",
   "VALOMBREUSE.ui.creature" : "Créature",
   "VALOMBREUSE.ui.equipable" : "Équipable",
+  "VALOMBREUSE.ui.rechargeable" : "Rechargeable",
   "VALOMBREUSE.ui.activable" : "Activable",
   "VALOMBREUSE.ui.stackable" : "Empilable",
   "VALOMBREUSE.ui.2Handed" : "À deux mains",
