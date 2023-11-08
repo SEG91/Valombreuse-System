@@ -2,20 +2,20 @@
 
      <div class="flex1 center">Bourse</div>
     <div class="flex1 center coin">
-        <i title="Couronne" class="fas fa-coins" style="color:goldenrod"></i>
-        <input class="field-value coin-field" name="system.currency.gp.qty" type="number" value="{{system.currency.gp.qty}}" placeholder="Couronne" data-dtype="Number"/>
+        <i title="Or" class="fas fa-coins" style="color:goldenrod"></i>
+        <input class="field-value coin-field" name="system.currency.gp.qty" type="number" value="{{system.currency.gp.qty}}" placeholder="Or" data-dtype="Number"/>
     </div>
     <div class="flex1 center coin">
-        <i title="Orbe" class="fas fa-coins" style="color:silver"></i>
-        <input class="field-value center coin-field" name="system.currency.sp.qty" type="number" value="{{system.currency.sp.qty}}" placeholder="Orbe" data-dtype="Number"/>
+        <i title="Argent" class="fas fa-coins" style="color:silver"></i>
+        <input class="field-value center coin-field" name="system.currency.sp.qty" type="number" value="{{system.currency.sp.qty}}" placeholder="Argent" data-dtype="Number"/>
     </div>
     <div class="flex1 center coin">
-        <i title="Sceptre" class="fas fa-coins" style="color:saddlebrown"></i>
-        <input class="field-value coin-field" name="system.currency.cp.qty" type="number" value="{{system.currency.cp.qty}}" placeholder="Sceptre" data-dtype="Number"/>
+        <i title="Bronze" class="fas fa-coins" style="color:saddlebrown"></i>
+        <input class="field-value coin-field" name="system.currency.cp.qty" type="number" value="{{system.currency.cp.qty}}" placeholder="Bronze" data-dtype="Number"/>
     </div>
         <div class="flex1 center coin">
-        <i title="Roi" class="fas fa-coins" style="color:dimgray"></i>
-        <input class="field-value coin-field" name="system.currency.fp.qty" type="number" value="{{system.currency.fp.qty}}" placeholder="Roi" data-dtype="Number"/>
+        <i title="Fer" class="fas fa-coins" style="color:dimgray"></i>
+        <input class="field-value coin-field" name="system.currency.fp.qty" type="number" value="{{system.currency.fp.qty}}" placeholder="Fer" data-dtype="Number"/>
     </div>
 </div>
 
@@ -34,8 +34,9 @@
         {{#if (notEmpty (getInventory actor.items))}}
         
         {{#each (getArraySubCategorywithItems actor.items)}}
+        {{debug this.items}}
                 {{#if (notEmpty this.items)}}
-                    <li class="inventory-header flexrow"><div class="item-name center flexrow">{{this.value}}</div></li>
+                    <li class="inventory-header flexrow"><div class="item-name center flexrow">{{localize this.value}}</div></li>
                 {{#each this.items}}
                         {{> "systems/valombreuse/templates/actors/character/parts/inventory/character-inventory-item.hbs" this}}
                     {{/each}}

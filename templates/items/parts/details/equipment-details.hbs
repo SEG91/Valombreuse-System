@@ -11,13 +11,13 @@
         <label class="checkbox"><input type="checkbox" name="system.properties.2h" {{checked system.properties.2h}}> {{localize "VALOMBREUSE.ui.2Handed"}}</label>
 {{debug system.subtype}}
 {{#if (not (or (equals system.subtype "melee") (equals system.subtype "ranged")) ) }}
-
         <label class="checkbox"><input type="checkbox" name="system.properties.weapon" {{checked system.properties.weapon}}> {{localize "VALOMBREUSE.properties.damage"}}</label>
         <label class="checkbox"><input type="checkbox" name="system.properties.ranged" {{checked system.properties.ranged}}> {{localize "VALOMBREUSE.properties.ranged"}}</label>
  {{/if}}
  {{#if (not (or (equals system.subtype "shield") (equals system.subtype "armor")) ) }}
         <label class="checkbox"><input type="checkbox" name="system.properties.protection" {{checked system.properties.protection}}> {{localize "VALOMBREUSE.properties.protection"}}</label>
  {{/if}}
+   <label class="checkbox"> <input type="checkbox" name="system.properties.rechargeable" {{checked system.properties.rechargeable}}> {{localize "VALOMBREUSE.ui.rechargeable"}}</label>
    </div>
 </div>
 

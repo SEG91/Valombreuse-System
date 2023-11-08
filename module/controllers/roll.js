@@ -1,6 +1,7 @@
 import {ValombreuseSkillRoll} from "../system/skill-roll.js";
 import {ValombreuseDamageRoll} from "../system/dmg-roll.js";
 import {ValombreuseInitiativeRoll} from "../system/init-roll.js";
+import {ValombreuseGlobalRoll} from "../system/glb-roll.js";
 
 export class ValombreuseRoll {
     static options() {
@@ -57,6 +58,12 @@ export class ValombreuseRoll {
         let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Numbonusmalus,false,false);
         r.roll(actor,rollType);
     }
+
+    static GlobalCheck(data, actor, event,formula,rollType = "PUBLIC") {
+        let r = new ValombreuseGlobalRoll(formula);
+        r.roll(actor,rollType);
+    }
+    
 
     static competencyCheck(data, actor, event,energy,AttrLnk2,rollType = "PUBLIC",bonusmalus,isSpe,isExpert) {
         const elt = $(event.currentTarget)[0];

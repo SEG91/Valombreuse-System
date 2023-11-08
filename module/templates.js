@@ -57,7 +57,8 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/valombreuse/templates/items/parts/details/protection-details.hbs",
         "systems/valombreuse/templates/items/parts/details/ranged-details.hbs",
         "systems/valombreuse/templates/actors/character/parts/inventory/character-inventory.hbs",
-        "systems/valombreuse/templates/actors/character/parts/inventory/character-inventory-item.hbs"
+        "systems/valombreuse/templates/actors/character/parts/inventory/character-inventory-item.hbs",
+        "systems/valombreuse/templates/chat/global-card.hbs"
     ];
 
     // Load the template parts

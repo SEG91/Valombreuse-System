@@ -101,6 +101,7 @@
   "VALOMBREUSE.rarity.rare" : "Rare",
   "VALOMBREUSE.rarity.very-rare" : "Très rare",
   "VALOMBREUSE.rarity.unique" : "Unique",
+  "VALOMBREUSE.ui.quantity" : "Quantité",
   "VALOMBREUSE.ui.qtymax" : "Quantité max",
   "VALOMBREUSE.ui.price" : "Prix",
   "VALOMBREUSE.placeholders.qtymax" : "Quantité infinie si vide",
@@ -118,6 +119,7 @@
   "VALOMBREUSE.catui.ammunition" : "Munition",
   "VALOMBREUSE.catui.potion" : "Potion",
   "VALOMBREUSE.catui.cloath" : "Vêtement",
+  "VALOMBREUSE.catui.state" : "Etat",
   "VALOMBREUSE.ui.defBase" : "Protection",
   "VALOMBREUSE.ui.range" : "Portée"
 }

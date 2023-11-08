@@ -71,6 +71,7 @@ VALOMBREUSE.itemSubCategories = {
     "mount" : "VALOMBREUSE.catui.mount",
     "ammunition" : "VALOMBREUSE.catui.ammunition",
     "potion" : "VALOMBREUSE.catui.potion",
-    "cloath" : "VALOMBREUSE.catui.cloath"
+    "cloath" : "VALOMBREUSE.catui.cloath",
+    "state" : "VALOMBREUSE.catui.state"
 };
 
