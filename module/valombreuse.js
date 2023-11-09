@@ -35,7 +35,7 @@ Hooks.once("init", async function () {
     // Define custom Entity classes
     CONFIG.Actor.documentClass = ValombreuseActor;
     CONFIG.Item.documentClass = ValombreuseItem;
-
+    CONFIG.Combat.initiative.formula = "@stats.mc.base+1d4 ";
 
     // Create a namespace within the game global
     game.valombreuse = {
