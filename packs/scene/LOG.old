@@ -1,7 +1,7 @@
-2023/11/08-17:59:25.681 8c64 Recovering log #545
-2023/11/08-17:59:25.684 8c64 Delete type=0 #545
-2023/11/08-17:59:25.684 8c64 Delete type=3 #543
-2023/11/09-15:29:40.607 792c Level-0 table #550: started
-2023/11/09-15:29:40.607 792c Level-0 table #550: 0 bytes OK
-2023/11/09-15:29:40.608 792c Delete type=0 #548
-2023/11/09-15:29:40.611 792c Manual compaction at level-0 from '!scenes!QchGWL2rUdrSqdNa' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)
+2023/11/10-11:17:42.803 8c64 Recovering log #557
+2023/11/10-11:17:42.806 8c64 Delete type=0 #557
+2023/11/10-11:17:42.806 8c64 Delete type=3 #555
+2023/11/10-11:22:19.059 792c Level-0 table #562: started
+2023/11/10-11:22:19.059 792c Level-0 table #562: 0 bytes OK
+2023/11/10-11:22:19.060 792c Delete type=0 #560
+2023/11/10-11:22:19.063 792c Manual compaction at level-0 from '!scenes!QchGWL2rUdrSqdNa' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)
