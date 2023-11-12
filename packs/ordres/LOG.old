@@ -1,22 +1,8 @@
-2023/11/12-11:44:48.107320 30bca2000 Recovering log #1223
-2023/11/12-11:44:48.108007 30bca2000 Delete type=0 #1090
-2023/11/12-11:44:48.108086 30bca2000 Delete type=3 #1210
-2023/11/12-11:44:48.108203 30bca2000 Delete type=3 #1150
-2023/11/12-11:44:48.108308 30bca2000 Delete type=0 #1151
-2023/11/12-11:44:48.108420 30bca2000 Delete type=0 #1223
-2023/11/12-11:44:48.108569 30bca2000 Delete type=3 #1098
-2023/11/12-11:44:48.108731 30bca2000 Delete type=0 #1183
-2023/11/12-11:44:48.108835 30bca2000 Delete type=0 #1207
-2023/11/12-11:44:48.108937 30bca2000 Delete type=3 #1222
-2023/11/12-11:44:48.109062 30bca2000 Delete type=2 #784
-2023/11/12-11:44:48.109186 30bca2000 Delete type=3 #1089
-2023/11/12-11:44:48.109564 30bca2000 Delete type=0 #1211
-2023/11/12-11:44:48.109725 30bca2000 Delete type=2 #783
-2023/11/12-11:44:48.109880 30bca2000 Delete type=0 #1099
-2023/11/12-11:44:48.109967 30bca2000 Delete type=3 #1182
-2023/11/12-11:44:48.110067 30bca2000 Delete type=3 #1206
-2023/11/12-13:47:45.616987 306db7000 Level-0 table #1227: started
-2023/11/12-13:47:45.617105 306db7000 Level-0 table #1227: 0 bytes OK
-2023/11/12-13:47:45.617302 306db7000 Delete type=0 #1225
-2023/11/12-13:47:45.620422 306db7000 Manual compaction at level-0 from '!items!5RMZHMZhbjD3BgXN' @ 72057594037927935 : 1 .. '!items!uDk5QNcajbHmeh9Z' @ 0 : 0; will stop at (end)
-2023/11/12-13:47:45.631373 306db7000 Manual compaction at level-1 from '!items!5RMZHMZhbjD3BgXN' @ 72057594037927935 : 1 .. '!items!uDk5QNcajbHmeh9Z' @ 0 : 0; will stop at (end)
+2023/11/12-13:47:48.690867 30bca2000 Recovering log #1226
+2023/11/12-13:47:48.691402 30bca2000 Delete type=0 #1226
+2023/11/12-13:47:48.691610 30bca2000 Delete type=3 #1224
+2023/11/12-21:58:09.520266 306db7000 Level-0 table #1231: started
+2023/11/12-21:58:09.520582 306db7000 Level-0 table #1231: 0 bytes OK
+2023/11/12-21:58:09.520824 306db7000 Delete type=0 #1229
+2023/11/12-21:58:09.525917 306db7000 Manual compaction at level-0 from '!items!5RMZHMZhbjD3BgXN' @ 72057594037927935 : 1 .. '!items!uDk5QNcajbHmeh9Z' @ 0 : 0; will stop at (end)
+2023/11/12-21:58:09.530513 306db7000 Manual compaction at level-1 from '!items!5RMZHMZhbjD3BgXN' @ 72057594037927935 : 1 .. '!items!uDk5QNcajbHmeh9Z' @ 0 : 0; will stop at (end)

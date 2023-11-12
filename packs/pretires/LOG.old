@@ -1,28 +1,7 @@
-2023/11/12-11:44:48.114479 30bca2000 Recovering log #1061
-2023/11/12-11:44:48.114959 30bca2000 Delete type=3 #930
-2023/11/12-11:44:48.115209 30bca2000 Delete type=3 #1048
-2023/11/12-11:44:48.115411 30bca2000 Delete type=0 #1045
-2023/11/12-11:44:48.115508 30bca2000 Delete type=2 #853
-2023/11/12-11:44:48.115674 30bca2000 Delete type=0 #931
-2023/11/12-11:44:48.115795 30bca2000 Delete type=0 #923
-2023/11/12-11:44:48.115961 30bca2000 Delete type=0 #1021
-2023/11/12-11:44:48.116110 30bca2000 Delete type=3 #922
-2023/11/12-11:44:48.116273 30bca2000 Delete type=3 #1044
-2023/11/12-11:44:48.116480 30bca2000 Delete type=2 #974
-2023/11/12-11:44:48.116619 30bca2000 Delete type=3 #1020
-2023/11/12-11:44:48.116735 30bca2000 Delete type=3 #987
-2023/11/12-11:44:48.116921 30bca2000 Delete type=3 #1060
-2023/11/12-11:44:48.117072 30bca2000 Delete type=0 #1049
-2023/11/12-11:44:48.117231 30bca2000 Delete type=0 #1061
-2023/11/12-11:44:48.117319 30bca2000 Delete type=0 #988
-2023/11/12-13:47:45.617532 306db7000 Level-0 table #1065: started
-2023/11/12-13:47:45.618104 306db7000 Level-0 table #1065: 10112 bytes OK
-2023/11/12-13:47:45.619231 306db7000 Delete type=0 #1063
-2023/11/12-13:47:45.620514 306db7000 Manual compaction at level-0 from '!actors!5FU5lbqg9vNVieT5' @ 72057594037927935 : 1 .. '!actors.items!vshHhjqF1gydORGC.ww1DstSVeZIySbi5' @ 0 : 0; will stop at '!actors.items!JRUBwqUMgZa6vvOX.rNkM5ApXvU4U6Yt3' @ 702 : 1
-2023/11/12-13:47:45.620551 306db7000 Compacting 1@0 + 1@1 files
-2023/11/12-13:47:45.630432 306db7000 Generated table #1066@0: 228 keys, 310602 bytes
-2023/11/12-13:47:45.630467 306db7000 Compacted 1@0 + 1@1 files => 310602 bytes
-2023/11/12-13:47:45.630576 306db7000 compacted to: files[ 0 1 0 0 0 0 0 ]
-2023/11/12-13:47:45.630663 306db7000 Delete type=2 #991
-2023/11/12-13:47:45.631056 306db7000 Delete type=2 #1065
-2023/11/12-13:47:45.632017 306db7000 Manual compaction at level-0 from '!actors.items!JRUBwqUMgZa6vvOX.rNkM5ApXvU4U6Yt3' @ 702 : 1 .. '!actors.items!vshHhjqF1gydORGC.ww1DstSVeZIySbi5' @ 0 : 0; will stop at (end)
+2023/11/12-13:47:48.695591 30c4a1000 Recovering log #1064
+2023/11/12-13:47:48.696117 30c4a1000 Delete type=3 #1062
+2023/11/12-13:47:48.696294 30c4a1000 Delete type=0 #1064
+2023/11/12-21:58:09.518275 306db7000 Level-0 table #1070: started
+2023/11/12-21:58:09.518426 306db7000 Level-0 table #1070: 0 bytes OK
+2023/11/12-21:58:09.518651 306db7000 Delete type=0 #1068
+2023/11/12-21:58:09.520078 306db7000 Manual compaction at level-0 from '!actors!5FU5lbqg9vNVieT5' @ 72057594037927935 : 1 .. '!actors.items!vshHhjqF1gydORGC.ww1DstSVeZIySbi5' @ 0 : 0; will stop at (end)
