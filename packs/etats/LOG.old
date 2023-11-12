@@ -1,8 +1,20 @@
-2023/11/10-11:17:42.782 8d2c Recovering log #1654
-2023/11/10-11:17:42.785 8d2c Delete type=0 #1654
-2023/11/10-11:17:42.786 8d2c Delete type=3 #1652
-2023/11/10-11:22:19.054 792c Level-0 table #1659: started
-2023/11/10-11:22:19.054 792c Level-0 table #1659: 0 bytes OK
-2023/11/10-11:22:19.055 792c Delete type=0 #1657
-2023/11/10-11:22:19.057 792c Manual compaction at level-0 from '!items!5Og63KOlDU5yRXSK' @ 72057594037927935 : 1 .. '!items!A5mmctrxyZjmWkcx' @ 0 : 0; will stop at (end)
-2023/11/10-11:22:19.057 792c Manual compaction at level-1 from '!items!5Og63KOlDU5yRXSK' @ 72057594037927935 : 1 .. '!items!A5mmctrxyZjmWkcx' @ 0 : 0; will stop at (end)
+2023/11/12-11:44:48.107311 30aca4000 Recovering log #1661
+2023/11/12-11:44:48.107973 30aca4000 Delete type=0 #1537
+2023/11/12-11:44:48.108092 30aca4000 Delete type=3 #1620
+2023/11/12-11:44:48.108235 30aca4000 Delete type=3 #1644
+2023/11/12-11:44:48.108340 30aca4000 Delete type=0 #1645
+2023/11/12-11:44:48.108448 30aca4000 Delete type=3 #1528
+2023/11/12-11:44:48.108580 30aca4000 Delete type=0 #1621
+2023/11/12-11:44:48.108735 30aca4000 Delete type=3 #1588
+2023/11/12-11:44:48.108878 30aca4000 Delete type=3 #1660
+2023/11/12-11:44:48.109004 30aca4000 Delete type=3 #1648
+2023/11/12-11:44:48.109107 30aca4000 Delete type=0 #1589
+2023/11/12-11:44:48.109206 30aca4000 Delete type=3 #1536
+2023/11/12-11:44:48.109554 30aca4000 Delete type=0 #1661
+2023/11/12-11:44:48.109646 30aca4000 Delete type=0 #1649
+2023/11/12-11:44:48.109747 30aca4000 Delete type=0 #1529
+2023/11/12-13:47:45.619522 306db7000 Level-0 table #1665: started
+2023/11/12-13:47:45.620000 306db7000 Level-0 table #1665: 949 bytes OK
+2023/11/12-13:47:45.620219 306db7000 Delete type=0 #1663
+2023/11/12-13:47:45.631353 306db7000 Manual compaction at level-0 from '!items!5Og63KOlDU5yRXSK' @ 72057594037927935 : 1 .. '!items!cMAgthlFACfoFUqW' @ 0 : 0; will stop at (end)
+2023/11/12-13:47:45.632027 306db7000 Manual compaction at level-1 from '!items!5Og63KOlDU5yRXSK' @ 72057594037927935 : 1 .. '!items!cMAgthlFACfoFUqW' @ 0 : 0; will stop at (end)

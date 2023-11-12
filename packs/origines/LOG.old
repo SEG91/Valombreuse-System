@@ -1,8 +1,21 @@
-2023/11/10-11:17:42.764 8c64 Recovering log #1672
-2023/11/10-11:17:42.767 8c64 Delete type=0 #1672
-2023/11/10-11:17:42.767 8c64 Delete type=3 #1670
-2023/11/10-11:22:19.051 792c Level-0 table #1677: started
-2023/11/10-11:22:19.051 792c Level-0 table #1677: 0 bytes OK
-2023/11/10-11:22:19.052 792c Delete type=0 #1675
-2023/11/10-11:22:19.052 792c Manual compaction at level-0 from '!items!A7Qtl35uJzU0tAPh' @ 72057594037927935 : 1 .. '!items!cPZixiYXvRlAvV14' @ 0 : 0; will stop at (end)
-2023/11/10-11:22:19.052 792c Manual compaction at level-1 from '!items!A7Qtl35uJzU0tAPh' @ 72057594037927935 : 1 .. '!items!cPZixiYXvRlAvV14' @ 0 : 0; will stop at (end)
+2023/11/12-11:44:48.092454 30c4a1000 Recovering log #1679
+2023/11/12-11:44:48.092965 30c4a1000 Delete type=0 #1679
+2023/11/12-11:44:48.095594 30c4a1000 Delete type=3 #1545
+2023/11/12-11:44:48.095788 30c4a1000 Delete type=0 #1555
+2023/11/12-11:44:48.095934 30c4a1000 Delete type=2 #1240
+2023/11/12-11:44:48.096161 30c4a1000 Delete type=0 #1546
+2023/11/12-11:44:48.096350 30c4a1000 Delete type=3 #1666
+2023/11/12-11:44:48.096540 30c4a1000 Delete type=3 #1678
+2023/11/12-11:44:48.096689 30c4a1000 Delete type=0 #1639
+2023/11/12-11:44:48.096854 30c4a1000 Delete type=3 #1554
+2023/11/12-11:44:48.097063 30c4a1000 Delete type=0 #1607
+2023/11/12-11:44:48.097202 30c4a1000 Delete type=0 #1663
+2023/11/12-11:44:48.097321 30c4a1000 Delete type=3 #1662
+2023/11/12-11:44:48.097435 30c4a1000 Delete type=0 #1667
+2023/11/12-11:44:48.097552 30c4a1000 Delete type=3 #1638
+2023/11/12-11:44:48.097706 30c4a1000 Delete type=3 #1606
+2023/11/12-13:47:45.612734 306db7000 Level-0 table #1683: started
+2023/11/12-13:47:45.613076 306db7000 Level-0 table #1683: 681 bytes OK
+2023/11/12-13:47:45.613426 306db7000 Delete type=0 #1681
+2023/11/12-13:47:45.614856 306db7000 Manual compaction at level-0 from '!items!A7Qtl35uJzU0tAPh' @ 72057594037927935 : 1 .. '!items!fY6yBXMLp41uCg1D' @ 0 : 0; will stop at (end)
+2023/11/12-13:47:45.615718 306db7000 Manual compaction at level-1 from '!items!A7Qtl35uJzU0tAPh' @ 72057594037927935 : 1 .. '!items!fY6yBXMLp41uCg1D' @ 0 : 0; will stop at (end)

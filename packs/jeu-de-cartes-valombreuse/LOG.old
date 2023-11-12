@@ -1,8 +1,22 @@
-2023/11/10-11:17:42.810 8c64 Recovering log #452
-2023/11/10-11:17:42.813 8c64 Delete type=0 #452
-2023/11/10-11:17:42.813 8c64 Delete type=3 #450
-2023/11/10-11:22:19.060 792c Level-0 table #457: started
-2023/11/10-11:22:19.061 792c Level-0 table #457: 0 bytes OK
-2023/11/10-11:22:19.061 792c Delete type=0 #455
-2023/11/10-11:22:19.063 792c Manual compaction at level-0 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
-2023/11/10-11:22:19.063 792c Manual compaction at level-1 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
+2023/11/12-11:44:48.120923 30b4a3000 Recovering log #459
+2023/11/12-11:44:48.121499 30b4a3000 Delete type=3 #441
+2023/11/12-11:44:48.122089 30b4a3000 Delete type=2 #239
+2023/11/12-11:44:48.122270 30b4a3000 Delete type=3 #324
+2023/11/12-11:44:48.122658 30b4a3000 Delete type=3 #385
+2023/11/12-11:44:48.122799 30b4a3000 Delete type=0 #459
+2023/11/12-11:44:48.122956 30b4a3000 Delete type=0 #333
+2023/11/12-11:44:48.123082 30b4a3000 Delete type=3 #332
+2023/11/12-11:44:48.123748 30b4a3000 Delete type=0 #442
+2023/11/12-11:44:48.124621 30b4a3000 Delete type=0 #325
+2023/11/12-11:44:48.124865 30b4a3000 Delete type=3 #417
+2023/11/12-11:44:48.125081 30b4a3000 Delete type=0 #446
+2023/11/12-11:44:48.125261 30b4a3000 Delete type=3 #445
+2023/11/12-11:44:48.125445 30b4a3000 Delete type=3 #458
+2023/11/12-11:44:48.125685 30b4a3000 Delete type=0 #386
+2023/11/12-11:44:48.125785 30b4a3000 Delete type=2 #336
+2023/11/12-11:44:48.125962 30b4a3000 Delete type=0 #418
+2023/11/12-13:47:45.632035 306db7000 Level-0 table #463: started
+2023/11/12-13:47:45.632435 306db7000 Level-0 table #463: 0 bytes OK
+2023/11/12-13:47:45.632616 306db7000 Delete type=0 #461
+2023/11/12-13:47:45.633855 306db7000 Manual compaction at level-0 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
+2023/11/12-13:47:45.635001 306db7000 Manual compaction at level-1 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)

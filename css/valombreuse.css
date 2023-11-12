@@ -2154,9 +2154,9 @@ bg
 
 .valombreuse.actor .window-content > form .wrap .item-name .item_tooltiptext {
   visibility: hidden;
-  background: url("../ui/fond_hover_comp.png");
+  background: url("../assets/images/fond_hover_comp.png");
   background-size: cover;
-  color: #fffdea;
+  color: #171716;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
@@ -2241,9 +2241,9 @@ bg
 
 .valombreuse.actor .window-content > form .wrap .competence_name .compspe_tooltiptext {
   visibility: hidden;
-  background: url("../ui/fond_hover_comp.png");
+  background: url("../assets/images/fond_hover_comp.png");
   background-size: cover;
-  color: #fffdea;
+  color: #171716;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
@@ -2352,9 +2352,9 @@ bg
 
 .valombreuse.actor .window-content > form .calc-comp .calc-comp-tooltip {
   visibility: hidden;
-  background: url("../ui/fond_hover_comp.png");
+  background: url("../assets/images/fond_hover_comp.png");
   background-size: cover;
-  color: #fffdea;
+  color: #171716;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
@@ -3145,9 +3145,9 @@ bg
 .valombreuse.item .window-content .competence_name .comp_tooltiptext {
   visibility: hidden;
   width: calc(100% + 60px);
-  background: url("../ui/fond_hover_comp.png");
+  background: url("../assets/images/fond_hover_comp.png");
   background-size: cover;
-  color: #fffdea;
+  color: #171716;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
@@ -3185,9 +3185,9 @@ bg
 .valombreuse.item .window-content .competence_name .compspe_tooltiptext {
   visibility: hidden;
   width: 445px;
-  background: url("../ui/fond_hover_comp.png");
+  background: url("../assets/images/fond_hover_comp.png");
   background-size: cover;
-  color: #fffdea;
+  color: #171716;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
