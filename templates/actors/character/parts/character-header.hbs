@@ -1,7 +1,11 @@
 <div class="flexrow top">
     <div class="flexcol">
          <div class="flex1 center">
+            {{#if (IsCharacter actor)}}
                 <span class="titleFont titre-general field-label">{{ localize 'VALOMBREUSE.ui.veinard' }}</span>
+            {{else}}
+                <span class="titleFont titre-general field-label">{{ localize 'VALOMBREUSE.details.name' }}</span>
+            {{/if}}
          </div>
         <!-- NAME -->
         <div class="flexrow">

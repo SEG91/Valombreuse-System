@@ -2201,9 +2201,9 @@ bg
 
 .valombreuse.actor .window-content > form .wrap .competence_name .comp_tooltiptext {
   visibility: hidden;
-  background: url("../ui/fond_hover_comp.png");
+  background: url("../assets/images/fond_hover_comp.png");
   background-size: cover;
-  color: #fffdea;
+  color: #171716;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
