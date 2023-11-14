@@ -80,9 +80,10 @@ export class ValombreuseSkillRoll {
            this._calcLabel+=" +(2)";
         if (this._isExpert == true)
             this._calcLabel+=" +(4)";
-        for (let idx = 1; idx < result.length; idx++) {
-            let oldlabel=this._calcLabel;
-            this._calcLabel=oldlabel+" + "+result[idx];
+        let Dicelabels=result[1];
+        for (let idx = 2; idx < result.length; idx++) {
+            let oldlabel=Dicelabels;
+            Dicelabels=oldlabel+" + "+result[idx];
         }
 
         let interCmpValue=this._cmpValue+this._bonusmalus;
@@ -94,6 +95,7 @@ export class ValombreuseSkillRoll {
             actor: actor,
             label: this._label,
             calcLabel: this._calcLabel,
+            diceLabel:Dicelabels,
             cmpValue: interCmpValue+result[0],
 
             isCritical: this._isCritical,
