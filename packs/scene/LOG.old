@@ -1,3 +1,7 @@
-2023/11/12-21:58:13.185069 30b4a3000 Recovering log #571
-2023/11/12-21:58:13.185570 30b4a3000 Delete type=3 #569
-2023/11/12-21:58:13.185964 30b4a3000 Delete type=0 #571
+2023/11/15-14:09:59.430 3b80 Recovering log #574
+2023/11/15-14:09:59.434 3b80 Delete type=0 #574
+2023/11/15-14:09:59.434 3b80 Delete type=3 #573
+2023/11/15-14:44:00.745 5bcc Level-0 table #578: started
+2023/11/15-14:44:00.746 5bcc Level-0 table #578: 1064 bytes OK
+2023/11/15-14:44:00.747 5bcc Delete type=0 #576
+2023/11/15-14:44:00.749 5bcc Manual compaction at level-0 from '!scenes!BBOtYKw4tq1n5bRf' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)

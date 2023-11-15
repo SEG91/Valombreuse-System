@@ -1,3 +1,8 @@
-2023/11/12-21:58:13.189165 30b4a3000 Recovering log #466
-2023/11/12-21:58:13.189746 30b4a3000 Delete type=3 #464
-2023/11/12-21:58:13.190133 30b4a3000 Delete type=0 #466
+2023/11/15-14:09:59.439 3b80 Recovering log #469
+2023/11/15-14:09:59.443 3b80 Delete type=0 #469
+2023/11/15-14:09:59.443 3b80 Delete type=3 #468
+2023/11/15-14:44:00.743 5bcc Level-0 table #473: started
+2023/11/15-14:44:00.743 5bcc Level-0 table #473: 0 bytes OK
+2023/11/15-14:44:00.743 5bcc Delete type=0 #471
+2023/11/15-14:44:00.749 5bcc Manual compaction at level-0 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
+2023/11/15-14:44:00.749 5bcc Manual compaction at level-1 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
