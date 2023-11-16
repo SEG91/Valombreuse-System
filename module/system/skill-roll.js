@@ -30,6 +30,129 @@ export class ValombreuseSkillRoll {
 
         let result=[];
         result[0]=0;
+        let potentialfumble=0;
+        let potentialcrit=0;
+        let minus=1;
+        let tour = 1+this._energy;
+        let critroll = new Roll(this._formula);
+        critroll.evaluate({async:false});
+        await critroll.render();
+        if (critroll.total == 1)
+            potentialfumble=1;
+        if (critroll.total == 4)
+            potentialcrit=1;
+
+        let MaxDice=1;
+        for (let pas = 0; pas < tour; pas++) {
+            let keeprolling=1;
+            while (keeprolling)
+            {
+                let r = new Roll(this._formula);
+                r.evaluate({async:false});
+                let renderedRoll = await r.render();
+                let prevres=result[0];
+                let relativeresult=minus*r.total;
+                result[0] = prevres+(relativeresult);
+                result.push(relativeresult);
+                if (this._isCritical)
+                    MaxDice+=r.total;
+                else
+                {
+                if (r.total>MaxDice)
+                    MaxDice=r.total;
+                }
+                switch(r.total){
+                    case 1:
+                       if ((this._energy==0)&&(potentialfumble==1)&&(this._isCritical==false))
+                            this._isFumble=true;
+                        keeprolling=0;
+                       break;
+                    case 4:
+                        if (potentialcrit==1) 
+                            this._isCritical=true;
+                        else
+                         keeprolling=0; 
+                        break;
+                    default:
+                        keeprolling=0;
+                }
+            }
+        }
+
+        this._calcLabel=this._cmpValue;
+        if (this._bonusmalus !=0)
+            this._calcLabel+="+ ("+this._bonusmalus+")";
+        if (this._isSpe == true)
+           this._calcLabel+=" +(2)";
+        if (this._isExpert == true)
+            this._calcLabel+=" +(4)";
+        if (this._energy)
+            this._calcLabel+=" +"+this._energy;
+        let Dicelabels=result[1];
+        for (let idx = 2; idx < result.length; idx++) {
+            let oldlabel=Dicelabels;
+            Dicelabels=oldlabel+","+result[idx];
+        }
+
+        let interCmpValue=this._cmpValue+this._bonusmalus;
+        if (this._isSpe== true)
+          interCmpValue+=2;
+        if (this._isExpert == true)
+          interCmpValue+=4;
+        let templateContextData = {
+            actor: actor,
+            label: this._label,
+            calcLabel: this._calcLabel,
+            diceLabel:Dicelabels,
+            engy:this._energy,
+            cmpValue: interCmpValue+MaxDice+this._energy,
+            CritDice: critroll.total,
+            MDice : MaxDice,
+            isCritical: this._isCritical,
+            isFumble: this._isFumble,
+            result: this._cmpValue+MaxDice,
+        };
+        let msg ="toto";
+        let chatData = {
+            user: game.user.id,
+            speaker: ChatMessage.getSpeaker({actor: actor}),
+            type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+            content: await renderTemplate(messageTemplate,templateContextData),
+            sound: CONFIG.sounds.dice
+        };
+
+    switch (rollType) {
+        case 'PUBLIC' :
+            await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.PUBLIC);
+            chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PUBLIC);
+            break;
+        case 'BLIND' :
+            await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.BLIND);
+            chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.BLIND);
+            break;
+        case 'SELF' :
+            await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.SELF);
+            chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.SELF);
+            break;
+        case 'PRIVATE' :
+            await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.PRIVATE);
+            chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PRIVATE);
+            break;
+    }
+      
+        ChatMessage.create(chatData);
+    }
+
+    async oldroll(actor,rollType){
+        const messageTemplate = "systems/valombreuse/templates/chat/carac-card.hbs";
+
+        let rollData = {
+            user: game.user.id,
+            speaker: ChatMessage.getSpeaker({actor: actor}),
+        };
+
+        let result=[];
+        result[0]=0;
         let potentialfumble=1;
         let potentialcrit=0;
         let minus=1;

@@ -2,15 +2,15 @@
 
     <div class="roll-card regular-roll-card">
         <header class="card-header flexrow">
-            <img src="{{actor.img}}" title="{{actor.name}}"/>
+            <img src="{{actor.img}}" title="{{actor.name}}" height="40"/>
             <div class="flexcol">
                 <div>
                     <h2 class="dice-title-card"> 
                         {{#if isCritical}} 
-                                 <span class="success critical">{{result}} : Réussite critique !</span>
+                                 <span class="success critical">Réussite critique !</span>
                         {{/if}}
                         {{#if isFumble}}
-                                <span class="failure fumble">{{result}} : Echec critique !</span>
+                                <span class="failure fumble">Echec critique !</span>
                         {{/if}}
                     </h2>
                 </div>
@@ -18,7 +18,10 @@
                 <p>
                     <strong>{{label}}</strong><br>
                     Compétence et Modificateurs : {{calcLabel}}<br>
+                    Energie : {{engy}}<br>
+                    Dé Critique : {{CritDice}}<br>
                     Jet de Dés = {{diceLabel}}<br>
+                    Dé Maximum = {{MDice}}<br>
                     Résultat = <strong>{{cmpValue}}</strong>
                 </p>
                 </div>
