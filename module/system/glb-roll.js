@@ -23,7 +23,10 @@ export class ValombreuseGlobalRoll {
         
         
         const result = r.total;
-
+        let DiceResult=r.terms[0].results[0].result;
+        for (let pas = 1; pas < r.terms[0].number; pas++) {
+            DiceResult+=","+r.terms[0].results[pas].result;
+        }
         this._isFumble =false;
 
         let templateContextData = {
@@ -32,6 +35,7 @@ export class ValombreuseGlobalRoll {
             text: this._buildGlbRollMessage(),
             isFumble:this._isFumble,
             formula: this._formula,
+            dresult: DiceResult,
             result: result,
             calc:calc,
             mod:mod,

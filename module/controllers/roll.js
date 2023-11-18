@@ -64,6 +64,23 @@ export class ValombreuseRoll {
         r.roll(actor,rollType);
     }
     
+    static AptitudeCheck(data, actor, event) {
+        const elt = $(event.currentTarget)[0];
+        let Rang = elt.attributes["data-rolling-value"].value;
+        let Title = elt.attributes["data-rolling-title"].value;
+
+        let RangValue = eval(`${Rang}`);
+
+        switch(Title)
+        {
+            case "Oeil Néfaste": 
+                let formula = RangValue+"d4";
+                let r = new ValombreuseGlobalRoll(formula);
+                r.roll(actor,"PUBLIC");
+            break;
+        }
+
+    }
 
     static competencyCheck(data, actor, event,energy,AttrLnk2,rollType = "PUBLIC",bonusmalus,isSpe,isExpert) {
         const elt = $(event.currentTarget)[0];

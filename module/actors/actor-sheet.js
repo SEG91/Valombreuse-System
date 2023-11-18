@@ -488,16 +488,20 @@ async _addItemToInventory(itemData) {
                 break;
 
 
-            case "competencycheck" :
-                if(forceConfig)
-                    {
-                        configJet.showBonus = true;
-                        extraOptions = await this.getRollOptions("systems/valombreuse/templates/config/skill-options.hbs","Configuration du jet de compétence",configJet);
-                        if (extraOptions.cancelled) return;
-                        
-                    }
-                    return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,extraOptions.rollType,extraOptions.bonusmalus,extraOptions.isSpe,extraOptions.isExpert);
+            case "Aptitudecheck" :
+                return ValombreuseRoll.AptitudeCheck(this.getData().items, this.actor, event);
                 break;
+            
+            case "competencycheck" :
+                    if(forceConfig)
+                        {
+                            configJet.showBonus = true;
+                            extraOptions = await this.getRollOptions("systems/valombreuse/templates/config/skill-options.hbs","Configuration du jet de compétence",configJet);
+                            if (extraOptions.cancelled) return;
+                            
+                        }
+                        return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,extraOptions.rollType,extraOptions.bonusmalus,extraOptions.isSpe,extraOptions.isExpert);
+                    break;
             
             case "Globalcheck" :
                 configJet.showBonus = true;

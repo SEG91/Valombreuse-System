@@ -58,6 +58,7 @@
             {{#each (getAptitudes actor.items) as |aptitude id|}}
                 <ol class="item-list">
                     <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
+                        <div class="rollable no-wrap" data-rolling-title="{{aptitude.name}}" data-rolling-value="{{aptitude.system.score}}"  data-roll-type="Aptitudecheck">
                         <div class="flex1 no-wrap" title="{{aptitude.name}}">
                             <div class="flexrow no-wrap ">
                                 <div class="field-label no-wrap left competence_name">{{aptitude.name}}
@@ -66,6 +67,7 @@
                                     </span>
                                 </div>
                             </div>
+                        </div>
                         </div>
                         <div class="item-detail flexrow competence-col-width">
                             <div class="field-value flex1 capa_score" name="aptitude.system.grade">{{aptitude.system.grade}}</div>
