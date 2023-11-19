@@ -1,7 +1,0 @@
-2023/11/19-10:12:13.586272 30ac5b000 Recovering log #1158
-2023/11/19-10:12:13.586910 30ac5b000 Delete type=3 #1156
-2023/11/19-10:12:13.587049 30ac5b000 Delete type=0 #1158
-2023/11/19-13:34:17.069210 30656f000 Level-0 table #1163: started
-2023/11/19-13:34:17.069300 30656f000 Level-0 table #1163: 0 bytes OK
-2023/11/19-13:34:17.069488 30656f000 Delete type=0 #1161
-2023/11/19-13:34:17.069637 30656f000 Manual compaction at level-0 from '!actors!5FU5lbqg9vNVieT5' @ 72057594037927935 : 1 .. '!actors.items!vshHhjqF1gydORGC.ww1DstSVeZIySbi5' @ 0 : 0; will stop at (end)
