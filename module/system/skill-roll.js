@@ -2,10 +2,13 @@ import {ValombreuseDamageRoll} from "./dmg-roll.js";
 
 export class ValombreuseSkillRoll {
 
-    constructor(label,calcLabel,cmpValue,energy,bonusmalus,isSpe,isExpert){
+    constructor(label,calcLabel,cmpValue,energy,bonusmalus,isFail,isCrit,isSpe,isExpert){
         this._label = label;
         this._calcLabel = calcLabel;
         this._energy=energy;
+        this._isCrit = isCrit;
+        this._isFail = isFail;
+        this._isPerfect = false;
         this._isCritical = false;
         this._isPerfect = false;
         this._isFumble = false;    
@@ -28,19 +31,35 @@ export class ValombreuseSkillRoll {
             speaker: ChatMessage.getSpeaker({actor: actor}),
         };
 
+        let Decrit;
         let result=[];
         result[0]=0;
         let potentialfumble=0;
         let potentialcrit=0;
         let minus=1;
         let tour = 1+this._energy;
-        let critroll = new Roll(this._formula);
-        critroll.evaluate({async:false});
-        await critroll.render();
-        if (critroll.total == 1)
-            potentialfumble=1;
-        if (critroll.total == 4)
+        if (this._isCrit == true)
+        {
             potentialcrit=1;
+            Decrit=4;
+        }
+        else if (this._isFail == true)
+        {
+            potentialfumble=1;
+            Decrit=1;
+        }
+        else
+        {
+            let critroll = new Roll(this._formula);
+            critroll.evaluate({async:false});
+            await critroll.render();
+            if (critroll.total == 1)
+                potentialfumble=1;
+            if (critroll.total == 4)
+                potentialcrit=1;
+            Decrit=critroll.total;
+        }
+        
 
         let MaxDice=1;
         for (let pas = 0; pas < tour; pas++) {
@@ -106,7 +125,7 @@ export class ValombreuseSkillRoll {
             diceLabel:Dicelabels,
             engy:this._energy,
             cmpValue: interCmpValue+MaxDice+this._energy,
-            CritDice: critroll.total,
+            CritDice: Decrit,
             MDice : MaxDice,
             isCritical: this._isCritical,
             isFumble: this._isFumble,

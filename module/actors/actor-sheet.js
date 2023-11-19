@@ -500,7 +500,8 @@ async _addItemToInventory(itemData) {
                             if (extraOptions.cancelled) return;
                             
                         }
-                        return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,extraOptions.rollType,extraOptions.bonusmalus,extraOptions.isSpe,extraOptions.isExpert);
+                        let isFail = extraOptions.isFail;
+                        return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,extraOptions.rollType,extraOptions.bonusmalus,isFail,extraOptions.isCrit,extraOptions.isSpe,extraOptions.isExpert);
                     break;
             
             case "Globalcheck" :
