@@ -9,14 +9,6 @@
                 <input class="field-value charname" name="name" type="text" value="{{actor.name}}" placeholder="Name" data-dtype="String"/>
             </div>
         </div>
-        <div class="flexrow no-wrap">
-            <div class="flex1 center">
-                <div class="field-label">{{ localize 'VALOMBREUSE.minion.moral.label' }}</div>
-            </div>
-            <div id="life_icon" class="flex1 center">
-                    <input class="field-label-icon-hp field-value" name="system.moral" type="text" value="{{system.moral}}" placeholder="NB" data-dtype="Number"/>
-            </div>
-        </div>
             <!-- /NAME -->
         
     </div>
@@ -41,6 +33,30 @@
                     </div>
                     <div class="flex1 center">
                         <div class="field-label">{{ localize 'VALOMBREUSE.minion.nbmax.label' }}</div>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </div>
+    </div>
+    <div class="flexcol">
+        <div class="attrvertalign">
+            <div class="flexcol no-wrap">
+                <div class="flexcol no-wrap">
+                    <div id="life_icon" class="flex1 center">
+                        <input class="field-label-icon-hp field-value" name="system.moral" type="text" value="{{system.moral}}" placeholder="NB" data-dtype="Number"/>
+                    </div>
+                    <div class="flex1 center">
+                        <div class="field-label">{{ localize 'VALOMBREUSE.minion.moral.label' }}</div>
+                    </div>
+                </div>
+            <div class="flexcol no-wrap">
+                     <div class="flexcol no-wrap">
+                    <div id="life_icon" class="flex1 center">
+                         <input class="field-label-icon-hp field-value" name="system.stats.vig.base" type="text" value="{{system.stats.vig.base}}" placeholder="2" data-dtype="Number"/>
+                    </div>
+                    <div class="flex1 center">
+                         <div class="field-label">{{ localize 'VALOMBREUSE.minion.resistance.label' }}</div>
                     </div>
                 </div>
             </div>
