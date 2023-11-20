@@ -1,8 +1,5 @@
-2023/11/19-13:34:21.135060 30b45a000 Recovering log #1898
-2023/11/19-13:34:21.135633 30b45a000 Delete type=0 #1898
-2023/11/19-13:34:21.135922 30b45a000 Delete type=3 #1896
-2023/11/19-20:10:22.622830 30656f000 Level-0 table #1903: started
-2023/11/19-20:10:22.623071 30656f000 Level-0 table #1903: 0 bytes OK
-2023/11/19-20:10:22.623614 30656f000 Delete type=0 #1901
-2023/11/19-20:10:22.625971 30656f000 Manual compaction at level-0 from '!items!HzzGKPYBKx4D1Qh2' @ 72057594037927935 : 1 .. '!items!ofVpOw9IWE0iwsCm' @ 0 : 0; will stop at (end)
-2023/11/19-20:10:22.627823 30656f000 Manual compaction at level-1 from '!items!HzzGKPYBKx4D1Qh2' @ 72057594037927935 : 1 .. '!items!ofVpOw9IWE0iwsCm' @ 0 : 0; will stop at (end)
+2023/11/20-08:41:35.891 4134 Log #1905: 0 ops saved to Table #1906 OK
+2023/11/20-08:41:35.891 4134 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/001905.log: OK
+2023/11/20-08:41:35.892 4134 Table #1685: 7 entries OK
+2023/11/20-08:41:35.898 4134 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-001904: OK
+2023/11/20-08:41:35.905 4134 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee; recovered 1 files; 29840 bytes. Some data may have been lost. ****

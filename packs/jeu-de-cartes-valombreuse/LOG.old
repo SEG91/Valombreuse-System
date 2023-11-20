@@ -1,8 +1,5 @@
-2023/11/19-13:34:21.155943 30ac5b000 Recovering log #561
-2023/11/19-13:34:21.156789 30ac5b000 Delete type=3 #559
-2023/11/19-13:34:21.156995 30ac5b000 Delete type=0 #561
-2023/11/19-20:10:22.637812 30656f000 Level-0 table #566: started
-2023/11/19-20:10:22.637955 30656f000 Level-0 table #566: 0 bytes OK
-2023/11/19-20:10:22.638176 30656f000 Delete type=0 #564
-2023/11/19-20:10:22.639631 30656f000 Manual compaction at level-0 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
-2023/11/19-20:10:22.639702 30656f000 Manual compaction at level-1 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
+2023/11/20-08:41:36.251 2f0 Log #568: 0 ops saved to Table #569 OK
+2023/11/20-08:41:36.252 2f0 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\jeu-de-cartes-valombreuse/000568.log: OK
+2023/11/20-08:41:36.252 2f0 Table #482: 84 entries OK
+2023/11/20-08:41:36.258 2f0 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\jeu-de-cartes-valombreuse/MANIFEST-000567: OK
+2023/11/20-08:41:36.264 2f0 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\jeu-de-cartes-valombreuse; recovered 1 files; 15575 bytes. Some data may have been lost. ****

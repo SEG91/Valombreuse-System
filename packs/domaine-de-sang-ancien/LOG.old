@@ -1,14 +1,5 @@
-2023/11/19-13:34:21.135021 30a45c000 Recovering log #1874
-2023/11/19-13:34:21.135612 30a45c000 Delete type=3 #1872
-2023/11/19-13:34:21.135883 30a45c000 Delete type=0 #1874
-2023/11/19-20:10:22.624759 30656f000 Level-0 table #1879: started
-2023/11/19-20:10:22.625274 30656f000 Level-0 table #1879: 5099 bytes OK
-2023/11/19-20:10:22.625639 30656f000 Delete type=0 #1877
-2023/11/19-20:10:22.626028 30656f000 Manual compaction at level-0 from '!folders!27JmqkD8LT5a8DJe' @ 72057594037927935 : 1 .. '!items!zgiDwJ0YIswLEEjL' @ 0 : 0; will stop at '!items!mTG2Qm1JypmnCABt' @ 81 : 1
-2023/11/19-20:10:22.626035 30656f000 Compacting 1@0 + 1@1 files
-2023/11/19-20:10:22.626741 30656f000 Generated table #1880@0: 24 keys, 26413 bytes
-2023/11/19-20:10:22.626753 30656f000 Compacted 1@0 + 1@1 files => 26413 bytes
-2023/11/19-20:10:22.626826 30656f000 compacted to: files[ 0 1 0 0 0 0 0 ]
-2023/11/19-20:10:22.626879 30656f000 Delete type=2 #1711
-2023/11/19-20:10:22.627471 30656f000 Delete type=2 #1879
-2023/11/19-20:10:22.629623 30656f000 Manual compaction at level-0 from '!items!mTG2Qm1JypmnCABt' @ 81 : 1 .. '!items!zgiDwJ0YIswLEEjL' @ 0 : 0; will stop at (end)
+2023/11/20-08:41:35.925 868 Log #1882: 0 ops saved to Table #1883 OK
+2023/11/20-08:41:35.925 868 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/001882.log: OK
+2023/11/20-08:41:35.926 868 Table #1880: 24 entries OK
+2023/11/20-08:41:35.932 868 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/MANIFEST-001881: OK
+2023/11/20-08:41:35.939 868 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien; recovered 1 files; 26413 bytes. Some data may have been lost. ****

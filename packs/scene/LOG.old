@@ -1,8 +1,6 @@
-2023/11/19-13:34:21.151442 30b45a000 Recovering log #664
-2023/11/19-13:34:21.151949 30b45a000 Delete type=0 #664
-2023/11/19-13:34:21.152208 30b45a000 Delete type=3 #662
-2023/11/19-20:10:22.651238 30656f000 Level-0 table #669: started
-2023/11/19-20:10:22.651420 30656f000 Level-0 table #669: 0 bytes OK
-2023/11/19-20:10:22.651645 30656f000 Delete type=0 #667
-2023/11/19-20:10:22.652545 30656f000 Manual compaction at level-0 from '!scenes!BBOtYKw4tq1n5bRf' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)
-2023/11/19-20:10:22.652588 30656f000 Manual compaction at level-1 from '!scenes!BBOtYKw4tq1n5bRf' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)
+2023/11/20-08:41:36.211 868 Log #671: 0 ops saved to Table #672 OK
+2023/11/20-08:41:36.212 868 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/000671.log: OK
+2023/11/20-08:41:36.212 868 Table #578: 1 entries OK
+2023/11/20-08:41:36.212 868 Table #585: 1 entries OK
+2023/11/20-08:41:36.218 868 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-000670: OK
+2023/11/20-08:41:36.224 868 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene; recovered 2 files; 2095 bytes. Some data may have been lost. ****

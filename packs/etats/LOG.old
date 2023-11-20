@@ -1,15 +1,6 @@
-2023/11/19-13:34:21.147041 30ac5b000 Recovering log #1765
-2023/11/19-13:34:21.147805 30ac5b000 Delete type=3 #1763
-2023/11/19-13:34:21.148090 30ac5b000 Delete type=0 #1765
-2023/11/19-20:10:22.638312 30656f000 Level-0 table #1770: started
-2023/11/19-20:10:22.638816 30656f000 Level-0 table #1770: 1266 bytes OK
-2023/11/19-20:10:22.639203 30656f000 Delete type=0 #1768
-2023/11/19-20:10:22.639666 30656f000 Manual compaction at level-0 from '!items!5Og63KOlDU5yRXSK' @ 72057594037927935 : 1 .. '!items!lhse7U91bNTiNQXo' @ 0 : 0; will stop at (end)
-2023/11/19-20:10:22.639744 30656f000 Manual compaction at level-1 from '!items!5Og63KOlDU5yRXSK' @ 72057594037927935 : 1 .. '!items!lhse7U91bNTiNQXo' @ 0 : 0; will stop at '!items!lhse7U91bNTiNQXo' @ 7 : 1
-2023/11/19-20:10:22.639759 30656f000 Compacting 1@1 + 1@2 files
-2023/11/19-20:10:22.640239 30656f000 Generated table #1771@1: 6 keys, 6227 bytes
-2023/11/19-20:10:22.640254 30656f000 Compacted 1@1 + 1@2 files => 6227 bytes
-2023/11/19-20:10:22.640343 30656f000 compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/11/19-20:10:22.640421 30656f000 Delete type=2 #1686
-2023/11/19-20:10:22.640564 30656f000 Delete type=2 #1770
-2023/11/19-20:10:22.644384 30656f000 Manual compaction at level-1 from '!items!lhse7U91bNTiNQXo' @ 7 : 1 .. '!items!lhse7U91bNTiNQXo' @ 0 : 0; will stop at (end)
+2023/11/20-08:41:36.101 2b74 Log #1773: 0 ops saved to Table #1774 OK
+2023/11/20-08:41:36.102 2b74 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\etats/001773.log: OK
+2023/11/20-08:41:36.102 2b74 Table #1609: 2 entries OK
+2023/11/20-08:41:36.102 2b74 Table #1771: 6 entries OK
+2023/11/20-08:41:36.108 2b74 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\etats/MANIFEST-001772: OK
+2023/11/20-08:41:36.115 2b74 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\etats; recovered 2 files; 7777 bytes. Some data may have been lost. ****
