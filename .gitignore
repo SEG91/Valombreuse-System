@@ -30,3 +30,5 @@ packs/domaine-de-sang-ancien/MANIFEST-001886
 packs/equipement/MANIFEST-000231
 packs/etats/MANIFEST-001777
 packs/jeu-de-cartes-valombreuse/MANIFEST-000572
+*.log
+*.log
