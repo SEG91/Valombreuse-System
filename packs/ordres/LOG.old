@@ -1,5 +1,1 @@
-2023/11/21-11:11:33.970 25a0 Log #1335: 0 ops saved to Table #1338 OK
-2023/11/21-11:11:33.970 25a0 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/001335.log: OK
-2023/11/21-11:11:33.971 25a0 Table #1337: 6 entries OK
-2023/11/21-11:11:33.976 25a0 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/MANIFEST-001333: OK
-2023/11/21-11:11:33.983 25a0 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres; recovered 1 files; 40858 bytes. Some data may have been lost. ****
+2023/11/21-11:11:33.997 25a0 Delete type=3 #1

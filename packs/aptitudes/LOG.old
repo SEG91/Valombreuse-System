@@ -1,5 +1,1 @@
-2023/11/21-11:11:33.899 1cbc Log #1794: 0 ops saved to Table #1797 OK
-2023/11/21-11:11:33.900 1cbc Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/001794.log: OK
-2023/11/21-11:11:33.901 1cbc Table #1796: 57 entries OK
-2023/11/21-11:11:33.906 1cbc Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/MANIFEST-001792: OK
-2023/11/21-11:11:33.913 1cbc **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes; recovered 1 files; 35229 bytes. Some data may have been lost. ****
+2023/11/21-11:11:33.928 1cbc Delete type=3 #1

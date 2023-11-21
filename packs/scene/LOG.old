@@ -1,5 +1,1 @@
-2023/11/21-11:11:34.044 1cbc Log #677: 0 ops saved to Table #680 OK
-2023/11/21-11:11:34.045 1cbc Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/000677.log: OK
-2023/11/21-11:11:34.045 1cbc Table #679: 2 entries OK
-2023/11/21-11:11:34.051 1cbc Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-000675: OK
-2023/11/21-11:11:34.057 1cbc **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene; recovered 1 files; 1241 bytes. Some data may have been lost. ****
+2023/11/21-11:11:34.072 1cbc Delete type=3 #1

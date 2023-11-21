@@ -1,5 +1,1 @@
-2023/11/21-11:11:33.760 1cbc Log #1888: 0 ops saved to Table #1891 OK
-2023/11/21-11:11:33.761 1cbc Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/001888.log: OK
-2023/11/21-11:11:33.761 1cbc Table #1890: 24 entries OK
-2023/11/21-11:11:33.767 1cbc Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/MANIFEST-001886: OK
-2023/11/21-11:11:33.774 1cbc **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien; recovered 1 files; 26255 bytes. Some data may have been lost. ****
+2023/11/21-11:11:33.789 1cbc Delete type=3 #1

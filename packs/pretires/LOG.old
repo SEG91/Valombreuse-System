@@ -1,5 +1,1 @@
-2023/11/21-11:11:34.004 423c Log #1175: 0 ops saved to Table #1178 OK
-2023/11/21-11:11:34.004 423c Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pretires/001175.log: OK
-2023/11/21-11:11:34.006 423c Table #1177: 227 entries OK
-2023/11/21-11:11:34.012 423c Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pretires/MANIFEST-001173: OK
-2023/11/21-11:11:34.019 423c **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pretires; recovered 1 files; 310709 bytes. Some data may have been lost. ****
+2023/11/21-11:11:34.034 423c Delete type=3 #1

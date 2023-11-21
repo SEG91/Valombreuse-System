@@ -11,3 +11,4 @@ npm-debug.log
 jsconfig.json
 foundry
 *.log
+*.old

@@ -1,5 +1,1 @@
-2023/11/21-11:11:33.722 2fb4 Log #1911: 0 ops saved to Table #1914 OK
-2023/11/21-11:11:33.723 2fb4 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/001911.log: OK
-2023/11/21-11:11:33.724 2fb4 Table #1913: 7 entries OK
-2023/11/21-11:11:33.729 2fb4 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-001909: OK
-2023/11/21-11:11:33.736 2fb4 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee; recovered 1 files; 29840 bytes. Some data may have been lost. ****
+2023/11/21-11:11:33.752 2fb4 Delete type=3 #1
