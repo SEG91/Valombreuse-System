@@ -223,6 +223,13 @@ export const registerHandlebarsHelpers = function () {
             return false;
     });
 
+    Handlebars.registerHelper('isArmor', function (item) {
+        if(   item.system.subtype == "shield" ||  item.system.subtype == "armor")
+            return true;
+        else
+            return false;
+    });
+
     Handlebars.registerHelper('splitWeaponDice', function (formula) {
         let terms = formula.split("+");
         return terms[0];

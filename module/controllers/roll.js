@@ -121,10 +121,14 @@ export class ValombreuseRoll {
         actor.system.attributes.power.value=oldenergy-energyspent;
         let cmpValue = RangValue+ AttrValue;
         let label = elt.attributes["title"].value;
+        let Totalbonusmalus=0;
         let Numbonusmalus=0;
-        if (bonusmalus!="")     
+        if (bonusmalus!="")
+        {
             Numbonusmalus = eval(`${bonusmalus}`);
-        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Numbonusmalus,isFail,isCrit,isSpe,isExpert);
+        }
+        Totalbonusmalus=Numbonusmalus-actor.system.attributes.hp.bonus;
+        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Totalbonusmalus,isFail,isCrit,isSpe,isExpert);
         r.roll(actor,rollType);
     }
 

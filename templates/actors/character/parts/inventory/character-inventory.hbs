@@ -34,7 +34,6 @@
         {{#if (notEmpty (getInventory actor.items))}}
         
         {{#each (getArraySubCategorywithItems actor.items)}}
-        {{debug this.items}}
                 {{#if (notEmpty this.items)}}
                     <li class="inventory-header flexrow"><div class="item-name center flexrow">{{localize this.value}}</div></li>
                 {{#each this.items}}
