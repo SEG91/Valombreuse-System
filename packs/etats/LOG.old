@@ -1,7 +1,3 @@
-2023/11/22-12:57:48.078 b550 Log #1728: 0 ops saved to Table #1795 OK
-2023/11/22-12:57:48.078 b550 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\etats/001728.log: OK
-2023/11/22-12:57:48.079 b550 Table #1609: 2 entries OK
-2023/11/22-12:57:48.079 b550 Table #1794: 9 entries OK
-2023/11/22-12:57:48.081 b550 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\etats/MANIFEST-001726: OK
-2023/11/22-12:57:48.081 b550 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\etats/MANIFEST-001845: OK
-2023/11/22-12:57:48.083 b550 **** Repaired leveldb E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\etats; recovered 2 files; 9507 bytes. Some data may have been lost. ****
+2023/11/22-12:44:42.553 3294 Recovering log #1843
+2023/11/22-12:44:42.564 3294 Delete type=0 #1843
+2023/11/22-12:44:42.564 3294 Delete type=3 #1841
