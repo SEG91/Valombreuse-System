@@ -1,3 +1,8 @@
-2023/11/22-12:44:42.605 61c Recovering log #740
-2023/11/22-12:44:42.617 61c Delete type=0 #740
-2023/11/22-12:44:42.617 61c Delete type=3 #738
+2023/11/22-12:57:48.125 49e0 Log #632: 0 ops saved to Table #692 OK
+2023/11/22-12:57:48.125 49e0 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\scene/000632.log: OK
+2023/11/22-12:57:48.126 49e0 Table #578: 1 entries OK
+2023/11/22-12:57:48.126 49e0 Table #589: 1 entries OK
+2023/11/22-12:57:48.126 49e0 Table #691: 2 entries OK
+2023/11/22-12:57:48.128 49e0 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-000630: OK
+2023/11/22-12:57:48.128 49e0 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-000742: OK
+2023/11/22-12:57:48.130 49e0 **** Repaired leveldb E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\scene; recovered 3 files; 3336 bytes. Some data may have been lost. ****

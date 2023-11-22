@@ -1,3 +1,7 @@
-2023/11/22-12:44:42.483 3294 Recovering log #1873
-2023/11/22-12:44:42.494 3294 Delete type=0 #1873
-2023/11/22-12:44:42.494 3294 Delete type=3 #1871
+2023/11/22-12:57:48.019 a598 Log #1762: 0 ops saved to Table #1825 OK
+2023/11/22-12:57:48.019 a598 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/001762.log: OK
+2023/11/22-12:57:48.020 a598 Table #1631: 25 entries OK
+2023/11/22-12:57:48.020 a598 Table #1824: 28 entries OK
+2023/11/22-12:57:48.022 a598 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/MANIFEST-001760: OK
+2023/11/22-12:57:48.022 a598 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/MANIFEST-001875: OK
+2023/11/22-12:57:48.024 a598 **** Repaired leveldb E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien; recovered 2 files; 43183 bytes. Some data may have been lost. ****
