@@ -1,7 +1,7 @@
-2023/11/22-12:40:16.188 2164 Recovering log #1950
-2023/11/22-12:40:16.200 2164 Delete type=0 #1950
-2023/11/22-12:40:16.200 2164 Delete type=3 #1948
-2023/11/22-12:44:39.547 2e1c Level-0 table #1955: started
-2023/11/22-12:44:39.547 2e1c Level-0 table #1955: 0 bytes OK
-2023/11/22-12:44:39.552 2e1c Delete type=0 #1953
-2023/11/22-12:44:39.552 2e1c Manual compaction at level-0 from '!folders!27JmqkD8LT5a8DJe' @ 72057594037927935 : 1 .. '!items!zgiDwJ0YIswLEEjL' @ 0 : 0; will stop at (end)
+2023/11/22-12:57:48.005 a714 Log #1842: 0 ops saved to Table #1904 OK
+2023/11/22-12:57:48.005 a714 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/001842.log: OK
+2023/11/22-12:57:48.005 a714 Table #1711: 24 entries OK
+2023/11/22-12:57:48.006 a714 Table #1903: 24 entries OK
+2023/11/22-12:57:48.008 a714 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/MANIFEST-001840: OK
+2023/11/22-12:57:48.008 a714 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/MANIFEST-001956: OK
+2023/11/22-12:57:48.010 a714 **** Repaired leveldb E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien; recovered 2 files; 51555 bytes. Some data may have been lost. ****
