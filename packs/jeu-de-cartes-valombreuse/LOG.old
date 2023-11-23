@@ -1,7 +1,12 @@
-2023/11/23-13:35:14.043 11e8 Recovering log #651
-2023/11/23-13:35:14.054 11e8 Delete type=0 #651
-2023/11/23-13:35:14.054 11e8 Delete type=3 #649
-2023/11/23-13:35:58.176 2828 Level-0 table #656: started
-2023/11/23-13:35:58.176 2828 Level-0 table #656: 0 bytes OK
-2023/11/23-13:35:58.180 2828 Delete type=0 #654
-2023/11/23-13:35:58.185 2828 Manual compaction at level-0 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
+2023/11/23-13:52:29.128 1944 Delete type=3 #1
+2023/11/23-13:54:46.436 3de0 Level-0 table #654: started
+2023/11/23-13:54:46.436 3de0 Level-0 table #654: 0 bytes OK
+2023/11/23-13:54:46.437 3de0 Delete type=0 #652
+2023/11/23-13:54:46.442 3de0 Manual compaction at level-0 from '!cards!27ByvyYczZf4aFtd' @ 72057594037927935 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 68 : 1
+2023/11/23-13:54:46.442 3de0 Compacting 2@0 + 0@1 files
+2023/11/23-13:54:46.445 3de0 Generated table #655@0: 84 keys, 15575 bytes
+2023/11/23-13:54:46.445 3de0 Compacted 2@0 + 0@1 files => 15575 bytes
+2023/11/23-13:54:46.445 3de0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2023/11/23-13:54:46.446 3de0 Delete type=2 #596
+2023/11/23-13:54:46.446 3de0 Delete type=2 #648
+2023/11/23-13:54:46.448 3de0 Manual compaction at level-0 from '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 68 : 1 .. '!cards.cards!njkpvSwcnQdkwVXf.zQXfvXO3FskXasia' @ 0 : 0; will stop at (end)
