@@ -1,7 +1,7 @@
-2023/11/22-12:57:48.019 a598 Log #1762: 0 ops saved to Table #1825 OK
-2023/11/22-12:57:48.019 a598 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/001762.log: OK
-2023/11/22-12:57:48.020 a598 Table #1631: 25 entries OK
-2023/11/22-12:57:48.020 a598 Table #1824: 28 entries OK
-2023/11/22-12:57:48.022 a598 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/MANIFEST-001760: OK
-2023/11/22-12:57:48.022 a598 Archiving E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/MANIFEST-001875: OK
-2023/11/22-12:57:48.024 a598 **** Repaired leveldb E:\Program Files\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien; recovered 2 files; 43183 bytes. Some data may have been lost. ****
+2023/11/23-13:35:13.901 5dc Recovering log #1887
+2023/11/23-13:35:13.913 5dc Delete type=0 #1887
+2023/11/23-13:35:13.913 5dc Delete type=3 #1885
+2023/11/23-13:35:58.137 2828 Level-0 table #1892: started
+2023/11/23-13:35:58.138 2828 Level-0 table #1892: 0 bytes OK
+2023/11/23-13:35:58.142 2828 Delete type=0 #1890
+2023/11/23-13:35:58.142 2828 Manual compaction at level-0 from '!folders!r6ylX7r2j92npqxr' @ 72057594037927935 : 1 .. '!items!y5TDzB1jobgNvoGh' @ 0 : 0; will stop at (end)

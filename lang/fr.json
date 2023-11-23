@@ -122,5 +122,7 @@
   "VALOMBREUSE.catui.cloath" : "Vêtement",
   "VALOMBREUSE.catui.state" : "Etat",
   "VALOMBREUSE.ui.defBase" : "Protection",
-  "VALOMBREUSE.ui.range" : "Portée"
+  "VALOMBREUSE.ui.range" : "Portée",
+  "VALOMBREUSE.ui.Fail" : "Dé Critique forcé à échec",
+  "VALOMBREUSE.ui.Crit" : "Dé Critique forcé à réussite"
 }
