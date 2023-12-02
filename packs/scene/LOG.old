@@ -1,3 +1,7 @@
-2023/12/02-10:21:44.359928 3141b1000 Recovering log #782
-2023/12/02-10:21:44.360612 3141b1000 Delete type=0 #782
-2023/12/02-10:21:44.360789 3141b1000 Delete type=3 #781
+2023/12/02-15:03:13.833 2ce4 Recovering log #789
+2023/12/02-15:03:13.845 2ce4 Delete type=0 #789
+2023/12/02-15:03:13.845 2ce4 Delete type=3 #787
+2023/12/02-15:09:36.087 4638 Level-0 table #794: started
+2023/12/02-15:09:36.087 4638 Level-0 table #794: 0 bytes OK
+2023/12/02-15:09:36.093 4638 Delete type=0 #792
+2023/12/02-15:09:36.100 4638 Manual compaction at level-0 from '!scenes!BBOtYKw4tq1n5bRf' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)

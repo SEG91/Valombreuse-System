@@ -89,6 +89,10 @@ export const registerHandlebarsHelpers = function () {
         for (let pas = 0; pas < VALOMBREUSE.Ordres.length; pas++) {
             OrdreNames.push(VALOMBREUSE.Ordres[pas].name)
         }
+        OrdreNames.push("Bande");
+        OrdreNames.push("Créature");
+        OrdreNames.push("PNJ");
+        OrdreNames.sort();
         return OrdreNames;
     });
 
@@ -218,6 +222,13 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('isWeapon', function (item) {
         if( item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged")
+            return true;
+        else
+            return false;
+    });
+
+    Handlebars.registerHelper('isState', function (item) {
+        if( item.system.subtype == "state")
             return true;
         else
             return false;
