@@ -84,6 +84,17 @@ export const registerHandlebarsHelpers = function () {
         return VALOMBREUSE.itemSubCategories;
     });
 
+    Handlebars.registerHelper('getActioncards', function () {
+        let items =VALOMBREUSE.Actioncards;
+        let caps = items.filter(item => item.type === "combatcard").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+       
+        return caps;
+    });
+
+    
+
     Handlebars.registerHelper('getOrdreNames', function () {
         let OrdreNames=[];
         for (let pas = 0; pas < VALOMBREUSE.Ordres.length; pas++) {

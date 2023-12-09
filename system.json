@@ -2,7 +2,7 @@
   "id": "valombreuse",
   "title": "valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.6.5.2",
+  "version": "0.0.6.6",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
@@ -174,6 +174,18 @@
       "type": "JournalEntry",
       "name": "regles",
       "path": "packs/regles",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Action de Combat",
+      "type": "Item",
+      "name": "action-de-combat",
+      "path": "packs/action-de-combat",
       "system": "valombreuse",
       "ownership": {
         "PLAYER": "OBSERVER",

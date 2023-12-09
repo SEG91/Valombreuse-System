@@ -3,7 +3,7 @@ export class ValombreuseGlobalRoll {
         this._label = "Formule";
         this._formula = formula;
     }
-
+        
     async roll(actor,rollType){
 
         const messageTemplate = "systems/valombreuse/templates/chat/global-card.hbs";

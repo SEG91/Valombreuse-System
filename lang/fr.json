@@ -17,7 +17,8 @@
       "bloodpower": "Pouvoir de Sang Ancien",
       "competence": "Compétence",
       "aptitude": "Aptitude",
-      "state": "Etats"
+      "state": "Etats",
+      "combatcard": "Carte de Combat"
     }
   },
   "VALOMBREUSE.title": "Valombreuse",

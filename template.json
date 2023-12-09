@@ -173,7 +173,7 @@
       "bloodline",
       "blooddomain",
       "bloodpower",
-      "state"
+      "combatcard"
     ],
     "templates": {
       "base" : {
@@ -279,6 +279,13 @@
       ],
       "key": "",
       "score":0
+    },
+    "combatcard": {
+      "templates": [
+        "base"
+      ],
+      "action1": false,
+      "action2":false
     }
   }
 }

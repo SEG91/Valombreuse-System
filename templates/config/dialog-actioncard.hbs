@@ -1,0 +1,26 @@
+<form>
+<ol class="inventory-list">
+    <li class="inventory-header flexrow">
+        <div class="item-name flexrow"></div>
+        <div class="item-detail">Action 1</div>
+        <div class="item-detail">Action 2</div>
+    </li>
+        {{#each (getActioncards) as |item ac|}}
+            <ol class="item-list">
+                <li class="item flexrow" data-item-id="{{_id}}" draggable="true">
+                    <div class="item-name flexrow">
+                        <div class="item-image flex1" style="background: center/contain no-repeat url('{{img}}')">
+                        </div>
+                        <h4>{{name}}</h4>
+                    </div>
+                    <div class="item-detail">
+                       <input type="radio" id="Action1" name="Action1" value={{_id}}>
+                    </div>
+                    <div class="item-detail">
+                       <input type="radio" id="Action2" name="Action2" value={{_id}}>
+                    </div>
+                </li>
+            </ol>
+        {{/each}}
+    </ol>
+</form>

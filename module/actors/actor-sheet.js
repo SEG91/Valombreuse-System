@@ -510,6 +510,12 @@ async _addItemToInventory(itemData) {
                 if (extraOptions.cancelled) return;
                 return ValombreuseRoll.GlobalCheck(this.getData().items, this.actor, event,extraOptions.Diceformula,extraOptions.rollType);
                 break;
+            
+            case "Combatcard" :
+                    extraOptions = await this.getActionsOptions("systems/valombreuse/templates/config/dialog-actioncard.hbs","Choix des actions de combat",configJet);
+                    if (extraOptions.cancelled) return;
+                    return ValombreuseRoll.ActionCardShow( this.actor, extraOptions.Action1,extraOptions.Action2);
+                    break;
 
 
             case "weapon" :
@@ -565,6 +571,37 @@ async _addItemToInventory(itemData) {
                 close: () => resolve({cancelled: true}),
             }
             new Dialog(data, {id:"configRollDialog",width:350}).render(true);
+        });
+    };
+    
+    async getActionsOptions(templatePath,dialogTitle,data={}) {
+        const template = templatePath;
+
+        const html = await renderTemplate(template, {
+            ...data
+        });
+    
+        return new Promise(resolve => {
+            const data = {
+                title: dialogTitle,
+                content: html,
+                buttons: {
+                    normal: {
+                        label: "Valider",
+                        callback: html => {
+                            const fd = new FormDataExtended(html[0].querySelector("form"));
+                            resolve(fd.object)
+                        }
+                    },
+                    cancel: {
+                        label: "Annuler",
+                        callback: html => resolve({cancelled: true}),
+                    }
+                },
+                default: "normal",
+                close: () => resolve({cancelled: true}),
+            }
+            new Dialog(data, {id:"configRollDialog",width:800}).render(true);
         });
     };
 }

@@ -13,6 +13,7 @@ export const VALOMBREUSE = {};
 VALOMBREUSE.competences = [];
 VALOMBREUSE.Ordres=[];
 VALOMBREUSE.Blooddomains=[];
+VALOMBREUSE.Actioncards=[];
 
 // Mise en cache des données de compétences
 VALOMBREUSE.getCompetences = async function () {
@@ -33,6 +34,15 @@ VALOMBREUSE.getBlooddomains = async function () {
     
     VALOMBREUSE.Blooddomains = blooddomains;
     console.debug("Competences loaded");
+};
+
+VALOMBREUSE.getActioncards = async function () {
+    let lactioncards;
+
+    lactioncards = await game.packs.get("valombreuse.action-de-combat").getDocuments().then(index => index.map(entity => entity.toObject(false)));
+    lactioncards.sort();
+    VALOMBREUSE.Actioncards = lactioncards;
+    console.debug("Actioncards loaded");
 };
 
 VALOMBREUSE.getOrdres = async function () {

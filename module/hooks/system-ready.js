@@ -10,6 +10,7 @@ Hooks.once("ready", async () => {
     await game.valombreuse.config.getAptitude();
     await game.valombreuse.config.getOrdres();
     await game.valombreuse.config.getBlooddomains();
+    await game.valombreuse.config.getActioncards();
 
     console.info("-------------------------------------System Initialized.");
 

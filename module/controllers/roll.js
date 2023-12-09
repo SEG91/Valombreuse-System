@@ -2,6 +2,7 @@ import {ValombreuseSkillRoll} from "../system/skill-roll.js";
 import {ValombreuseDamageRoll} from "../system/dmg-roll.js";
 import {ValombreuseInitiativeRoll} from "../system/init-roll.js";
 import {ValombreuseGlobalRoll} from "../system/glb-roll.js";
+import {ValombreuseActionCard} from "../system/ActionCard.js";
 
 export class ValombreuseRoll {
     static options() {
@@ -62,6 +63,11 @@ export class ValombreuseRoll {
     static GlobalCheck(data, actor, event,formula,rollType = "PUBLIC") {
         let r = new ValombreuseGlobalRoll(formula);
         r.roll(actor,rollType);
+    }
+
+    static ActionCardShow(actor,IdAction1,IdAction2) {
+        let r = new ValombreuseActionCard(IdAction1,IdAction2);
+        r.Show(actor);
     }
     
     static AptitudeCheck(data, actor, event) {

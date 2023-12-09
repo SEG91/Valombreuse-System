@@ -1,0 +1,47 @@
+<ol class="item-list">
+    <li class="item flexrow" data-item-id="{{_id}}" draggable="true">
+        {{#if (isWeapon this)}}
+        <div class="item-name flexrow rollable" data-roll-formula="{{system.dmgBase}}" data-roll-weapon-name="{{name}}" data-roll-weapon-img="{{img}}" data-roll-type="weapon">
+        {{else}}
+        <div class="item-name flexrow">
+        {{/if}}
+                <div class="item-image flex1" style="background: center/contain no-repeat url('{{img}}')">
+                </div>
+                <h4>{{name}}</h4>
+                <span class="item_tooltiptext">
+                    <h1>{{name}} :</h1>{{{system.description}}}
+                     {{#if (isWeapon this)}}
+                     <br><h1>{{localize "VALOMBREUSE.properties.damage"}} :</h1>{{{system.dmgBase}}}
+                     {{/if}}
+                     {{#if (isArmor this)}}
+                     <br><h1>{{localize "VALOMBREUSE.properties.protection"}} :</h1>{{system.defBase}}
+                     {{/if}}
+                </span>
+        </div> 
+        <div class="item-detail {{#if system.properties.stackable}}item-qty unlocked{{else}}locked{{/if}}">
+            {{#if system.properties.stackable}}{{system.qty}}{{/if}}
+        </div>
+        <div class="item-detail">
+            {{#if system.properties.equipable}}
+                {{#if system.equiped}}
+                    <a class="item-control item-equip" title="Unequip Item"><div class="fas fa-shield-alt"></div></a>
+                {{else}}
+                    <a class="item-control item-equip" title="Equip Item" style="color:lightgray;"><div class="fas fa-shield-alt"></div></a>
+                {{/if}}
+            {{/if}}
+        </div>
+{{!--
+        <div class="item-detail">
+            {{#if (isWeapon this)}}
+                <a class="item-control rollable" data-roll-formula="{{system.dmgBase}}" data-roll-weapon-name="{{name}}" data-roll-weapon-img="{{img}}" data-roll-type="weapon">
+                    <div class="icon_d100"></div>
+                </a>
+            {{/if}}
+        </div>
+--}}
+        <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+    </li>
+</ol>
