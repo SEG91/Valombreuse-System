@@ -34,7 +34,11 @@
         </div> 
     </div>
     <div class="flexcol"id="logo-sceptre">
-            <img class="img" src="/systems/valombreuse/assets/images/Clef.webp"/>
+        {{#if system.silentmode}}
+            <img class="clef-silent" src="/systems/valombreuse/assets/images/Clef_grey.webp"/>       
+        {{else}}
+            <img class="clef-silent" src="/systems/valombreuse/assets/images/Clef.webp"/>
+        {{/if}}
     </div>
     <div class="flexcol">
         <div class="flex1 center">

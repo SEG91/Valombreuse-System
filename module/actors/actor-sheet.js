@@ -70,6 +70,11 @@ export class ValombreuseActorSheet extends ActorSheet {
     });
 
     // Equip/Unequip items
+    html.find('.clef-silent').click(ev => {
+        ev.preventDefault();
+        return this.actor.modifySilentMode();
+    });
+
     html.find('.item-equip').click(ev => {
         ev.preventDefault();
         const elt = $(ev.currentTarget).parents(".item");
@@ -501,6 +506,8 @@ async _addItemToInventory(itemData) {
                             
                         }
                         let isFail = extraOptions.isFail;
+                        if (this.actor.system.silentmode)
+                            extraOptions.rollType="BLIND";
                         return ValombreuseRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,extraOptions.rollType,extraOptions.bonusmalus,isFail,extraOptions.isCrit,extraOptions.isSpe,extraOptions.isExpert);
                     break;
             

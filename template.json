@@ -136,7 +136,8 @@
       "templates": [
         "stats",
         "common"
-      ]
+      ],
+      "silentmode":false
     },
     "npc": {
       "templates": [

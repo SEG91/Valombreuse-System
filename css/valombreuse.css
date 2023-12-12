@@ -1646,7 +1646,7 @@ bg
   max-height: 162px;
 }
 
-.valombreuse.actor .window-content > form .wrap #logo-sceptre > img {
+.valombreuse.actor .window-content > form .wrap #logo-sceptre > clef-silent {
   min-width: 42px;
   width: 42px;
   max-width: 42px;

@@ -84,4 +84,9 @@ export class ValombreuseActor extends Actor {
           return this.update({'system.attributes.hp': hp});
       }
 
+      async modifySilentMode() {
+        const silentmode = !this.system.silentmode;
+        return this.update({'system.silentmode': silentmode});
+    }
+
 }
