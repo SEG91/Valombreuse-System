@@ -59,6 +59,7 @@
   "VALOMBREUSE.category" : "Catégorie",
   "VALOMBREUSE.ui.specialskill": "Spécialisation",
   "VALOMBREUSE.ui.score": "Rang",
+  "VALOMBREUSE.ui.bonus": "Modificateur",
   "VALOMBREUSE.SheetClassCharacter" : "Fiche de Personnage VALOMBREUSE par défaut",
   "VALOMBREUSE.SheetClassItem" : "Fiche d'Objet VALOMBREUSE par défaut",
   "VALOMBREUSE.ui.properties" :  "Propriétés",
