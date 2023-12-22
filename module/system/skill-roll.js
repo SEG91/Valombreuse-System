@@ -23,7 +23,7 @@ export class ValombreuseSkillRoll {
         this._isExpert=isExpert;
     }
 
-    async roll(actor,rollType){
+    async roll(actor,rollType,showmessage){
         const messageTemplate = "systems/valombreuse/templates/chat/carac-card.hbs";
 
         let rollData = {
@@ -131,6 +131,7 @@ export class ValombreuseSkillRoll {
             isFumble: this._isFumble,
             result: this._cmpValue+MaxDice,
         };
+        this._result= interCmpValue+MaxDice+this._energy+MaxDice;
         let msg ="toto";
         let chatData = {
             user: game.user.id,
@@ -158,7 +159,6 @@ export class ValombreuseSkillRoll {
             chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PRIVATE);
             break;
     }
-      
         ChatMessage.create(chatData);
     }
 

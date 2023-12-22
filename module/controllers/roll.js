@@ -36,7 +36,7 @@ export class ValombreuseRoll {
             }
         }
         let energy=1;
-        let r = new ValombreuseSkillRoll(label,calcLabel,cmpValue,energy);
+        let r = new ValombreuseSkillRoll(label,calcLabel,cmpValue,energy,true);
         r.roll(actor,rollType);
     }
 
@@ -56,7 +56,7 @@ export class ValombreuseRoll {
         let Numbonusmalus=0;
         if (bonusmalus!="")     
             Numbonusmalus = eval(`${bonusmalus}`);
-        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Numbonusmalus,false,false);
+        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Numbonusmalus,false,false,true);
         r.roll(actor,rollType);
     }
 
@@ -136,7 +136,7 @@ export class ValombreuseRoll {
             Numbonusmalus = eval(`${bonusmalus}`);
         }
         Totalbonusmalus=Numbonusmalus-actor.system.attributes.hp.bonus+bonusmalusValue;
-        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Totalbonusmalus,isFail,isCrit,isSpe,isExpert);
+        let r = new ValombreuseSkillRoll(label,RangValue,cmpValue,energyspent,Totalbonusmalus,isFail,isCrit,isSpe,isExpert,true);
         r.roll(actor,rollType);
     }
 
@@ -152,36 +152,6 @@ export class ValombreuseRoll {
         let formula = elt.attributes["data-roll-formula"].value;
         let label = elt.attributes["data-roll-weapon-name"].value;
         let img = elt.attributes["data-roll-weapon-img"].value;
-
-        let globalSettingCarac100 = game.settings.get("valombreuse","carac100"); 
-
-        if(globalSettingCarac100)
-        {
-            let valTMP = actor.system.stats.str.base +actor.system.stats.dex.base;
-
-            if(valTMP < 41)
-            {
-                formula+='+1';
-            }else{
-                if(valTMP < 81)
-                {
-                    formula+='+2';
-                }else{
-                    if(valTMP < 121)
-                    {
-                        formula+='+3';
-                    }else{
-                        if(valTMP < 141)
-                        {
-                            formula+='+4';
-                        }else{
-                            formula+='+5';
-                        } 
-                    } 
-                }
-            }
-        }
-
         let r = new ValombreuseDamageRoll(label,formula,img);
         r.roll(actor,rollType);
     }

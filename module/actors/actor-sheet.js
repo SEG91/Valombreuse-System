@@ -529,7 +529,7 @@ async _addItemToInventory(itemData) {
                 if(forceConfig)
                 {
                     configJet.checkGM = true;
-                    extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet d'attaque",configJet);
+                    extraOptions = await this.getRollOptions("systems/valombreuse/templates/config/skill-options.hbs","Configuration du jet d'attaque",configJet);
                     if (extraOptions.cancelled) return;                    
                 }
                 return ValombreuseRoll.rollWeapon(this.getData().system, this.actor, event,extraOptions.rollType);

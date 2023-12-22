@@ -1,46 +1,25 @@
-<div class="chat-card aria-roll-chat" data-actor-id="{{actor.id}}">
+<div class="chat-card valombreuse-roll-chat" data-actor-id="{{actor.id}}">
 
     <div class="roll-card regular-roll-card">
-        <header class="card-header flexrow">
+        <header class="card-header flexcol">
+            <h3>{{actor.name}}</h3>
             <img src="{{actor.img}}" title="{{actor.name}}"/>
-            
-            <div class="flexcol">
-                <div class="flexrow">
-                    <h2>Jet = {{result}}</h2>
-                </div>
-                <div class="flexrow">
-                    <div class="flexcol">
-                    <b>Dégats</b><br>
-                    <b>{{label}}</b>
-                    <br>
-                    {{formula}}
-                    </div>
-                    <img class="item-img" src="{{img}}" title="{{label}}"/>
-                </div>
+            <div class="flexrow">
+                <b>{{label}}</b>
+                <img class="item-img" src="{{img}}" title="{{label}}"/>
             </div>
-            
+            <div class="flexrow">
+                    <h4>Cible : {{cible.name}}</h4>
+                    <img class="item-img" src="{{cible.img}}" title="{{cible.name}}"/>
+            </div>
+            <div class="flexrow">
+                    <div class="flexcol">
+                    <h4>Dégats de l'arme : {{wdamage}}</h4>
+                    <h4>Marge : {{Mmargin}}</h4>
+                    </div>
+            </div>
+            <h3>Blessures infligées : {{result}}</h3>
         </header>
      </div>
 
-
-     <div class="blind-roll-card flexcol roll-card">
-
-        <header class="card-header flexrow">
-            <img src="icons/svg/mystery-man.svg" title="Inconnu"/>
-
-            <div class="flexcol">
-                <div class="flexrow">
-                    <h2>Jet = <i><b>?</b></i></h2>
-                </div>
-                <div class="flexrow">
-                    <div class="flexcol">
-                    <strong class="item-name">Caché</strong>
-                    <br>
-                    {{formula}}
-                    </div>
-                </div>
-            </div>
-        </header>
-
-    </div>
 </div>

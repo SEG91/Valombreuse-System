@@ -1,42 +1,175 @@
+import {ValombreuseSkillRoll} from "../system/skill-roll.js";
+
 export class ValombreuseDamageRoll {
     constructor(label, formula,img){
         this._label = label;
         this._formula = formula;
+        this._weapondmg=Number(formula);
         this._img = img;
+    }
+
+    getWeapon(actor,weaponname)
+    {
+        let weapon = actor.items.filter(item => item.type === "item" && item.name === weaponname);
+        return weapon;
+    }
+
+    getCompetence(actor,skillname)
+    {
+        let comp = actor.items.filter(item => item.type === "competence" && item.name === skillname);
+        return comp;
+    }
+
+    getDefenseScore(weapon,cible)
+    {
+        let val = 0;
+        let compname="Mêlée";
+        if (weapon.system.subtype === "ranged")
+           compname="Acrobatie";
+
+        if (cible.type == "minion")
+        {
+            val = cible.system.Defpot;
+        }
+        else
+        {
+            let complist=this.getCompetence(this._target,compname);
+            let comp=complist[0];
+            val=this.ComputeCompScore(this._target,comp);
+        }
+       
+        return val;
+    }
+
+    ComputeandApplyBlessure(weapondmg)
+    {
+        let Blessure=0;
+        let seuil=this._target.system.attributes.def.value;
+        if (weapondmg>seuil)
+        {
+            var quo = Math.floor(weapondmg / seuil);
+            var rem = weapondmg % seuil;
+            if (rem>0)
+                Blessure=quo;
+            else
+                Blessure=quo-1;
+            if (this._target.type =="minion")
+            {
+                var nbminion= Math.floor(Blessure / this._target.system.attributes.hp.bonus);
+                this._target.system.nb-=nbminion;
+                if (this._target.system.nb<0)
+                this._target.system.nb=0;
+                this._target.system.offpotmax=this._target.system.offpot* this._target.system.nb;
+                this._target.system.attributes.hp.max=this._target.system.attributes.hp.bonus*this._target.system.nb;
+            }
+            else
+                this._target.system.attributes.hp.bonus+=Blessure;
+        }
+        else
+            this._target.system.attributes.power.value--;
+
+        return Blessure;
+    }
+
+    getAttackMargin(calc)
+    {
+        let margin=-100;
+        if (game.user.targets.size)
+        {
+            game.user.targets.forEach(t =>{
+                this._target= t.actor;
+             })   
+            let TargetDef=this.getDefenseScore(this._weapon,this._target);
+            margin=calc-TargetDef;
+        }
+        else
+         ChatMessage.create({content: "Pas de cible sélectionnée"});
+      
+        return margin;
+    }
+
+    ComputeCompScore(actor,comp)
+    {
+        let AttrValue;
+        switch(comp.system.link1)
+        {
+            case "VIG": 
+                AttrValue=actor.system.stats.vig.base;
+                break;
+            case "MC":
+                AttrValue=actor.system.stats.mc.base;
+                break;
+            case "CON": 
+                AttrValue=actor.system.stats.con.base;
+                break;
+            case "EVE":
+                AttrValue=actor.system.stats.eve.base;
+                break;
+            case "INT": 
+                AttrValue=actor.system.stats.int.base;
+                break;
+            case "CHA":
+                AttrValue=actor.system.stats.cha.base;
+                break;
+        }
+        let val=comp.system.score+AttrValue;
+        return val;
     }
 
     async roll(actor,rollType){
 
         const messageTemplate = "systems/valombreuse/templates/chat/weapon-card.hbs";
-
+        this._attaquant=actor;
         let rollData = {
             user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
         };
 
-        let r = new Roll(this._formula);
-        r.evaluate({async:false});
+        let selweaponlist=this.getWeapon(actor,this._label);
+        let selweapon=selweaponlist[0];
+        this._weapon=selweapon;
+        let compname="Mêlée";
+        if (selweapon.system.subtype === "ranged")
+           compname="Arme à distance";
 
-        const calc = r.result;
-        const mod = (r.terms.length > 1);
-
-        let renderedRoll = await r.render();  
+        let complist=this.getCompetence(actor,compname);
+        let comp=complist[0];
         
-        
-        const result = r.total;
+        let val=this.ComputeCompScore(actor,comp);
+        let energy=0;
+        let r = new ValombreuseSkillRoll(this._label,val,val,energy,comp.system.bonus,false,false,false,false,true);
+        await r.roll(actor,rollType);
 
-        this._isFumble = (result == 0);
+        const calc = r._result;
+        if (r._isFumble)
+          return;
+        let margin=this.getAttackMargin(calc);
+        if (margin == -100)
+         return;
+        let AttackMessage="";
+        let Blessure=0;
+        if (margin>0)
+        {
+            let Totaldmg=margin+this._weapondmg;
+            Blessure=this.ComputeandApplyBlessure(Totaldmg);
+        }
+        else
+        {
+            ChatMessage.create({content: "Attaque manquée"});
+            return;
+        }
+         
+                
 
         let templateContextData = {
             actor: actor,
+            cible: this._target,
             label: this._label,
             img: this._img,
             text: this._buildDamageRollMessage(),
-            isFumble:this._isFumble,
-            formula: this._formula,
-            result: result,
-            calc:calc,
-            mod:mod,
+            Mmargin:margin,
+            wdamage: this._formula,
+            result: Blessure,
         };
 
         let chatData = {
