@@ -190,13 +190,13 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('getWeapons', function (items) {
         let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged");
+        let weapons = caps.filter(item => item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged" ||  item.system.subtype == "natural");
         return weapons;
     });
 
     Handlebars.registerHelper('getEquipedWeapons', function (items) {
         let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged");
+        let weapons = caps.filter(item => item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged"||  item.system.subtype == "natural");
         let equipedWeapons = weapons.filter(item => item.system.equiped === true);
         return equipedWeapons;
     });
@@ -232,7 +232,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('isWeapon', function (item) {
-        if( item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged")
+        if( item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged"||  item.system.subtype == "natural")
             return true;
         else
             return false;

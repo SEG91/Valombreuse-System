@@ -12,10 +12,13 @@
         </select>
     </div>
 </div>
-
+{{debug system.subtype}}
 {{> "systems/valombreuse/templates/items/parts/details/equipment-details.hbs"}}
 
 {{#if (or (or (equals system.subtype "melee") (equals system.subtype "ranged")) system.properties.weapon) }}
+    {{> "systems/valombreuse/templates/items/parts/details/weapon-details.hbs"}}
+{{/if}}
+{{#if (or (equals system.subtype "natural") system.properties.weapon) }}
     {{> "systems/valombreuse/templates/items/parts/details/weapon-details.hbs"}}
 {{/if}}
 {{#if (or (equals system.subtype "ranged") system.properties.ranged) }}

@@ -64,6 +64,8 @@ export class ValombreuseSkillRoll {
         let MaxDice=1;
         for (let pas = 0; pas < tour; pas++) {
             let keeprolling=1;
+            let localcritical=false;
+            let localMaxDice=1;
             while (keeprolling)
             {
                 let r = new Roll(this._formula);
@@ -73,26 +75,37 @@ export class ValombreuseSkillRoll {
                 let relativeresult=minus*r.total;
                 result[0] = prevres+(relativeresult);
                 result.push(relativeresult);
-                if (this._isCritical)
-                    MaxDice+=r.total;
+                if (localcritical)
+                     localMaxDice+=r.total;
                 else
                 {
-                if (r.total>MaxDice)
-                    MaxDice=r.total;
+                if (r.total>localMaxDice)
+                     localMaxDice=r.total;
                 }
                 switch(r.total){
                     case 1:
                        if ((this._energy==0)&&(potentialfumble==1)&&(this._isCritical==false))
                             this._isFumble=true;
                         keeprolling=0;
+                        if (localMaxDice>MaxDice)
+                            MaxDice=localMaxDice;
                        break;
                     case 4:
-                        if (potentialcrit==1) 
+                        if (potentialcrit==1)
+                        {
                             this._isCritical=true;
+                            localcritical=true;
+                        }        
                         else
-                         keeprolling=0; 
+                        {
+                            if (localMaxDice>MaxDice)
+                                 MaxDice=localMaxDice;
+                            keeprolling=0; 
+                        }
                         break;
                     default:
+                        if (localMaxDice>MaxDice)
+                                 MaxDice=localMaxDice;
                         keeprolling=0;
                 }
             }

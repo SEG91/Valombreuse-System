@@ -532,7 +532,7 @@ async _addItemToInventory(itemData) {
                     extraOptions = await this.getRollOptions("systems/valombreuse/templates/config/skill-options.hbs","Configuration du jet d'attaque",configJet);
                     if (extraOptions.cancelled) return;                    
                 }
-                return ValombreuseRoll.rollWeapon(this.getData().system, this.actor, event,extraOptions.rollType);
+                return ValombreuseRoll.rollWeapon(this.getData().system, this.actor, event,extraOptions.energyspent,extraOptions.AttrLnk2,"PUBLIC",extraOptions.bonusmalus,extraOptions.isFail,extraOptions.isCrit,extraOptions.isSpe,extraOptions.isExpert);
 
 
             case "initiative" :

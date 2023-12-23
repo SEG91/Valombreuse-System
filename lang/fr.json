@@ -111,6 +111,7 @@
   "VALOMBREUSE.catui.systeme" : "Système de l'Ingénieur",
   "VALOMBREUSE.catui.ranged" : "Arme à distance",
   "VALOMBREUSE.catui.melee" : "Arme de mêlée",
+  "VALOMBREUSE.catui.natural" : "Arme naturelle",
   "VALOMBREUSE.catui.armor" : "Armure",
   "VALOMBREUSE.catui.jewel" : "Bijou",
   "VALOMBREUSE.catui.shield" : "Bouclier",
@@ -126,5 +127,7 @@
   "VALOMBREUSE.ui.defBase" : "Protection",
   "VALOMBREUSE.ui.range" : "Portée",
   "VALOMBREUSE.ui.Fail" : "Dé Critique forcé à échec",
-  "VALOMBREUSE.ui.Crit" : "Dé Critique forcé à réussite"
+  "VALOMBREUSE.ui.Crit" : "Dé Critique forcé à réussite",
+  "VALOMBREUSE.energyspent" : "Energie dépensée",
+  "VALOMBREUSE.cmod" : "Modificateur"
 }

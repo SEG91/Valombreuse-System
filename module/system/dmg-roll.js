@@ -1,11 +1,17 @@
 import {ValombreuseSkillRoll} from "../system/skill-roll.js";
 
 export class ValombreuseDamageRoll {
-    constructor(label, formula,img){
+    constructor(label, formula,img,energyspent,Numbonusmalus,isFail,isCrit,isSpe,isExpert){
         this._label = label;
         this._formula = formula;
         this._weapondmg=Number(formula);
         this._img = img;
+        this._energy=energyspent;
+        this._isCrit = isCrit;
+        this._isFail = isFail;
+        this._bonusmalus=Numbonusmalus;
+        this._isSpe=isSpe;
+        this._isExpert=isExpert;
     }
 
     getWeapon(actor,weaponname)
@@ -17,6 +23,11 @@ export class ValombreuseDamageRoll {
     getCompetence(actor,skillname)
     {
         let comp = actor.items.filter(item => item.type === "competence" && item.name === skillname);
+        if (!comp)
+        {
+            let Citems =VALOMBREUSE.Actioncards;
+            comp=Citems.filter(item => item.type === "competence" && item.name === skillname);
+        }
         return comp;
     }
 
@@ -131,13 +142,26 @@ export class ValombreuseDamageRoll {
         let compname="Mêlée";
         if (selweapon.system.subtype === "ranged")
            compname="Arme à distance";
+        if (selweapon.system.subtype === "natural")
+           compname="Bagarre";
 
         let complist=this.getCompetence(actor,compname);
         let comp=complist[0];
         
-        let val=this.ComputeCompScore(actor,comp);
-        let energy=0;
-        let r = new ValombreuseSkillRoll(this._label,val,val,energy,comp.system.bonus,false,false,false,false,true);
+        let val=0;
+        let cbonus=0;
+        if(actor.type=="minion")
+        {
+            val = actor.system.offpotmax;
+        }
+        else
+        {
+            val = this.ComputeCompScore(actor,comp);
+            cbonus=comp.system.bonus-actor.system.attributes.hp.bonus;
+        }
+            
+        cbonus+=this._bonusmalus;
+        let r = new ValombreuseSkillRoll(this._label,val,val,this._energy,cbonus,this._isFail,this._isCrit,this._isSpe,this._isExpert,true);
         await r.roll(actor,rollType);
 
         const calc = r._result;

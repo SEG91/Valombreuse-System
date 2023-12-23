@@ -613,7 +613,7 @@ strong {
 .chat-card .card-header .item-name {
   line-height: 48px;
 }
-bg
+
 .chat-card .card-header h3 {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1632,6 +1632,67 @@ bg
 }
 
 .valombreuse.actor .window-content > form .wrap .header #logo-orbe > img {
+  margin-top: 20px;
+  min-width: 25px;
+  width: 52px;
+  max-width: 83px;
+  min-height: 25px;
+  height: 52px;
+  max-height: 66px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #banner {
+  margin:0;
+  position: relative;
+  max-height: 100px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #banner-left {
+  min-height: 3px;
+  height: 3px;
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #banner-right {
+  float: right;
+  min-height: 3px;
+  height: 3px;
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #banner-bot-left {
+  min-height: 3px;
+  height: 3px;
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #banner-bot-right {
+  float: right;
+  min-height: 3px;
+  height: 3px;
+  max-height: 45px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #logo-banner {
+  max-width: 63px;
+  max-height: 50px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #logo-banner > img {
+  min-width: 63px;
+  width: 63px;
+  max-width: 63px;
+  min-height: 50px;
+  height: 50px;
+  max-height: 50px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #logo-orbe {
+  max-width: 83px;
+  max-height: 66px;
+}
+
+.valombreuse.actor .window-content > form .wrap .footer #logo-orbe > img {
   margin-top: 20px;
   min-width: 25px;
   width: 52px;

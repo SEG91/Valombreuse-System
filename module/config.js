@@ -71,6 +71,7 @@ VALOMBREUSE.itemSubCategories = {
     "systeme" : "VALOMBREUSE.catui.systeme",
     "ranged" : "VALOMBREUSE.catui.ranged",
     "melee" : "VALOMBREUSE.catui.melee",
+    "natural" : "VALOMBREUSE.catui.natural",
     "armor" : "VALOMBREUSE.catui.armor",
     "jewel" : "VALOMBREUSE.catui.jewel",
     "shield" : "VALOMBREUSE.catui.shield",
