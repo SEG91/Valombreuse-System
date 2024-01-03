@@ -21,7 +21,7 @@
    <label class="checkbox"> <input type="checkbox" name="system.properties.rechargeable" {{checked system.properties.rechargeable}}> {{localize "VALOMBREUSE.ui.rechargeable"}}</label>
    </div>
 </div>
-{{#if (not (or (equals system.subtype "state")) ) }}
+{{#if (not (equals system.subtype "state") ) }}
 <div class="form-group">
     <label>{{ localize "VALOMBREUSE.ui.price" }}</label>&nbsp; <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number"/>
 </div>
