@@ -209,7 +209,7 @@ export class ValombreuseRoll {
         let target;
         let found=0;
         let options = game.combat.turns;
-        for (i = 0; i < options.length; i++) {
+        for (let i = 0; i < options.length; i++) {
             if (options[i].actor.data._id == sockmsg.data._actorid) {
                 actor=  options[i].actor.actor();
                 found++;     
