@@ -16,7 +16,6 @@ import {ValombreuseMinionSheet} from "./actors/minion-sheet.js";
 import {ValombreuseCreatureSheet} from "./actors/creature-sheet.js";
 import {ValombreuseItem} from "./items/item.js";
 import {ValombreuseItemSheet} from "./items/item-sheet.js";
-import {ValombreuseRoll} from "../controllers/roll.js";
 
 
 Hooks.once("init", async function () {

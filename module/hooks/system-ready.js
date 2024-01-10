@@ -4,6 +4,7 @@
 
 import {DataLoader} from "../data.js";
 import {UpdateUtils} from "../utils/update-utils.js";
+import {ValombreuseRoll} from "../controllers/roll.js";
 
 Hooks.once("ready", async () => {
     await game.valombreuse.config.getCompetences();
@@ -12,26 +13,30 @@ Hooks.once("ready", async () => {
     await game.valombreuse.config.getBlooddomains();
     await game.valombreuse.config.getActioncards();
 
-    /* -------------------------------------------- */
-    game.socket.on("valombreuse", async (sockmsg) => {
-    console.log(">>>>> MSG RECV", sockmsg);
-    try {
-      if (!game.user.isGM) return;
 
-      // if the logged in user is the active GM with the lowest user id
-      const isResponsibleGM = game.users
-        .filter(user => user.isGM && user.isActive)
-        .some(other => other.data._id < game.user.data._id);
-    
-      if (!isResponsibleGM) return;
-      ValombreuseRoll.rollWeaponFromMessage(sockmsg);
-    } catch (e) {
-      console.error('game.socket.on(valombreuse) Exception: ', sockmsg, ' => ', e)
-    }
-  });
+    game.socket.on("valombreuse", data => {
+        if (game.user.isGM)
+        {
+            // if the logged in user is the active GM with the lowest user id
+            // if the logged in user is the active GM with the lowest user id
+  const isResponsibleGM = game.users
+  .filter(user => user.isGM && user.isActive)
+  .some(other => other.data._id < game.user.data._id);
+
+if (isResponsibleGM) {
+    ValombreuseRoll.rollWeaponFromMessage(data);
+}
+
+        }
+
+        
+      });
     console.info("-------------------------------------System Initialized.");
 
 });
+
+
+  
 
 
 
