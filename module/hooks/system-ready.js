@@ -25,7 +25,7 @@ Hooks.once("ready", async () => {
                 if (game.users[pas].isGM)
                      GMUsers.push(game.users[pas])
                 }
-            int nbgm=GMUsers.length;
+            let nbgm=GMUsers.length;
             let idUser=game.user.data._id;
             if (GMUsers[nbgm-1]==idUser)
             isResponsibleGM=false;
