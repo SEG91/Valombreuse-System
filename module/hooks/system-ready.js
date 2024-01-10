@@ -21,11 +21,12 @@ Hooks.once("ready", async () => {
             // if the logged in user is the active GM with the lowest user id
              let isResponsibleGM = true;
              let GMUsers=[];
-             let Users=game.users.players()
-             for (let pas = 0; pas < Users.length; pas++) {
-                if (Users[pas].isGM)
-                     GMUsers.push(Users[pas])
-                }
+             let Users=[];
+             for(let user of game.users.players) {
+                if (user.isGM)
+                     GMUsers.push(user)
+            }
+           
             let nbgm=GMUsers.length;
             let idUser=game.user.data._id;
             if (GMUsers[nbgm-1]==idUser)
