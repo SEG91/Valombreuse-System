@@ -187,7 +187,7 @@ export class ValombreuseRoll {
                 _targetid:target.id,
                 userId: game.user.id
               }
-                game.socket.emit("valombreuse", {
+                game.socket.emit("system.valombreuse", {
                   msg: "msg_request_attack",
                   data: socketData
                 });

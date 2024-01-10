@@ -14,7 +14,7 @@ Hooks.once("ready", async () => {
     await game.valombreuse.config.getActioncards();
 
 
-    game.socket.on("valombreuse", data => {
+    game.socket.on("system.valombreuse", data => {
         if (game.user.isGM)
         {
             // if the logged in user is the active GM with the lowest user id
