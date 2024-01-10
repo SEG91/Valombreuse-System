@@ -1,7 +1,5 @@
-2023/12/23-11:35:42.626 11e8 Recovering log #2389
-2023/12/23-11:35:42.638 11e8 Delete type=0 #2389
-2023/12/23-11:35:42.638 11e8 Delete type=3 #2387
-2023/12/23-11:46:44.121 1fec Level-0 table #2394: started
-2023/12/23-11:46:44.121 1fec Level-0 table #2394: 0 bytes OK
-2023/12/23-11:46:44.128 1fec Delete type=0 #2392
-2023/12/23-11:46:44.134 1fec Manual compaction at level-0 from '!folders!r6ylX7r2j92npqxr' @ 72057594037927935 : 1 .. '!items!z1kx01HAqK4lPXNw' @ 0 : 0; will stop at (end)
+2024/01/10-10:38:57.570 9d0 Log #2405: 0 ops saved to Table #2406 OK
+2024/01/10-10:38:57.571 9d0 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/002405.log: OK
+2024/01/10-10:38:57.571 9d0 Table #2290: 54 entries OK
+2024/01/10-10:38:57.577 9d0 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/MANIFEST-002403: OK
+2024/01/10-10:38:57.583 9d0 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien; recovered 1 files; 42091 bytes. Some data may have been lost. ****

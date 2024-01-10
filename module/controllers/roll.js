@@ -160,8 +160,70 @@ export class ValombreuseRoll {
          {
              Numbonusmalus = eval(`${bonusmalus}`);
          }
+        if (game.user.isGM)
+        {
+            let r = new ValombreuseDamageRoll(label,formula,img,energyspent,Numbonusmalus,isFail,isCrit,isSpe,isExpert);
+            r.roll(actor,rollType);
+        }
+        else{
+            let target;
+            if (game.user.targets.size)
+            {
+                  game.user.targets.forEach(t =>{
+                target= t.actor;
+             })   
+            }
+            let socketData = {
+                _actorid: actor.id,
+                _weaponname: label,
+                _weaponformula:formula,
+                _weaponimg: img,
+                _energy: energyspent,
+                _bonusmalus: Numbonusmalus,
+                _isFail: isFail,
+                _isCrit: isCrit,
+                _isSpe:isSpe,
+                _isExpert:isExpert,
+                _targetid:target.id,
+                userId: game.user.id
+              }
+                game.socket.emit("valombreuse", {
+                  msg: "msg_request_attack",
+                  data: socketData
+                });
+        }
+    }
+
+    static rollWeaponFromMessage(sockmsg){
+
+        let label = sockmsg.data._weaponname;
+        let formula=sockmsg.data._weaponformula;
+        let img=sockmsg.data._weaponimg;
+        let energyspent=sockmsg.data._energy;
+        let Numbonusmalus=sockmsg.data._bonusmalus;
+        let isFail=sockmsg.data._isFail;
+        let isCrit=sockmsg.data._isCrit;
+        let isSpe=sockmsg.data._isSpe;
+        let isExpert=sockmsg.data._isExpert;
+        let actor;
+        let target;
+        let found=0;
+        let options = game.combat.turns;
+        for (i = 0; i < options.length; i++) {
+            if (options[i].actor.data._id == sockmsg.data._actorid) {
+                actor=  options[i].actor.actor();
+                found++;     
+            }
+            if (options[i].actor.data._id == sockmsg.data._targetid) {
+                target=  options[i].actor.actor();
+                found++;       
+            }
+            if (found==2)
+             break;
+        }    
         let r = new ValombreuseDamageRoll(label,formula,img,energyspent,Numbonusmalus,isFail,isCrit,isSpe,isExpert);
-        r.roll(actor,rollType);
+        r.setTarget(target);
+        r.roll(actor,"PUBLIC");
     }
 
         /**

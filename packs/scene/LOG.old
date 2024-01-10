@@ -1,7 +1,5 @@
-2023/12/23-11:35:42.743 471c Recovering log #1255
-2023/12/23-11:35:42.756 471c Delete type=0 #1255
-2023/12/23-11:35:42.756 471c Delete type=3 #1253
-2023/12/23-11:46:44.161 1fec Level-0 table #1260: started
-2023/12/23-11:46:44.161 1fec Level-0 table #1260: 0 bytes OK
-2023/12/23-11:46:44.166 1fec Delete type=0 #1258
-2023/12/23-11:46:44.171 1fec Manual compaction at level-0 from '!scenes!BBOtYKw4tq1n5bRf' @ 72057594037927935 : 1 .. '!scenes!QchGWL2rUdrSqdNa' @ 0 : 0; will stop at (end)
+2024/01/10-10:38:57.817 59e4 Log #1271: 0 ops saved to Table #1272 OK
+2024/01/10-10:38:57.817 59e4 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/001271.log: OK
+2024/01/10-10:38:57.817 59e4 Table #1156: 2 entries OK
+2024/01/10-10:38:57.824 59e4 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001269: OK
+2024/01/10-10:38:57.830 59e4 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene; recovered 1 files; 1241 bytes. Some data may have been lost. ****

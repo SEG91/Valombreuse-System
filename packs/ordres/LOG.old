@@ -1,7 +1,5 @@
-2023/12/23-11:35:42.708 471c Recovering log #1913
-2023/12/23-11:35:42.719 471c Delete type=0 #1913
-2023/12/23-11:35:42.719 471c Delete type=3 #1911
-2023/12/23-11:46:44.155 1fec Level-0 table #1918: started
-2023/12/23-11:46:44.156 1fec Level-0 table #1918: 0 bytes OK
-2023/12/23-11:46:44.161 1fec Delete type=0 #1916
-2023/12/23-11:46:44.171 1fec Manual compaction at level-0 from '!items!5RMZHMZhbjD3BgXN' @ 72057594037927935 : 1 .. '!items!uDk5QNcajbHmeh9Z' @ 0 : 0; will stop at (end)
+2024/01/10-10:38:57.745 546c Log #1929: 0 ops saved to Table #1930 OK
+2024/01/10-10:38:57.746 546c Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/001929.log: OK
+2024/01/10-10:38:57.746 546c Table #1814: 6 entries OK
+2024/01/10-10:38:57.752 546c Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/MANIFEST-001927: OK
+2024/01/10-10:38:57.759 546c **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres; recovered 1 files; 40858 bytes. Some data may have been lost. ****

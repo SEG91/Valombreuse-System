@@ -12,6 +12,7 @@ export class ValombreuseDamageRoll {
         this._bonusmalus=Numbonusmalus;
         this._isSpe=isSpe;
         this._isExpert=isExpert;
+        this.forcetarget=false;
     }
 
     getWeapon(actor,weaponname)
@@ -82,19 +83,33 @@ export class ValombreuseDamageRoll {
         return Blessure;
     }
 
+    setTarget(target)
+    {
+        this._target=target;
+        this.forcetarget=true;
+    }
+
     getAttackMargin(calc)
     {
         let margin=-100;
-        if (game.user.targets.size)
+        if (this.forcetarget==false)
         {
-            game.user.targets.forEach(t =>{
-                this._target= t.actor;
-             })   
+            if (game.user.targets.size)
+             {
+                 game.user.targets.forEach(t =>{
+                  this._target= t.actor;
+                })   
+                let TargetDef=this.getDefenseScore(this._weapon,this._target);
+                margin=calc-TargetDef;
+             }
+            else
+                ChatMessage.create({content: "Pas de cible sélectionnée"});
+        }
+        else{
             let TargetDef=this.getDefenseScore(this._weapon,this._target);
             margin=calc-TargetDef;
         }
-        else
-         ChatMessage.create({content: "Pas de cible sélectionnée"});
+        
       
         return margin;
     }

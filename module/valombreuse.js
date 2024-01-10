@@ -16,6 +16,7 @@ import {ValombreuseMinionSheet} from "./actors/minion-sheet.js";
 import {ValombreuseCreatureSheet} from "./actors/creature-sheet.js";
 import {ValombreuseItem} from "./items/item.js";
 import {ValombreuseItemSheet} from "./items/item-sheet.js";
+import {ValombreuseRoll} from "../controllers/roll.js";
 
 
 Hooks.once("init", async function () {
@@ -88,9 +89,27 @@ Hooks.once("init", async function () {
     // Register Handlebars helpers
     registerHandlebarsHelpers();
 
-    //CONFIG.TinyMCE.content_css.push("/systems/aria/css/aria_TinyMCE.css");
+    
 
     console.info("Valombreuse : Init Done");
+
+      /* -------------------------------------------- */
+      game.socket.on("valombreuse", async (sockmsg) => {
+        console.log(">>>>> MSG RECV", sockmsg);
+        try {
+          if (!game.user.isGM) return;
+
+          // if the logged in user is the active GM with the lowest user id
+          const isResponsibleGM = game.users
+            .filter(user => user.isGM && user.isActive)
+            .some(other => other.data._id < game.user.data._id);
+        
+          if (!isResponsibleGM) return;
+          ValombreuseRoll.rollWeaponFromMessage(sockmsg);
+        } catch (e) {
+          console.error('game.socket.on(valombreuse) Exception: ', sockmsg, ' => ', e)
+        }
+      });
 
 });
 

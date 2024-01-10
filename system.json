@@ -2,7 +2,7 @@
   "id": "valombreuse",
   "title": "valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.6.9.1",
+  "version": "0.0.6.9.5",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
@@ -198,6 +198,7 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
+  "socket": true,
   "url": "https://github.com/SEG91/Valombreuse-System",
   "manifest": "https://raw.githubusercontent.com/SEG91/Valombreuse-System/main/system.json",
   "download": "https://github.com/SEG91/Valombreuse-System/archive/main.zip",
