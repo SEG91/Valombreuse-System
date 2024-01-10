@@ -211,11 +211,11 @@ export class ValombreuseRoll {
         let options = game.combat.turns;
         for (let i = 0; i < options.length; i++) {
             if (options[i].actor.data._id == sockmsg.data._actorid) {
-                actor=  options[i].actor.actor();
+                actor=  options[i].actor;
                 found++;     
             }
             if (options[i].actor.data._id == sockmsg.data._targetid) {
-                target=  options[i].actor.actor();
+                target=  options[i].actor;
                 found++;       
             }
             if (found==2)

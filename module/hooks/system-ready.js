@@ -20,8 +20,15 @@ Hooks.once("ready", async () => {
             // if the logged in user is the active GM with the lowest user id
             // if the logged in user is the active GM with the lowest user id
              let isResponsibleGM = true;
-             let GMUsers=game.users.find(user => user.isGM && user.isActive);
+             let GMUsers=[];
+             for (let pas = 0; pas < game.users.length; pas++) {
+                if (game.users[pas].isGM)
+                     GMUsers.push(game.users[pas])
+                }
+            int nbgm=GMUsers.length;
             let idUser=game.user.data._id;
+            if (GMUsers[nbgm-1]==idUser)
+            isResponsibleGM=false;
             if (isResponsibleGM) {
                 ValombreuseRoll.rollWeaponFromMessage(data);
             }
