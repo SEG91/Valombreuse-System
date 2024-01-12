@@ -19,7 +19,7 @@ Hooks.once("ready", async () => {
         {
             // if the logged in user is the active GM with the lowest user id
             // if the logged in user is the active GM with the lowest user id
-             let isResponsibleGM = flase;
+             let isResponsibleGM = false;
              let GMUsers=game.users.activeGM;
             if (GMUsers==game.user)
                 isResponsibleGM=true;
