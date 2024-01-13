@@ -208,8 +208,12 @@ export class ValombreuseRoll {
         let actor;
         let target;
         let found=0;
+        console.log("rollWeaponFromMessage>");
+        console.log(sockmsg.data);
         let options = game.combat.turns;
         for (let i = 0; i < options.length; i++) {
+            console.log(options[i].actor.data._id);
+            console.log(options[i].actor.data.name);
             if (options[i].actor.data._id == sockmsg.data._actorid) {
                 actor=  options[i].actor;
                 found++;     
@@ -218,12 +222,16 @@ export class ValombreuseRoll {
                 target=  options[i].actor;
                 found++;       
             }
-            if (found==2)
-             break;
+           // if (found==2)
+            // break;
         }    
         let r = new ValombreuseDamageRoll(label,formula,img,energyspent,Numbonusmalus,isFail,isCrit,isSpe,isExpert);
+        console.log("Target :");
+        console.log(target._id);
+        console.log(target.name);
         r.setTarget(target);
         r.roll(actor,"PUBLIC");
+        console.log("rollWeaponFromMessage<");
     }
 
         /**

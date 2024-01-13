@@ -55,8 +55,24 @@ export class ValombreuseDamageRoll {
 
     ComputeandApplyBlessure(weapondmg)
     {
+        console.log("ComputeandApplyBlessure>");
         let Blessure=0;
         let seuil=this._target.system.attributes.def.value;
+        console.log("Seuil :");
+        console.log(seuil);
+        console.log("Target avt dommage");
+        console.log("Type :");
+        console.log(this._target.type);
+        console.log("Energie :");
+        console.log(this._target.system.attributes.power.value);
+        if (this._target.type =="minion")
+            {
+        console.log("Nb :");
+        console.log(target.system.nb);
+    }
+    console.log("Blessure :");
+        console.log(this._target.system.attributes.hp.bonus);
+
         if (weapondmg>seuil)
         {
             var quo = Math.floor(weapondmg / seuil);
@@ -80,6 +96,21 @@ export class ValombreuseDamageRoll {
         else
             this._target.system.attributes.power.value--;
 
+        console.log("Blessure");
+        console.log(Blessure);
+        console.log("Target Après dommage");
+        console.log("Type :");
+        console.log(this._target.type);
+        console.log("Energie :");
+        console.log(this._target.system.attributes.power.value);
+        if (this._target.type =="minion")
+            {
+        console.log("Nb :");
+        console.log(target.system.nb);
+    }
+    console.log("Blessure :");
+        console.log(this._target.system.attributes.hp.bonus);
+        console.log("ComputeandApplyBlessure<");
         return Blessure;
     }
 

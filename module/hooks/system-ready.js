@@ -23,9 +23,13 @@ Hooks.once("ready", async () => {
              let GMUsers=game.users.activeGM;
             if (GMUsers==game.user)
                 isResponsibleGM=true;
+            console.log("socket.on>");
+            console.log(game.user.name);
+            console.log(isResponsibleGM);
             if (isResponsibleGM) {
                 ValombreuseRoll.rollWeaponFromMessage(data);
             }
+            console.log("socket.on<");
 
         }
 
