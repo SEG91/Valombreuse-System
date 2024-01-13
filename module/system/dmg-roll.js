@@ -47,7 +47,8 @@ export class ValombreuseDamageRoll {
         {
             let complist=this.getCompetence(this._target,compname);
             let comp=complist[0];
-            val=this.ComputeCompScore(this._target,comp);
+            if (comp)
+                val=this.ComputeCompScore(this._target,comp);
             if (val==0)
               val=this._target.system.stats.mc.base
         }
