@@ -68,7 +68,7 @@ export class ValombreuseDamageRoll {
         if (this._target.type =="minion")
             {
         console.log("Nb :");
-        console.log(target.system.nb);
+        console.log(this._target.system.nb);
     }
     console.log("Blessure :");
         console.log(this._target.system.attributes.hp.bonus);
@@ -106,7 +106,7 @@ export class ValombreuseDamageRoll {
         if (this._target.type =="minion")
             {
         console.log("Nb :");
-        console.log(target.system.nb);
+        console.log(this._target.system.nb);
     }
     console.log("Blessure :");
         console.log(this._target.system.attributes.hp.bonus);

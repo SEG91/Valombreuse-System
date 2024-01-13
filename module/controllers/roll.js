@@ -194,7 +194,7 @@ export class ValombreuseRoll {
         }
     }
 
-    static rollWeaponFromMessage(sockmsg){
+    static async rollWeaponFromMessage(sockmsg){
 
         let label = sockmsg.data._weaponname;
         let formula=sockmsg.data._weaponformula;
@@ -230,7 +230,7 @@ export class ValombreuseRoll {
         console.log(target._id);
         console.log(target.name);
         r.setTarget(target);
-        r.roll(actor,"PUBLIC");
+        await r.roll(actor,"PUBLIC");
         console.log("rollWeaponFromMessage<");
     }
 
