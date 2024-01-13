@@ -146,7 +146,7 @@ export class ValombreuseRoll {
      * @param key the key of the attribute to roll
      * @private
      */
-    static rollWeapon(data, actor, event,energy,AttrLnk2,rollType = "PUBLIC",bonusmalus,isFail,isCrit,isSpe,isExpert) {
+    static async rollWeapon(data, actor, event,energy,AttrLnk2,rollType = "PUBLIC",bonusmalus,isFail,isCrit,isSpe,isExpert) {
 
         const elt = $(event.currentTarget)[0];
         let formula = elt.attributes["data-roll-formula"].value;
@@ -163,7 +163,7 @@ export class ValombreuseRoll {
         if (game.user.isGM)
         {
             let r = new ValombreuseDamageRoll(label,formula,img,energyspent,Numbonusmalus,isFail,isCrit,isSpe,isExpert);
-            r.roll(actor,rollType);
+            await r.roll(actor,rollType);
         }
         else{
             let target;

@@ -48,6 +48,8 @@ export class ValombreuseDamageRoll {
             let complist=this.getCompetence(this._target,compname);
             let comp=complist[0];
             val=this.ComputeCompScore(this._target,comp);
+            if (val==0)
+              val=this._target.system.stats.mc.base
         }
        
         return val;
@@ -122,6 +124,7 @@ export class ValombreuseDamageRoll {
 
     getAttackMargin(calc)
     {
+        console.log("ValombreuseDamageRoll::getAttackMargin>");
         let margin=-100;
         if (this.forcetarget==false)
         {
@@ -140,8 +143,9 @@ export class ValombreuseDamageRoll {
             let TargetDef=this.getDefenseScore(this._weapon,this._target);
             margin=calc-TargetDef;
         }
-        
-      
+        console.log("Margin :");
+        console.log(margin);
+        console.log("ValombreuseDamageRoll::getAttackMargin<");
         return margin;
     }
 
@@ -174,6 +178,7 @@ export class ValombreuseDamageRoll {
     }
 
     async roll(actor,rollType){
+        console.log("ValombreuseDamageRoll::Roll>");
 
         const messageTemplate = "systems/valombreuse/templates/chat/weapon-card.hbs";
         this._attaquant=actor;
@@ -271,6 +276,7 @@ export class ValombreuseDamageRoll {
             }
 
         ChatMessage.create(chatData);
+        console.log("ValombreuseDamageRoll::Roll<");
     }
 
     /* -------------------------------------------- */
