@@ -15,7 +15,7 @@
         {{#each (getCompetences actor.items) as |competence id|}}
                 <ol class="item-list">
                     <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                        <div class="rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.system.score}}" data-rolling-bonus="{{competence.system.link1}}" data-roll-type="competencycheck">
+                        <div class="rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.system.score}}" data-rolling-attr="{{competence.system.link1}}" data-rolling-bonus="{{competence.system.bonus}}" data-roll-type="competencycheck">
                             <div class="flexrow no-wrap ">
                                 <div class="icon_d100">
                                 </div>
