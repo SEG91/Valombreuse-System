@@ -1,5 +1,11 @@
-2024/01/10-10:38:57.570 9d0 Log #2405: 0 ops saved to Table #2406 OK
-2024/01/10-10:38:57.571 9d0 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/002405.log: OK
-2024/01/10-10:38:57.571 9d0 Table #2290: 54 entries OK
-2024/01/10-10:38:57.577 9d0 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/MANIFEST-002403: OK
-2024/01/10-10:38:57.583 9d0 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien; recovered 1 files; 42091 bytes. Some data may have been lost. ****
+2024/01/10-10:38:57.600 9d0 Delete type=3 #1
+2024/01/10-10:40:22.884 da8 Level-0 table #2410: started
+2024/01/10-10:40:22.884 da8 Level-0 table #2410: 0 bytes OK
+2024/01/10-10:40:22.889 da8 Delete type=0 #2408
+2024/01/10-10:40:22.910 da8 Manual compaction at level-0 from '!folders!r6ylX7r2j92npqxr' @ 72057594037927935 : 1 .. '!items!z1kx01HAqK4lPXNw' @ 0 : 0; will stop at '!items!z1kx01HAqK4lPXNw' @ 203 : 1
+2024/01/10-10:40:22.910 da8 Compacting 1@0 + 0@1 files
+2024/01/10-10:40:22.917 da8 Generated table #2411@0: 54 keys, 42091 bytes
+2024/01/10-10:40:22.917 da8 Compacted 1@0 + 0@1 files => 42091 bytes
+2024/01/10-10:40:22.921 da8 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/01/10-10:40:22.922 da8 Delete type=2 #2290
+2024/01/10-10:40:22.941 da8 Manual compaction at level-0 from '!items!z1kx01HAqK4lPXNw' @ 203 : 1 .. '!items!z1kx01HAqK4lPXNw' @ 0 : 0; will stop at (end)
