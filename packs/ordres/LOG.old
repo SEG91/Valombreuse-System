@@ -1,5 +1,11 @@
-2024/01/10-10:38:57.745 546c Log #1929: 0 ops saved to Table #1930 OK
-2024/01/10-10:38:57.746 546c Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/001929.log: OK
-2024/01/10-10:38:57.746 546c Table #1814: 6 entries OK
-2024/01/10-10:38:57.752 546c Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/MANIFEST-001927: OK
-2024/01/10-10:38:57.759 546c **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres; recovered 1 files; 40858 bytes. Some data may have been lost. ****
+2024/01/10-10:38:57.773 546c Delete type=3 #1
+2024/01/10-10:40:22.995 da8 Level-0 table #1934: started
+2024/01/10-10:40:22.995 da8 Level-0 table #1934: 0 bytes OK
+2024/01/10-10:40:22.999 da8 Delete type=0 #1932
+2024/01/10-10:40:23.018 da8 Manual compaction at level-0 from '!items!5RMZHMZhbjD3BgXN' @ 72057594037927935 : 1 .. '!items!uDk5QNcajbHmeh9Z' @ 0 : 0; will stop at '!items!uDk5QNcajbHmeh9Z' @ 83 : 1
+2024/01/10-10:40:23.018 da8 Compacting 1@0 + 0@1 files
+2024/01/10-10:40:23.027 da8 Generated table #1935@0: 6 keys, 40858 bytes
+2024/01/10-10:40:23.027 da8 Compacted 1@0 + 0@1 files => 40858 bytes
+2024/01/10-10:40:23.032 da8 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/01/10-10:40:23.032 da8 Delete type=2 #1814
+2024/01/10-10:40:23.043 da8 Manual compaction at level-0 from '!items!uDk5QNcajbHmeh9Z' @ 83 : 1 .. '!items!uDk5QNcajbHmeh9Z' @ 0 : 0; will stop at (end)
