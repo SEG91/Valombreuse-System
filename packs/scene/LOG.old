@@ -1,4 +1,11 @@
-2024/03/29-15:21:38.127 6f5c Delete type=3 #1278
-2024/03/29-15:21:38.127 6f5c Delete type=3 #1289
-2024/03/29-15:21:38.127 6f5c Delete type=3 #1291
-2024/03/29-15:21:38.128 6f5c Delete type=3 #1294
+2024/03/30-13:51:04.802 3518 Table #1277: 2 entries OK
+2024/03/30-13:51:04.802 3518 Table #1281: 4 entries OK
+2024/03/30-13:51:04.802 3518 Table #1292: 1 entries OK
+2024/03/30-13:51:04.803 3518 Table #1295: 2 entries OK
+2024/03/30-13:51:04.809 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001278: OK
+2024/03/30-13:51:04.810 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001289: OK
+2024/03/30-13:51:04.810 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001291: OK
+2024/03/30-13:51:04.811 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001294: OK
+2024/03/30-13:51:04.811 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001297: OK
+2024/03/30-13:51:04.812 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001299: OK
+2024/03/30-13:51:04.818 3518 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene; recovered 4 files; 4914 bytes. Some data may have been lost. ****

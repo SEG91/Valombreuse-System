@@ -1,2 +1,7 @@
-2024/03/29-15:21:38.017 6698 Delete type=3 #2388
-2024/03/29-15:21:38.017 6698 Delete type=3 #2393
+2024/03/30-13:51:04.577 5e98 Table #2392: 9 entries OK
+2024/03/30-13:51:04.577 5e98 Table #2398: 2 entries OK
+2024/03/30-13:51:04.583 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\origines/MANIFEST-002388: OK
+2024/03/30-13:51:04.584 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\origines/MANIFEST-002393: OK
+2024/03/30-13:51:04.584 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\origines/MANIFEST-002395: OK
+2024/03/30-13:51:04.585 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\origines/MANIFEST-002397: OK
+2024/03/30-13:51:04.592 5e98 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\origines; recovered 2 files; 24850 bytes. Some data may have been lost. ****

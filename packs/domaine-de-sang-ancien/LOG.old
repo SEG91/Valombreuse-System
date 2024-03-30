@@ -1,2 +1,8 @@
-2024/03/29-15:21:37.981 6698 Delete type=3 #2493
-2024/03/29-15:21:37.983 6698 Delete type=3 #2502
+2024/03/30-13:51:04.503 5e98 Table #2490: 24 entries OK
+2024/03/30-13:51:04.504 5e98 Table #2496: 15 entries OK
+2024/03/30-13:51:04.504 5e98 Table #2507: 10 entries OK
+2024/03/30-13:51:04.510 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/MANIFEST-002493: OK
+2024/03/30-13:51:04.510 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/MANIFEST-002502: OK
+2024/03/30-13:51:04.511 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/MANIFEST-002504: OK
+2024/03/30-13:51:04.512 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien/MANIFEST-002506: OK
+2024/03/30-13:51:04.518 5e98 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\domaine-de-sang-ancien; recovered 3 files; 76176 bytes. Some data may have been lost. ****

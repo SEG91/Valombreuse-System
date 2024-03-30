@@ -1,3 +1,10 @@
-2024/03/29-15:21:37.964 6f5c Delete type=3 #2514
-2024/03/29-15:21:37.965 6f5c Delete type=3 #2516
-2024/03/29-15:21:37.965 6f5c Delete type=3 #2526
+2024/03/30-13:51:04.465 3518 Table #2511: 7 entries OK
+2024/03/30-13:51:04.465 3518 Table #2517: 1 entries OK
+2024/03/30-13:51:04.466 3518 Table #2518: 5 entries OK
+2024/03/30-13:51:04.466 3518 Table #2531: 9 entries OK
+2024/03/30-13:51:04.471 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-002514: OK
+2024/03/30-13:51:04.472 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-002516: OK
+2024/03/30-13:51:04.473 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-002526: OK
+2024/03/30-13:51:04.474 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-002528: OK
+2024/03/30-13:51:04.474 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee/MANIFEST-002530: OK
+2024/03/30-13:51:04.481 3518 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\lignee; recovered 4 files; 101953 bytes. Some data may have been lost. ****

@@ -1,5 +1,12 @@
-2024/03/29-15:21:38.049 6698 Delete type=3 #2401
-2024/03/29-15:21:38.049 6698 Delete type=3 #2406
-2024/03/29-15:21:38.050 6698 Delete type=3 #2408
-2024/03/29-15:21:38.050 6698 Delete type=3 #2410
-2024/03/29-15:21:38.050 6698 Delete type=3 #2412
+2024/03/30-13:51:04.650 5e98 Table #2400: 88 entries OK
+2024/03/30-13:51:04.650 5e98 Table #2404: 3 entries OK
+2024/03/30-13:51:04.650 5e98 Table #2413: 36 entries OK
+2024/03/30-13:51:04.651 5e98 Table #2418: 10 entries OK
+2024/03/30-13:51:04.657 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/MANIFEST-002401: OK
+2024/03/30-13:51:04.657 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/MANIFEST-002406: OK
+2024/03/30-13:51:04.658 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/MANIFEST-002408: OK
+2024/03/30-13:51:04.658 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/MANIFEST-002410: OK
+2024/03/30-13:51:04.659 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/MANIFEST-002412: OK
+2024/03/30-13:51:04.659 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/MANIFEST-002415: OK
+2024/03/30-13:51:04.660 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes/MANIFEST-002417: OK
+2024/03/30-13:51:04.666 5e98 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\aptitudes; recovered 4 files; 71768 bytes. Some data may have been lost. ****
