@@ -1,3 +1,5 @@
-2024/03/30-16:24:54.357 27e0 Recovering log #6
-2024/03/30-16:24:54.369 27e0 Delete type=0 #6
-2024/03/30-16:24:54.370 27e0 Delete type=3 #4
+2024/03/30-18:13:33.501 5fc Recovering log #8
+2024/03/30-18:13:33.501 5fc Level-0 table #10: started
+2024/03/30-18:13:33.511 5fc Level-0 table #10: 100574 bytes OK
+2024/03/30-18:13:33.523 5fc Delete type=0 #8
+2024/03/30-18:13:33.524 5fc Delete type=3 #7
