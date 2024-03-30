@@ -1,5 +1,1 @@
-2024/03/30-13:51:04.844 5078 Table #1174: 84 entries OK
-2024/03/30-13:51:04.849 5078 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\jeu-de-cartes-valombreuse/MANIFEST-001170: OK
-2024/03/30-13:51:04.850 5078 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\jeu-de-cartes-valombreuse/MANIFEST-001175: OK
-2024/03/30-13:51:04.851 5078 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\jeu-de-cartes-valombreuse/MANIFEST-001177: OK
-2024/03/30-13:51:04.857 5078 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\jeu-de-cartes-valombreuse; recovered 1 files; 15575 bytes. Some data may have been lost. ****
+2024/03/30-13:51:04.871 5078 Delete type=3 #1

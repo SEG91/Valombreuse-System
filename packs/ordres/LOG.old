@@ -1,7 +1,1 @@
-2024/03/30-13:51:04.722 5e98 Table #1935: 6 entries OK
-2024/03/30-13:51:04.722 5e98 Table #1941: 1 entries OK
-2024/03/30-13:51:04.728 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/MANIFEST-001931: OK
-2024/03/30-13:51:04.729 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/MANIFEST-001936: OK
-2024/03/30-13:51:04.730 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/MANIFEST-001938: OK
-2024/03/30-13:51:04.730 5e98 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres/MANIFEST-001940: OK
-2024/03/30-13:51:04.737 5e98 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\ordres; recovered 2 files; 47696 bytes. Some data may have been lost. ****
+2024/03/30-13:51:04.752 5e98 Delete type=3 #1

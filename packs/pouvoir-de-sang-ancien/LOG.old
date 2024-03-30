@@ -1,6 +1,1 @@
-2024/03/30-13:51:04.540 3518 Table #2411: 54 entries OK
-2024/03/30-13:51:04.541 3518 Table #2417: 58 entries OK
-2024/03/30-13:51:04.541 3518 Table #2426: 8 entries OK
-2024/03/30-13:51:04.547 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/MANIFEST-002423: OK
-2024/03/30-13:51:04.548 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien/MANIFEST-002425: OK
-2024/03/30-13:51:04.554 3518 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\pouvoir-de-sang-ancien; recovered 3 files; 97753 bytes. Some data may have been lost. ****
+2024/03/30-13:51:04.570 3518 Delete type=3 #1

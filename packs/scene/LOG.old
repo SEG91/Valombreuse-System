@@ -1,11 +1,9 @@
-2024/03/30-13:51:04.802 3518 Table #1277: 2 entries OK
-2024/03/30-13:51:04.802 3518 Table #1281: 4 entries OK
-2024/03/30-13:51:04.802 3518 Table #1292: 1 entries OK
-2024/03/30-13:51:04.803 3518 Table #1295: 2 entries OK
-2024/03/30-13:51:04.809 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001278: OK
-2024/03/30-13:51:04.810 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001289: OK
-2024/03/30-13:51:04.810 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001291: OK
-2024/03/30-13:51:04.811 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001294: OK
-2024/03/30-13:51:04.811 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001297: OK
-2024/03/30-13:51:04.812 3518 Archiving E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene/MANIFEST-001299: OK
-2024/03/30-13:51:04.818 3518 **** Repaired leveldb E:\nosave\FoundryVTT\Data\systems\valombreuse\packs\scene; recovered 4 files; 4914 bytes. Some data may have been lost. ****
+2024/03/30-13:51:04.833 3518 Delete type=3 #1
+2024/03/30-13:51:04.834 4c78 Compacting 4@0 + 0@1 files
+2024/03/30-13:51:04.838 4c78 Generated table #1298@0: 3 keys, 1435 bytes
+2024/03/30-13:51:04.838 4c78 Compacted 4@0 + 0@1 files => 1435 bytes
+2024/03/30-13:51:04.843 4c78 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/03/30-13:51:04.843 4c78 Delete type=2 #1277
+2024/03/30-13:51:04.843 4c78 Delete type=2 #1281
+2024/03/30-13:51:04.844 4c78 Delete type=2 #1292
+2024/03/30-13:51:04.844 4c78 Delete type=2 #1295
