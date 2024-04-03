@@ -1,5 +1,5 @@
-2024/03/31-20:16:14.555 5e5c Recovering log #769
-2024/03/31-20:16:14.556 5e5c Level-0 table #771: started
-2024/03/31-20:16:14.573 5e5c Level-0 table #771: 583012 bytes OK
-2024/03/31-20:16:14.584 5e5c Delete type=0 #769
-2024/03/31-20:16:14.585 5e5c Delete type=3 #768
+2024/04/02-08:20:45.839 5bb0 Recovering log #774
+2024/04/02-08:20:45.839 5bb0 Level-0 table #776: started
+2024/04/02-08:20:45.843 5bb0 Level-0 table #776: 6038 bytes OK
+2024/04/02-08:20:45.855 5bb0 Delete type=0 #774
+2024/04/02-08:20:45.856 5bb0 Delete type=3 #773
