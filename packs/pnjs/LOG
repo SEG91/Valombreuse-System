@@ -1,3 +1,5 @@
-2024/04/05-21:29:46.580 7ae8 Recovering log #35
-2024/04/05-21:29:46.592 7ae8 Delete type=0 #35
-2024/04/05-21:29:46.592 7ae8 Delete type=3 #34
+2024/04/06-14:00:24.281 5e2c Recovering log #41
+2024/04/06-14:00:24.281 5e2c Level-0 table #43: started
+2024/04/06-14:00:24.287 5e2c Level-0 table #43: 17376 bytes OK
+2024/04/06-14:00:24.299 5e2c Delete type=0 #41
+2024/04/06-14:00:24.299 5e2c Delete type=3 #40
