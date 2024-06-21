@@ -17,6 +17,7 @@
                     <a class="item titleFont" data-tab="competences">{{ localize "VALOMBREUSE.tabs.competences" }}</a>
                     <a class="item titleFont" data-tab="inventory">{{ localize "VALOMBREUSE.tabs.inventory" }}</a>
                     <a class="item titleFont" data-tab="bloodmagic">{{ localize "VALOMBREUSE.tabs.bloodmagic" }}</a>
+                    <a class="item titleFont" data-tab="history">{{ localize "VALOMBREUSE.tabs.history" }}</a>
                 </nav>
                 {{!-- Sheet Body --}}
                 <section class="sheet-body" style="overflow: visible;">
@@ -36,6 +37,10 @@
                     {{!-- Competences Tab --}}
                     <div class="tab bloodmagic" data-group="primary" data-tab="bloodmagic">
                         {{> "systems/valombreuse/templates/actors/character/parts/blooddomains/character-blooddomains.hbs"}}
+                    </div>
+                    {{!-- histoire Tab --}}
+                    <div class="tab history" data-group="primary" data-tab="history">
+                        {{> "systems/valombreuse/templates/actors/character/parts/history/character-history.hbs"}}
                     </div>
                 </section>
             </div>
