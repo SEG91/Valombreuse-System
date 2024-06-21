@@ -39,6 +39,32 @@ Hooks.once("ready", async () => {
 
 });
 
+function CardDealed(from, to, action) {
+    //do my things here
+    console.trace();
+      if(action.action === "deal"){
+        action.toCreate.forEach(function(c,i){
+          console.log("dealCards>>deal>>");
+          console.log(c[i].name);
+        });
+      }
+    };
+    
+Hooks.on("dealCards", CardDealed);
+    
+Hooks.on("createCard", function(target) {
+          //if(!!target && !!target.parent && (!!t.currentCards && (target.parent._id ? target.parent._id : target.parent.data._id) == (t.currentCards._id ? t.currentCards._id : t.currentCards.data._id))){
+            //t.update();
+          //}
+          const nb=Math.floor(Math.random() * 1000);
+          console.log(nb);
+          if (nb>499){
+            ChatMessage.create({content: "A l'Endroit"});
+          }
+          else
+            ChatMessage.create({content: "A l'Envers"});
+     });
+
 
   
 

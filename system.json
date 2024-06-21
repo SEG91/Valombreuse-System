@@ -2,7 +2,7 @@
   "id": "valombreuse",
   "title": "valombreuse",
   "description": "Systèmes pour FoundryVTT pour Valombreuse",
-  "version": "0.0.7.1.6",
+  "version": "0.0.7.1.7",
   "compatibility": {
     "minimum": 11,
     "verified": "11",
@@ -198,6 +198,18 @@
       "type": "Actor",
       "name": "pnjs",
       "path": "packs/pnjs",
+      "system": "valombreuse",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Faiblesse",
+      "type": "Item",
+      "name": "faiblesse",
+      "path": "packs/faiblesse",
       "system": "valombreuse",
       "ownership": {
         "PLAYER": "OBSERVER",

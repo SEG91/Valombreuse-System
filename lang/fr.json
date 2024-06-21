@@ -124,6 +124,7 @@
   "VALOMBREUSE.catui.potion" : "Potion",
   "VALOMBREUSE.catui.cloath" : "Vêtement",
   "VALOMBREUSE.catui.state" : "Etat",
+  "VALOMBREUSE.catui.weakness" : "Faiblesse",
   "VALOMBREUSE.ui.defBase" : "Protection",
   "VALOMBREUSE.ui.range" : "Portée",
   "VALOMBREUSE.ui.Fail" : "Dé Critique forcé à échec",
