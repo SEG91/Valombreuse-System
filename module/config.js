@@ -84,6 +84,7 @@ VALOMBREUSE.itemSubCategories = {
     "potion" : "VALOMBREUSE.catui.potion",
     "cloath" : "VALOMBREUSE.catui.cloath",
     "state" : "VALOMBREUSE.catui.state",
-    "weakness" : "VALOMBREUSE.catui.weakness"
+    "weakness" : "VALOMBREUSE.catui.weakness",
+    "vision" : "VALOMBREUSE.catui.vision",
 };
 
