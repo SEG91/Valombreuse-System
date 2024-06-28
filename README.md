@@ -10,3 +10,6 @@ Merci aussi à tous nos groupes de playtests sur les one shots Nuit d'orage à V
 
 Sans vous, Valombreuse serait au fond d'un tiroir.
 Nous espérons que vous prendrez beaucoup de plaisir à découvrir notre jeu.
+
+
+manifest : https://raw.githubusercontent.com/SEG91/Valombreuse-System/main/system.json
