@@ -1,3 +1,7 @@
-2024/06/24-11:16:21.185 4abc Recovering log #1433
-2024/06/24-11:16:21.197 4abc Delete type=0 #1433
-2024/06/24-11:16:21.198 4abc Delete type=3 #1432
+2024/06/28-08:58:07.405 3ac4 Recovering log #1435
+2024/06/28-08:58:07.418 3ac4 Delete type=0 #1435
+2024/06/28-08:58:07.418 3ac4 Delete type=3 #1434
+2024/06/28-08:59:07.775 1778 Level-0 table #1439: started
+2024/06/28-08:59:07.775 1778 Level-0 table #1439: 0 bytes OK
+2024/06/28-08:59:07.784 1778 Delete type=0 #1437
+2024/06/28-08:59:07.795 1778 Manual compaction at level-0 from '!folders!J0RtsDoMEIjoaLsZ' @ 72057594037927935 : 1 .. '!scenes.walls!uAHMZVBgTvunsYaF.zz26bgdtlSKqraxz' @ 0 : 0; will stop at (end)
