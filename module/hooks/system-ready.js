@@ -56,6 +56,8 @@ Hooks.on("createCard", function(target) {
           //if(!!target && !!target.parent && (!!t.currentCards && (target.parent._id ? target.parent._id : target.parent.data._id) == (t.currentCards._id ? t.currentCards._id : t.currentCards.data._id))){
             //t.update();
           //}
+          if (GMUsers==game.user)
+          {
           const nb=Math.floor(Math.random() * 1000);
           console.log(nb);
           if (nb>499){
@@ -63,6 +65,7 @@ Hooks.on("createCard", function(target) {
           }
           else
             ChatMessage.create({content: "A l'Envers"});
+          }
      });
 
 

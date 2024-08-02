@@ -31,6 +31,46 @@ export class ValombreuseDamageRoll {
         }
         return comp;
     }
+    getBestDefenseScore(weapon,cible)
+    {
+        let Bestval = 0;
+        let Bestcomname;
+
+        let compnames=["Acrobatie","Bagarre","Mêlée"];
+        for(var i= 0; i < compnames.length; i++)
+        {
+            let complist=this.getCompetence(this._target,compnames[i]);
+            let val=0;
+            if (complist.length>0)
+            {
+                let comp=complist[0];
+                val=this.ComputeCompScore(this._target,comp);
+                if (weapon.system.subtype === "natural")
+                {
+                    if (compnames[i]==="Mêlée")
+                    val+=1;
+                }
+                if (weapon.system.subtype === "melee")
+                {
+                    if (compnames[i]==="Bagarre")
+                    val-=1;
+                }
+            }
+               
+            if (val==0)
+              val=this._target.system.stats.mc.base;
+            if (val>Bestval)
+            {
+                Bestval=val;
+                Bestcomname=complist[0];
+            }
+        }
+        this._targetDefenseSkill=Bestcomname;
+        this._targetDefenseScore=Bestval;
+       
+        return Bestval;
+    }
+
 
     getDefenseScore(weapon,cible)
     {
@@ -42,19 +82,12 @@ export class ValombreuseDamageRoll {
         if (cible.type == "minion")
         {
             val = cible.system.Defpot;
+            this._targetDefenseScore=val;
+            this._targetDefenseSkill="Défense Bande";
         }
         else
         {
-            let complist=this.getCompetence(this._target,compname);
-            
-            if (complist.length>0)
-            {
-                let comp=complist[0];
-                val=this.ComputeCompScore(this._target,comp);
-            }
-               
-            if (val==0)
-              val=this._target.system.stats.mc.base
+            val=this.getBestDefenseScore(weapon,cible);
         }
        
         return val;
@@ -65,6 +98,7 @@ export class ValombreuseDamageRoll {
         console.log("ComputeandApplyBlessure>");
         let Blessure=0;
         let seuil=this._target.system.attributes.def.value;
+        this._SeuilB=seuil;
         console.log("Seuil :");
         console.log(seuil);
         console.log("Target avt dommage");
@@ -148,6 +182,10 @@ export class ValombreuseDamageRoll {
             let TargetDef=this.getDefenseScore(this._weapon,this._target);
             margin=calc-TargetDef;
         }
+        console.log("Resultat Attaque :");
+        console.log(calc); 
+        console.log("Défense :");
+        console.log(TargetDef);
         console.log("Margin :");
         console.log(margin);
         console.log("ValombreuseDamageRoll::getAttackMargin<");
@@ -200,7 +238,7 @@ export class ValombreuseDamageRoll {
            compname="Arme à distance";
         if (selweapon.system.subtype === "natural")
            compname="Bagarre";
-
+        this._actorAttackSkill=compname;
         let complist=this.getCompetence(actor,compname);
         let comp=complist[0];
         
@@ -231,6 +269,7 @@ export class ValombreuseDamageRoll {
         if (margin>0)
         {
             let Totaldmg=margin+this._weapondmg;
+            this._totaldamage=Totaldmg;
             Blessure=this.ComputeandApplyBlessure(Totaldmg);
         }
         else
@@ -247,8 +286,12 @@ export class ValombreuseDamageRoll {
             label: this._label,
             img: this._img,
             text: this._buildDamageRollMessage(),
+            TargetDefenseSkill:this._targetDefenseSkill,
+            TargetDefenseScore:this._targetDefenseScore,
             Mmargin:margin,
             wdamage: this._formula,
+            Tdmg:this._totaldamage,
+            SeuilB:this._SeuilB,
             result: Blessure,
         };
 
