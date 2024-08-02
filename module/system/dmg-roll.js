@@ -62,7 +62,7 @@ export class ValombreuseDamageRoll {
             if (val>Bestval)
             {
                 Bestval=val;
-                Bestcomname=complist[0];
+                Bestcomname=complist[0].name;
             }
         }
         this._targetDefenseSkill=Bestcomname;
