@@ -165,6 +165,7 @@ export class ValombreuseDamageRoll {
     {
         console.log("ValombreuseDamageRoll::getAttackMargin>");
         let margin=-100;
+        let TargetDef=0;
         if (this.forcetarget==false)
         {
             if (game.user.targets.size)
@@ -172,7 +173,7 @@ export class ValombreuseDamageRoll {
                  game.user.targets.forEach(t =>{
                   this._target= t.actor;
                 })   
-                let TargetDef=this.getDefenseScore(this._weapon,this._target);
+                TargetDef=this.getDefenseScore(this._weapon,this._target);
                 margin=calc-TargetDef;
              }
             else

@@ -144,7 +144,7 @@ export class ValombreuseSkillRoll {
             isFumble: this._isFumble,
             result: this._cmpValue+MaxDice,
         };
-        this._result= interCmpValue+MaxDice+this._energy+MaxDice;
+        this._result= interCmpValue+this._energy+MaxDice;
         let msg ="toto";
         let chatData = {
             user: game.user.id,
