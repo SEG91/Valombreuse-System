@@ -478,7 +478,7 @@ async _addItemToInventory(itemData) {
 
 
         switch (rolltype) {
-            case "skillcheck" :
+            case "Attributecheck" :
                break;
             
             case "BandeAttack" :
