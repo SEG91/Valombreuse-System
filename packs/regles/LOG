@@ -1,5 +1,5 @@
-2024/09/22-16:08:06.518 3ae0 Recovering log #994
-2024/09/22-16:08:06.519 3ae0 Level-0 table #996: started
-2024/09/22-16:08:06.532 3ae0 Level-0 table #996: 369394 bytes OK
-2024/09/22-16:08:06.551 3ae0 Delete type=0 #994
-2024/09/22-16:08:06.551 3ae0 Delete type=3 #993
+2024/09/22-17:24:08.107 5cd0 Recovering log #999
+2024/09/22-17:24:08.108 5cd0 Level-0 table #1001: started
+2024/09/22-17:24:08.119 5cd0 Level-0 table #1001: 301229 bytes OK
+2024/09/22-17:24:08.135 5cd0 Delete type=0 #999
+2024/09/22-17:24:08.136 5cd0 Delete type=3 #998
