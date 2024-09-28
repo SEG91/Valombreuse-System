@@ -14,6 +14,7 @@ import {ValombreuseActor} from "./actors/actor.js";
 import {ValombreuseCharacterSheet} from "./actors/character-sheet.js";
 import {ValombreuseMinionSheet} from "./actors/minion-sheet.js";
 import {ValombreuseCreatureSheet} from "./actors/creature-sheet.js";
+import {ValombreuseVeineSheet} from "./actors/veine-sheet.js";
 import {ValombreuseItem} from "./items/item.js";
 import {ValombreuseItemSheet} from "./items/item-sheet.js";
 
@@ -77,6 +78,13 @@ Hooks.once("init", async function () {
       makeDefault: true,
       label: "VALOMBREUSE.SheetClassMinion"
   });
+
+  // Register actor sheets
+  Actors.registerSheet("valombreuse", ValombreuseVeineSheet, {
+    types: ["veine"], 
+    makeDefault: true,
+    label: "VALOMBREUSE.SheetClassVeine"
+ });
 
 
     console.info("Valombreuse : New sheets registered");

@@ -1,0 +1,39 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="wrap valombreuse-bg-std">
+        <div class="header">
+            <div class="flexrow no-wrap">
+                <div class="flex1 left" id="banner-left"></div>
+                    <div class="flex1 center" title="logo top"  id="logo-banner"><img src="/systems/valombreuse/assets/images/Valombreuse-Logo.png"/></div>                
+                <div class="flex1 right" id="banner-right"></div>
+            </div>
+        </div>
+        
+        {{> "systems/valombreuse/templates/actors/veine/parts/veine-header.hbs"}}
+        <div class="flexrow main mainHeight_std" style="overflow: visible;">
+            <div class="content flex3">
+             {{!-- Sheet Tab Navigation --}}
+                <nav class="sheet-tabs tabs" data-group="primary">
+                    <a class="item titleFont" data-tab="diplomacy">{{ localize "VALOMBREUSE.tabs.diplomacy" }}</a>
+                    <a class="item titleFont" data-tab="pouvoirveine">{{ localize "VALOMBREUSE.tabs.pouvoirveine" }}</a>
+                    <a class="item titleFont" data-tab="secrets">{{ localize "VALOMBREUSE.tabs.secrets" }}</a>
+                    <a class="item titleFont" data-tab="historyveine">{{ localize "VALOMBREUSE.tabs.historyveine" }}</a>
+                </nav>
+                {{!-- Sheet Body --}}
+                <section class="sheet-body" style="overflow: visible;">
+                    {{!-- Stats Tab --}}
+                    <div class="tab stats" data-group="primary" data-tab="diplomacy">
+                        {{> "systems/valombreuse/templates/actors/veine/parts/veine-diplomacy.hbs"}}
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="header">
+            <div class="flexrow no-wrap">
+                <div class="flex1 left" id="banner-bot-left"></div>
+                    <div class="flex1 center" title="Action de Combat"  id="logo-orbe"><img src="/systems/valombreuse/assets/images/Valombresue-Logo-4.png"/></div> 
+                <div class="flex1 right" id="banner-bot-right"></div>
+            </div>
+        </div>
+    </div>
+</form>
+

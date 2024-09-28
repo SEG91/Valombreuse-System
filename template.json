@@ -4,7 +4,8 @@
       "character",
       "npc",
       "creature",
-      "minion"
+      "minion",
+      "veine"
     ],
     "templates": {
       "stats": {
@@ -258,7 +259,8 @@
         "eve" : 0,
         "cha" : 0
       },
-      "competences": []
+      "competences": [],
+      "diplomacy":0
     },
     "bloodline": {
       "templates": [

@@ -60,7 +60,10 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/valombreuse/templates/actors/character/parts/inventory/character-inventory-item.hbs",
         "systems/valombreuse/templates/chat/global-card.hbs",
         "systems/valombreuse/templates/config/dialog-actioncard.hbs",
-        "systems/valombreuse/templates/actors/character/parts/history/character-history.hbs"
+        "systems/valombreuse/templates/actors/character/parts/history/character-history.hbs",
+        "systems/valombreuse/templates/actors/veine/parts/veine-header.hbs",
+        "systems/valombreuse/templates/actors/veine/veine-sheet.hbs",
+        "systems/valombreuse/templates/actors/veine/parts/veine-diplomacy.hbs",
     ];
 
     // Load the template parts

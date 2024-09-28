@@ -5,7 +5,8 @@
       "character": "Veinard",
       "npc": "PNJ",
       "creature": "Creature",
-      "minion": "Bande"
+      "minion": "Bande",
+      "veine" : "Veine"
     },
 
     "Item": {
@@ -27,6 +28,10 @@
   "VALOMBREUSE.tabs.paths" : "Voies",
   "VALOMBREUSE.tabs.competences" : "Compétences",
   "VALOMBREUSE.tabs.history" : "Histoire & Liens",
+  "VALOMBREUSE.tabs.diplomacy" : "Diplomatie",
+  "VALOMBREUSE.tabs.pouvoirveine" : "Pouvoirs de la Veine",
+  "VALOMBREUSE.tabs.secrets" : "Secrets de Céphéus",
+  "VALOMBREUSE.tabs.historyveine" : "Histoire de la Veine",
   "VALOMBREUSE.ui.competence" : "Compétence",
   "VALOMBREUSE.ui.skill" : "Compétence",
   "VALOMBREUSE.tabs.inventory" : "Inventaire",
@@ -48,6 +53,7 @@
   "VALOMBREUSE.stats.eve.abbrev" : "EVE",
   "VALOMBREUSE.details.name": "Nom",
   "VALOMBREUSE.ui.veinard" : "VEINARD",
+  "VALOMBREUSE.ui.veine" : "Nom de la Veine",
   "VALOMBREUSE.ui.ordre" : "Ordre",
   "VALOMBREUSE.ui.lignee" : "Lignée",
   "VALOMBREUSE.ui.origine" : "Origine",
