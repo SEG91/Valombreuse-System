@@ -1,0 +1,22 @@
+    <ol class="inventory-list">
+        <li class="inventory-header flexrow">
+            <div class="item-name flexrow"></div>
+        </li>
+        {{#if (notEmpty (getSecrets actor.items))}}
+        
+        {{#each (getArraySecretCategorywithItems actor.items)}}
+                {{#if (notEmpty this.items)}}
+                    <li class="inventory-header flexrow"><div class="item-name center flexrow">{{localize this.value}}</div></li>
+                {{#each this.items}}
+                        {{> "systems/valombreuse/templates/actors/veine/parts/inventory/veine-inventory-item.hbs" this}}
+                    {{/each}}
+                {{/if}}
+        {{/each}}
+
+     
+
+        {{else}}
+            <p>Vous ne connaissez pas de secrets</p>
+        {{/if}}
+    </ol>
+

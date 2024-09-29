@@ -24,6 +24,26 @@ export const registerHandlebarsHelpers = function () {
         return inventory;
     });
 
+    Handlebars.registerHelper('getSecrets', function (items) {
+        let inventory = items.filter(item => item.type === "secrets");
+        inventory.sort(function (a, b) {
+            const aKey = a.system.subtype + "-" + a.name.slugify({strict: true});
+            const bKey = b.system.subtype + "-" + b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return inventory;
+    });
+
+    Handlebars.registerHelper('getVeinepowers', function (items) {
+        let inventory = items.filter(item => item.type === "veinebloodpower");
+        inventory.sort(function (a, b) {
+            const aKey = a.system.subtype + "-" + a.name.slugify({strict: true});
+            const bKey = b.system.subtype + "-" + b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return inventory;
+    });
+
     
     Handlebars.registerHelper('getArraySubCategorywithItems', function (items) {
         let subCat=VALOMBREUSE.itemSubCategories;
@@ -63,6 +83,44 @@ export const registerHandlebarsHelpers = function () {
         return itemByCat;
     });
 
+    Handlebars.registerHelper('getArraySecretCategorywithItems', function (items) {
+        let subCat=VALOMBREUSE.secretCategories;
+        var itemByCat = [];
+        for (const [key, value] of Object.entries(subCat)) {
+
+            let caps = items.filter(item => item.type === "secrets");
+            let weapons = caps.filter(item => item.system.type == key);
+            weapons.sort(function (a, b) {
+                const aKey = a.name.slugify({strict: true});
+                const bKey = b.name.slugify({strict: true});
+                return (aKey > bKey) ? 1 : -1
+            });
+
+            itemByCat.push({
+                key: key,
+                value: value,
+                items: weapons
+            });
+        }
+
+        //Add all items with no categories
+        let caps = items.filter(item => item.type === "secrets");
+        let weapons = caps.filter(item => item.system.type == "");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+
+        itemByCat.push({
+            key: "",
+            value: game.i18n.localize("VALOMBREUSE.category.other"),
+            items: weapons
+        });
+
+        return itemByCat;
+    });
+
     Handlebars.registerHelper('InitializeGlobalCount', function () {
         globalcount=0;
         return ;
@@ -82,6 +140,10 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('getItemSubCategories', function () {
         return VALOMBREUSE.itemSubCategories;
+    });
+
+    Handlebars.registerHelper('getSecretCategories', function () {
+        return VALOMBREUSE.secretCategories ;
     });
 
     Handlebars.registerHelper('getActioncards', function () {
@@ -160,6 +222,14 @@ export const registerHandlebarsHelpers = function () {
       
     Handlebars.registerHelper('getCompetences', function (items) {
         let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+       
+        return caps;
+    });
+
+    Handlebars.registerHelper('getRoyaumes', function (items) {
+        let caps = items.filter(item => item.type === "origine").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
        

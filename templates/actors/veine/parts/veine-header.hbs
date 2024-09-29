@@ -12,6 +12,23 @@
                 <input class="field-value charname" name="name" type="text" value="{{actor.name}}" placeholder="Name" data-dtype="String"/>
             </div>
         </div>
-            <!-- /NAME -->
+        <ol class="item-list">
+    			<li class="item flexrow" data-item-id="{{_id}}" draggable="true">
+                    <div class="flex1 left">
+                         <span class="titleFont titre-general field-label">{{ localize 'VALOMBREUSE.ui.eveil' }}</span>
+                    </div>
+					<div class="item-detail">
+						<input class="veine-eveil" name="system.eveil" type="number" value="{{system.eveil}}" placeholder="10" data-dtype="Number"/>
+      				</div>
+					<div class="item-detail">
+						<div style="position: relative; z-index: 1; border: solid black 1px;">
+									<div id="barPhyCur" style="background-color: #cef2b3; width: 100%;">&nbsp</div>
+									<div id="barPhyBoxes" style="display: flex; z-index: 2; position: absolute; top: 0em; width: 100%">
+									<input id="pi_input" name="inputSeuil" type="range" value="{{system.eveil}}" min="0" max="100" step="1" style="font-size: 15px;flex:1.9"/>
+									</div>
+						</div>
+      				</div>
+                </li>
+		</ol>
     </div>
 </div>

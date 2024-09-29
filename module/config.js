@@ -14,6 +14,7 @@ VALOMBREUSE.competences = [];
 VALOMBREUSE.Ordres=[];
 VALOMBREUSE.Blooddomains=[];
 VALOMBREUSE.Actioncards=[];
+VALOMBREUSE.royaumes=[];
 
 // Mise en cache des données de compétences
 VALOMBREUSE.getCompetences = async function () {
@@ -23,6 +24,16 @@ VALOMBREUSE.getCompetences = async function () {
     
     VALOMBREUSE.competences = competences;
     console.debug("Competences loaded");
+};
+
+// Mise en cache des données de compétences
+VALOMBREUSE.getRoyaumes = async function () {
+    let origines;
+
+    origines = await game.packs.get("valombreuse.origines").getDocuments().then(index => index.map(entity => entity.toObject(false)));
+    
+    VALOMBREUSE.royaumes = origines;
+    console.debug("Origines loaded");
 };
 
 // Mise en cache des données de blooddomains;
@@ -65,6 +76,13 @@ VALOMBREUSE.itemProperties = {
     "equipment": "VALOMBREUSE.properties.equipment",
     "weapon": "VALOMBREUSE.properties.weapon",
     "protection": "VALOMBREUSE.properties.protection"
+};
+
+VALOMBREUSE.secretCategories = {
+    "monde": "VALOMBREUSE.secret.monde",
+    "genese": "VALOMBREUSE.secret.genese",
+    "ordre": "VALOMBREUSE.secret.ordre",
+    "bloodline": "VALOMBREUSE.secret.bloodline"
 };
 
 VALOMBREUSE.itemSubCategories = {

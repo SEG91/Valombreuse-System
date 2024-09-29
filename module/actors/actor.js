@@ -22,6 +22,13 @@ export class ValombreuseActor extends Actor {
           
           mergeObject(data.items, caps, {overwrite: false});
       }
+
+      let roys = game.valombreuse.config.royaumes;
+
+      if ( data.type === "veine" ) {
+          
+          mergeObject(data.items, roys, {overwrite: false});
+      }
   }
 
     //data.items = data.items || [];

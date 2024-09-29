@@ -1,22 +1,30 @@
-<div class="flexrow no-wrap stats">
-     <div class="flexrow flex3">
-        <div class="flex1 layout center carac pos_relative">
-            <!-- STATS -->
-            <td>
-				<input data-field="Déreis" class="centered health-phys"
-				type="text" value="0" data-dtype="Number"
-				id="dataPhyCur"></td>
-			<td id="barPhyMax">
-				<div style="width: 300px;">
-					<div style="position: relative; z-index: 1; border: solid black 1px;">
-						<div id="barPhyCur" style="background-color: #cef2b3; width: 77%;">&nbsp</div>
-						<div id="barPhyBoxes" style="display: flex; z-index: 2; position: absolute; top: 0em; width: 100%">
-					</div>
-					</div>
-					<div id="barPhyScale" style="display: flex; font-size: x-small">
-					</div>
-				</div>
-			</td>
-        </div>
+<div class="flexrow competence_row">
+    <div class="flexcol">
+            {{#each (getRoyaumes actor.items) as |royaume id|}}
+			<ol class="item-list">
+    			<li class="item flexrow" data-item-id="{{_id}}" draggable="true">
+       				<div class="item-name flexrow">
+                		<div class="item-image flex1" style="background: center/contain no-repeat url('{{royaume.img}}')">
+                		</div>
+                		<h4>{{royaume.name}}</h4>
+                		<span class="item_tooltiptext">
+                    	<h1>{{royaume.name}} :</h1>{{{royaume.system.description}}}
+                		</span>
+       		 		</div> 
+					<div class="item-detail">
+						<input class="realm-diplomacy" name="royaume.system.diplomacy" type="number" value="{{royaume.system.diplomacy}}" placeholder="Diplomatie" data-dtype="Number"/>
+      				</div>
+					<div class="item-detail">
+						<div style="position: relative; z-index: 1; border: solid black 1px;">
+									<div id="barPhyCur" style="background-color: #cef2b3; width: 100%;">&nbsp</div>
+									<div id="barPhyBoxes" style="display: flex; z-index: 2; position: absolute; top: 0em; width: 100%">
+									<input id="pi_input" name="inputSeuil" type="range" value="{{royaume.system.diplomacy}}" min="-50" max="50" step="1" style="font-size: 15px;flex:1.9"/>
+									</div>
+						</div>
+      				</div>
+ 		   		</li>
+			</ol>
+            {{/each}}
     </div>
 </div>
+

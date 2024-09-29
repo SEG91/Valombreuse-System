@@ -19,7 +19,9 @@
       "competence": "Compétence",
       "aptitude": "Aptitude",
       "state": "Etats",
-      "combatcard": "Carte de Combat"
+      "combatcard": "Carte de Combat",
+      "secrets": "Secrets de Céphéus",
+      "veinebloodpower": "Pouvoir de Veine"
     }
   },
   "VALOMBREUSE.title": "Valombreuse",
@@ -54,6 +56,7 @@
   "VALOMBREUSE.details.name": "Nom",
   "VALOMBREUSE.ui.veinard" : "VEINARD",
   "VALOMBREUSE.ui.veine" : "Nom de la Veine",
+  "VALOMBREUSE.ui.eveil" : "Eveil",
   "VALOMBREUSE.ui.ordre" : "Ordre",
   "VALOMBREUSE.ui.lignee" : "Lignée",
   "VALOMBREUSE.ui.origine" : "Origine",
@@ -75,6 +78,7 @@
   "VALOMBREUSE.ui.learning" :  "Apprentissage",
   "VALOMBREUSE.ui.blooddomain": "Domaine de Sang Ancien",
   "VALOMBREUSE.ui.bloodpower": "Pouvoir de Sang Ancien",
+  "VALOMBREUSE.ui.veinepower": "Pouvoir de Veine",
   "VALOMBREUSE.ui.link": "Lancement rapide",
   "VALOMBREUSE.ui.None": "Aucun",
   "VALOMBREUSE.attributes.xp.label" : "XP",
@@ -138,5 +142,11 @@
   "VALOMBREUSE.ui.Fail" : "Dé Critique forcé à échec",
   "VALOMBREUSE.ui.Crit" : "Dé Critique forcé à réussite",
   "VALOMBREUSE.energyspent" : "Energie dépensée",
-  "VALOMBREUSE.cmod" : "Modificateur"
+  "VALOMBREUSE.cmod" : "Modificateur",
+  "VALOMBREUSE.ui.secretscore": "Rang du Secret",
+  "VALOMBREUSE.ui.secrettype": "Type de Secret",
+  "VALOMBREUSE.secret.monde": "Secret du Monde",
+  "VALOMBREUSE.secret.genese": "Secret de la Génèse",
+  "VALOMBREUSE.secret.ordre": "Secret des Ordres",
+  "VALOMBREUSE.secret.bloodline": "Secret des Lignées"
 }

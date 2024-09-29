@@ -8,6 +8,8 @@ import {Origines} from "../controllers/origines.js";
 import {Bloodline} from "../controllers/bloodline.js";
 import {Bloodpower} from "../controllers/bloodpower.js";
 import {Aptitude} from "../controllers/aptitudes.js";
+import {Secret} from "../controllers/secret.js";
+import {VeinePower} from "../controllers/veinebloodpower.js";
 import {Competence} from "../controllers/competence.js";
 import {Traversal} from "../utils/traversal.js";
 import { ValombreuseItem } from "../items/item.js";
@@ -73,6 +75,15 @@ export class ValombreuseActorSheet extends ActorSheet {
     html.find('.clef-silent').click(ev => {
         ev.preventDefault();
         return this.actor.modifySilentMode();
+    });
+
+    html.find('.realm-diplomacy').change(ev => {
+        ev.preventDefault();
+        const li = $(ev.currentTarget).closest(".item");
+        const item = this.actor.items.get(li.data("itemId"));
+        let itemData = item.toObject();
+        itemData.system.diplomacy = ev.currentTarget.value;
+        return this.actor.updateEmbeddedDocuments("Item",[itemData]);
     });
 
     html.find('.item-equip').click(ev => {
@@ -281,6 +292,22 @@ async getData(options) {
                     return await Competence.addToActor(this.actor, event, itemData);
                 }
             }
+        case "secrets":
+                {
+                    const actor = this.actor;
+                    if ((actor.type=="veine"))
+                    {
+                        return await Secret.addToActor(this.actor, event, itemData);
+                    }
+                }
+        case "veinebloodpower":
+                {
+                    const actor = this.actor;
+                    if ((actor.type=="veine"))
+                    {
+                        return await VeinePower.addToActor(this.actor, event, itemData);
+                    }
+                }
         default:
             // Handle item sorting within the same Actor
             const actor = this.actor;

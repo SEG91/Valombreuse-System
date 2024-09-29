@@ -38,6 +38,12 @@
                 {{#if (equals item.type "combatcard")}}
                    <div class="flexrow description-long">
                 {{/if}} 
+                {{#if (equals item.type "veinebloodpower")}}
+                   <div class="flexrow description-verylong">
+                {{/if}}
+                {{#if (equals item.type "secrets")}}
+                   <div class="flexrow description-verylong">
+                {{/if}}
                 {{editor descriptionHTML target="system.description" button=true owner=owner editable=editable}}
             </div>
             <div class="details">
@@ -64,6 +70,12 @@
                 {{/if}}
                 {{#if (equals item.type "item")}}
                     {{> "systems/valombreuse/templates/items/parts/details/item-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "veinebloodpower")}}
+                    {{> "systems/valombreuse/templates/items/parts/details/veinebloodpower-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "secrets")}}
+                    {{> "systems/valombreuse/templates/items/parts/details/secrets-details.hbs"}}
                 {{/if}}
             </div>
         </section>

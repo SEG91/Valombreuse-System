@@ -165,6 +165,9 @@
       "Offpot":0,
       "Offpotmax":0,
       "Defpot":0
+    },
+    "veine": {
+      "eveil":10
     }
   },
   "Item": {
@@ -177,7 +180,9 @@
       "bloodline",
       "blooddomain",
       "bloodpower",
-      "combatcard"
+      "combatcard",
+      "secrets",
+      "veinebloodpower"
     ],
     "templates": {
       "base" : {
@@ -291,6 +296,20 @@
       ],
       "action1": false,
       "action2":false
+    },
+    "veinebloodpower": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "score":0
+    },
+    "secrets": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "type":""
     }
   }
 }

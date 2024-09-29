@@ -36,6 +36,8 @@ export class ValombreuseItem extends Item {
             case "bloodline":
             case "aptitude":
             case "state":
+            case "veinebloodpower":
+            case "secrets":
             case "trapping" :
                 break;
             default :

@@ -12,6 +12,7 @@ Hooks.once("ready", async () => {
     await game.valombreuse.config.getOrdres();
     await game.valombreuse.config.getBlooddomains();
     await game.valombreuse.config.getActioncards();
+    await game.valombreuse.config.getRoyaumes();
 
 
     game.socket.on("system.valombreuse", data => {

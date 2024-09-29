@@ -64,6 +64,12 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/valombreuse/templates/actors/veine/parts/veine-header.hbs",
         "systems/valombreuse/templates/actors/veine/veine-sheet.hbs",
         "systems/valombreuse/templates/actors/veine/parts/veine-diplomacy.hbs",
+        "systems/valombreuse/templates/actors/veine/parts/inventory/veine-inventory.hbs",
+        "systems/valombreuse/templates/actors/veine/parts/inventory/veine-inventory-item.hbs",
+        "systems/valombreuse/templates/actors/veine/parts/history/veine-history.hbs",
+        "systems/valombreuse/templates/items/parts/details/veinebloodpower-details.hbs",
+        "systems/valombreuse/templates/items/parts/details/secrets-details.hbs",
+        "systems/valombreuse/templates/actors/veine/parts/veine-power.hbs"
     ];
 
     // Load the template parts

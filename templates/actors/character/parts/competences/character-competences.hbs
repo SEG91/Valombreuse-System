@@ -6,10 +6,6 @@
                 <div class="item-detail competence-col-width">{{ localize "VALOMBREUSE.ui.LR" }}</div>
                 <div class="item-detail competence-col-width">{{ localize "VALOMBREUSE.ui.score" }}</div>
                 <div class="item-controls competence-col-width">
-                      
-                    <a class="item-control item-create valombreuse-compendium-pack" title="Ajouter une compétence du compendium" data-pack="valombreuse.competences" data-open="0">
-                        <i class="fas fa-folder-plus"></i>
-                    </a>
                 </div>
             </li>
         {{#each (getCompetences actor.items) as |competence id|}}

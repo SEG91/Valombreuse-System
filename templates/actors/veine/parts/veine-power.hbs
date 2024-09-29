@@ -1,0 +1,34 @@
+<div class="flexrow competence_row">
+    <div class="flexcol">
+        <ol class="inventory-list competence-list">
+        <li class="inventory-header flexrow" data-item-id="{{_id}}" data-item-type="item">
+                <div class="bld-name flexrow">{{ localize "VALOMBREUSE.ui.veinepower" }}</div>
+                <div class="bld-detail competence-col-width">{{ localize "VALOMBREUSE.ui.score" }}</div>
+                <div class="bld-detail flexrow competence-col-width">
+                </div>
+        </li>
+        {{#each (getVeinepowers actor.items) as |veinepower pw|}}
+                <ol class="item-list">
+                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
+                            <div class="flexrow no-wrap ">
+                                <div class="field-label no-wrap left competence_name">{{veinepower.name}}
+                                    <span class="comp_tooltiptext">
+                                        <h1>{{veinepower.name}} :</h1>{{{veinepower.system.description}}}
+                                    </span>
+                                </div>
+                            </div>
+                        <div class="item-detail flexrow competence-col-width">
+                            <input class="field-value flex1 capa_score" name="veinepower.system.score" type="text" value="{{veinepower.system.score}}" placeholder="" data-dtype="Number"/>
+                        </div>
+                        <div class="item-controls competence-col-width">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                </ol>
+        {{/each}}
+        </ol>
+    </div>
+</div>
+    
+    
