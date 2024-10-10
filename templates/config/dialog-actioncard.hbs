@@ -1,26 +1,109 @@
 <form>
-<ol class="inventory-list">
+  <ol class="inventory-list">
+    <!-- Header row with Action columns -->
     <li class="inventory-header flexrow">
-        <div class="item-name flexrow"></div>
-        <div class="item-detail">Action 1</div>
-        <div class="item-detail">Action 2</div>
+      <div class="item-name flexrow">Item</div>
+      <div class="item-detail">Action 1</div>
+      <div class="item-detail">Action 2</div>
     </li>
-        {{#each (getActioncards) as |item ac|}}
-            <ol class="item-list">
-                <li class="item flexrow" data-item-id="{{_id}}" draggable="true">
-                    <div class="item-name flexrow">
-                        <div class="item-image flex1" style="background: center/contain no-repeat url('{{img}}')">
-                        </div>
-                        <h4>{{name}}</h4>
-                    </div>
-                    <div class="item-detail">
-                       <input type="radio" id="Action1" name="Action1" value={{_id}}>
-                    </div>
-                    <div class="item-detail">
-                       <input type="radio" id="Action2" name="Action2" value={{_id}}>
-                    </div>
-                </li>
-            </ol>
-        {{/each}}
+
+    <!-- Dynamically generate items using Handlebars -->
+    {{#each (getActioncards) as |item|}}
+    <ol class="item-list">
+      <li class="item flexrow" data-item-id="{{item._id}}" draggable="true">
+        <!-- Item image and name -->
+        <div class="item-name flexrow">
+          <div class="item-image flex1" style="background: center/contain no-repeat url('{{item.img}}'); width: 50px; height: 50px; margin-right: 10px;"></div>
+          <h4>{{item.name}}</h4>
+        </div>
+
+        <!-- Radio button for Action 1 -->
+        <div class="item-detail">
+          <input type="radio" class="action1-radio" id="Action1-{{item._id}}" name="Action1" value="{{item._id}}" data-name="{{item.name}}" onchange="handleAction1Selection(this)">
+        </div>
+        
+        <!-- Radio button for Action 2, initially disabled -->
+        <div class="item-detail">
+          <input type="radio" class="action2-radio" id="Action2-{{item._id}}" name="Action2" value="{{item._id}}" disabled>
+        </div>
+      </li>
     </ol>
+    {{/each}}
+  </ol>
+
+  <!-- Reset Button -->
+  <div>
+    <button type="button" onclick="resetSelections()">Reset</button>
+  </div>
 </form>
+
+<script>
+  // Function to handle Action 1 selection and enable/disable Action 2 accordingly
+  function handleAction1Selection(selectedRadio) {
+    const selectedItemName = selectedRadio.getAttribute('data-name');
+    const action2Radios = document.querySelectorAll('.action2-radio');
+    
+    // Disable all Action 2 radios initially
+    action2Radios.forEach(function(radio) {
+      radio.disabled = true;
+    });
+
+    // Enable Action 2 radios based on the selection in Action 1
+    if (selectedItemName.includes('(x2)')) {
+      // If the selected item for Action 1 has (x2), enable all Action 2 radios
+      action2Radios.forEach(function(radio) {
+        radio.disabled = false;
+      });
+    } else {
+      // Otherwise, enable only those Action 2 items with (x2) in their names
+      action2Radios.forEach(function(radio) {
+        const itemName = radio.closest('li').querySelector('h4').innerText;
+        if (itemName.includes('(x2)')) {
+          radio.disabled = false;
+        }
+      });
+    }
+  }
+
+  // Function to reset the selections for Action 1 and Action 2
+  function resetSelections() {
+    const action1Radios = document.querySelectorAll('.action1-radio');
+    const action2Radios = document.querySelectorAll('.action2-radio');
+
+    // Reset Action 1 selections
+    action1Radios.forEach(function(radio) {
+      radio.checked = false;
+    });
+
+    // Reset and disable Action 2 selections
+    action2Radios.forEach(function(radio) {
+      radio.checked = false;
+      radio.disabled = true;
+    });
+  }
+</script>
+
+<style>
+  /* Optional: Some basic styling for better visualization */
+  .flexrow {
+    display: flex;
+    align-items: center;
+  }
+  .inventory-list, .item-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .inventory-header {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+  }
+  .item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  .item-detail {
+    margin-right: 20px;
+  }
+</style>
