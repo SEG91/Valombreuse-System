@@ -1,3 +1,16 @@
-2024/10/10-17:08:26.901 433c Recovering log #1541
-2024/10/10-17:08:26.918 433c Delete type=0 #1541
-2024/10/10-17:08:26.919 433c Delete type=3 #1539
+2024/10/26-18:15:46.339 5780 Recovering log #1552
+2024/10/26-18:15:46.340 5780 Level-0 table #1554: started
+2024/10/26-18:15:46.346 5780 Level-0 table #1554: 11261 bytes OK
+2024/10/26-18:15:46.365 5780 Delete type=0 #1552
+2024/10/26-18:15:46.365 5780 Delete type=3 #1551
+2024/10/26-19:54:05.546 8a8 Level-0 table #1557: started
+2024/10/26-19:54:05.546 8a8 Level-0 table #1557: 0 bytes OK
+2024/10/26-19:54:05.558 8a8 Delete type=0 #1555
+2024/10/26-19:54:05.595 8a8 Manual compaction at level-0 from '!cards!BnxkxotOnJ3L3BfE' @ 72057594037927935 : 1 .. '!cards.cards!nLEQe7ZN1hmxhXqJ.ySp30aDEcnCansID' @ 0 : 0; will stop at '!cards.cards!nLEQe7ZN1hmxhXqJ.ySp30aDEcnCansID' @ 201 : 1
+2024/10/26-19:54:05.595 8a8 Compacting 1@0 + 1@1 files
+2024/10/26-19:54:05.601 8a8 Generated table #1558@0: 101 keys, 14364 bytes
+2024/10/26-19:54:05.601 8a8 Compacted 1@0 + 1@1 files => 14364 bytes
+2024/10/26-19:54:05.607 8a8 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/10/26-19:54:05.608 8a8 Delete type=2 #1272
+2024/10/26-19:54:05.608 8a8 Delete type=2 #1554
+2024/10/26-19:54:05.616 8a8 Manual compaction at level-0 from '!cards.cards!nLEQe7ZN1hmxhXqJ.ySp30aDEcnCansID' @ 201 : 1 .. '!cards.cards!nLEQe7ZN1hmxhXqJ.ySp30aDEcnCansID' @ 0 : 0; will stop at (end)
