@@ -275,7 +275,7 @@ async getData(options) {
                                 if (bldpws)
                                   {
                                     bldpws.push(itemData);
-                                      return await this.actor.updateEmbeddedDocuments("Item",[caps]);
+                                      return await Bloodpower.addToActor(this.actor, event, itemData);
                                   }
                             }
                         }

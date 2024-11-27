@@ -2,6 +2,7 @@ import { VALOMBREUSE } from "./config.js";
 import {Traversal} from "./utils/traversal.js";
 
 let globalcount=0;
+let CurrentObject;
 
 export const registerHandlebarsHelpers = function () {
 
@@ -130,6 +131,10 @@ export const registerHandlebarsHelpers = function () {
      globalcount++;
     });
 
+    Handlebars.registerHelper('SetCurrentObject', function (ThisACtor) {
+        CurrentObject=ThisACtor;
+       });
+
     Handlebars.registerHelper('CompareGlobalCount', function (num) {
         if (globalcount == num)
         {
@@ -186,8 +191,12 @@ export const registerHandlebarsHelpers = function () {
         return Bloodpowers;
     });
 
-    Handlebars.registerHelper('getBloodpowers', function (blooddomain) {
-        return blooddomain.system.bloodpowers;
+    Handlebars.registerHelper('getBloodpowers', function (items) {
+        let caps = CurrentObject.items.filter(item => item.type === "bloodpower").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+       
+        return caps;
     });
     
 

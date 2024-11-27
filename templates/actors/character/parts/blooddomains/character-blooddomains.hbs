@@ -22,8 +22,9 @@
 </div>
 {{InitializeGlobalCount}}
 <div class="flexrow flex2">
+{{SetCurrentObject actor}}
 {{#each (getBlooddomains actor.items) as |blooddomain bd|}}
-
+{{debug actor}}
   {{#if (CompareGlobalCount 0)}}
     <div class="flexcol">
   {{/if}}
@@ -38,16 +39,15 @@
                     <input class="field-value flex1 bld_score" name="blooddomain.system.score" type="text" value="{{blooddomain.system.score}}" placeholder="0" data-dtype="Number"/>
                 </div>
             </li>
-            {{debug actor}}
             {{#if (IsSangImpur blooddomain)}}
-            {{#each (getBloodpowers blooddomain) as |bloodpower pw|}}
+            {{#each (getBloodpowers) as |bpw pw|}}
                 <ol class="item-list">
                     <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                        <div class="rollable no-wrap" title="{{bloodpower.name}}">
+                        <div class="rollable no-wrap" title="{{bpw.name}}">
                             <div class="flexrow no-wrap ">
-                                <div class="field-label no-wrap left competence_name">{{bloodpower.name}}
+                                <div class="field-label no-wrap left competence_name">{{bpw.name}}
                                     <span class="comp_tooltiptext">
-                                        <h1>{{bloodpower.name}} :</h1>{{{bloodpower.system.description}}}
+                                        <h1>{{bpw.name}} :</h1>{{{bpw.system.description}}}
                                     </span>
                                 </div>
                             </div>
