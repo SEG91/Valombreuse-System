@@ -62,7 +62,10 @@ export class ValombreuseDamageRoll {
             if (val>Bestval)
             {
                 Bestval=val;
-                Bestcomname=complist[0].name;
+                if (complist.length>0)
+                 Bestcomname=complist[0].name;
+                else
+                 Bestcomname="Maitrise Corporelle";
             }
         }
         this._targetDefenseSkill=Bestcomname;
